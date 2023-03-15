@@ -14,8 +14,10 @@ def extract_iawa_information(row):
     for x in original_string.split("|"):
         x = x.replace("Synonym:", "")
         # family = re.search("(PRIMULACEAE|LEGUMINOSAE|MALVACEAE)*\s[A-Z][A-Z]+", original_string).group(0)
+
         family = re.search("[A-Z][A-Z]+\s[A-Z][A-Z]+|[A-Z][A-Z]+", x).group(0)
-        genre = re.search("[A-Z][a-z]+\s[a-z]+|[A-Z][a-z]+", x).group(0)
+        genre = re.search("[A-Z][a-z]+\sspp\. | [A-Z][a-z]+\ssp\. | [A-Z][a-z]+\sspp | [A-Z][a-z]+\s[a-z]+subsp\.[a-z][a-z]+ | [A-Z][a-z]+\s[a-z\-]+|[A-Z][a-z]+",
+                          x).group(0)
         if re.search("\([A-Z][A-Z,\s]+\)", x):
             usual_name = re.search("\([A-Z][A-Z,\s]+\)", x).group(0)
         else:
