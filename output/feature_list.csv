@@ -1,0 +1,694 @@
+feature_id;parent_id;feature_label;definition;author;collection;number_collection
+IFC-1;IFG-23;Growth ring boundaries distinct;;IAWA;Hardwood;1
+IFC-1;IFG-23;Growth ring boundaries distinct;;IAWA;Softwood;40
+IFC-2;IFG-23;Growth ring boundaries indistinct or absent;;IAWA;Hardwood;2
+IFC-2;IFG-23;Growth ring boundaries indistinct or absent;;IAWA;Softwood;41
+IFC-3;IFG-25;Wood ring-porous;;IAWA;Hardwood;3
+IFC-4;IFG-25;Wood semi-ring-porous;;IAWA;Hardwood;4
+IFC-5;IFG-25;Wood diffuse-porous;;IAWA;Hardwood;5
+IFC-6;IFG-28;Vessels in tangential bands;;IAWA;Hardwood;6
+IFC-7;IFG-28;Vessels in diagonal and / or radial pattern;;IAWA;Hardwood;7
+IFC-8;IFG-28;Vessels in dendritic pattern;;IAWA;Hardwood;8
+IFC-9;IFG-31;Vessels exclusively solitary (90% or more);;IAWA;Hardwood;9
+IFC-10;IFG-31;Vessels in radial multiples of 4 or more common;;IAWA;Hardwood;10
+IFC-11;IFG-31;Vessel clusters common;;IAWA;Hardwood;11
+IFC-12;IFG-34;Solitary vessel outline angular;;IAWA;Hardwood;12
+IFC-13;IFG-35;Simple perforation plates;;IAWA;Hardwood;13
+IFC-14;IFG-35;Scalariform perforation plates;;IAWA;Hardwood;14
+IFC-15;IFG-35;Scalariform perforation plates with <= 10 bars;;IAWA;Hardwood;15
+IFC-16;IFG-35;Scalariform perforation plates with 10 - 20 bars;;IAWA;Hardwood;16
+IFC-17;IFG-35;Scalariform perforation plates with 20 - 40 bars;;IAWA;Hardwood;17
+IFC-18;IFG-35;Scalariform perforation plates with >= 40 bars;;IAWA;Hardwood;18
+IFC-19;IFG-35;Reticulate, foraminate, and / or other types of multiple perforation plates;;IAWA;Hardwood;19
+IFC-20;IFG-42;Intervessel pits scalariform;;IAWA;Hardwood;20
+IFC-21;IFG-42;Intervessel pits opposite;;IAWA;Hardwood;21
+IFC-22;IFG-42;Intervessel pits alternate;;IAWA;Hardwood;22
+IFC-23;IFG-42;Shape of alternate pits polygonal;;IAWA;Hardwood;23
+IFC-24;IFG-46;Minute <= 4 µm;;IAWA;Hardwood;24
+IFC-25;IFG-46;Small 4 - 7 µm;;IAWA;Hardwood;25
+IFC-26;IFG-46;Medium 7 - 10 µm;;IAWA;Hardwood;26
+IFC-27;IFG-46;Large >= 10 µm;;IAWA;Hardwood;27
+IFC-28;IFG-46;Range of intervessel pit size (µm);;IAWA;Hardwood;28
+IFC-29;IFG-51;Vestured pits;;IAWA;Hardwood;29
+IFC-30;IFG-52;"Vessel-ray pits with distinct borders; similar to intervessel pits in size and shape throughout the ray cell";;IAWA;Hardwood;30
+IFC-31;IFG-52;Vessel-ray pits with much reduced borders to apparently simple: pits rounded or angular;;IAWA;Hardwood;31
+IFC-32;IFG-52;Vessel-ray pits with much reduced borders to apparently simple: pits horizontal (scalariform, gash-like) to vertical (palisade);;IAWA;Hardwood;32
+IFC-33;IFG-52;Vessel-ray pits of two distinct sizes or types in the same ray cell;;IAWA;Hardwood;33
+IFC-34;IFG-52;Vessel-ray pits unilaterally compound and coarse (over 10 µm);;IAWA;Hardwood;34
+IFC-35;IFG-52;Vessel-ray pits restricted to marginal rows;;IAWA;Hardwood;35
+IFC-36;IFG-58;Helical thickenings in vessel elements present;;IAWA;Hardwood;36
+IFC-37;IFG-58;Helical thickenings throughout body of vessel element;;IAWA;Hardwood;37
+IFC-38;IFG-58;Helical thickenings only in vessel element tails;;IAWA;Hardwood;38
+IFC-39;IFG-58;Helical thickenings only in narrower vessel elements;;IAWA;Hardwood;39
+IFC-40;IFG-62;<= 50 µm;;IAWA;Hardwood;40
+IFC-41;IFG-62;50 - 100 µm;;IAWA;Hardwood;41
+IFC-42;IFG-62;100 - 200 µm;;IAWA;Hardwood;42
+IFC-43;IFG-62;>= 200 µm;;IAWA;Hardwood;43
+IFC-44;IFG-62;Mean, +/– Standard Deviation, Range, n = x;;IAWA;Hardwood;44
+IFC-45;IFG-62;Vessels of two distinct diameter classes, wood not ring-porous;;IAWA;Hardwood;45
+IFC-46;IFG-68;<= 5 vessels per square millimetre;;IAWA;Hardwood;46
+IFC-47;IFG-68;5 - 20 vessels per square millimetre;;IAWA;Hardwood;47
+IFC-48;IFG-68;20 - 40 vessels per square millimetre;;IAWA;Hardwood;48
+IFC-49;IFG-68;40 - 100 vessels per square millimetre;;IAWA;Hardwood;49
+IFC-50;IFG-68;>= 100 vessels per square millimetre;;IAWA;Hardwood;50
+IFC-51;IFG-68;Mean, +/– Standard Deviation, Range, n = x;;IAWA;Hardwood;51
+IFC-52;IFG-74;<= 350 µm;;IAWA;Hardwood;52
+IFC-53;IFG-74;350–800 µm;;IAWA;Hardwood;53
+IFC-54;IFG-74;>= 800 µm;;IAWA;Hardwood;54
+IFC-55;IFG-74;Mean, +/– Standard Deviation, Range, n = x;;IAWA;Hardwood;55
+IFC-56;IFG-78;Tyloses common;;IAWA;Hardwood;56
+IFC-57;IFG-78;Tyloses sclerotic;;IAWA;Hardwood;57
+IFC-58;IFG-78;Gums and other deposits in heartwood vessels;;IAWA;Hardwood;58
+IFC-59;IFG-81;Wood vesselless;;IAWA;Hardwood;59
+IFC-60;IFG-82;Vascular / vasicentric tracheids present;;IAWA;Hardwood;60
+IFC-61;IFG-83;Fibres with simple to minutely bordered pits;;IAWA;Hardwood;61
+IFC-62;IFG-83;Fibres with distinctly bordered pits;;IAWA;Hardwood;62
+IFC-63;IFG-83;Fibre pits common in both radial and tangential walls;;IAWA;Hardwood;63
+IFC-64;IFG-83;Helical thickenings in ground tissue fibres;;IAWA;Hardwood;64
+IFC-65;IFG-87;Septate fibres present;;IAWA;Hardwood;65
+IFC-66;IFG-87;Non-septate fibres present;;IAWA;Hardwood;66
+IFC-67;IFG-89;Parenchyma-like fibre bands alternating with ordinary fibres;;IAWA;Hardwood;67
+IFC-68;IFG-90;Fibres very thin-walled;;IAWA;Hardwood;68
+IFC-69;IFG-90;Fibres thin- to thick-walled;;IAWA;Hardwood;69
+IFC-70;IFG-90;Fibres very thick-walled;;IAWA;Hardwood;70
+IFC-71;IFG-93;<= 900 µm;;IAWA;Hardwood;71
+IFC-72;IFG-93;900–1600 µm;;IAWA;Hardwood;72
+IFC-73;IFG-93;>= 1600 µm;;IAWA;Hardwood;73
+IFC-74;IFG-93;Mean, +/– Standard Deviation, Range, n = x;;IAWA;Hardwood;74
+IFC-75;IFG-97;Axial parenchyma absent or extremely rare;;IAWA;Hardwood;75
+IFC-76;IFG-98;Axial parenchyma diffuse;;IAWA;Hardwood;76
+IFC-77;IFG-98;Axial parenchyma diffuse-in-aggregates;;IAWA;Hardwood;77
+IFC-78;IFG-100;Axial parenchyma scanty paratracheal;;IAWA;Hardwood;78
+IFC-79;IFG-100;Axial parenchyma vasicentric;;IAWA;Hardwood;79
+IFC-80;IFG-100;Axial parenchyma aliform;;IAWA;Hardwood;80
+IFC-81;IFG-100;Axial parenchyma lozenge-aliform;;IAWA;Hardwood;81
+IFC-82;IFG-100;Axial parenchyma winged-aliform;;IAWA;Hardwood;82
+IFC-83;IFG-100;Axial parenchyma confluent;;IAWA;Hardwood;83
+IFC-84;IFG-100;Axial parenchyma unilateral paratracheal;;IAWA;Hardwood;84
+IFC-85;IFG-107;Axial parenchyma bands more than three cells wide;;IAWA;Hardwood;85
+IFC-86;IFG-107;Axial parenchyma in narrow bands or lines up to three cells wide;;IAWA;Hardwood;86
+IFC-87;IFG-109;Axial parenchyma reticulate;;IAWA;Hardwood;87
+IFC-88;IFG-109;Axial parenchyma scalariform;;IAWA;Hardwood;88
+IFC-89;IFG-109;Axial parenchyma in marginal or in seemingly marginal bands ;;IAWA;Hardwood;89
+IFC-90;IFG-112;Fusiform parenchyma cells;;IAWA;Hardwood;90
+IFC-91;IFG-112;Two cells per parenchyma strand;;IAWA;Hardwood;91
+IFC-92;IFG-112;Four (3-4) cells per parenchyma strand;;IAWA;Hardwood;92
+IFC-93;IFG-112;Eight (5-8) cells per parenchyma strand;;IAWA;Hardwood;93
+IFC-94;IFG-112;Over eight cells per parenchyma strand;;IAWA;Hardwood;94
+IFC-95;IFG-117;Unlignified parenchyma;;IAWA;Hardwood;95
+IFC-96;IFG-118;Rays exclusively uniseriate;;IAWA;Hardwood;96
+IFC-97;IFG-118;Ray width 1 to 3 cells;;IAWA;Hardwood;97
+IFC-98;IFG-118;Larger rays commonly 4-seriate to 10-seriate;;IAWA;Hardwood;98
+IFC-99;IFG-118;Larger rays commonly > 10-seriate;;IAWA;Hardwood;99
+IFC-100;IFG-118;Rays with multiseriate portion(s) as wide as uniseriate portions;;IAWA;Hardwood;100
+IFC-101;IFG-123;Aggregate rays;;IAWA;Hardwood;101
+IFC-102;IFG-124;Ray height > 1 mm;;IAWA;Hardwood;102
+IFC-103;IFG-125;Rays of two distinct sizes;;IAWA;Hardwood;103
+IFC-104;IFG-126;All ray cells procumbent;;IAWA;Hardwood;104
+IFC-105;IFG-126;All ray cells upright and/or square;;IAWA;Hardwood;105
+IFC-106;IFG-126;Body ray cells procumbent with one row of upright and/or square marginal cells;;IAWA;Hardwood;106
+IFC-107;IFG-126;Body ray cells procumbent with mostly 2–4 rows of upright and/or square marginal cells;;IAWA;Hardwood;107
+IFC-108;IFG-126;Body ray cells procumbent with over 4 rows of upright and/or square marginal cells;;IAWA;Hardwood;108
+IFC-109;IFG-126;Rays with procumbent, square and upright cells mixed throughout the ray;;IAWA;Hardwood;109
+IFC-110;IFG-132;Sheath cells;;IAWA;Hardwood;110
+IFC-111;IFG-132;Tile cells;;IAWA;Hardwood;111
+IFC-112;IFG-132;Perforated ray cells;;IAWA;Hardwood;112
+IFC-113;IFG-132;Disjunctive ray parenchyma cell walls;;IAWA;Hardwood;113
+IFC-114;IFG-136;<=  4 / mm;;IAWA;Hardwood;114
+IFC-115;IFG-136;4–12 / mm;;IAWA;Hardwood;115
+IFC-116;IFG-136;>= 12 / mm;;IAWA;Hardwood;116
+IFC-117;IFG-139;Wood rayless;;IAWA;Hardwood;117
+IFC-118;IFG-140;All rays storied;;IAWA;Hardwood;118
+IFC-119;IFG-140;Low rays storied, high rays non-storied;;IAWA;Hardwood;119
+IFC-120;IFG-142;Axial parenchyma and / or vessel elements storied;;IAWA;Hardwood;120
+IFC-121;IFG-143;Fibres storied;;IAWA;Hardwood;121
+IFC-122;IFG-144;Rays and / or axial elements irregularly storied;;IAWA;Hardwood;122
+IFC-123;IFG-8;Number of ray tiers per axial mm;;IAWA;Hardwood;123
+IFC-124;IFG-146;Oil and/or mucilage cells associated with ray parenchyma;;IAWA;Hardwood;124
+IFC-125;IFG-146;Oil and/or mucilage cells associated with axial parenchyma;;IAWA;Hardwood;125
+IFC-126;IFG-146;Oil and/or mucilage cells present among fibres;;IAWA;Hardwood;126
+IFC-127;IFG-149;Axial canals in long tangential lines;;IAWA;Hardwood;127
+IFC-128;IFG-149;Axial canals in short tangential lines;;IAWA;Hardwood;128
+IFC-129;IFG-149;Axial canals diffuse;;IAWA;Hardwood;129
+IFC-130;IFG-149;Radial canals;;IAWA;Hardwood;130
+IFC-131;IFG-149;Intercellular canals of traumatic origin;;IAWA;Hardwood;131
+IFC-132;IFG-154;Laticifers or tanniniferous tubes;;IAWA;Hardwood;132
+IFC-133;IFG-155;Included phloem, concentric;;IAWA;Hardwood;133
+IFC-134;IFG-155;Included phloem, diffuse;;IAWA;Hardwood;134
+IFC-135;IFG-155;Other cambial variants;;IAWA;Hardwood;135
+IFC-136;IFG-158;Prismatic crystals present;;IAWA;Hardwood;136
+IFC-137;IFG-158;Prismatic crystals in upright and/or square ray cells;;IAWA;Hardwood;137
+IFC-138;IFG-158;Prismatic crystals in procumbent ray cells;;IAWA;Hardwood;138
+IFC-139;IFG-158;Prismatic crystals in radial alignment in procumbent ray cells;;IAWA;Hardwood;139
+IFC-140;IFG-158;Prismatic crystals in chambered upright and/or square ray cells;;IAWA;Hardwood;140
+IFC-141;IFG-158;Prismatic crystals in non-chambered axial parenchyma cells;;IAWA;Hardwood;141
+IFC-142;IFG-158;Prismatic crystals in chambered axial parenchyma cells;;IAWA;Hardwood;142
+IFC-143;IFG-158;Prismatic crystals in fibres;;IAWA;Hardwood;143
+IFC-144;IFG-166;Druses present;;IAWA;Hardwood;144
+IFC-145;IFG-166;Druses in ray parenchyma cells;;IAWA;Hardwood;145
+IFC-146;IFG-166;Druses in axial parenchyma cells;;IAWA;Hardwood;146
+IFC-147;IFG-166;Druses in fibres;;IAWA;Hardwood;147
+IFC-148;IFG-166;Druses in chambered cells;;IAWA;Hardwood;148
+IFC-149;IFG-171;Raphides;;IAWA;Hardwood;149
+IFC-150;IFG-171;Acicular crystals;;IAWA;Hardwood;150
+IFC-151;IFG-171;Styloids and/or elongate crystals;;IAWA;Hardwood;151
+IFC-152;IFG-171;Crystals of other shapes (mostly small);;IAWA;Hardwood;152
+IFC-153;IFG-171;Crystal sand;;IAWA;Hardwood;153
+IFC-154;IFG-176;More than one crystal of about the same size per cell or chamber;;IAWA;Hardwood;154
+IFC-155;IFG-176;Two distinct sizes of crystals per cell or chamber;;IAWA;Hardwood;155
+IFC-156;IFG-176;Crystals in enlarged cells;;IAWA;Hardwood;156
+IFC-157;IFG-176;Crystals in tyloses;;IAWA;Hardwood;157
+IFC-158;IFG-176;Cystoliths;;IAWA;Hardwood;158
+IFC-159;IFG-181;Silica bodies present;;IAWA;Hardwood;159
+IFC-159;IFG-181;Silica bodies present;;IAWA;Bark;144
+IFC-160;IFG-181;Silica bodies in ray cells;;IAWA;Hardwood;160
+IFC-161;IFG-181;Silica bodies in axial parenchyma cells;;IAWA;Hardwood;161
+IFC-162;IFG-181;Silica bodies in fibres;;IAWA;Hardwood;162
+IFC-163;IFG-181;Vitreous silica;;IAWA;Hardwood;163
+IFC-163;IFG-181;Vitreous silica;;IAWA;Bark;145
+IFC-164;IFG-186;Abrupt transition from earlywood to latewood;;IAWA;Softwood;42
+IFC-165;IFG-186;Gradual transition from earlywood to latewood;;IAWA;Softwood;43
+IFC-166;IFG-188;(predominantly) Uniseriate;;IAWA;Softwood;44
+IFC-167;IFG-188;(predominantly) Two or more seriate;;IAWA;Softwood;45
+IFC-168;IFG-190;IT pitting opposite;;IAWA;Softwood;46
+IFC-169;IFG-190;IT pitting alternate;;IAWA;Softwood;47
+IFC-170;IFG-192;Organic deposits (in heartwood tracheids) Present;;IAWA;Softwood;48
+IFC-171;IFG-193;Average tracheid length (µm);;IAWA;Softwood;49
+IFC-172;IFG-194;Short (< 3000 µm);;IAWA;Softwood;50
+IFC-173;IFG-194;Medium (3000 to 5000 µm);;IAWA;Softwood;51
+IFC-174;IFG-194;Long (> 5000 µm);;IAWA;Softwood;52
+IFC-175;IFG-197;Intercellular spaces throughout the wood;;IAWA;Softwood;53
+IFC-176;IFG-198;Thin-walled (double wall thickness less than radial lumen diameter);;IAWA;Softwood;54
+IFC-177;IFG-198;Thick-walled (double wall thickness larger than radial lumen diameter);;IAWA;Softwood;55
+IFC-178;IFG-199;Torus (pits in earlywood tracheids only) Present;;IAWA;Softwood;56
+IFC-179;IFG-199;Scalloped;;IAWA;Softwood;57
+IFC-180;IFG-199;Torus extensions;;IAWA;Softwood;58
+IFC-181;IFG-200;Pits with notched borders Present;;IAWA;Softwood;59
+IFC-182;IFG-201;Warty layer (visible under the light microscope) Present;;IAWA;Softwood;60
+IFC-183;IFG-202;Helical thickenings in longitudinal tracheids Present;;IAWA;Softwood;61
+IFC-184;IFG-203;Present throughout the growth increment;;IAWA;Softwood;62
+IFC-185;IFG-203;Well developed only in earlywood;;IAWA;Softwood;63
+IFC-186;IFG-203;Well developed only in latewood;;IAWA;Softwood;64
+IFC-187;IFG-204;Single;;IAWA;Softwood;65
+IFC-188;IFG-204;Grouped (double or triple);;IAWA;Softwood;66
+IFC-189;IFG-205;Narrowly spaced (number of coils more than 120 per mm);;IAWA;Softwood;67
+IFC-190;IFG-205;Widely spaced (number of coils less than 120 per mm);;IAWA;Softwood;68
+IFC-191;IFG-206;Commonly present;;IAWA;Softwood;69
+IFC-192;IFG-206;(present but) Rare;;IAWA;Softwood;70
+IFC-193;IFG-207;Callitroid thickenings Present;;IAWA;Softwood;71
+IFC-194;IFG-208;Present;;IAWA;Softwood;72
+IFC-195;IFG-209;Diffuse (evenly scattered throughout the entire growth increment);;IAWA;Softwood;73
+IFC-196;IFG-209;Tangentially zonate;;IAWA;Softwood;74
+IFC-197;IFG-209;Marginal;;IAWA;Softwood;75
+IFC-198;IFG-210;Smooth;;IAWA;Softwood;76
+IFC-199;IFG-210;Irregularly thickened;;IAWA;Softwood;77
+IFC-200;IFG-210;Beaded or nodular;;IAWA;Softwood;78
+IFC-201;IFG-211;Commonly present;;IAWA;Softwood;79
+IFC-202;IFG-211;Absent or very rare;;IAWA;Softwood;80
+IFC-203;IFG-212;Smooth;;IAWA;Softwood;81
+IFC-204;IFG-212;Dentate;;IAWA;Softwood;82
+IFC-205;IFG-212;Reticulate;;IAWA;Softwood;83
+IFC-206;IFG-213;Present;;IAWA;Softwood;84
+IFC-207;IFG-214;Smooth (unpitted);;IAWA;Softwood;85
+IFC-208;IFG-214;Distinctly pitted;;IAWA;Softwood;86
+IFC-209;IFG-215;Smooth (unpitted);;IAWA;Softwood;87
+IFC-210;IFG-215;Distinctly pitted;;IAWA;Softwood;88
+IFC-211;IFG-216;Indentures Present;;IAWA;Softwood;89
+IFC-212;IFG-217;“Window-like” (fenestriform);;IAWA;Softwood;90
+IFC-213;IFG-217;Pinoid;;IAWA;Softwood;91
+IFC-214;IFG-217;Piceoid;;IAWA;Softwood;92
+IFC-215;IFG-217;Cupressoid;;IAWA;Softwood;93
+IFC-216;IFG-217;Taxodioid;;IAWA;Softwood;94
+IFC-217;IFG-217;Araucarioid;;IAWA;Softwood;95
+IFC-218;IFG-218;Number of pits per cross-field (earlywood tracheids only) value;;IAWA;Softwood;96
+IFC-219;IFG-219;(large window-like) 1–2;;IAWA;Softwood;97
+IFC-220;IFG-219;1–3;;IAWA;Softwood;98
+IFC-221;IFG-219;3–5;;IAWA;Softwood;99
+IFC-222;IFG-219;6 or more;;IAWA;Softwood;100
+IFC-223;IFG-220;Average ray height value (µm);;IAWA;Softwood;101
+IFC-224;IFG-221;Very low (up to 4 cells);;IAWA;Softwood;102
+IFC-225;IFG-221;Medium (5 to 15 cells);;IAWA;Softwood;103
+IFC-226;IFG-221;High (from 16 to 30 cells);;IAWA;Softwood;104
+IFC-227;IFG-221;Very high (more than 30 cells);;IAWA;Softwood;105
+IFC-228;IFG-222;Average fusiform ray height value (µm);;IAWA;Softwood;106
+IFC-229;IFG-223;Exclusively uniseriate;;IAWA;Softwood;107
+IFC-230;IFG-223;2–3-seriate in part;;IAWA;Softwood;108
+IFC-231;IFG-224;Axial canals Present;;IAWA;Softwood;109
+IFC-232;IFG-225;Radial canals Present;;IAWA;Softwood;110
+IFC-233;IFG-226;Traumatic canals (axial or radial) Present;;IAWA;Softwood;111
+IFC-234;IFG-227;Tangential diameter, delimited by epithelial cells (Method A) (µm);;IAWA;Softwood;112
+IFC-235;IFG-227;Tangential diameter of entire resin canal complex (Method B) (µm);;IAWA;Softwood;113
+IFC-236;IFG-227;Radial diameter, delimited by epithelial cells (Method C) (µm);;IAWA;Softwood;114
+IFC-237;IFG-228;Average diameter of normal radial intercellular canals Value (µm);;IAWA;Softwood;115
+IFC-238;IFG-229;Thick-walled;;IAWA;Softwood;116
+IFC-239;IFG-229;Thin-walled;;IAWA;Softwood;117
+IFC-240;IFG-230;Crystals Present (Only search for presence);;IAWA;Softwood;118
+IFC-241;IFG-231;Prismatic;;IAWA;Softwood;119
+IFC-242;IFG-231;Druses;;IAWA;Softwood;120
+IFC-243;IFG-231;Other forms of crystals;;IAWA;Softwood;121
+IFC-244;IFG-232;Rays;;IAWA;Softwood;122
+IFC-245;IFG-233;Axial parenchyma;;IAWA;Softwood;123
+IFC-246;IFG-233;Cells associated with intercellular canals;;IAWA;Softwood;124
+IFC-247;IFG-234;Europe and temperate Asia (Brazier and Franklin region 74);;IAWA;Hardwood;164
+IFC-247;IFG-234;Europe and temperate Asia (Brazier and Franklin region 74);;IAWA;Softwood;1
+IFC-248;IFG-234;Europe, excluding Mediterranean;;IAWA;Hardwood;165
+IFC-248;IFG-234;Europe, excluding Mediterranean;;IAWA;Softwood;2
+IFC-249;IFG-234;Mediterranean including Northern Africa and Middle East;;IAWA;Hardwood;166
+IFC-249;IFG-234;Mediterranean including Northern Africa and Middle East;;IAWA;Softwood;3
+IFC-250;IFG-234;Temperate Asia (China), Japan, USSR;;IAWA;Hardwood;167
+IFC-250;IFG-234;Temperate Asia (China), Japan, USSR;;IAWA;Softwood;4
+IFC-251;IFG-234;Central South Asia (Brazier and Franklin region 75);;IAWA;Hardwood;168
+IFC-251;IFG-234;Central South Asia (Brazier and Franklin region 75);;IAWA;Softwood;5
+IFC-252;IFG-234;India, Pakistan, Sri Lanka;;IAWA;Hardwood;169
+IFC-252;IFG-234;India, Pakistan, Sri Lanka;;IAWA;Softwood;6
+IFC-253;IFG-234;Burma;;IAWA;Hardwood;170
+IFC-253;IFG-234;Burma;;IAWA;Softwood;7
+IFC-254;IFG-234;Southeast Asia and the Pacific (Brazier and Franklin region 76);;IAWA;Hardwood;171
+IFC-254;IFG-234;Southeast Asia and the Pacific (Brazier and Franklin region 76);;IAWA;Softwood;8
+IFC-255;IFG-234;Thailand, Laos, Vietnam, Cambodia (Indochina);;IAWA;Hardwood;172
+IFC-255;IFG-234;Thailand, Laos, Vietnam, Cambodia (Indochina);;IAWA;Softwood;9
+IFC-256;IFG-234;Indomalesia: Indonesia, Philippines, Malaysia, Brunei, Papua New Guinea, and Solomon Islands;;IAWA;Hardwood;173
+IFC-256;IFG-234;Indomalesia: Indonesia, Philippines, Malaysia, Brunei, Papua New Guinea, and Solomon Islands;;IAWA;Softwood;10
+IFC-257;IFG-234;Pacific Islands (including New Caledonia, Samoa, Hawaii, and Fiji);;IAWA;Hardwood;174
+IFC-257;IFG-234;Pacific Islands (including New Caledonia, Samoa, Hawaii, and Fiji);;IAWA;Softwood;11
+IFC-258;IFG-234;Australia and New Zealand (Brazier and Franklin region 77);;IAWA;Hardwood;175
+IFC-258;IFG-234;Australia and New Zealand (Brazier and Franklin region 77);;IAWA;Softwood;12
+IFC-259;IFG-234;Australia;;IAWA;Hardwood;176
+IFC-259;IFG-234;Australia;;IAWA;Softwood;13
+IFC-260;IFG-234;New Zealand;;IAWA;Hardwood;177
+IFC-260;IFG-234;New Zealand;;IAWA;Softwood;14
+IFC-261;IFG-234;Tropical mainland Africa and adjacent islands (Brazier and Franklin region 78);;IAWA;Hardwood;178
+IFC-261;IFG-234;Tropical mainland Africa and adjacent islands (Brazier and Franklin region 78);;IAWA;Softwood;15
+IFC-262;IFG-234;Tropical Africa;;IAWA;Hardwood;179
+IFC-262;IFG-234;Tropical Africa;;IAWA;Softwood;16
+IFC-263;IFG-234;Madagascar & Mauritius, Réunion & Comores;;IAWA;Hardwood;180
+IFC-263;IFG-234;Madagascar & Mauritius, Réunion & Comores;;IAWA;Softwood;17
+IFC-264;IFG-234;Southern Africa (south of the Tropic of Capricorn) (Brazier and Franklin region 79);;IAWA;Hardwood;181
+IFC-264;IFG-234;Southern Africa (south of the Tropic of Capricorn) (Brazier and Franklin region 79);;IAWA;Softwood;18
+IFC-265;IFG-234;North America, north of Mexico (Brazier and Franklin region 80);;IAWA;Hardwood;182
+IFC-265;IFG-234;North America, north of Mexico (Brazier and Franklin region 80);;IAWA;Softwood;19
+IFC-266;IFG-234;Neotropics and temperate Brazil (Brazier and Franklin region 81);;IAWA;Hardwood;183
+IFC-266;IFG-234;Neotropics and temperate Brazil (Brazier and Franklin region 81);;IAWA;Softwood;20
+IFC-267;IFG-234;Mexico and Central America;;IAWA;Hardwood;184
+IFC-267;IFG-234;Mexico and Central America;;IAWA;Softwood;21
+IFC-268;IFG-234;Caribbean;;IAWA;Hardwood;185
+IFC-268;IFG-234;Caribbean;;IAWA;Softwood;22
+IFC-269;IFG-234;Tropical South America;;IAWA;Hardwood;186
+IFC-269;IFG-234;Tropical South America;;IAWA;Softwood;23
+IFC-270;IFG-234;Southern Brazil;;IAWA;Hardwood;187
+IFC-270;IFG-234;Southern Brazil;;IAWA;Softwood;24
+IFC-271;IFG-234;Temperate South America including Argentina, Chile, Uruguay, and S. Paraguay (Brazier and Franklin region 82);;IAWA;Hardwood;188
+IFC-271;IFG-234;Temperate South America including Argentina, Chile, Uruguay, and S. Paraguay (Brazier and Franklin region 82);;IAWA;Softwood;25
+IFC-272;IFG-235;Tree;;IAWA;Hardwood;189
+IFC-272;IFG-235;Tree;;IAWA;Bark;174
+IFC-273;IFG-235;Shrub;;IAWA;Hardwood;190
+IFC-273;IFG-235;Shrub;;IAWA;Bark;175
+IFC-274;IFG-235;Vine/liana;;IAWA;Hardwood;191
+IFC-274;IFG-235;Vine/liana;;IAWA;Bark;176
+IFC-275;IFG-236;Wood of commercial importance;;IAWA;Hardwood;192
+IFC-276;IFG-237;Basic specific gravity low, ? 0.40;;IAWA;Hardwood;193
+IFC-277;IFG-237;Basic specific gravity medium, 0.40–0.75;;IAWA;Hardwood;194
+IFC-278;IFG-237;Basic specific gravity high, ? 0.75;;IAWA;Hardwood;195
+IFC-279;IFG-238;Heartwood colour darker than sapwood colour;;IAWA;Hardwood;196
+IFC-280;IFG-238;Heartwood basically brown or shades of brown;;IAWA;Hardwood;197
+IFC-280;IFG-238;Heartwood basically brown or shades of brown;;IAWA;Softwood;26
+IFC-281;IFG-238;Heartwood basically red or shades of red;;IAWA;Hardwood;198
+IFC-281;IFG-238;Heartwood basically red or shades of red;;IAWA;Softwood;27
+IFC-282;IFG-238;Heartwood basically yellow or shades of yellow;;IAWA;Hardwood;199
+IFC-282;IFG-238;Heartwood basically yellow or shades of yellow;;IAWA;Softwood;28
+IFC-283;IFG-238;Heartwood basically white to grey;;IAWA;Hardwood;200
+IFC-284;IFG-238;Heartwood with streaks;;IAWA;Hardwood;201
+IFC-284;IFG-238;Heartwood with streaks;;IAWA;Softwood;34
+IFC-285;IFG-238;Heartwood not as above;;IAWA;Hardwood;202
+IFC-286;IFG-238;Light coloured (whitish, creamy, grey);;IAWA;Softwood;29
+IFC-287;IFG-238;Purple or shades of purple;;IAWA;Softwood;30
+IFC-288;IFG-238;Other than above;;IAWA;Softwood;31
+IFC-289;IFG-239;Heartwood colour similar to sapwood colour;;IAWA;Softwood;32
+IFC-290;IFG-239;Heartwood colour distinct from sapwood colour;;IAWA;Softwood;33
+IFC-291;IFG-240;Distinct odour;;IAWA;Hardwood;203
+IFC-291;IFG-240;Distinct odour;;IAWA;Softwood;35
+IFC-292;IFG-241;Value (g/m3);;IAWA;Softwood;36
+IFC-293;IFG-242;Less than 0.48 (g/cm3);;IAWA;Softwood;37
+IFC-294;IFG-242;0.48–0.60 (g/cm3);;IAWA;Softwood;38
+IFC-295;IFG-242;Above 0.60 (g/cm3);;IAWA;Softwood;39
+IFC-296;IFG-243;Heartwood fluorescent;;IAWA;Hardwood;204
+IFC-297;IFG-244;Water extract fluorescent;;IAWA;Hardwood;205
+IFC-298;IFG-244;Water extract basically colourless to brown or shades of brown;;IAWA;Hardwood;206
+IFC-299;IFG-244;Water extract basically red or shades of red;;IAWA;Hardwood;207
+IFC-300;IFG-244;Water extract basically yellow or shades of yellow;;IAWA;Hardwood;208
+IFC-301;IFG-244;Water extract not as above;;IAWA;Hardwood;209
+IFC-302;IFG-244;Ethanol extract fluorescent;;IAWA;Hardwood;210
+IFC-303;IFG-244;Ethanol extract basically colourless to brown or shades of brown;;IAWA;Hardwood;211
+IFC-304;IFG-244;Ethanol extract basically red or shades of red;;IAWA;Hardwood;212
+IFC-305;IFG-244;Ethanol extract basically yellow or shades of yellow;;IAWA;Hardwood;213
+IFC-306;IFG-244;Ethanol extract not as above;;IAWA;Hardwood;214
+IFC-307;IFG-245;Froth test positive;;IAWA;Hardwood;215
+IFC-308;IFG-246;Chrome Azurol-S test positive;;IAWA;Hardwood;216
+IFC-309;IFG-247;Splinter burns to charcoal;;IAWA;Hardwood;217
+IFC-310;IFG-247;Splinter burns to a full ash: Colour of ash bright white;;IAWA;Hardwood;218
+IFC-311;IFG-247;Splinter burns to a full ash: Colour of ash yellow-brown;;IAWA;Hardwood;219
+IFC-312;IFG-247;Splinter burns to a full ash: Colour of ash other than above;;IAWA;Hardwood;220
+IFC-313;IFG-247;Splinter burns to a partial ash;;IAWA;Hardwood;221
+IFC-314;IFG-248;solitary and in small groups;;IAWA;Bark;1
+IFC-315;IFG-248;In radial rows;;IAWA;Bark;2
+IFC-316;IFG-248;In tangential bands;;IAWA;Bark;3
+IFC-317;IFG-248;In clusters;;IAWA;Bark;4
+IFC-318;IFG-249;All sieve plates simple;;IAWA;Bark;5
+IFC-319;IFG-249;Simple and scalariform or reticulate (compound) sieve plates present;;IAWA;Bark;6
+IFC-320;IFG-249;All sieve plates scalariform;;IAWA;Bark;7
+IFC-321;IFG-249;Scalariform plates with < 10 sieve areas;;IAWA;Bark;8
+IFC-322;IFG-249;Scalariform with ? 10 sieve areas;;IAWA;Bark;9
+IFC-323;IFG-249;Reticulate sieve plates present;;IAWA;Bark;10
+IFC-324;IFG-250;Transverse and/or slightly inclined;;IAWA;Bark;11
+IFC-325;IFG-250;Strongly inclined;;IAWA;Bark;12
+IFC-326;IFG-251;Nacreous walls;;IAWA;Bark;13
+IFC-327;IFG-251;Sieve-tube size (area and/or diameter);;IAWA;Bark;14
+IFC-328;IFG-251;Sieve-tube element length;;IAWA;Bark;15
+IFC-329;IFG-252;One companion cell per sieve-tube element;;IAWA;Bark;16
+IFC-330;IFG-252;Two companion cells on opposite sides of the sieve tube;;IAWA;Bark;17
+IFC-331;IFG-252;Two or more companion cells lying along the sieve tube;;IAWA;Bark;18
+IFC-332;IFG-252;Companion cells fusiform;;IAWA;Bark;19
+IFC-333;IFG-252;Companion cells in strands of 2 cells;;IAWA;Bark;20
+IFC-334;IFG-252;Companion cells in strands of > 2 cells;;IAWA;Bark;21
+IFC-335;IFG-253;Sieve cell size (area and/or diameter);;IAWA;Bark;22
+IFC-336;IFG-253;Sieve cell length;;IAWA;Bark;23
+IFC-337;IFG-254;strasburger cells present;;IAWA;Bark;24
+IFC-338;IFG-255;In the rays;;IAWA;Bark;25
+IFC-339;IFG-255;In the rays by cell expansion only;;IAWA;Bark;26
+IFC-340;IFG-255;In the rays by anticlinal cell division and cell expansion;;IAWA;Bark;27
+IFC-341;IFG-255;In axial parenchyma;;IAWA;Bark;28
+IFC-342;IFG-255;In both axial parenchyma and rays;;IAWA;Bark;29
+IFC-343;IFG-255;In the cortex and/or epidermis;;IAWA;Bark;30
+IFC-344;IFG-256;Diffuse and diffuse-in-aggregates;;IAWA;Bark;31
+IFC-345;IFG-256;Narrow bands;;IAWA;Bark;32
+IFC-346;IFG-256;Broad bands;;IAWA;Bark;33
+IFC-347;IFG-256;Sieve-tube-centric;;IAWA;Bark;34
+IFC-348;IFG-256;Axial parenchyma constitutes the ground tissue;;IAWA;Bark;35
+IFC-349;IFG-257;Fusiform or two cells per parenchyma strand;;IAWA;Bark;36
+IFC-350;IFG-257;3–4 cells per parenchyma strand;;IAWA;Bark;37
+IFC-351;IFG-257;5–8 cells per parenchyma strand;;IAWA;Bark;38
+IFC-352;IFG-257;Over eight cells per parenchyma strand;;IAWA;Bark;39
+IFC-353;IFG-258;Straight;;IAWA;Bark;40
+IFC-354;IFG-258;Undulated or wavy;;IAWA;Bark;41
+IFC-355;IFG-259;(seemingly) Absent;;IAWA;Bark;42
+IFC-356;IFG-259;Slightly dilated;;IAWA;Bark;43
+IFC-357;IFG-259;Strongly dilated (wedge-shaped);;IAWA;Bark;44
+IFC-358;IFG-260;Rays exclusively uniseriate;;IAWA;Bark;45
+IFC-359;IFG-260;Rays 1 to 3 cells wide;;IAWA;Bark;46
+IFC-360;IFG-260;Larger rays commonly 4- to 10-seriate;;IAWA;Bark;47
+IFC-361;IFG-260;Larger rays commonly > 10-seriate;;IAWA;Bark;48
+IFC-362;IFG-260;Rays of two distinct sizes;;IAWA;Bark;49
+IFC-363;IFG-260;Ray height (in mm);;IAWA;Bark;50
+IFC-364;IFG-260;Rays of over 1 mm tall;;IAWA;Bark;51
+IFC-365;IFG-261;All ray cells procumbent;;IAWA;Bark;52
+IFC-366;IFG-261;All ray cells upright;;IAWA;Bark;53
+IFC-367;IFG-261;Body ray cells procumbent with one to many rows of upright and/or square marginal cells;;IAWA;Bark;54
+IFC-368;IFG-261;Rays with procumbent, square and upright cells mixed throughout the rays;;IAWA;Bark;55
+IFC-369;IFG-261;Sheath cells present;;IAWA;Bark;56
+IFC-370;IFG-261;Ray sieve-tube elements present;;IAWA;Bark;57
+IFC-371;IFG-262;Aggregate rays present;;IAWA;Bark;58
+IFC-372;IFG-263;Absent;;IAWA;Bark;59
+IFC-373;IFG-263;Ray cells sclerified only when touching axial sclerenchyma cells;;IAWA;Bark;60
+IFC-374;IFG-263;Central or scattered groups of ray cells sclerified;;IAWA;Bark;61
+IFC-375;IFG-263;(Almost) all ray cells sclerified;;IAWA;Bark;62
+IFC-376;IFG-264;phloem rayless;;IAWA;Bark;63
+IFC-377;IFG-265;fibers present;;IAWA;Bark;64
+IFC-378;IFG-265;Fiber shape rounded to polygonal;;IAWA;Bark;65
+IFC-379;IFG-265;Fiber shape square;;IAWA;Bark;66
+IFC-380;IFG-265;Fiber shape tangentially elongate;;IAWA;Bark;67
+IFC-381;IFG-265;Septate fibers (and/or fiber-sclereids) present;;IAWA;Bark;68
+IFC-382;IFG-265;Gelatinous fibers present;;IAWA;Bark;69
+IFC-383;IFG-265;Fiber length;;IAWA;Bark;70
+IFC-384;IFG-265;Sclereids present;;IAWA;Bark;71
+IFC-385;IFG-265;Fiber-sclereids present;;IAWA;Bark;72
+IFC-386;IFG-266;Absent;;IAWA;Bark;73
+IFC-387;IFG-266;Present;;IAWA;Bark;74
+IFC-388;IFG-266;Fibers only;;IAWA;Bark;75
+IFC-389;IFG-266;Sclereids only;;IAWA;Bark;76
+IFC-390;IFG-266;Fibers and sclereids (including fiber-sclereids) mixed together;;IAWA;Bark;77
+IFC-391;IFG-267;Diffuse and diffuse-in-aggregates;;IAWA;Bark;78
+IFC-392;IFG-267;Clusters;;IAWA;Bark;79
+IFC-393;IFG-267;Tangential bands;;IAWA;Bark;80
+IFC-394;IFG-267;Fibers constituting the ground tissue of the secondary phloem;;IAWA;Bark;81
+IFC-395;IFG-267;Radial rows;;IAWA;Bark;82
+IFC-396;IFG-268;Narrow: 1–2 cells wide;;IAWA;Bark;83
+IFC-397;IFG-268;Medium: (2–)3–5 cells wide;;IAWA;Bark;84
+IFC-398;IFG-268;Wide: more than 5 cells wide;;IAWA;Bark;85
+IFC-399;IFG-269;Phloem elements nonstoried;;IAWA;Bark;86
+IFC-400;IFG-269;All rays, axial parenchyma and sieve-tube elements storied;;IAWA;Bark;87
+IFC-401;IFG-269;Low rays storied, high rays nonstoried;;IAWA;Bark;88
+IFC-402;IFG-269;Axial parenchyma and/or sieve elements storied;;IAWA;Bark;89
+IFC-403;IFG-269;Rays and/or axial elements irregularly storied;;IAWA;Bark;90
+IFC-404;IFG-270;pericycle remaining parenchymatous;;IAWA;Bark;91
+IFC-405;IFG-270;Pericycle with a ring of discrete fiber strands embedded in parenchyma;;IAWA;Bark;92
+IFC-406;IFG-270;Pericycle with a continuous or nearly continuous closed ring of fibers;;IAWA;Bark;93
+IFC-407;IFG-270;Pericycle with alternating groups of fibers and sclereids in a continuous or nearly continuous ring;;IAWA;Bark;94
+IFC-408;IFG-271;Intraxylary phloem present;;IAWA;Bark;95
+IFC-409;IFG-271;Phloem strands or bands produced by successive cambia present throughout the stem;;IAWA;Bark;96
+IFC-410;IFG-271;Interxylary phloem produced by a single cambium present throughout the stem;;IAWA;Bark;97
+IFC-411;IFG-271;Phloem wedges present;;IAWA;Bark;98
+IFC-412;IFG-272;Epidermal;;IAWA;Bark;99
+IFC-413;IFG-272;Subepidermal layer;;IAWA;Bark;100
+IFC-414;IFG-272;Second and third cortical layers;;IAWA;Bark;101
+IFC-415;IFG-272;Deep-seated: in inner cortex, endodermis, pericycle or the phloem;;IAWA;Bark;102
+IFC-416;IFG-273;reticulate;;IAWA;Bark;103
+IFC-417;IFG-273;Concentric;;IAWA;Bark;104
+IFC-418;IFG-274;Phellem cells evenly thin-walled;;IAWA;Bark;105
+IFC-419;IFG-274;Phellem cells evenly thick-walled and sclerified;;IAWA;Bark;106
+IFC-420;IFG-274;Phellem cells with u-shaped wall thickenings;;IAWA;Bark;107
+IFC-421;IFG-274;Phellem cells with inversely u-shaped wall thickenings;;IAWA;Bark;108
+IFC-422;IFG-274;Phelloid cells present;;IAWA;Bark;109
+IFC-423;IFG-275;Alternating bands of thin-walled and thick-walled phellem cells;;IAWA;Bark;110
+IFC-424;IFG-275;Alternating layers of cells with and without dark contents;;IAWA;Bark;111
+IFC-425;IFG-275;Phellem nonstratified;;IAWA;Bark;112
+IFC-426;IFG-275;Phellem aerenchymatous;;IAWA;Bark;113
+IFC-427;IFG-276;Thin (1–3 cell layers);;IAWA;Bark;114
+IFC-428;IFG-276;Thick (more than 3 cell layers);;IAWA;Bark;115
+IFC-429;IFG-277;Phelloderm cells parenchymatous;;IAWA;Bark;116
+IFC-430;IFG-277;Phelloderm cell walls evenly thickened and sclerified;;IAWA;Bark;117
+IFC-431;IFG-277;Phelloderm cells sclerified with U-shaped or inversely U-shaped wall thick-enings;;IAWA;Bark;118
+IFC-432;IFG-277;Phelloderm consisting of alternating sclerified or nonsclerified cell layers;;IAWA;Bark;119
+IFC-433;IFG-277;Phelloderm and phellem cells square and/or rectangular (tangentially elon-gate);;IAWA;Bark;120
+IFC-434;IFG-277;Phelloderm and phellem cells radially elongate;;IAWA;Bark;121
+IFC-435;IFG-278;Filling tisssue nonstratified (homogeneous) and suberized;;IAWA;Bark;122
+IFC-436;IFG-278;Filling tissue nonstratified (homogeneous) and largely nonsuberized;;IAWA;Bark;123
+IFC-437;IFG-278;Filling tissue stratified (heterogeneous);;IAWA;Bark;124
+IFC-438;IFG-279;prickles present;;IAWA;Bark;125
+IFC-439;IFG-279;Prickles originating from the cortex;;IAWA;Bark;126
+IFC-440;IFG-279;Prickles originating from the phellogen;;IAWA;Bark;127
+IFC-441;IFG-279;Winged bark present;;IAWA;Bark;128
+IFC-442;IFG-280;Prismatic crystals;;IAWA;Bark;129
+IFC-443;IFG-280;Druses;;IAWA;Bark;130
+IFC-444;IFG-280;Raphides;;IAWA;Bark;131
+IFC-445;IFG-280;Acicular crystals;;IAWA;Bark;132
+IFC-446;IFG-280;Styloids and elongated crystals;;IAWA;Bark;133
+IFC-447;IFG-280;Crystal sand;;IAWA;Bark;134
+IFC-448;IFG-281;Cubical crystals;;IAWA;Bark;135
+IFC-449;IFG-281;Navicular crystals;;IAWA;Bark;136
+IFC-450;IFG-281;Spindle-shaped crystals;;IAWA;Bark;137
+IFC-451;IFG-281;Pyramidal crystals;;IAWA;Bark;138
+IFC-452;IFG-281;Diamond-shaped crystals;;IAWA;Bark;139
+IFC-453;IFG-281;Tabular crystals;;IAWA;Bark;140
+IFC-454;IFG-281;Indented and twinned crystals;;IAWA;Bark;141
+IFC-455;IFG-281;Acicular crystals in variously-shaped aggregates;;IAWA;Bark;142
+IFC-456;IFG-281;Sphaerites or sphaerocrystals;;IAWA;Bark;143
+IFC-457;IFG-282;In single axial parenchyma cells;;IAWA;Bark;146
+IFC-458;IFG-282;In chambered axial parenchyma cells;;IAWA;Bark;147
+IFC-459;IFG-282;In ray parenchyma cells;;IAWA;Bark;148
+IFC-460;IFG-282;In fibers;;IAWA;Bark;149
+IFC-461;IFG-282;In sclereids;;IAWA;Bark;150
+IFC-462;IFG-282;In cristarque cells;;IAWA;Bark;151
+IFC-463;IFG-282;In cell walls;;IAWA;Bark;152
+IFC-464;IFG-282;In cortical cells;;IAWA;Bark;153
+IFC-465;IFG-282;In phelloderm cells;;IAWA;Bark;154
+IFC-466;IFG-282;In phellem cells;;IAWA;Bark;155
+IFC-467;IFG-283;Starch;;IAWA;Bark;156
+IFC-468;IFG-283;Fructans including inulin;;IAWA;Bark;157
+IFC-469;IFG-284;Secretory cells;;IAWA;Bark;158
+IFC-470;IFG-284;Oil cells;;IAWA;Bark;159
+IFC-471;IFG-284;Mucilage cells;;IAWA;Bark;160
+IFC-472;IFG-284;Tannin cells;;IAWA;Bark;161
+IFC-473;IFG-284;Myrosin cells;;IAWA;Bark;162
+IFC-474;IFG-284;Laticifers;;IAWA;Bark;163
+IFC-475;IFG-284;Nonarticulated laticifers (latex cells);;IAWA;Bark;164
+IFC-476;IFG-284;Articulated laticifers (latex vessels);;IAWA;Bark;165
+IFC-477;IFG-284;Tanniniferous tubes/tubules;;IAWA;Bark;166
+IFC-478;IFG-284;Secretory intercellular spaces (canals/ducts and cavities);;IAWA;Bark;167
+IFC-479;IFG-284;Secretory epithelium present;;IAWA;Bark;168
+IFC-480;IFG-284;Resin ducts;;IAWA;Bark;169
+IFC-481;IFG-284;Gum ducts;;IAWA;Bark;170
+IFC-482;IFG-284;Mucilage cavities or canals;;IAWA;Bark;171
+IFC-483;IFG-284;Breakdown ray areas;;IAWA;Bark;172
+IFC-484;IFG-284;Kino veins;;IAWA;Bark;173
+IFG-1;;NON-ANATOMICAL INFORMATION;;IAWA;;
+IFG-2;;MINERAL AND ORGANIC INCLUSIONS;;IAWA;;
+IFG-3;;GROWTH RINGS;;IAWA;;
+IFG-4;;VESSELS;;IAWA;;
+IFG-5;;TRACHEIDS AND FIBRES;;IAWA;;
+IFG-6;;AXIAL PARENCHYMA;;IAWA;;
+IFG-7;;RAY;;IAWA;;
+IFG-8;;STORIED STRUCTURE;;IAWA;;
+IFG-9;;SECRETORY ELEMENTS AND CAMBIAL VARIANTS;;IAWA;;
+IFG-10;;MINERAL INCLUSIONS;;IAWA;;
+IFG-11;;TRACHEIDS;;IAWA;;
+IFG-12;;HELICAL AND OTHER WALL THICKENINGS;;IAWA;;
+IFG-13;;AXIAL PARENCHYMA (excludes epithelial and subsidiary cells of canals);;IAWA;;
+IFG-14;;RAY COMPOSITION;;IAWA;;
+IFG-15;;CROSS-FIELD PITTING;;IAWA;;
+IFG-16;;RAY SIZE;;IAWA;;
+IFG-17;;INTERCELLULAR CANALS;;IAWA;;
+IFG-18;;SIEVE-TUBE ELEMENTS AND COMPANION CELLS;;IAWA;;
+IFG-19;;RAYS;;IAWA;;
+IFG-20;;SCLERENCHYMA: FIBERS AND SCLEREIDS;;IAWA;;
+IFG-21;;PERIDERM AND RHYTIDOME (OUTER BARK);;IAWA;;
+IFG-22;;MINERAL AND ORGANIC INCLUSIONS;;IAWA;;
+IFG-23;IFG-3;Presence of growth ring boundaries;;IAWA;;
+IFG-25;IFG-4;Porosity;;IAWA;;
+IFG-28;IFG-4;Arrangement;;IAWA;;
+IFG-31;IFG-4;Groupings;;IAWA;;
+IFG-34;IFG-4;Outline;;IAWA;;
+IFG-35;IFG-4;Perforation plates;;IAWA;;
+IFG-42;IFG-4;Intervessel pits arrangement;;IAWA;;
+IFG-46;IFG-4;Intervessel pits size (µm);;IAWA;;
+IFG-51;IFG-4;Vestured pits;;IAWA;;
+IFG-52;IFG-4;Vessel-ray pitting;;IAWA;;
+IFG-58;IFG-4;Helical thickenings;;IAWA;;
+IFG-62;IFG-4;Tangential diameter (µm);;IAWA;;
+IFG-68;IFG-4;Vessel density (V/mm²);;IAWA;;
+IFG-74;IFG-4;Mean vessel element length;;IAWA;;
+IFG-78;IFG-4;Tyloses and deposits in vessels;;IAWA;;
+IFG-81;IFG-4;Wood vesselless;;IAWA;;
+IFG-82;IFG-5;Tracheids;;IAWA;;
+IFG-83;IFG-5;Ground tissu fibres;;IAWA;;
+IFG-87;IFG-5;Septate fibres;;IAWA;;
+IFG-89;IFG-5;Parenchyma-like;;IAWA;;
+IFG-90;IFG-5;Fibre wall thickness;;IAWA;;
+IFG-93;IFG-5;Mean fibre lengths;;IAWA;;
+IFG-97;IFG-6;Absent/rare;;IAWA;;
+IFG-98;IFG-6;Apotracheal;;IAWA;;
+IFG-100;IFG-6;Paratracheal;;IAWA;;
+IFG-107;IFG-6;Banded wide;;IAWA;;
+IFG-109;IFG-6;Banded pattern;;IAWA;;
+IFG-112;IFG-6;Cell type / strand length;;IAWA;;
+IFG-117;IFG-6;Unlignified;;IAWA;;
+IFG-118;IFG-7;Ray width;;IAWA;;
+IFG-123;IFG-7;Aggregate rays;;IAWA;;
+IFG-124;IFG-7;Ray height;;IAWA;;
+IFG-125;IFG-7;Rays of two distinct sizes;;IAWA;;
+IFG-126;IFG-7;Rays: cellular composition;;IAWA;;
+IFG-132;IFG-7;Other;;IAWA;;
+IFG-136;IFG-7;Rays per millimetre;;IAWA;;
+IFG-139;IFG-7;Wood rayless;;IAWA;;
+IFG-140;IFG-8;Ray;;IAWA;;
+IFG-142;IFG-8;Par - Vessel;;IAWA;;
+IFG-143;IFG-8;Fibres;;IAWA;;
+IFG-144;IFG-8;Irregular;;IAWA;;
+IFG-146;IFG-9;Oil and mucilage cells;;IAWA;;
+IFG-149;IFG-9;Intercellular canals;;IAWA;;
+IFG-154;IFG-9;Tubes / tubules;;IAWA;;
+IFG-155;IFG-9;Cambial variants;;IAWA;;
+IFG-158;IFG-10;Prismatic crystals;;IAWA;;
+IFG-166;IFG-10;Druses;;IAWA;;
+IFG-171;IFG-10;Other crystal types;;IAWA;;
+IFG-176;IFG-10;Other diagnostic crystal features;;IAWA;;
+IFG-181;IFG-10;Silica;;IAWA;;
+IFG-186;IFG-3;Transition from earlywood to latewood;;IAWA;;
+IFG-188;IFG-11;Tracheid pitting in radial walls (in earlywood only);;IAWA;;
+IFG-190;IFG-11;"Arrangement of (two or more seriate) tracheid pitting in radial walls (earlywood
+only)";;IAWA;;
+IFG-192;IFG-11;Organic deposits (in heartwood tracheids);;IAWA;;
+IFG-193;IFG-11;tracheid length;;IAWA;;
+IFG-194;IFG-11;Average longitudinal tracheid length (LT length);;IAWA;;
+IFG-197;IFG-11;Intercellular spaces throughout the wood (transverse section);;IAWA;;
+IFG-198;IFG-11;Latewood (LW) tracheid wall thickness (transverse section);;IAWA;;
+IFG-199;IFG-11;Torus (pits in earlywood tracheids only);;IAWA;;
+IFG-200;IFG-11;Pits with notched borders;;IAWA;;
+IFG-201;IFG-11;Warty layer (visible under the light microscope);;IAWA;;
+IFG-202;IFG-12;Helical thickenings in tracheids;;IAWA;;
+IFG-203;IFG-12;Helical thickenings (in longitudinal tracheids - location);;IAWA;;
+IFG-204;IFG-12;Helical thickenings (in longitudinal tracheids - whether single or grouped);;IAWA;;
+IFG-205;IFG-12;Helical thickenings (in longitudinal tracheids - spacing, earlywood tracheids only);;IAWA;;
+IFG-206;IFG-12;Helical thickenings in ray tracheids;;IAWA;;
+IFG-207;IFG-12;Callitroid thickenings;;IAWA;;
+IFG-208;IFG-13;Axial parenchyma (excl. epithelial and subsidiary cells of intercellular canals);;IAWA;;
+IFG-209;IFG-13;Arrangement of axial parenchyma;;IAWA;;
+IFG-210;IFG-13; Transverse end walls of axial parenchyma;;IAWA;;
+IFG-211;IFG-14;Ray tracheids;;IAWA;;
+IFG-212;IFG-14;Cell walls of ray tracheids;;IAWA;;
+IFG-213;IFG-14;Ray tracheid pit borders angular or with dentate thickenings (radial section, Larix & Picea only);;IAWA;;
+IFG-214;IFG-14;End walls of ray parenchyma cells;;IAWA;;
+IFG-215;IFG-14;Horizontal walls of ray parenchyma cells;;IAWA;;
+IFG-216;IFG-14;Indentures;;IAWA;;
+IFG-217;IFG-15;Cross-field pitting (according to Phillips 1948, amended by Vogel 1995);;IAWA;;
+IFG-218;IFG-15;Number of pits per cross-field;;IAWA;;
+IFG-219;IFG-15;Number of pits per cross-field (earlywood only – categories);;IAWA;;
+IFG-220;IFG-16;Average ray height;;IAWA;;
+IFG-221;IFG-16;Average ray height (number of cells);;IAWA;;
+IFG-222;IFG-16;Average fusiform ray height;;IAWA;;
+IFG-223;IFG-16;Ray width (applies to rays without canals);;IAWA;;
+IFG-224;IFG-17;Axial intercellular (resin) canals;;IAWA;;
+IFG-225;IFG-17;Radial intercellular (resin) canals;;IAWA;;
+IFG-226;IFG-17;Traumatic (resin) canals ;;IAWA;;
+IFG-227;IFG-17;Average diameter of normal axial intercellular canals;;IAWA;;
+IFG-228;IFG-17;Average diameter of normal radial intercellular canals;;IAWA;;
+IFG-229;IFG-17;Epithelial cells (of intercellular canals) ;;IAWA;;
+IFG-230;IFG-10;Crystals;;IAWA;;
+IFG-231;IFG-10;Type of crystals;;IAWA;;
+IFG-232;IFG-10;Crystals located in;;IAWA;;
+IFG-233;IFG-10;Crystals located in ;;IAWA;;
+IFG-234;IFG-1;Geographical distribution;;IAWA;;
+IFG-235;IFG-1;Habit;;IAWA;;
+IFG-236;IFG-1;Wood of commercial importance;;IAWA;;
+IFG-237;IFG-1;Specific gravity;;IAWA;;
+IFG-238;IFG-1;Heartwood colour;;IAWA;;
+IFG-239;IFG-1;Difference between heartwood and sapwood colour;;IAWA;;
+IFG-240;IFG-1;Odour;;IAWA;;
+IFG-241;IFG-1;Average air-dry density / basic specific gravity;;IAWA;;
+IFG-242;IFG-1;Average air-dry density (g/cm3);;IAWA;;
+IFG-243;IFG-1;Heartwood fluorescence;;IAWA;;
+IFG-244;IFG-1;Water & ethanol extracts: fluorescence & colour;;IAWA;;
+IFG-245;IFG-1;Froth test ;;IAWA;;
+IFG-246;IFG-1;Chrome Azurol-S test;;IAWA;;
+IFG-247;IFG-1;Burning splinter test;;IAWA;;
+IFG-248;IFG-18;Sieve-tube grouping and distribution;;IAWA;;
+IFG-249;IFG-18;Sieve plate complement;;IAWA;;
+IFG-250;IFG-18;Sieve plate inclination;;IAWA;;
+IFG-251;IFG-18;Other sieve-tube features;;IAWA;;
+IFG-252;IFG-18;Companion cells;;IAWA;;
+IFG-253;IFG-18;Sieve cells;;IAWA;;
+IFG-254;IFG-18;Strasburger cells;;IAWA;;
+IFG-255;IFG-18;Dilatation phenomena;;IAWA;;
+IFG-256;IFG-6;Parenchyma distribution;;IAWA;;
+IFG-257;IFG-6;Parenchyma strand length;;IAWA;;
+IFG-258;IFG-19;Course of rays;;IAWA;;
+IFG-259;IFG-19;Ray dilatation;;IAWA;;
+IFG-260;IFG-19;Ray width and height;;IAWA;;
+IFG-261;IFG-19;Ray composition;;IAWA;;
+IFG-262;IFG-19;Ray aggregation;;IAWA;;
+IFG-263;IFG-19;Sclerification of rays;;IAWA;;
+IFG-264;IFG-19;Rays absent;;IAWA;;
+IFG-265;IFG-20;Fibers, fiber-sclereids, and sclereids (cellular level);;IAWA;;
+IFG-266;IFG-20;Sclerification at the tissue level;;IAWA;;
+IFG-267;IFG-20;Arrangement of fibers, fiber-sclereids and sclereids;;IAWA;;
+IFG-268;IFG-20;Fiber or fiber-sclereid band width;;IAWA;;
+IFG-269;IFG-20;Storied structure;;IAWA;;
+IFG-270;IFG-20;Pericyclic and protophloem fibers and sclereids;;IAWA;;
+IFG-271;IFG-20;Variation in the location of the phloem;;IAWA;;
+IFG-272;IFG-21;Origins of the first periderm;;IAWA;;
+IFG-273;IFG-21;Arrangement of sequent periderms in TS;;IAWA;;
+IFG-274;IFG-21;Types of phellem cells;;IAWA;;
+IFG-275;IFG-21;Stratification and aerenchyma in the phellem;;IAWA;;
+IFG-276;IFG-21;Phelloderm thickness;;IAWA;;
+IFG-277;IFG-21;Cell types and phelloderm stratification;;IAWA;;
+IFG-278;IFG-21;Lenticels;;IAWA;;
+IFG-279;IFG-21;Outgrowths of the bark;;IAWA;;
+IFG-280;IFG-22;Crystal shape;;IAWA;;
+IFG-281;IFG-22;Crystals of other shapes (mostly small);;IAWA;;
+IFG-282;IFG-22;Distribution of mineral inclusions;;IAWA;;
+IFG-283;IFG-22;Organic inclusions;;IAWA;;
+IFG-284;IFG-22;Secretory structures;;IAWA;;
+IFG-285;IFG-1;Common legend for the staining used in the color plates;;IAWA;;
+IFV-1;;Feature Value;;IAWA;;
+IFV-2;IFV-1;Presence;The feature is observed and always present.;IAWA;;
+IFV-3;IFV-1;Variable presence;The feature is observed but is not always present (wood anatomic variabilty).;IAWA;;
+IFV-4;IFV-1;Doubtfull presence;The feature is observed but the presence is doutbfull (Unusual observation).;IAWA;;
