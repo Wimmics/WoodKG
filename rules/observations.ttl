@@ -1,0 +1,152 @@
+@prefix xrr: <http://i3s.unice.fr/xr2rml#> .
+@prefix rr:  <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix pl_tax: <http://www.plant-taxonomy-kg.com/core#>.
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+<#WoodSample>
+	a rr:TripleMap;
+	xrr:logicalSource [
+		xrr:query """db.Observation.find({'collection' : 'Inside Wood'})""";
+	];
+	
+	rr:subjectMap [
+		rr:template "https://www.wood-sample-observation.com/sample/{$.sample_id}";
+		rr:class skos:Concept, pl_tax:WoodSample;
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate pl_tax:hasObservation;
+		rr:objectMap [
+			rr:template "https://www.wood-sample-observation.com/observation/{$.sample_id}_{$.taxon_id}_{$.id_feature}";
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate pl_tax:collectedAt;
+		rr:objectMap [
+			rr:template "http://www.wcvp-core.com/geoloc/area/{$.collected_at}";
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate skos:prefLabel;
+		rr:objectMap [
+			xrr:reference "$.sample_id";
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate pl_tax:identifiedTaxon;
+		rr:objectMap [
+			rr:template "http://www.wcvp-core.com/name/{$.taxon_id}";
+		];
+	].
+
+<#CharcoalSample>
+	a rr:TripleMap;
+	xrr:logicalSource [
+		xrr:query """db.Observation.find({'collection' : 'SACHA'})""";
+	];
+	
+	rr:subjectMap [
+		rr:template "https://www.wood-sample-observation.com/sample/{$.sample_id}";
+		rr:class skos:Concept, pl_tax:CharcoalSample;
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate pl_tax:hasObservation;
+		rr:objectMap [
+			rr:template "https://www.wood-sample-observation.com/observation/{$.sample_id}_{$.taxon_id}_{$.id_feature}";
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate pl_tax:collectedAt;
+		rr:objectMap [
+			rr:template "http://www.wcvp-core.com/geoloc/area/{$.collected_at}";
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate skos:prefLabel;
+		rr:objectMap [
+			xrr:reference "$.sample_id";
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate pl_tax:originalInput;
+		rr:objectMap [
+			xrr:reference "$.original_data";
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate pl_tax:identifiedTaxon;
+		rr:objectMap [
+			rr:template "http://www.wcvp-core.com/name/{$.taxon_id}";
+		];
+	].
+	
+<#Observation>
+	a rr:TripleMap;
+	xrr:logicalSource [
+		xrr:query """db.Observation.find()""";
+	];
+	
+	rr:subjectMap [
+		rr:template "https://www.wood-sample-observation.com/observation/{$.sample_id}_{$.taxon_id}_{$.id_feature}";
+		rr:class sosa:Observation;
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate sosa:hasFeatureOfInterest;
+		rr:objectMap [
+			rr:template "https://www.iawa-website.org/features/{$.FOI}";
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate sosa:observedProperty;
+		rr:objectMap [
+			rr:template "https://www.iawa-website.org/features/{$.id_feature}";
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate sosa:hasSimpleResult;
+		rr:objectMap [
+			rr:template "https://www.iawa-website.org/features/{$.feature_value}";
+		];
+	].
+
+<#Collection>
+	a rr:TripleMap;
+	xrr:logicalSource [
+		xrr:query """db.Observation.find()""";
+	];
+	
+	rr:subjectMap [
+		rr:template "https://www.wood-sample-observation.com/collection/{$.collection}";
+		rr:class skos:Collection;
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate skos:member;
+		rr:objectMap [
+			rr:template "https://www.wood-sample-observation.com/sample/{$.sample_id}";
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate skos:prefLabel;
+		rr:objectMap [
+			xrr:reference "$.collection";
+		];
+	].

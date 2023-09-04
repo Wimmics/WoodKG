@@ -1,0 +1,290 @@
+@prefix xrr: <http://i3s.unice.fr/xr2rml#> .
+@prefix rr:  <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix txrfp: <http://taxref.mnhn.fr/lod/property/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix pl_tax: <http://www.plant-taxonomy-kg.com/core#>.
+
+<#other_accepted>
+	a rr:TripleMap;
+	xrr:logicalSource [
+		xrr:query """db.Nommenclature.find({'taxon_status' : 'Accepted', $or : [{'taxon_rank':'Species'}, {'taxon_rank' : 'Subspecies'}, {'taxon_rank':'Variety'}, {'taxon_rank' : 'Subvariety'}]})""";
+	];
+	
+	rr:subjectMap [
+		rr:template "http://www.wcvp-core.com/taxon/{$.plant_name_id}";
+		rr:class owl:Class;
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate rdfs:SubClassOf;
+		rr:objectMap [
+			rr:template "http://www.wcvp-core.com/taxon/{$.parent_plant_name_id}";
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate txrfp:taxonRank;
+		rr:objectMap [
+			rr:template "http://taxref.mnhn.fr/lod/taxrank/{$.taxon_rank}";
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate owl:equivalentClass;
+		rr:objectMap [
+			rr:template "https://powo.science.kew.org/taxon/{$.ipni_id}";
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate txrfp:hasReferenceName;
+		rr:objectMap [
+			rr:template "http://www.wcvp-core.com/name/{$.plant_name_id}";
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			xrr:reference "$.taxon_name";
+			rr:datatype xsd:string;
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate pl_tax:creator;
+		rr:objectMap [
+			xrr:reference "$.primary_author";
+			rr:datatype xsd:string;
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate pl_tax:publicationAuthor;
+		rr:objectMap [
+			xrr:reference "$.publication_author";
+			rr:datatype xsd:string;
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate owl:equivalentClass;
+		rr:objectMap [
+			rr:template "https://ipni.org/n/{$.ipni_id}";
+		];
+	].
+
+	
+<#Genus_accepted>
+	a rr:TripleMap;
+	xrr:logicalSource [
+		xrr:query """db.Nommenclature.find({'taxon_status' : 'Accepted', 'taxon_rank' : 'Genus'})""";
+	];
+	
+	rr:subjectMap [
+		rr:template "http://www.wcvp-core.com/taxon/{$.plant_name_id}";
+		rr:class owl:Class;
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate rdfs:SubClassOf;
+		rr:objectMap [
+			rr:template "http://www.wcvp-core.com/taxon/{$.family}";
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate txrfp:taxonRank;
+		rr:objectMap [
+			rr:template "http://taxref.mnhn.fr/lod/taxrank/{$.taxon_rank}";
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate owl:equivalentClass;
+		rr:objectMap [
+			rr:template "https://powo.science.kew.org/taxon/{$.ipni_id}";
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate txrfp:hasReferenceName;
+		rr:objectMap [
+			rr:template "http://www.wcvp-core.com/name/{$.plant_name_id}";
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			xrr:reference "$.taxon_name";
+			rr:datatype xsd:string;
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			xrr:reference "$.taxon_name";
+			rr:datatype xsd:string;
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate pl_tax:creator;
+		rr:objectMap [
+			xrr:reference "$.primary_author";
+			rr:datatype xsd:string;
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate owl:equivalentClass;
+		rr:objectMap [
+			rr:template "https://ipni.org/n/{$.ipni_id}";
+		];
+	].
+<#Family_accepted>
+	a rr:TripleMap;
+	xrr:logicalSource [
+		xrr:query """db.Nommenclature.find({'taxon_status' : 'Accepted', 'taxon_rank' : 'Genus'})""";
+	];
+	
+	rr:subjectMap [
+		rr:template "http://www.wcvp-core.com/taxon/{$.family}";
+		rr:class owl:Class;
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate txrfp:taxonRank;
+		rr:objectMap [
+			rr:template "http://taxref.mnhn.fr/lod/taxrank/{$.taxon_rank}";
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate txrfp:hasReferenceName;
+		rr:objectMap [
+			rr:template "http://www.wcvp-core.com/name/{$.family}";
+		];
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate rdfs:label;
+		rr:objectMap [
+			xrr:reference "$.family";
+		];
+	].
+
+<#Label_family_accepted>
+	a rr:TripleMap;
+	xrr:logicalSource [
+		xrr:query """db.Nommenclature.find({'taxon_status' : 'Accepted', 'taxon_rank' : 'Genus'})""";
+	];
+	
+	rr:subjectMap [
+		rr:template "http://www.wcvp-core.com/name/{$.family}";
+		rr:class skos:Concept;
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate skos:prefLabel;
+		rr:objectMap [
+			xrr:reference "$.taxon_name";
+			rr:datatype xsd:string;
+		];
+	].
+	
+<#Label_taxon_accepted>
+	a rr:TripleMap;
+	xrr:logicalSource [
+		xrr:query """db.Nommenclature.find({'taxon_status' : 'Accepted', $or : [{'taxon_rank':'Species'}, {'taxon_rank' : 'Subspecies'}, {'taxon_rank':'Variety'}, {'taxon_rank' : 'Subvariety'}]})""";
+	];
+	
+	rr:subjectMap [
+		rr:template "http://www.wcvp-core.com/name/{$.plant_name_id}";
+		rr:class skos:Concept;
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate skos:broader;
+		rr:objectMap [
+			rr:template "http://www.wcvp-core.com/name/{$.parent_plant_name_id}";
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate skos:prefLabel;
+		rr:objectMap [
+			xrr:reference "$.taxon_name";
+			rr:datatype xsd:string;
+		];
+	].
+
+<#label_genus_accepted>
+	a rr:TripleMap;
+	xrr:logicalSource [
+		xrr:query """db.Nommenclature.find({'taxon_status' : 'Accepted', 'taxon_rank' : 'Genus'})""";
+	];
+	
+	rr:subjectMap [
+		rr:template "http://www.wcvp-core.com/name/{$.plant_name_id}";
+		rr:class skos:Concept;
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate skos:broader;
+		rr:objectMap [
+			rr:template "http://www.wcvp-core.com/name/{$.family}";
+		]
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate skos:prefLabel;
+		rr:objectMap [
+			xrr:reference "$.taxon_name";
+			rr:datatype xsd:string;
+		];
+	].
+	
+<#Label_taxon_link_to_accepted_synonym>
+	a rr:TripleMap;
+	xrr:logicalSource [
+		xrr:query """db.Nommenclature.find({'taxon_status' : 'Synonym', $or : [{'taxon_rank':'Species'}, {'taxon_rank' : 'Subspecies'}, {'taxon_rank':'Variety'}, {'taxon_rank' : 'Subvariety'}]})""";
+	];
+	
+	rr:subjectMap [
+		rr:template "http://www.wcvp-core.com/taxon/{$.accepted_plant_name_id}";
+		rr:class owl:Class;
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate txrfp:hasSynonym;
+		rr:objectMap [
+			rr:template "http://www.wcvp-core.com/name/{$.plant_name_id}";
+		];
+	].
+
+<#Label_taxon_synonym>
+	a rr:TripleMap;
+	xrr:logicalSource [
+		xrr:query """db.Nommenclature.find({'taxon_status' : 'Synonym', $or : [{'taxon_rank':'Species'}, {'taxon_rank' : 'Subspecies'}, {'taxon_rank':'Variety'}, {'taxon_rank' : 'Subvariety'}]})""";
+	];
+	
+	rr:subjectMap [
+		rr:template "http://www.wcvp-core.com/name/{$.plant_name_id}";
+		rr:class skos:Concept;
+	];
+	
+	rr:predicateObjectMap [
+		rr:predicate skos:prefLabel;
+		rr:objectMap [
+			xrr:reference "$.taxon_name";
+			rr:datatype xsd:string;
+		];
+	].
