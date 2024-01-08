@@ -21,7 +21,7 @@ Request used to retrieve samples :
         }
     }
     ORDER BY ?mismatch
-    ```
+```
 
 ## Precision at n first result: 
 - 1 row(s): precision 0.7427055702917772
