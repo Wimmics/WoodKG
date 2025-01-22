@@ -8,7 +8,18 @@ All the implementation is contains in a Jupyter Notebook
 
 # Usage
 
+- Wood Description update
+
+The jupyter notebook "burnwood_extract" contains all steps to extract from unstructured text in CSV columns, the familly, genus and taxa of a sample from both InsideWood and IAWA databases and match its accepted label in the POWO taxonomy. It will also translate IAWA features symbole into specific number between 0 and 3 (0 for total absence, 1 for doubtfull presence, 2 for not systematic presence and 3 for presence) and produce a CSV that will be lift into RDF graph with mapping rules. A second CSV is produce to be used for machine learning purpouse.
+
+- Knowledge graph use case examples
+
+The jupyter notebook "QC_sparql" contains example of possible use cases and SPARQL translation of those use cases.
+
+- Wood Identification
+
 The identlib.py script take a csv of wood description and give the closest spicies based on their IAWA features. The list is order by number of mismatches.
+This script focus on 4 African regions to fit the initial problem and database of wood sample.
 
 # Example of identification
 
