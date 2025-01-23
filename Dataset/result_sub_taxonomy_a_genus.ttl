@@ -1,0 +1,5607 @@
+@prefix rr:      <http://www.w3.org/ns/r2rml#> .
+@prefix rml:     <http://semweb.mmlab.be/ns/rml#> .
+@prefix txrfp:   <http://taxref.mnhn.fr/lod/property/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix pl_tax:  <http://www.plant-taxonomy-kg.com/core#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xrr:     <http://i3s.unice.fr/xr2rml#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.wcvp-core.com/name/755935-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dalbergia tricolor" .
+
+<http://www.wcvp-core.com/taxon/384196-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros hoyleana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/384196-wcs> .
+
+<http://www.wcvp-core.com/name/732482-az>
+      a       skos:Concept ;
+      skos:prefLabel "Combretum celastroides" .
+
+<http://www.wcvp-core.com/name/850161-az>
+      a       skos:Concept ;
+      skos:prefLabel "Hibiscus mandrarensis" .
+
+<http://www.wcvp-core.com/name/400224-az>
+      a       skos:Concept ;
+      skos:prefLabel "Olax subscorpioidea" .
+
+<http://www.wcvp-core.com/taxon/431493-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia ankaranensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/431493-az> .
+
+<http://www.wcvp-core.com/name/897311-az>
+      a       skos:Concept ;
+      skos:prefLabel "Senegalia laeta" .
+
+<http://www.wcvp-core.com/taxon/811562-az>
+      a       owl:Class ;
+      rdfs:label "Ficus oreodryadum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ficus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/811562-az> .
+
+<http://www.wcvp-core.com/taxon/355240-wcs>
+      a       owl:Class ;
+      rdfs:label "Olea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Olea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/355240-wcs> .
+
+<http://www.wcvp-core.com/name/367721-az>
+      a       skos:Concept ;
+      skos:prefLabel "Millettia laurentii" .
+
+<http://www.wcvp-core.com/taxon/199663-wcs>
+      a       owl:Class ;
+      rdfs:label "Syzygium guineense" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Syzygium> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/199663-wcs> .
+
+<http://www.wcvp-core.com/taxon/756769-az>
+      a       owl:Class ;
+      rdfs:label "Daniellia thurifera" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Daniellia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/756769-az> .
+
+<http://www.wcvp-core.com/taxon/Burseraceae>
+      a       owl:Class ;
+      rdfs:label "Burseraceae" .
+
+<http://www.wcvp-core.com/name/817056-az>
+      a       skos:Concept ;
+      skos:prefLabel "Garcinia ovalifolia" .
+
+<http://www.wcvp-core.com/taxon/925263-az>
+      a       owl:Class ;
+      rdfs:label "Homalium laxiflorum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Homalium> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/925263-az> .
+
+<http://www.wcvp-core.com/name/755498-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dalbergia comorensis" .
+
+<http://www.wcvp-core.com/taxon/313942-wcs>
+      a       owl:Class ;
+      rdfs:label "Foetidia asymetrica" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Foetidia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/313942-wcs> .
+
+<http://www.wcvp-core.com/name/400062-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ochna polycarpa" .
+
+<http://www.wcvp-core.com/taxon/148134-wcs>
+      a       owl:Class ;
+      rdfs:label "Pauridiantha dewevrei" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Pauridiantha> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/148134-wcs> .
+
+<http://www.wcvp-core.com/name/774944-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dombeya elliptica" .
+
+<http://www.wcvp-core.com/name/680359-az>
+      a       skos:Concept ;
+      skos:prefLabel "Boscia senegalensis" .
+
+<http://www.wcvp-core.com/taxon/925271-az>
+      a       owl:Class ;
+      rdfs:label "Homalium longistylum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Homalium> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/925271-az> .
+
+<http://www.wcvp-core.com/taxon/809363-az>
+      a       owl:Class ;
+      rdfs:label "Ficus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ficus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/809363-az> .
+
+<http://www.wcvp-core.com/name/816674-az>
+      a       skos:Concept ;
+      skos:prefLabel "Garcinia anjouanensis" .
+
+<http://www.wcvp-core.com/taxon/384083-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros fragrans" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/384083-wcs> .
+
+<http://www.wcvp-core.com/name/213793-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Vitex madiensisÊsubsp.Êmadiensis" .
+
+<http://www.wcvp-core.com/taxon/752262-az>
+      a       owl:Class ;
+      rdfs:label "Cynometra commersoniana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cynometra> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/752262-az> .
+
+<http://www.wcvp-core.com/taxon/469299-az>
+      a       owl:Class ;
+      rdfs:label "Zanthoxylum gilletii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Zanthoxylum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/469299-az> .
+
+<http://www.wcvp-core.com/taxon/213387-wcs>
+      a       owl:Class ;
+      rdfs:label "Vitex ciliata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vitex> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/213387-wcs> .
+
+<http://www.wcvp-core.com/name/386125-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ocotea obtusata" .
+
+<http://www.wcvp-core.com/name/514979-az>
+      a       skos:Concept ;
+      skos:prefLabel "Trichilia megalantha" .
+
+<http://www.wcvp-core.com/taxon/850615-az>
+      a       owl:Class ;
+      rdfs:label "Hibiscus tiliaceus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Hibiscus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/850615-az> .
+
+<http://www.wcvp-core.com/taxon/Elaeodendron>
+      a       owl:Class ;
+      rdfs:label "Elaeodendron" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Celastraceae> .
+
+<http://www.wcvp-core.com/taxon/433988-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia seyrigii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/433988-az> .
+
+<http://www.wcvp-core.com/name/133213-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Nauclea latifolia" .
+
+<http://www.wcvp-core.com/name/213680-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Vitex oxycuspis" .
+
+<http://www.wcvp-core.com/taxon/535567-az>
+      a       owl:Class ;
+      rdfs:label "Pterocarpus erinaceus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Pterocarpus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/535567-az> .
+
+<http://www.wcvp-core.com/name/825251-az>
+      a       skos:Concept ;
+      skos:prefLabel "Gilbertiodendron limba" .
+
+<http://www.wcvp-core.com/name/384778-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros sanza-minika" .
+
+<http://www.wcvp-core.com/taxon/468203-az>
+      a       owl:Class ;
+      rdfs:label "Xylopia humblotiana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Xylopia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/468203-az> .
+
+<http://www.wcvp-core.com/taxon/755809-az>
+      a       owl:Class ;
+      rdfs:label "Dalbergia pervillei" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dalbergia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/755809-az> .
+
+<http://www.wcvp-core.com/name/335925-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Nuxia capitata" .
+
+<http://www.wcvp-core.com/taxon/469325-az>
+      a       owl:Class ;
+      rdfs:label "Zanthoxylum decaryi" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Zanthoxylum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/469325-az> .
+
+<http://www.wcvp-core.com/name/736523-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cordia africana" .
+
+<http://www.wcvp-core.com/name/786171-az>
+      a       skos:Concept ;
+      skos:prefLabel "Elaeodendron croceum" .
+
+<http://www.wcvp-core.com/name/384632-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros piscatoria" .
+
+<http://www.wcvp-core.com/name/704422-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cassipourea adami" .
+
+<http://www.wcvp-core.com/name/732892-az>
+      a       skos:Concept ;
+      skos:prefLabel "Combretum paniculatum" .
+
+<http://www.wcvp-core.com/taxon/313949-wcs>
+      a       owl:Class ;
+      rdfs:label "Foetidia parviflora" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Foetidia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/313949-wcs> .
+
+<http://www.wcvp-core.com/name/468047-az>
+      a       skos:Concept ;
+      skos:prefLabel "Xylopia cupularis" .
+
+<http://www.wcvp-core.com/name/833067-az>
+      a       skos:Concept ;
+      skos:prefLabel "Grewia flavescens" .
+
+<http://www.wcvp-core.com/name/454484-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vepris parvicalyx" .
+
+<http://www.wcvp-core.com/name/412159-az>
+      a       skos:Concept ;
+      skos:prefLabel "Pachylobus macrophyllus" .
+
+<http://www.wcvp-core.com/taxon/Dipterocarpaceae>
+      a       owl:Class ;
+      rdfs:label "Dipterocarpaceae" .
+
+<http://www.wcvp-core.com/name/674982-az>
+      a       skos:Concept ;
+      skos:prefLabel "Berlinia grandiflora" .
+
+<http://www.wcvp-core.com/name/708140-az>
+      a       skos:Concept ;
+      skos:prefLabel "Celtis africana" .
+
+<http://www.wcvp-core.com/taxon/49480-wcs>
+      a       owl:Class ;
+      rdfs:label "Croton brieyi" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Croton> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/49480-wcs> .
+
+<http://www.wcvp-core.com/name/745887-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cryptocarya capuronii" .
+
+<http://www.wcvp-core.com/taxon/64863-wcs>
+      a       owl:Class ;
+      rdfs:label "Drypetes floribunda" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Drypetes> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/64863-wcs> .
+
+<http://www.wcvp-core.com/taxon/213678-wcs>
+      a       owl:Class ;
+      rdfs:label "Vitex oscitans" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vitex> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/213678-wcs> .
+
+<http://www.wcvp-core.com/taxon/Xylopia>
+      a       owl:Class ;
+      rdfs:label "Xylopia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Annonaceae> .
+
+<http://www.wcvp-core.com/name/50592-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Croton mongue" .
+
+<http://www.wcvp-core.com/taxon/737124-az>
+      a       owl:Class ;
+      rdfs:label "Cordia platythyrsa" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cordia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/737124-az> .
+
+<http://www.wcvp-core.com/taxon/816660-az>
+      a       owl:Class ;
+      rdfs:label "Garcinia afzelii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Garcinia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/816660-az> .
+
+<http://www.wcvp-core.com/taxon/468131-az>
+      a       owl:Class ;
+      rdfs:label "Xylopia bemarivensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Xylopia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/468131-az> .
+
+<http://www.wcvp-core.com/taxon/590817-az>
+      a       owl:Class ;
+      rdfs:label "Senegalia senegal" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Senegalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/590817-az> .
+
+<http://www.wcvp-core.com/name/383734-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros borbonica" .
+
+<http://www.wcvp-core.com/taxon/681413-az>
+      a       owl:Class ;
+      rdfs:label "Brachystegia eurycoma" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Brachystegia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/681413-az> .
+
+<http://www.wcvp-core.com/taxon/789542-az>
+      a       owl:Class ;
+      rdfs:label "Entandrophragma candollei" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Entandrophragma> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/789542-az> .
+
+<http://www.wcvp-core.com/taxon/528723-az>
+      a       owl:Class ;
+      rdfs:label "Rinorea longicuspis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Rinorea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/528723-az> .
+
+<http://www.wcvp-core.com/name/1012758-az>
+      a       skos:Concept ;
+      skos:prefLabel "Olax thouarsii" .
+
+<http://www.wcvp-core.com/name/384472-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros myriophylla" .
+
+<http://www.wcvp-core.com/taxon/469406-az>
+      a       owl:Class ;
+      rdfs:label "Zanthoxylum lemairei" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Zanthoxylum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/469406-az> .
+
+<http://www.wcvp-core.com/taxon/Trichoscypha>
+      a       owl:Class ;
+      rdfs:label "Trichoscypha" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Anacardiaceae> .
+
+<http://www.wcvp-core.com/name/528326-az>
+      a       skos:Concept ;
+      skos:prefLabel "Rinorea greveana" .
+
+<http://www.wcvp-core.com/taxon/386829-az>
+      a       owl:Class ;
+      rdfs:label "Ocotea perforata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ocotea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/386829-az> .
+
+<http://www.wcvp-core.com/taxon/213452-wcs>
+      a       owl:Class ;
+      rdfs:label "Vitex fischeri" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vitex> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/213452-wcs> .
+
+<http://www.wcvp-core.com/name/732813-az>
+      a       skos:Concept ;
+      skos:prefLabel "Combretum micranthum" .
+
+<http://www.wcvp-core.com/name/535436-az>
+      a       skos:Concept ;
+      skos:prefLabel "Pterocarpus tinctorius" .
+
+<http://www.wcvp-core.com/taxon/Berlinia>
+      a       owl:Class ;
+      rdfs:label "Berlinia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Fabaceae> .
+
+<http://www.wcvp-core.com/name/24531-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Bridelia grandis" .
+
+<http://www.wcvp-core.com/taxon/384226-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros iturensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/384226-wcs> .
+
+<http://www.wcvp-core.com/taxon/Ficus>
+      a       owl:Class ;
+      rdfs:label "Ficus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Moraceae> .
+
+<http://www.wcvp-core.com/name/374549-az>
+      a       skos:Concept ;
+      skos:prefLabel "Millettia zechiana" .
+
+<http://www.wcvp-core.com/taxon/Strychnos>
+      a       owl:Class ;
+      rdfs:label "Strychnos" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Loganiaceae> .
+
+<http://www.wcvp-core.com/taxon/1230074-az>
+      a       owl:Class ;
+      rdfs:label "Pachylobus igaganga" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Pachylobus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/1230074-az> .
+
+<http://www.wcvp-core.com/name/789547-az>
+      a       skos:Concept ;
+      skos:prefLabel "Entandrophragma congoense" .
+
+<http://www.wcvp-core.com/name/745826-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cryptocarya alseodaphnifolia" .
+
+<http://www.wcvp-core.com/taxon/833463-az>
+      a       owl:Class ;
+      rdfs:label "Grewia triflora" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Grewia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/833463-az> .
+
+<http://www.wcvp-core.com/taxon/732678-az>
+      a       owl:Class ;
+      rdfs:label "Combretum imberbe" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Combretum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/732678-az> .
+
+<http://www.wcvp-core.com/name/627245-az>
+      a       skos:Concept ;
+      skos:prefLabel "Albizia balabaka" .
+
+<http://www.wcvp-core.com/name/834803-az>
+      a       skos:Concept ;
+      skos:prefLabel "Guibourtia arnoldiana" .
+
+<http://www.wcvp-core.com/name/355603-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Olea europaea subsp. cuspidata" .
+
+<http://www.wcvp-core.com/taxon/732363-az>
+      a       owl:Class ;
+      rdfs:label "Combretum aculeatum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Combretum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/732363-az> .
+
+<http://www.wcvp-core.com/name/88013-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Gambeya subnuda" .
+
+<http://www.wcvp-core.com/name/87997-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Gambeya beguei" .
+
+<http://www.wcvp-core.com/name/383604-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros abyssinica" .
+
+<http://www.wcvp-core.com/taxon/431091-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia albida" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/431091-az> .
+
+<http://www.wcvp-core.com/taxon/384131-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros gracilipes" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/384131-wcs> .
+
+<http://www.wcvp-core.com/taxon/999244-az>
+      a       owl:Class ;
+      rdfs:label "Vachellia sieberiana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vachellia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/999244-az> .
+
+<http://www.wcvp-core.com/taxon/199112-wcs>
+      a       owl:Class ;
+      rdfs:label "Synsepalum congolense" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Synsepalum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/199112-wcs> .
+
+<http://www.wcvp-core.com/taxon/925335-az>
+      a       owl:Class ;
+      rdfs:label "Homalium planiflorum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Homalium> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/925335-az> .
+
+<http://www.wcvp-core.com/name/1230074-az>
+      a       skos:Concept ;
+      skos:prefLabel "Pachylobus igaganga" .
+
+<http://www.wcvp-core.com/taxon/50054-wcs>
+      a       owl:Class ;
+      rdfs:label "Croton gratissimus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Croton> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/50054-wcs> .
+
+<http://www.wcvp-core.com/name/925125-az>
+      a       skos:Concept ;
+      skos:prefLabel "Homalium albiflorum" .
+
+<http://www.wcvp-core.com/name/383848-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros cooperi" .
+
+<http://www.wcvp-core.com/taxon/42022-wcs>
+      a       owl:Class ;
+      rdfs:label "Cleistanthus boivinianus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cleistanthus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/42022-wcs> .
+
+<http://www.wcvp-core.com/taxon/746263-az>
+      a       owl:Class ;
+      rdfs:label "Cryptocarya thouvenotii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cryptocarya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/746263-az> .
+
+<http://www.wcvp-core.com/taxon/383612-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros aculeata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/383612-wcs> .
+
+<http://www.wcvp-core.com/taxon/850274-az>
+      a       owl:Class ;
+      rdfs:label "Hibiscus palmatifidus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Hibiscus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/850274-az> .
+
+<http://www.wcvp-core.com/name/755434-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dalbergia armata" .
+
+<http://www.wcvp-core.com/taxon/624966-az>
+      a       owl:Class ;
+      rdfs:label "Afzelia bipindensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Afzelia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/624966-az> .
+
+<http://www.wcvp-core.com/taxon/641623-az>
+      a       owl:Class ;
+      rdfs:label "Anthocleista grandiflora" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Anthocleista> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/641623-az> .
+
+<http://www.wcvp-core.com/taxon/383734-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros borbonica" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/383734-wcs> .
+
+<http://www.wcvp-core.com/taxon/605047-az>
+      a       owl:Class ;
+      rdfs:label "Olax mayottensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Olax> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/605047-az> .
+
+<http://www.wcvp-core.com/name/383897-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros dendo" .
+
+<http://www.wcvp-core.com/name/536360-az>
+      a       skos:Concept ;
+      skos:prefLabel "Prioria balsamifera" .
+
+<http://www.wcvp-core.com/name/528559-az>
+      a       skos:Concept ;
+      skos:prefLabel "Rinorea welwitschii" .
+
+<http://www.wcvp-core.com/name/434362-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia ombrophila" .
+
+<http://www.wcvp-core.com/name/763498-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dialium madagascariense" .
+
+<http://www.wcvp-core.com/taxon/Annonaceae>
+      a       owl:Class ;
+      rdfs:label "Annonaceae" .
+
+<http://www.wcvp-core.com/taxon/Prioria>
+      a       owl:Class ;
+      rdfs:label "Prioria" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Fabaceae> .
+
+<http://www.wcvp-core.com/taxon/763511-az>
+      a       owl:Class ;
+      rdfs:label "Dialium pachyphyllum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dialium> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/763511-az> .
+
+<http://www.wcvp-core.com/name/756760-az>
+      a       skos:Concept ;
+      skos:prefLabel "Daniellia oblonga" .
+
+<http://www.wcvp-core.com/name/367872-az>
+      a       skos:Concept ;
+      skos:prefLabel "Millettia versicolor" .
+
+<http://www.wcvp-core.com/taxon/468107-az>
+      a       owl:Class ;
+      rdfs:label "Xylopia aethiopica" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Xylopia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/468107-az> .
+
+<http://www.wcvp-core.com/taxon/454456-az>
+      a       owl:Class ;
+      rdfs:label "Vepris gabonensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vepris> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/454456-az> .
+
+<http://www.wcvp-core.com/taxon/755761-az>
+      a       owl:Class ;
+      rdfs:label "Dalbergia neoperrieri" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dalbergia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/755761-az> .
+
+<http://www.wcvp-core.com/name/746119-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cryptocarya myrtifolia" .
+
+<http://www.wcvp-core.com/taxon/64871-wcs>
+      a       owl:Class ;
+      rdfs:label "Drypetes gerrardii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Drypetes> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/64871-wcs> .
+
+<http://www.wcvp-core.com/name/810194-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ficus densifolia" .
+
+<http://www.wcvp-core.com/name/732500-az>
+      a       skos:Concept ;
+      skos:prefLabel "Combretum collinum" .
+
+<http://www.wcvp-core.com/name/199138-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Synsepalum tsounkpe" .
+
+<http://www.wcvp-core.com/name/384615-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros physocalycina" .
+
+<http://www.wcvp-core.com/taxon/755834-az>
+      a       owl:Class ;
+      rdfs:label "Dalbergia purpurascens" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dalbergia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/755834-az> .
+
+<http://www.wcvp-core.com/taxon/730575-az>
+      a       owl:Class ;
+      rdfs:label "Cola buntingii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cola> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/730575-az> .
+
+<http://www.wcvp-core.com/name/800761-az>
+      a       skos:Concept ;
+      skos:prefLabel "Erythrina abyssinica" .
+
+<http://www.wcvp-core.com/taxon/373235-az>
+      a       owl:Class ;
+      rdfs:label "Monotes" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Monotes> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/373235-az> .
+
+<http://www.wcvp-core.com/name/434006-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia tricristata" .
+
+<http://www.wcvp-core.com/name/535446-az>
+      a       skos:Concept ;
+      skos:prefLabel "Pterocarpus soyauxii" .
+
+<http://www.wcvp-core.com/taxon/641640-az>
+      a       owl:Class ;
+      rdfs:label "Anthocleista madagascariensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Anthocleista> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/641640-az> .
+
+<http://www.wcvp-core.com/name/674958-az>
+      a       skos:Concept ;
+      skos:prefLabel "Berlinia auriculata" .
+
+<http://www.wcvp-core.com/name/355136-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Olea capensis" .
+
+<http://www.wcvp-core.com/taxon/Cordia>
+      a       owl:Class ;
+      rdfs:label "Cordia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Boraginaceae> .
+
+<http://www.wcvp-core.com/name/627226-az>
+      a       skos:Concept ;
+      skos:prefLabel "Albizia altissima" .
+
+<http://www.wcvp-core.com/taxon/609121-az>
+      a       owl:Class ;
+      rdfs:label "Vachellia xanthophloea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vachellia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/609121-az> .
+
+<http://www.wcvp-core.com/taxon/Rhizophoraceae>
+      a       owl:Class ;
+      rdfs:label "Rhizophoraceae" .
+
+<http://www.wcvp-core.com/name/680357-az>
+      a       skos:Concept ;
+      skos:prefLabel "Boscia salicifolia" .
+
+<http://www.wcvp-core.com/taxon/812015-az>
+      a       owl:Class ;
+      rdfs:label "Ficus recurvata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ficus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/812015-az> .
+
+<http://www.wcvp-core.com/name/598264-az>
+      a       skos:Concept ;
+      skos:prefLabel "Strychnos innocua" .
+
+<http://www.wcvp-core.com/name/730561-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cola attiensis" .
+
+<http://www.wcvp-core.com/name/902092-az>
+      a       skos:Concept ;
+      skos:prefLabel "Trichoscypha arborea" .
+
+<http://www.wcvp-core.com/taxon/384778-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros sanza-minika" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/384778-wcs> .
+
+<http://www.wcvp-core.com/taxon/641650-az>
+      a       owl:Class ;
+      rdfs:label "Anthocleista procera" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Anthocleista> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/641650-az> .
+
+<http://www.wcvp-core.com/taxon/816968-az>
+      a       owl:Class ;
+      rdfs:label "Garcinia madagascariensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Garcinia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/816968-az> .
+
+<http://www.wcvp-core.com/taxon/Rhamnaceae>
+      a       owl:Class ;
+      rdfs:label "Rhamnaceae" .
+
+<http://www.wcvp-core.com/name/383612-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros aculeata" .
+
+<http://www.wcvp-core.com/name/680288-az>
+      a       skos:Concept ;
+      skos:prefLabel "Boscia" .
+
+<http://www.wcvp-core.com/name/755615-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dalbergia greveana" .
+
+<http://www.wcvp-core.com/taxon/Maytenus>
+      a       owl:Class ;
+      rdfs:label "Maytenus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Celastraceae> .
+
+<http://www.wcvp-core.com/name/755739-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dalbergia mollis" .
+
+<http://www.wcvp-core.com/taxon/834819-az>
+      a       owl:Class ;
+      rdfs:label "Guibourtia pellegriniana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Guibourtia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/834819-az> .
+
+<http://www.wcvp-core.com/name/681444-az>
+      a       skos:Concept ;
+      skos:prefLabel "Brachystegia laurentii" .
+
+<http://www.wcvp-core.com/name/609118-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vachellia seyal" .
+
+<http://www.wcvp-core.com/taxon/825240-az>
+      a       owl:Class ;
+      rdfs:label "Gilbertiodendron bilineatum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Gilbertiodendron> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/825240-az> .
+
+<http://www.wcvp-core.com/name/42074-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Cleistanthus gabonensis" .
+
+<http://www.wcvp-core.com/taxon/384632-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros piscatoria" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/384632-wcs> .
+
+<http://www.wcvp-core.com/name/834810-az>
+      a       skos:Concept ;
+      skos:prefLabel "Guibourtia copallifera" .
+
+<http://www.wcvp-core.com/taxon/Clusiaceae>
+      a       owl:Class ;
+      rdfs:label "Clusiaceae" .
+
+<http://www.wcvp-core.com/name/789574-az>
+      a       skos:Concept ;
+      skos:prefLabel "Entandrophragma utile" .
+
+<http://www.wcvp-core.com/taxon/913615-az>
+      a       owl:Class ;
+      rdfs:label "Gilbertiodendron diphyllum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Gilbertiodendron> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/913615-az> .
+
+<http://www.wcvp-core.com/name/730669-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cola nitida" .
+
+<http://www.wcvp-core.com/name/469248-az>
+      a       skos:Concept ;
+      skos:prefLabel "Zanthoxylum tsihanimposa" .
+
+<http://www.wcvp-core.com/name/832950-az>
+      a       skos:Concept ;
+      skos:prefLabel "Grewia brideliifolia" .
+
+<http://www.wcvp-core.com/name/755701-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dalbergia madagascariensis" .
+
+<http://www.wcvp-core.com/taxon/Celtis>
+      a       owl:Class ;
+      rdfs:label "Celtis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cannabaceae> .
+
+<http://www.wcvp-core.com/name/434338-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia fatraea" .
+
+<http://www.wcvp-core.com/name/936595-az>
+      a       skos:Concept ;
+      skos:prefLabel "Strychnos decussata" .
+
+<http://www.wcvp-core.com/taxon/87994-wcs>
+      a       owl:Class ;
+      rdfs:label "Gambeya africana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Gambeya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/87994-wcs> .
+
+<http://www.wcvp-core.com/name/627327-az>
+      a       skos:Concept ;
+      skos:prefLabel "Albizia ferruginea" .
+
+<http://www.wcvp-core.com/name/674968-az>
+      a       skos:Concept ;
+      skos:prefLabel "Berlinia confusa" .
+
+<http://www.wcvp-core.com/taxon/624959-az>
+      a       owl:Class ;
+      rdfs:label "Afzelia bella" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Afzelia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/624959-az> .
+
+<http://www.wcvp-core.com/name/369492-az>
+      a       skos:Concept ;
+      skos:prefLabel "Maytenus peduncularis" .
+
+<http://www.wcvp-core.com/taxon/468201-az>
+      a       owl:Class ;
+      rdfs:label "Xylopia hypolampra" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Xylopia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/468201-az> .
+
+<http://www.wcvp-core.com/name/451738-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vepris ampody" .
+
+<http://www.wcvp-core.com/name/609115-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vachellia gerrardii" .
+
+<http://www.wcvp-core.com/name/479830-az>
+      a       skos:Concept ;
+      skos:prefLabel "Sclerocarya birrea" .
+
+<http://www.wcvp-core.com/taxon/199548-wcs>
+      a       owl:Class ;
+      rdfs:label "Syzygium emirnense" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Syzygium> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/199548-wcs> .
+
+<http://www.wcvp-core.com/taxon/383897-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros dendo" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/383897-wcs> .
+
+<http://www.wcvp-core.com/name/148153-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Pauridiantha pyramidata" .
+
+<http://www.wcvp-core.com/taxon/469417-az>
+      a       owl:Class ;
+      rdfs:label "Zanthoxylum madagascariense" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Zanthoxylum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/469417-az> .
+
+<http://www.wcvp-core.com/name/737012-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cordia millenii" .
+
+<http://www.wcvp-core.com/taxon/Grewia>
+      a       owl:Class ;
+      rdfs:label "Grewia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Malvaceae> .
+
+<http://www.wcvp-core.com/taxon/469344-az>
+      a       owl:Class ;
+      rdfs:label "Zanthoxylum capense" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Zanthoxylum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/469344-az> .
+
+<http://www.wcvp-core.com/name/925194-az>
+      a       skos:Concept ;
+      skos:prefLabel "Homalium dewevrei" .
+
+<http://www.wcvp-core.com/taxon/816980-az>
+      a       owl:Class ;
+      rdfs:label "Garcinia mannii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Garcinia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/816980-az> .
+
+<http://www.wcvp-core.com/taxon/384615-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros physocalycina" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/384615-wcs> .
+
+<http://www.wcvp-core.com/name/786146-az>
+      a       skos:Concept ;
+      skos:prefLabel "Elaeodendron" .
+
+<http://www.wcvp-core.com/taxon/535324-az>
+      a       owl:Class ;
+      rdfs:label "Pterocarpus santalinoides" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Pterocarpus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/535324-az> .
+
+<http://www.wcvp-core.com/taxon/Cynometra>
+      a       owl:Class ;
+      rdfs:label "Cynometra" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Fabaceae> .
+
+<http://www.wcvp-core.com/name/816924-az>
+      a       skos:Concept ;
+      skos:prefLabel "Garcinia kola" .
+
+<http://www.wcvp-core.com/name/898817-az>
+      a       skos:Concept ;
+      skos:prefLabel "Senegalia galpinii" .
+
+<http://www.wcvp-core.com/taxon/471069-az>
+      a       owl:Class ;
+      rdfs:label "Ziziphus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ziziphus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/471069-az> .
+
+<http://www.wcvp-core.com/taxon/609114-az>
+      a       owl:Class ;
+      rdfs:label "Vachellia erioloba" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vachellia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/609114-az> .
+
+<http://www.wcvp-core.com/name/624993-az>
+      a       skos:Concept ;
+      skos:prefLabel "Afzelia pachyloba" .
+
+<http://www.wcvp-core.com/name/598301-az>
+      a       skos:Concept ;
+      skos:prefLabel "Strychnos mitis" .
+
+<http://www.wcvp-core.com/name/755721-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dalbergia melanoxylon" .
+
+<http://www.wcvp-core.com/taxon/467893-az>
+      a       owl:Class ;
+      rdfs:label "Xylopia rubescens" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Xylopia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/467893-az> .
+
+<http://www.wcvp-core.com/taxon/431431-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia brownii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/431431-az> .
+
+<http://www.wcvp-core.com/name/384843-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros squamosa" .
+
+<http://www.wcvp-core.com/taxon/598341-az>
+      a       owl:Class ;
+      rdfs:label "Strychnos madagascariensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Strychnos> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/598341-az> .
+
+<http://www.wcvp-core.com/name/368120-az>
+      a       skos:Concept ;
+      skos:prefLabel "Millettia drastica" .
+
+<http://www.wcvp-core.com/name/834811-az>
+      a       skos:Concept ;
+      skos:prefLabel "Guibourtia demeusei" .
+
+<http://www.wcvp-core.com/taxon/358377-wcs>
+      a       owl:Class ;
+      rdfs:label "Olea capensis subsp. enervis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Olea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/358377-wcs> .
+
+<http://www.wcvp-core.com/taxon/786230-az>
+      a       owl:Class ;
+      rdfs:label "Elaeodendron orientale" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Elaeodendron> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/786230-az> .
+
+<http://www.wcvp-core.com/taxon/833386-az>
+      a       owl:Class ;
+      rdfs:label "Grewia saligna" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Grewia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/833386-az> .
+
+<http://www.wcvp-core.com/taxon/898817-az>
+      a       owl:Class ;
+      rdfs:label "Senegalia galpinii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Senegalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/898817-az> .
+
+<http://www.wcvp-core.com/name/624959-az>
+      a       skos:Concept ;
+      skos:prefLabel "Afzelia bella" .
+
+<http://www.wcvp-core.com/name/514943-az>
+      a       skos:Concept ;
+      skos:prefLabel "Trichilia dregeana" .
+
+<http://www.wcvp-core.com/name/752373-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cynometra sakalava" .
+
+<http://www.wcvp-core.com/taxon/Searsia>
+      a       owl:Class ;
+      rdfs:label "Searsia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Anacardiaceae> .
+
+<http://www.wcvp-core.com/name/454412-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vepris soyauxii" .
+
+<http://www.wcvp-core.com/name/468968-az>
+      a       skos:Concept ;
+      skos:prefLabel "Zanthoxylum rubescens" .
+
+<http://www.wcvp-core.com/taxon/680329-az>
+      a       owl:Class ;
+      rdfs:label "Boscia longifolia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Boscia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/680329-az> .
+
+<http://www.wcvp-core.com/name/789539-az>
+      a       skos:Concept ;
+      skos:prefLabel "Entandrophragma angolense" .
+
+<http://www.wcvp-core.com/taxon/528731-az>
+      a       owl:Class ;
+      rdfs:label "Rinorea pugionifera" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Rinorea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/528731-az> .
+
+<http://www.wcvp-core.com/name/745889-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cryptocarya caryoptera" .
+
+<http://www.wcvp-core.com/taxon/627339-az>
+      a       owl:Class ;
+      rdfs:label "Albizia glaberrima" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Albizia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/627339-az> .
+
+<http://www.wcvp-core.com/taxon/Afzelia>
+      a       owl:Class ;
+      rdfs:label "Afzelia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Fabaceae> .
+
+<http://www.wcvp-core.com/taxon/Gilbertiodendron>
+      a       owl:Class ;
+      rdfs:label "Gilbertiodendron" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Fabaceae> .
+
+<http://www.wcvp-core.com/taxon/832893-az>
+      a       owl:Class ;
+      rdfs:label "Grewia apetala" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Grewia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/832893-az> .
+
+<http://www.wcvp-core.com/name/627582-az>
+      a       skos:Concept ;
+      skos:prefLabel "Albizia versicolor" .
+
+<http://www.wcvp-core.com/taxon/431102-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia catappa" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/431102-az> .
+
+<http://www.wcvp-core.com/name/479831-az>
+      a       skos:Concept ;
+      skos:prefLabel "Sclerocarya birrea subsp. caffra" .
+
+<http://www.wcvp-core.com/name/786260-az>
+      a       skos:Concept ;
+      skos:prefLabel "Elaeodendron transvaalense" .
+
+<http://www.wcvp-core.com/name/609116-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vachellia karroo" .
+
+<http://www.wcvp-core.com/taxon/64820-wcs>
+      a       owl:Class ;
+      rdfs:label "Drypetes caustica" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Drypetes> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/64820-wcs> .
+
+<http://www.wcvp-core.com/taxon/367834-az>
+      a       owl:Class ;
+      rdfs:label "Millettia stuhlmannii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Millettia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/367834-az> .
+
+<http://www.wcvp-core.com/name/24581-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Bridelia ndellensis" .
+
+<http://www.wcvp-core.com/taxon/213680-wcs>
+      a       owl:Class ;
+      rdfs:label "Vitex oxycuspis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vitex> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/213680-wcs> .
+
+<http://www.wcvp-core.com/taxon/737232-az>
+      a       owl:Class ;
+      rdfs:label "Cordia sinensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cordia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/737232-az> .
+
+<http://www.wcvp-core.com/taxon/896205-az>
+      a       owl:Class ;
+      rdfs:label "Garcinia tsaratananae" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Garcinia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/896205-az> .
+
+<http://www.wcvp-core.com/taxon/Dombeya>
+      a       owl:Class ;
+      rdfs:label "Dombeya" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Malvaceae> .
+
+<http://www.wcvp-core.com/name/825241-az>
+      a       skos:Concept ;
+      skos:prefLabel "Gilbertiodendron brachystegioides" .
+
+<http://www.wcvp-core.com/name/470728-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ziziphus mauritiana" .
+
+<http://www.wcvp-core.com/taxon/Phyllanthaceae>
+      a       owl:Class ;
+      rdfs:label "Phyllanthaceae" .
+
+<http://www.wcvp-core.com/name/732629-az>
+      a       skos:Concept ;
+      skos:prefLabel "Combretum glutinosum" .
+
+<http://www.wcvp-core.com/taxon/435121-az>
+      a       owl:Class ;
+      rdfs:label "Trichoscypha acuminata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Trichoscypha> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/435121-az> .
+
+<http://www.wcvp-core.com/taxon/384472-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros myriophylla" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/384472-wcs> .
+
+<http://www.wcvp-core.com/name/755771-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dalbergia normandii" .
+
+<http://www.wcvp-core.com/name/755938-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dalbergia tsiandalana" .
+
+<http://www.wcvp-core.com/taxon/755490-az>
+      a       owl:Class ;
+      rdfs:label "Dalbergia chlorocarpa" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dalbergia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/755490-az> .
+
+<http://www.wcvp-core.com/taxon/24681-wcs>
+      a       owl:Class ;
+      rdfs:label "Bridelia tulasneana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Bridelia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/24681-wcs> .
+
+<http://www.wcvp-core.com/name/355240-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Olea" .
+
+<http://www.wcvp-core.com/taxon/Brachystegia>
+      a       owl:Class ;
+      rdfs:label "Brachystegia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Fabaceae> .
+
+<http://www.wcvp-core.com/taxon/1230038-az>
+      a       owl:Class ;
+      rdfs:label "Pachylobus normandii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Pachylobus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/1230038-az> .
+
+<http://www.wcvp-core.com/taxon/434278-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia ivorensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/434278-az> .
+
+<http://www.wcvp-core.com/taxon/88011-wcs>
+      a       owl:Class ;
+      rdfs:label "Gambeya perpulchra" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Gambeya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/88011-wcs> .
+
+<http://www.wcvp-core.com/name/454477-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vepris decaryana" .
+
+<http://www.wcvp-core.com/taxon/84638-wcs>
+      a       owl:Class ;
+      rdfs:label "Foetidia clusioides" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Foetidia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/84638-wcs> .
+
+<http://www.wcvp-core.com/name/816968-az>
+      a       skos:Concept ;
+      skos:prefLabel "Garcinia madagascariensis" .
+
+<http://www.wcvp-core.com/taxon/213793-wcs>
+      a       owl:Class ;
+      rdfs:label "Vitex madiensisÊsubsp.Êmadiensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vitex> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/213793-wcs> .
+
+<http://www.wcvp-core.com/name/641650-az>
+      a       skos:Concept ;
+      skos:prefLabel "Anthocleista procera" .
+
+<http://www.wcvp-core.com/name/730563-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cola ballayi" .
+
+<http://www.wcvp-core.com/name/400259-az>
+      a       skos:Concept ;
+      skos:prefLabel "Olax lanceolata" .
+
+<http://www.wcvp-core.com/taxon/746004-az>
+      a       owl:Class ;
+      rdfs:label "Cryptocarya helicina" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cryptocarya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/746004-az> .
+
+<http://www.wcvp-core.com/taxon/435175-az>
+      a       owl:Class ;
+      rdfs:label "Trichoscypha eugong" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Trichoscypha> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/435175-az> .
+
+<http://www.wcvp-core.com/taxon/624953-az>
+      a       owl:Class ;
+      rdfs:label "Afzelia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Afzelia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/624953-az> .
+
+<http://www.wcvp-core.com/name/84638-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Foetidia clusioides" .
+
+<http://www.wcvp-core.com/name/925322-az>
+      a       skos:Concept ;
+      skos:prefLabel "Homalium paniculatum" .
+
+<http://www.wcvp-core.com/taxon/834810-az>
+      a       owl:Class ;
+      rdfs:label "Guibourtia copallifera" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Guibourtia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/834810-az> .
+
+<http://www.wcvp-core.com/taxon/832950-az>
+      a       owl:Class ;
+      rdfs:label "Grewia brideliifolia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Grewia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/832950-az> .
+
+<http://www.wcvp-core.com/taxon/810862-az>
+      a       owl:Class ;
+      rdfs:label "Ficus ingens" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ficus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/810862-az> .
+
+<http://www.wcvp-core.com/taxon/810315-az>
+      a       owl:Class ;
+      rdfs:label "Ficus elasticoides" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ficus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/810315-az> .
+
+<http://www.wcvp-core.com/taxon/627234-az>
+      a       owl:Class ;
+      rdfs:label "Albizia anthelmintica" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Albizia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/627234-az> .
+
+<http://www.wcvp-core.com/taxon/680357-az>
+      a       owl:Class ;
+      rdfs:label "Boscia salicifolia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Boscia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/680357-az> .
+
+<http://www.wcvp-core.com/taxon/755434-az>
+      a       owl:Class ;
+      rdfs:label "Dalbergia armata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dalbergia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/755434-az> .
+
+<http://www.wcvp-core.com/taxon/515506-az>
+      a       owl:Class ;
+      rdfs:label "Trichilia tessmannii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Trichilia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/515506-az> .
+
+<http://www.wcvp-core.com/name/800943-az>
+      a       skos:Concept ;
+      skos:prefLabel "Erythrina mildbraedii" .
+
+<http://www.wcvp-core.com/taxon/Anacardiaceae>
+      a       owl:Class ;
+      rdfs:label "Anacardiaceae" .
+
+<http://www.wcvp-core.com/taxon/470728-az>
+      a       owl:Class ;
+      rdfs:label "Ziziphus mauritiana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ziziphus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/470728-az> .
+
+<http://www.wcvp-core.com/taxon/528693-az>
+      a       owl:Class ;
+      rdfs:label "Rinorea kibbiensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Rinorea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/528693-az> .
+
+<http://www.wcvp-core.com/name/775184-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dombeya rotundifolia" .
+
+<http://www.wcvp-core.com/name/755761-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dalbergia neoperrieri" .
+
+<http://www.wcvp-core.com/name/360115-az>
+      a       skos:Concept ;
+      skos:prefLabel "Maytenus albata" .
+
+<http://www.wcvp-core.com/taxon/435861-az>
+      a       owl:Class ;
+      rdfs:label "Trichoscypha oddonii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Trichoscypha> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/435861-az> .
+
+<http://www.wcvp-core.com/taxon/755771-az>
+      a       owl:Class ;
+      rdfs:label "Dalbergia normandii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dalbergia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/755771-az> .
+
+<http://www.wcvp-core.com/taxon/469457-az>
+      a       owl:Class ;
+      rdfs:label "Zanthoxylum heitzii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Zanthoxylum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/469457-az> .
+
+<http://www.wcvp-core.com/name/704490-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cassipourea malosana" .
+
+<http://www.wcvp-core.com/name/755834-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dalbergia purpurascens" .
+
+<http://www.wcvp-core.com/name/88011-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Gambeya perpulchra" .
+
+<http://www.wcvp-core.com/name/825240-az>
+      a       skos:Concept ;
+      skos:prefLabel "Gilbertiodendron bilineatum" .
+
+<http://www.wcvp-core.com/taxon/Rutaceae>
+      a       owl:Class ;
+      rdfs:label "Rutaceae" .
+
+<http://www.wcvp-core.com/name/800800-az>
+      a       skos:Concept ;
+      skos:prefLabel "Erythrina caffra" .
+
+<http://www.wcvp-core.com/name/834807-az>
+      a       skos:Concept ;
+      skos:prefLabel "Guibourtia coleosperma" .
+
+<http://www.wcvp-core.com/taxon/1262975-az>
+      a       owl:Class ;
+      rdfs:label "Combretum apiculatum subsp. apiculatum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Combretum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/1262975-az> .
+
+<http://www.wcvp-core.com/name/431102-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia catappa" .
+
+<http://www.wcvp-core.com/name/434026-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia tetrandra" .
+
+<http://www.wcvp-core.com/name/1255835-az>
+      a       skos:Concept ;
+      skos:prefLabel "Brachystegia tamarindoides subsp. tamarindoides" .
+
+<http://www.wcvp-core.com/name/515478-az>
+      a       skos:Concept ;
+      skos:prefLabel "Trichilia ornithothera" .
+
+<http://www.wcvp-core.com/taxon/64797-wcs>
+      a       owl:Class ;
+      rdfs:label "Drypetes aylmeri" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Drypetes> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/64797-wcs> .
+
+<http://www.wcvp-core.com/name/213446-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Vitex ferruginea" .
+
+<http://www.wcvp-core.com/taxon/756758-az>
+      a       owl:Class ;
+      rdfs:label "Daniellia klainei" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Daniellia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/756758-az> .
+
+<http://www.wcvp-core.com/name/605047-az>
+      a       skos:Concept ;
+      skos:prefLabel "Olax mayottensis" .
+
+<http://www.wcvp-core.com/name/384226-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros iturensis" .
+
+<http://www.wcvp-core.com/taxon/1016445-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia hylodendron" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/1016445-az> .
+
+<http://www.wcvp-core.com/name/367918-az>
+      a       skos:Concept ;
+      skos:prefLabel "Millettia orientalis" .
+
+<http://www.wcvp-core.com/name/774866-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dombeya biumbellata" .
+
+<http://www.wcvp-core.com/taxon/624993-az>
+      a       owl:Class ;
+      rdfs:label "Afzelia pachyloba" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Afzelia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/624993-az> .
+
+<http://www.wcvp-core.com/taxon/732827-az>
+      a       owl:Class ;
+      rdfs:label "Combretum molle" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Combretum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/732827-az> .
+
+<http://www.wcvp-core.com/taxon/755786-az>
+      a       owl:Class ;
+      rdfs:label "Dalbergia orientalis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dalbergia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/755786-az> .
+
+<http://www.wcvp-core.com/taxon/812165-az>
+      a       owl:Class ;
+      rdfs:label "Ficus salicifolia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ficus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/812165-az> .
+
+<http://www.wcvp-core.com/name/608673-az>
+      a       skos:Concept ;
+      skos:prefLabel "Searsia rigida var. margaretae" .
+
+<http://www.wcvp-core.com/taxon/213385-wcs>
+      a       owl:Class ;
+      rdfs:label "Vitex chrysomallum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vitex> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/213385-wcs> .
+
+<http://www.wcvp-core.com/name/431431-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia brownii" .
+
+<http://www.wcvp-core.com/name/87995-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Gambeya albida" .
+
+<http://www.wcvp-core.com/name/469417-az>
+      a       skos:Concept ;
+      skos:prefLabel "Zanthoxylum madagascariense" .
+
+<http://www.wcvp-core.com/taxon/64784-wcs>
+      a       owl:Class ;
+      rdfs:label "Drypetes ambigua" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Drypetes> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/64784-wcs> .
+
+<http://www.wcvp-core.com/name/412165-az>
+      a       skos:Concept ;
+      skos:prefLabel "Pachylobus heterotrichus" .
+
+<http://www.wcvp-core.com/name/386136-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ocotea kenyensis" .
+
+<http://www.wcvp-core.com/name/469344-az>
+      a       skos:Concept ;
+      skos:prefLabel "Zanthoxylum capense" .
+
+<http://www.wcvp-core.com/taxon/199110-wcs>
+      a       owl:Class ;
+      rdfs:label "Synsepalum cerasiferum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Synsepalum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/199110-wcs> .
+
+<http://www.wcvp-core.com/taxon/833129-az>
+      a       owl:Class ;
+      rdfs:label "Grewia humbertii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Grewia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/833129-az> .
+
+<http://www.wcvp-core.com/name/199112-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Synsepalum congolense" .
+
+<http://www.wcvp-core.com/name/641625-az>
+      a       skos:Concept ;
+      skos:prefLabel "Anthocleista inermis" .
+
+<http://www.wcvp-core.com/name/528723-az>
+      a       skos:Concept ;
+      skos:prefLabel "Rinorea longicuspis" .
+
+<http://www.wcvp-core.com/name/925119-az>
+      a       skos:Concept ;
+      skos:prefLabel "Homalium" .
+
+<http://www.wcvp-core.com/taxon/335917-wcs>
+      a       owl:Class ;
+      rdfs:label "Nuxia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Nuxia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/335917-wcs> .
+
+<http://www.wcvp-core.com/name/468131-az>
+      a       skos:Concept ;
+      skos:prefLabel "Xylopia bemarivensis" .
+
+<http://www.wcvp-core.com/name/384393-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros mannii" .
+
+<http://www.wcvp-core.com/taxon/49367-wcs>
+      a       owl:Class ;
+      rdfs:label "Croton aubrevillei" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Croton> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/49367-wcs> .
+
+<http://www.wcvp-core.com/taxon/811596-az>
+      a       owl:Class ;
+      rdfs:label "Ficus pachyclada" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ficus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/811596-az> .
+
+<http://www.wcvp-core.com/taxon/412165-az>
+      a       owl:Class ;
+      rdfs:label "Pachylobus heterotrichus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Pachylobus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/412165-az> .
+
+<http://www.wcvp-core.com/taxon/752235-az>
+      a       owl:Class ;
+      rdfs:label "Cynometra ananta" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cynometra> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/752235-az> .
+
+<http://www.wcvp-core.com/name/833129-az>
+      a       skos:Concept ;
+      skos:prefLabel "Grewia humbertii" .
+
+<http://www.wcvp-core.com/name/608664-az>
+      a       skos:Concept ;
+      skos:prefLabel "Searsia pyroides" .
+
+<http://www.wcvp-core.com/name/435851-az>
+      a       skos:Concept ;
+      skos:prefLabel "Trichoscypha longifolia" .
+
+<http://www.wcvp-core.com/taxon/833453-az>
+      a       owl:Class ;
+      rdfs:label "Grewia thouvenotii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Grewia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/833453-az> .
+
+<http://www.wcvp-core.com/name/64780-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Drypetes afzelii" .
+
+<http://www.wcvp-core.com/name/49367-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Croton aubrevillei" .
+
+<http://www.wcvp-core.com/name/1016440-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia myrtifolia" .
+
+<http://www.wcvp-core.com/taxon/Nuxia>
+      a       owl:Class ;
+      rdfs:label "Nuxia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Stilbaceae> .
+
+<http://www.wcvp-core.com/name/385022-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros whyteana" .
+
+<http://www.wcvp-core.com/taxon/50592-wcs>
+      a       owl:Class ;
+      rdfs:label "Croton mongue" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Croton> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/50592-wcs> .
+
+<http://www.wcvp-core.com/taxon/Boscia>
+      a       owl:Class ;
+      rdfs:label "Boscia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Capparaceae> .
+
+<http://www.wcvp-core.com/taxon/730692-az>
+      a       owl:Class ;
+      rdfs:label "Cola rostrata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cola> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/730692-az> .
+
+<http://www.wcvp-core.com/name/833386-az>
+      a       skos:Concept ;
+      skos:prefLabel "Grewia saligna" .
+
+<http://www.wcvp-core.com/name/398186-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ochna holstii" .
+
+<http://www.wcvp-core.com/taxon/1003419-az>
+      a       owl:Class ;
+      rdfs:label "Vachellia bellula" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vachellia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/1003419-az> .
+
+<http://www.wcvp-core.com/taxon/467857-az>
+      a       owl:Class ;
+      rdfs:label "Xylopia villosa" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Xylopia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/467857-az> .
+
+<http://www.wcvp-core.com/name/774794-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dombeya" .
+
+<http://www.wcvp-core.com/taxon/925249-az>
+      a       owl:Class ;
+      rdfs:label "Homalium involucratum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Homalium> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/925249-az> .
+
+<http://www.wcvp-core.com/name/732827-az>
+      a       skos:Concept ;
+      skos:prefLabel "Combretum molle" .
+
+<http://www.wcvp-core.com/taxon/789539-az>
+      a       owl:Class ;
+      rdfs:label "Entandrophragma angolense" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Entandrophragma> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/789539-az> .
+
+<http://www.wcvp-core.com/taxon/Capparaceae>
+      a       owl:Class ;
+      rdfs:label "Capparaceae" .
+
+<http://www.wcvp-core.com/taxon/755934-az>
+      a       owl:Class ;
+      rdfs:label "Dalbergia trichocarpa" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dalbergia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/755934-az> .
+
+<http://www.wcvp-core.com/name/84642-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Foetidia retusa" .
+
+<http://www.wcvp-core.com/name/1016513-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia welwitschii" .
+
+<http://www.wcvp-core.com/name/199132-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Synsepalum revolutum" .
+
+<http://www.wcvp-core.com/name/745911-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cryptocarya crassifolia" .
+
+<http://www.wcvp-core.com/taxon/850095-az>
+      a       owl:Class ;
+      rdfs:label "Hibiscus lasiococcus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Hibiscus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/850095-az> .
+
+<http://www.wcvp-core.com/taxon/755701-az>
+      a       owl:Class ;
+      rdfs:label "Dalbergia madagascariensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dalbergia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/755701-az> .
+
+<http://www.wcvp-core.com/taxon/681408-az>
+      a       owl:Class ;
+      rdfs:label "Brachystegia cynometroides" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Brachystegia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/681408-az> .
+
+<http://www.wcvp-core.com/name/627351-az>
+      a       skos:Concept ;
+      skos:prefLabel "Albizia greveana" .
+
+<http://www.wcvp-core.com/name/609114-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vachellia erioloba" .
+
+<http://www.wcvp-core.com/name/833014-az>
+      a       skos:Concept ;
+      skos:prefLabel "Grewia cyclea" .
+
+<http://www.wcvp-core.com/taxon/704490-az>
+      a       owl:Class ;
+      rdfs:label "Cassipourea malosana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cassipourea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/704490-az> .
+
+<http://www.wcvp-core.com/name/925263-az>
+      a       skos:Concept ;
+      skos:prefLabel "Homalium laxiflorum" .
+
+<http://www.wcvp-core.com/taxon/786171-az>
+      a       owl:Class ;
+      rdfs:label "Elaeodendron croceum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Elaeodendron> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/786171-az> .
+
+<http://www.wcvp-core.com/name/756769-az>
+      a       skos:Concept ;
+      skos:prefLabel "Daniellia thurifera" .
+
+<http://www.wcvp-core.com/name/384083-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros fragrans" .
+
+<http://www.wcvp-core.com/name/386331-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ocotea brevipes" .
+
+<http://www.wcvp-core.com/name/412123-az>
+      a       skos:Concept ;
+      skos:prefLabel "Pachylobus buettneri" .
+
+<http://www.wcvp-core.com/name/625002-az>
+      a       skos:Concept ;
+      skos:prefLabel "Afzelia quanzensis" .
+
+<http://www.wcvp-core.com/taxon/800800-az>
+      a       owl:Class ;
+      rdfs:label "Erythrina caffra" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Erythrina> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/800800-az> .
+
+<http://www.wcvp-core.com/taxon/732892-az>
+      a       owl:Class ;
+      rdfs:label "Combretum paniculatum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Combretum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/732892-az> .
+
+<http://www.wcvp-core.com/name/763506-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dialium occidentale" .
+
+<http://www.wcvp-core.com/taxon/998828-az>
+      a       owl:Class ;
+      rdfs:label "Senegalia ataxacantha" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Senegalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/998828-az> .
+
+<http://www.wcvp-core.com/taxon/199927-wcs>
+      a       owl:Class ;
+      rdfs:label "Syzygium micropodum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Syzygium> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/199927-wcs> .
+
+<http://www.wcvp-core.com/name/42035-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Cleistanthus caudatus" .
+
+<http://www.wcvp-core.com/taxon/674982-az>
+      a       owl:Class ;
+      rdfs:label "Berlinia grandiflora" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Berlinia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/674982-az> .
+
+<http://www.wcvp-core.com/name/469299-az>
+      a       skos:Concept ;
+      skos:prefLabel "Zanthoxylum gilletii" .
+
+<http://www.wcvp-core.com/name/627234-az>
+      a       skos:Concept ;
+      skos:prefLabel "Albizia anthelmintica" .
+
+<http://www.wcvp-core.com/taxon/627236-az>
+      a       owl:Class ;
+      rdfs:label "Albizia arenicola" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Albizia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/627236-az> .
+
+<http://www.wcvp-core.com/taxon/367918-az>
+      a       owl:Class ;
+      rdfs:label "Millettia orientalis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Millettia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/367918-az> .
+
+<http://www.wcvp-core.com/name/850615-az>
+      a       skos:Concept ;
+      skos:prefLabel "Hibiscus tiliaceus" .
+
+<http://www.wcvp-core.com/name/641640-az>
+      a       skos:Concept ;
+      skos:prefLabel "Anthocleista madagascariensis" .
+
+<http://www.wcvp-core.com/taxon/386331-az>
+      a       owl:Class ;
+      rdfs:label "Ocotea brevipes" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ocotea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/386331-az> .
+
+<http://www.wcvp-core.com/name/313942-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Foetidia asymetrica" .
+
+<http://www.wcvp-core.com/taxon/730648-az>
+      a       owl:Class ;
+      rdfs:label "Cola mahoundensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cola> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/730648-az> .
+
+<http://www.wcvp-core.com/taxon/627221-az>
+      a       owl:Class ;
+      rdfs:label "Albizia adianthifolia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Albizia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/627221-az> .
+
+<http://www.wcvp-core.com/taxon/400259-az>
+      a       owl:Class ;
+      rdfs:label "Olax lanceolata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Olax> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/400259-az> .
+
+<http://www.wcvp-core.com/name/746004-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cryptocarya helicina" .
+
+<http://www.wcvp-core.com/name/833053-az>
+      a       skos:Concept ;
+      skos:prefLabel "Grewia erythroxyloides" .
+
+<http://www.wcvp-core.com/taxon/Euphorbiaceae>
+      a       owl:Class ;
+      rdfs:label "Euphorbiaceae" .
+
+<http://www.wcvp-core.com/name/755445-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dalbergia baronii" .
+
+<http://www.wcvp-core.com/name/624953-az>
+      a       skos:Concept ;
+      skos:prefLabel "Afzelia" .
+
+<http://www.wcvp-core.com/taxon/Salicaceae>
+      a       owl:Class ;
+      rdfs:label "Salicaceae" .
+
+<http://www.wcvp-core.com/name/469457-az>
+      a       skos:Concept ;
+      skos:prefLabel "Zanthoxylum heitzii" .
+
+<http://www.wcvp-core.com/taxon/Fabaceae>
+      a       owl:Class ;
+      rdfs:label "Fabaceae" .
+
+<http://www.wcvp-core.com/name/755488-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dalbergia chapelieri" .
+
+<http://www.wcvp-core.com/taxon/811785-az>
+      a       owl:Class ;
+      rdfs:label "Ficus politoria" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ficus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/811785-az> .
+
+<http://www.wcvp-core.com/taxon/624955-az>
+      a       owl:Class ;
+      rdfs:label "Afzelia africana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Afzelia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/624955-az> .
+
+<http://www.wcvp-core.com/name/372894-az>
+      a       skos:Concept ;
+      skos:prefLabel "Monotes engleri" .
+
+<http://www.wcvp-core.com/taxon/335927-wcs>
+      a       owl:Class ;
+      rdfs:label "Nuxia congesta" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Nuxia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/335927-wcs> .
+
+<http://www.wcvp-core.com/name/752262-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cynometra commersoniana" .
+
+<http://www.wcvp-core.com/name/627390-az>
+      a       skos:Concept ;
+      skos:prefLabel "Albizia laurentii" .
+
+<http://www.wcvp-core.com/taxon/732680-az>
+      a       owl:Class ;
+      rdfs:label "Combretum indicum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Combretum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/732680-az> .
+
+<http://www.wcvp-core.com/taxon/833067-az>
+      a       owl:Class ;
+      rdfs:label "Grewia flavescens" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Grewia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/833067-az> .
+
+<http://www.wcvp-core.com/taxon/383604-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros abyssinica" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/383604-wcs> .
+
+<http://www.wcvp-core.com/taxon/998443-az>
+      a       owl:Class ;
+      rdfs:label "Senegalia rovumae" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Senegalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/998443-az> .
+
+<http://www.wcvp-core.com/taxon/833098-az>
+      a       owl:Class ;
+      rdfs:label "Grewia grevei" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Grewia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/833098-az> .
+
+<http://www.wcvp-core.com/name/608604-az>
+      a       skos:Concept ;
+      skos:prefLabel "Searsia erosa" .
+
+<http://www.wcvp-core.com/name/732851-az>
+      a       skos:Concept ;
+      skos:prefLabel "Combretum nigricans" .
+
+<http://www.wcvp-core.com/name/1003423-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vachellia myrmecophila" .
+
+<http://www.wcvp-core.com/taxon/Meliaceae>
+      a       owl:Class ;
+      rdfs:label "Meliaceae" .
+
+<http://www.wcvp-core.com/name/87998-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Gambeya boiviniana" .
+
+<http://www.wcvp-core.com/name/681408-az>
+      a       skos:Concept ;
+      skos:prefLabel "Brachystegia cynometroides" .
+
+<http://www.wcvp-core.com/taxon/745911-az>
+      a       owl:Class ;
+      rdfs:label "Cryptocarya crassifolia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cryptocarya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/745911-az> .
+
+<http://www.wcvp-core.com/taxon/213829-wcs>
+      a       owl:Class ;
+      rdfs:label "Vitex trichantha" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vitex> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/213829-wcs> .
+
+<http://www.wcvp-core.com/name/384425-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros mespiliformis" .
+
+<http://www.wcvp-core.com/name/755689-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dalbergia lemurica" .
+
+<http://www.wcvp-core.com/taxon/811398-az>
+      a       owl:Class ;
+      rdfs:label "Ficus mucuso" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ficus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/811398-az> .
+
+<http://www.wcvp-core.com/taxon/672423-az>
+      a       owl:Class ;
+      rdfs:label "Beilschmiedia cryptocaryoides" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Beilschmiedia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/672423-az> .
+
+<http://www.wcvp-core.com/taxon/42032-wcs>
+      a       owl:Class ;
+      rdfs:label "Cleistanthus capuronii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cleistanthus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/42032-wcs> .
+
+<http://www.wcvp-core.com/taxon/825251-az>
+      a       owl:Class ;
+      rdfs:label "Gilbertiodendron limba" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Gilbertiodendron> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/825251-az> .
+
+<http://www.wcvp-core.com/taxon/Bridelia>
+      a       owl:Class ;
+      rdfs:label "Bridelia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Phyllanthaceae> .
+
+<http://www.wcvp-core.com/taxon/998285-az>
+      a       owl:Class ;
+      rdfs:label "Senegalia macrostachya" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Senegalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/998285-az> .
+
+<http://www.wcvp-core.com/name/384746-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros sakalavarum" .
+
+<http://www.wcvp-core.com/taxon/148162-wcs>
+      a       owl:Class ;
+      rdfs:label "Pauridiantha viridiflora" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Pauridiantha> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/148162-wcs> .
+
+<http://www.wcvp-core.com/name/515506-az>
+      a       skos:Concept ;
+      skos:prefLabel "Trichilia tessmannii" .
+
+<http://www.wcvp-core.com/name/24564-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Bridelia micrantha" .
+
+<http://www.wcvp-core.com/name/925335-az>
+      a       skos:Concept ;
+      skos:prefLabel "Homalium planiflorum" .
+
+<http://www.wcvp-core.com/taxon/763506-az>
+      a       owl:Class ;
+      rdfs:label "Dialium occidentale" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dialium> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/763506-az> .
+
+<http://www.wcvp-core.com/taxon/730563-az>
+      a       owl:Class ;
+      rdfs:label "Cola ballayi" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cola> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/730563-az> .
+
+<http://www.wcvp-core.com/name/213452-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Vitex fischeri" .
+
+<http://www.wcvp-core.com/taxon/536351-az>
+      a       owl:Class ;
+      rdfs:label "Prioria oxyphylla" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Prioria> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/536351-az> .
+
+<http://www.wcvp-core.com/taxon/468133-az>
+      a       owl:Class ;
+      rdfs:label "Xylopia acutiflora" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Xylopia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/468133-az> .
+
+<http://www.wcvp-core.com/name/435175-az>
+      a       skos:Concept ;
+      skos:prefLabel "Trichoscypha eugong" .
+
+<http://www.wcvp-core.com/name/467857-az>
+      a       skos:Concept ;
+      skos:prefLabel "Xylopia villosa" .
+
+<http://www.wcvp-core.com/taxon/24531-wcs>
+      a       owl:Class ;
+      rdfs:label "Bridelia grandis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Bridelia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/24531-wcs> .
+
+<http://www.wcvp-core.com/name/817236-az>
+      a       skos:Concept ;
+      skos:prefLabel "Garcinia verrucosa" .
+
+<http://www.wcvp-core.com/taxon/64794-wcs>
+      a       owl:Class ;
+      rdfs:label "Drypetes aubrevillei" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Drypetes> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/64794-wcs> .
+
+<http://www.wcvp-core.com/name/148134-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Pauridiantha dewevrei" .
+
+<http://www.wcvp-core.com/taxon/745826-az>
+      a       owl:Class ;
+      rdfs:label "Cryptocarya alseodaphnifolia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cryptocarya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/745826-az> .
+
+<http://www.wcvp-core.com/taxon/Anthocleista>
+      a       owl:Class ;
+      rdfs:label "Anthocleista" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Gentianaceae> .
+
+<http://www.wcvp-core.com/name/468107-az>
+      a       skos:Concept ;
+      skos:prefLabel "Xylopia aethiopica" .
+
+<http://www.wcvp-core.com/taxon/746119-az>
+      a       owl:Class ;
+      rdfs:label "Cryptocarya myrtifolia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cryptocarya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/746119-az> .
+
+<http://www.wcvp-core.com/name/313949-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Foetidia parviflora" .
+
+<http://www.wcvp-core.com/name/384289-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros lanceolata" .
+
+<http://www.wcvp-core.com/name/752235-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cynometra ananta" .
+
+<http://www.wcvp-core.com/taxon/213879-wcs>
+      a       owl:Class ;
+      rdfs:label "Vitex waterlotii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vitex> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/213879-wcs> .
+
+<http://www.wcvp-core.com/name/384131-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros gracilipes" .
+
+<http://www.wcvp-core.com/name/833011-az>
+      a       skos:Concept ;
+      skos:prefLabel "Grewia cuneifolia" .
+
+<http://www.wcvp-core.com/name/354965-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Olea schliebenii" .
+
+<http://www.wcvp-core.com/taxon/704437-az>
+      a       owl:Class ;
+      rdfs:label "Cassipourea congoensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cassipourea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/704437-az> .
+
+<http://www.wcvp-core.com/taxon/133181-wcs>
+      a       owl:Class ;
+      rdfs:label "Nauclea gilletii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Nauclea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/133181-wcs> .
+
+<http://www.wcvp-core.com/taxon/383644-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros analamerensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/383644-wcs> .
+
+<http://www.wcvp-core.com/taxon/Ochna>
+      a       owl:Class ;
+      rdfs:label "Ochna" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ochnaceae> .
+
+<http://www.wcvp-core.com/taxon/641625-az>
+      a       owl:Class ;
+      rdfs:label "Anthocleista inermis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Anthocleista> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/641625-az> .
+
+<http://www.wcvp-core.com/name/730692-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cola rostrata" .
+
+<http://www.wcvp-core.com/name/811398-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ficus mucuso" .
+
+<http://www.wcvp-core.com/name/373230-az>
+      a       skos:Concept ;
+      skos:prefLabel "Monotes africanus" .
+
+<http://www.wcvp-core.com/taxon/833011-az>
+      a       owl:Class ;
+      rdfs:label "Grewia cuneifolia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Grewia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/833011-az> .
+
+<http://www.wcvp-core.com/name/925249-az>
+      a       skos:Concept ;
+      skos:prefLabel "Homalium involucratum" .
+
+<http://www.wcvp-core.com/name/50526-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Croton megalocarpus" .
+
+<http://www.wcvp-core.com/name/755934-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dalbergia trichocarpa" .
+
+<http://www.wcvp-core.com/taxon/Rubiaceae>
+      a       owl:Class ;
+      rdfs:label "Rubiaceae" .
+
+<http://www.wcvp-core.com/name/468133-az>
+      a       skos:Concept ;
+      skos:prefLabel "Xylopia acutiflora" .
+
+<http://www.wcvp-core.com/taxon/704422-az>
+      a       owl:Class ;
+      rdfs:label "Cassipourea adami" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cassipourea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/704422-az> .
+
+<http://www.wcvp-core.com/taxon/367872-az>
+      a       owl:Class ;
+      rdfs:label "Millettia versicolor" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Millettia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/367872-az> .
+
+<http://www.wcvp-core.com/taxon/708140-az>
+      a       owl:Class ;
+      rdfs:label "Celtis africana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Celtis> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/708140-az> .
+
+<http://www.wcvp-core.com/name/627221-az>
+      a       skos:Concept ;
+      skos:prefLabel "Albizia adianthifolia" .
+
+<http://www.wcvp-core.com/taxon/833053-az>
+      a       owl:Class ;
+      rdfs:label "Grewia erythroxyloides" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Grewia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/833053-az> .
+
+<http://www.wcvp-core.com/name/536351-az>
+      a       skos:Concept ;
+      skos:prefLabel "Prioria oxyphylla" .
+
+<http://www.wcvp-core.com/name/213387-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Vitex ciliata" .
+
+<http://www.wcvp-core.com/name/383875-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros cupulifera" .
+
+<http://www.wcvp-core.com/name/434427-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia mantaliopsis" .
+
+<http://www.wcvp-core.com/taxon/1012758-az>
+      a       owl:Class ;
+      rdfs:label "Olax thouarsii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Olax> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/1012758-az> .
+
+<http://www.wcvp-core.com/taxon/133213-wcs>
+      a       owl:Class ;
+      rdfs:label "Nauclea latifolia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Nauclea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/133213-wcs> .
+
+<http://www.wcvp-core.com/name/811785-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ficus politoria" .
+
+<http://www.wcvp-core.com/name/64794-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Drypetes aubrevillei" .
+
+<http://www.wcvp-core.com/taxon/755445-az>
+      a       owl:Class ;
+      rdfs:label "Dalbergia baronii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dalbergia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/755445-az> .
+
+<http://www.wcvp-core.com/name/133271-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Nauclea pobeguinii" .
+
+<http://www.wcvp-core.com/name/213678-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Vitex oscitans" .
+
+<http://www.wcvp-core.com/taxon/755488-az>
+      a       owl:Class ;
+      rdfs:label "Dalbergia chapelieri" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dalbergia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/755488-az> .
+
+<http://www.wcvp-core.com/name/732680-az>
+      a       skos:Concept ;
+      skos:prefLabel "Combretum indicum" .
+
+<http://www.wcvp-core.com/taxon/627390-az>
+      a       owl:Class ;
+      rdfs:label "Albizia laurentii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Albizia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/627390-az> .
+
+<http://www.wcvp-core.com/name/1261474-az>
+      a       skos:Concept ;
+      skos:prefLabel "Searsia pyroides var. pyroides" .
+
+<http://www.wcvp-core.com/taxon/469413-az>
+      a       owl:Class ;
+      rdfs:label "Zanthoxylum leprieurii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Zanthoxylum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/469413-az> .
+
+<http://www.wcvp-core.com/name/42022-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Cleistanthus boivinianus" .
+
+<http://www.wcvp-core.com/taxon/674997-az>
+      a       owl:Class ;
+      rdfs:label "Berlinia occidentalis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Berlinia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/674997-az> .
+
+<http://www.wcvp-core.com/taxon/732851-az>
+      a       owl:Class ;
+      rdfs:label "Combretum nigricans" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Combretum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/732851-az> .
+
+<http://www.wcvp-core.com/taxon/608604-az>
+      a       owl:Class ;
+      rdfs:label "Searsia erosa" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Searsia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/608604-az> .
+
+<http://www.wcvp-core.com/name/672651-az>
+      a       skos:Concept ;
+      skos:prefLabel "Beilschmiedia sericans" .
+
+<http://www.wcvp-core.com/name/998443-az>
+      a       skos:Concept ;
+      skos:prefLabel "Senegalia rovumae" .
+
+<http://www.wcvp-core.com/name/64784-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Drypetes ambigua" .
+
+<http://www.wcvp-core.com/taxon/775184-az>
+      a       owl:Class ;
+      rdfs:label "Dombeya rotundifolia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dombeya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/775184-az> .
+
+<http://www.wcvp-core.com/taxon/87995-wcs>
+      a       owl:Class ;
+      rdfs:label "Gambeya albida" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Gambeya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/87995-wcs> .
+
+<http://www.wcvp-core.com/taxon/Olax>
+      a       owl:Class ;
+      rdfs:label "Olax" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Olacaceae> .
+
+<http://www.wcvp-core.com/name/627236-az>
+      a       skos:Concept ;
+      skos:prefLabel "Albizia arenicola" .
+
+<http://www.wcvp-core.com/taxon/763477-az>
+      a       owl:Class ;
+      rdfs:label "Dialium guineense" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dialium> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/763477-az> .
+
+<http://www.wcvp-core.com/name/672423-az>
+      a       skos:Concept ;
+      skos:prefLabel "Beilschmiedia cryptocaryoides" .
+
+<http://www.wcvp-core.com/taxon/755689-az>
+      a       owl:Class ;
+      rdfs:label "Dalbergia lemurica" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dalbergia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/755689-az> .
+
+<http://www.wcvp-core.com/name/42032-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Cleistanthus capuronii" .
+
+<http://www.wcvp-core.com/name/998285-az>
+      a       skos:Concept ;
+      skos:prefLabel "Senegalia macrostachya" .
+
+<http://www.wcvp-core.com/name/624955-az>
+      a       skos:Concept ;
+      skos:prefLabel "Afzelia africana" .
+
+<http://www.wcvp-core.com/taxon/435862-az>
+      a       owl:Class ;
+      rdfs:label "Trichoscypha oliveri" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Trichoscypha> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/435862-az> .
+
+<http://www.wcvp-core.com/taxon/24564-wcs>
+      a       owl:Class ;
+      rdfs:label "Bridelia micrantha" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Bridelia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/24564-wcs> .
+
+<http://www.wcvp-core.com/taxon/Myrtaceae>
+      a       owl:Class ;
+      rdfs:label "Myrtaceae" .
+
+<http://www.wcvp-core.com/taxon/468047-az>
+      a       owl:Class ;
+      rdfs:label "Xylopia cupularis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Xylopia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/468047-az> .
+
+<http://www.wcvp-core.com/name/810862-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ficus ingens" .
+
+<http://www.wcvp-core.com/taxon/925119-az>
+      a       owl:Class ;
+      rdfs:label "Homalium" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Homalium> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/925119-az> .
+
+<http://www.wcvp-core.com/taxon/680288-az>
+      a       owl:Class ;
+      rdfs:label "Boscia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Boscia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/680288-az> .
+
+<http://www.wcvp-core.com/name/833098-az>
+      a       skos:Concept ;
+      skos:prefLabel "Grewia grevei" .
+
+<http://www.wcvp-core.com/taxon/Rinorea>
+      a       owl:Class ;
+      rdfs:label "Rinorea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Violaceae> .
+
+<http://www.wcvp-core.com/taxon/833014-az>
+      a       owl:Class ;
+      rdfs:label "Grewia cyclea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Grewia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/833014-az> .
+
+<http://www.wcvp-core.com/taxon/434017-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia superba" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/434017-az> .
+
+<http://www.wcvp-core.com/taxon/372894-az>
+      a       owl:Class ;
+      rdfs:label "Monotes engleri" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Monotes> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/372894-az> .
+
+<http://www.wcvp-core.com/taxon/627351-az>
+      a       owl:Class ;
+      rdfs:label "Albizia greveana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Albizia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/627351-az> .
+
+<http://www.wcvp-core.com/taxon/817236-az>
+      a       owl:Class ;
+      rdfs:label "Garcinia verrucosa" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Garcinia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/817236-az> .
+
+<http://www.wcvp-core.com/name/834819-az>
+      a       skos:Concept ;
+      skos:prefLabel "Guibourtia pellegriniana" .
+
+<http://www.wcvp-core.com/taxon/Dalbergia>
+      a       owl:Class ;
+      rdfs:label "Dalbergia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Fabaceae> .
+
+<http://www.wcvp-core.com/taxon/817171-az>
+      a       owl:Class ;
+      rdfs:label "Garcinia smeathmanii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Garcinia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/817171-az> .
+
+<http://www.wcvp-core.com/name/384321-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros lokohensis" .
+
+<http://www.wcvp-core.com/taxon/1003423-az>
+      a       owl:Class ;
+      rdfs:label "Vachellia myrmecophila" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vachellia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/1003423-az> .
+
+<http://www.wcvp-core.com/taxon/412123-az>
+      a       owl:Class ;
+      rdfs:label "Pachylobus buettneri" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Pachylobus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/412123-az> .
+
+<http://www.wcvp-core.com/name/435862-az>
+      a       skos:Concept ;
+      skos:prefLabel "Trichoscypha oliveri" .
+
+<http://www.wcvp-core.com/taxon/789574-az>
+      a       owl:Class ;
+      rdfs:label "Entandrophragma utile" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Entandrophragma> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/789574-az> .
+
+<http://www.wcvp-core.com/taxon/Terminalia>
+      a       owl:Class ;
+      rdfs:label "Terminalia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Combretaceae> .
+
+<http://www.wcvp-core.com/taxon/1230758-az>
+      a       owl:Class ;
+      rdfs:label "Pachylobus klaineanus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Pachylobus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/1230758-az> .
+
+<http://www.wcvp-core.com/taxon/384416-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros melanida" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/384416-wcs> .
+
+<http://www.wcvp-core.com/taxon/369492-az>
+      a       owl:Class ;
+      rdfs:label "Maytenus peduncularis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Maytenus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/369492-az> .
+
+<http://www.wcvp-core.com/name/812015-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ficus recurvata" .
+
+<http://www.wcvp-core.com/taxon/674968-az>
+      a       owl:Class ;
+      rdfs:label "Berlinia confusa" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Berlinia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/674968-az> .
+
+<http://www.wcvp-core.com/name/468201-az>
+      a       skos:Concept ;
+      skos:prefLabel "Xylopia hypolampra" .
+
+<http://www.wcvp-core.com/taxon/627327-az>
+      a       owl:Class ;
+      rdfs:label "Albizia ferruginea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Albizia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/627327-az> .
+
+<http://www.wcvp-core.com/name/200233-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Syzygium rowlandii" .
+
+<http://www.wcvp-core.com/name/933673-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ocotea cymosa" .
+
+<http://www.wcvp-core.com/taxon/84642-wcs>
+      a       owl:Class ;
+      rdfs:label "Foetidia retusa" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Foetidia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/84642-wcs> .
+
+<http://www.wcvp-core.com/taxon/454415-az>
+      a       owl:Class ;
+      rdfs:label "Vepris suaveolens" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vepris> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/454415-az> .
+
+<http://www.wcvp-core.com/name/674997-az>
+      a       skos:Concept ;
+      skos:prefLabel "Berlinia occidentalis" .
+
+<http://www.wcvp-core.com/taxon/902092-az>
+      a       owl:Class ;
+      rdfs:label "Trichoscypha arborea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Trichoscypha> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/902092-az> .
+
+<http://www.wcvp-core.com/name/383844-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros conocarpa" .
+
+<http://www.wcvp-core.com/taxon/609118-az>
+      a       owl:Class ;
+      rdfs:label "Vachellia seyal" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vachellia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/609118-az> .
+
+<http://www.wcvp-core.com/taxon/672651-az>
+      a       owl:Class ;
+      rdfs:label "Beilschmiedia sericans" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Beilschmiedia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/672651-az> .
+
+<http://www.wcvp-core.com/taxon/755615-az>
+      a       owl:Class ;
+      rdfs:label "Dalbergia greveana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dalbergia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/755615-az> .
+
+<http://www.wcvp-core.com/taxon/755640-az>
+      a       owl:Class ;
+      rdfs:label "Dalbergia humbertii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dalbergia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/755640-az> .
+
+<http://www.wcvp-core.com/name/730648-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cola mahoundensis" .
+
+<http://www.wcvp-core.com/taxon/148130-wcs>
+      a       owl:Class ;
+      rdfs:label "Pauridiantha callicarpoides" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Pauridiantha> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/148130-wcs> .
+
+<http://www.wcvp-core.com/name/763511-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dialium pachyphyllum" .
+
+<http://www.wcvp-core.com/taxon/431551-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia avicennioides" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/431551-az> .
+
+<http://www.wcvp-core.com/name/24681-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Bridelia tulasneana" .
+
+<http://www.wcvp-core.com/name/730575-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cola buntingii" .
+
+<http://www.wcvp-core.com/name/913615-az>
+      a       skos:Concept ;
+      skos:prefLabel "Gilbertiodendron diphyllum" .
+
+<http://www.wcvp-core.com/name/373235-az>
+      a       skos:Concept ;
+      skos:prefLabel "Monotes" .
+
+<http://www.wcvp-core.com/taxon/625002-az>
+      a       owl:Class ;
+      rdfs:label "Afzelia quanzensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Afzelia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/625002-az> .
+
+<http://www.wcvp-core.com/taxon/335936-wcs>
+      a       owl:Class ;
+      rdfs:label "Nuxia floribunda" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Nuxia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/335936-wcs> .
+
+<http://www.wcvp-core.com/name/998837-az>
+      a       skos:Concept ;
+      skos:prefLabel "Senegalia burkei" .
+
+<http://www.wcvp-core.com/name/746263-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cryptocarya thouvenotii" .
+
+<http://www.wcvp-core.com/name/199499-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Syzygium danguyanum" .
+
+<http://www.wcvp-core.com/taxon/479831-az>
+      a       owl:Class ;
+      rdfs:label "Sclerocarya birrea subsp. caffra" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Sclerocarya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/479831-az> .
+
+<http://www.wcvp-core.com/name/471069-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ziziphus" .
+
+<http://www.wcvp-core.com/taxon/Dialium>
+      a       owl:Class ;
+      rdfs:label "Dialium" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Fabaceae> .
+
+<http://www.wcvp-core.com/name/535379-az>
+      a       skos:Concept ;
+      skos:prefLabel "Pterocarpus mildbraedii" .
+
+<http://www.wcvp-core.com/taxon/832881-az>
+      a       owl:Class ;
+      rdfs:label "Grewia amplifolia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Grewia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/832881-az> .
+
+<http://www.wcvp-core.com/taxon/434362-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia ombrophila" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/434362-az> .
+
+<http://www.wcvp-core.com/taxon/528559-az>
+      a       owl:Class ;
+      rdfs:label "Rinorea welwitschii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Rinorea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/528559-az> .
+
+<http://www.wcvp-core.com/name/850095-az>
+      a       skos:Concept ;
+      skos:prefLabel "Hibiscus lasiococcus" .
+
+<http://www.wcvp-core.com/name/896205-az>
+      a       skos:Concept ;
+      skos:prefLabel "Garcinia tsaratananae" .
+
+<http://www.wcvp-core.com/name/704437-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cassipourea congoensis" .
+
+<http://www.wcvp-core.com/taxon/730561-az>
+      a       owl:Class ;
+      rdfs:label "Cola attiensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cola> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/730561-az> .
+
+<http://www.wcvp-core.com/name/737258-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cordia subcordata" .
+
+<http://www.wcvp-core.com/name/384248-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros kamerunensis" .
+
+<http://www.wcvp-core.com/name/133162-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Nauclea diderrichii" .
+
+<http://www.wcvp-core.com/name/65006-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Drypetes perrieri" .
+
+<http://www.wcvp-core.com/taxon/434026-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia tetrandra" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/434026-az> .
+
+<http://www.wcvp-core.com/taxon/732629-az>
+      a       owl:Class ;
+      rdfs:label "Combretum glutinosum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Combretum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/732629-az> .
+
+<http://www.wcvp-core.com/name/1016445-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia hylodendron" .
+
+<http://www.wcvp-core.com/name/786230-az>
+      a       skos:Concept ;
+      skos:prefLabel "Elaeodendron orientale" .
+
+<http://www.wcvp-core.com/name/435121-az>
+      a       skos:Concept ;
+      skos:prefLabel "Trichoscypha acuminata" .
+
+<http://www.wcvp-core.com/taxon/816960-az>
+      a       owl:Class ;
+      rdfs:label "Garcinia lucida" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Garcinia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/816960-az> .
+
+<http://www.wcvp-core.com/taxon/755938-az>
+      a       owl:Class ;
+      rdfs:label "Dalbergia tsiandalana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dalbergia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/755938-az> .
+
+<http://www.wcvp-core.com/name/755490-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dalbergia chlorocarpa" .
+
+<http://www.wcvp-core.com/name/763477-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dialium guineense" .
+
+<http://www.wcvp-core.com/taxon/514943-az>
+      a       owl:Class ;
+      rdfs:label "Trichilia dregeana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Trichilia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/514943-az> .
+
+<http://www.wcvp-core.com/name/756758-az>
+      a       skos:Concept ;
+      skos:prefLabel "Daniellia klainei" .
+
+<http://www.wcvp-core.com/taxon/373230-az>
+      a       owl:Class ;
+      rdfs:label "Monotes africanus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Monotes> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/373230-az> .
+
+<http://www.wcvp-core.com/taxon/199107-wcs>
+      a       owl:Class ;
+      rdfs:label "Synsepalum brevipes" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Synsepalum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/199107-wcs> .
+
+<http://www.wcvp-core.com/name/384176-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros heudelotii" .
+
+<http://www.wcvp-core.com/name/64797-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Drypetes aylmeri" .
+
+<http://www.wcvp-core.com/taxon/368120-az>
+      a       owl:Class ;
+      rdfs:label "Millettia drastica" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Millettia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/368120-az> .
+
+<http://www.wcvp-core.com/taxon/50526-wcs>
+      a       owl:Class ;
+      rdfs:label "Croton megalocarpus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Croton> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/50526-wcs> .
+
+<http://www.wcvp-core.com/taxon/850162-az>
+      a       owl:Class ;
+      rdfs:label "Hibiscus mangindranensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Hibiscus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/850162-az> .
+
+<http://www.wcvp-core.com/name/213385-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Vitex chrysomallum" .
+
+<http://www.wcvp-core.com/taxon/774866-az>
+      a       owl:Class ;
+      rdfs:label "Dombeya biumbellata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dombeya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/774866-az> .
+
+<http://www.wcvp-core.com/taxon/Cola>
+      a       owl:Class ;
+      rdfs:label "Cola" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Malvaceae> .
+
+<http://www.wcvp-core.com/name/434278-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia ivorensis" .
+
+<http://www.wcvp-core.com/name/833453-az>
+      a       skos:Concept ;
+      skos:prefLabel "Grewia thouvenotii" .
+
+<http://www.wcvp-core.com/taxon/383875-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros cupulifera" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/383875-wcs> .
+
+<http://www.wcvp-core.com/name/199108-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Synsepalum buluensis" .
+
+<http://www.wcvp-core.com/name/627339-az>
+      a       skos:Concept ;
+      skos:prefLabel "Albizia glaberrima" .
+
+<http://www.wcvp-core.com/taxon/1255835-az>
+      a       owl:Class ;
+      rdfs:label "Brachystegia tamarindoides subsp. tamarindoides" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Brachystegia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/1255835-az> .
+
+<http://www.wcvp-core.com/name/672558-az>
+      a       skos:Concept ;
+      skos:prefLabel "Beilschmiedia microphylla" .
+
+<http://www.wcvp-core.com/name/528693-az>
+      a       skos:Concept ;
+      skos:prefLabel "Rinorea kibbiensis" .
+
+<http://www.wcvp-core.com/taxon/434427-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia mantaliopsis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/434427-az> .
+
+<http://www.wcvp-core.com/name/763459-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dialium bipindense" .
+
+<http://www.wcvp-core.com/taxon/384289-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros lanceolata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/384289-wcs> .
+
+<http://www.wcvp-core.com/name/627355-az>
+      a       skos:Concept ;
+      skos:prefLabel "Albizia gummifera" .
+
+<http://www.wcvp-core.com/taxon/454477-az>
+      a       owl:Class ;
+      rdfs:label "Vepris decaryana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vepris> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/454477-az> .
+
+<http://www.wcvp-core.com/name/367834-az>
+      a       skos:Concept ;
+      skos:prefLabel "Millettia stuhlmannii" .
+
+<http://www.wcvp-core.com/taxon/383860-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros crassiflora" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/383860-wcs> .
+
+<http://www.wcvp-core.com/name/360109-az>
+      a       skos:Concept ;
+      skos:prefLabel "Maytenus acuminata" .
+
+<http://www.wcvp-core.com/taxon/24581-wcs>
+      a       owl:Class ;
+      rdfs:label "Bridelia ndellensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Bridelia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/24581-wcs> .
+
+<http://www.wcvp-core.com/taxon/434176-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia tropophylla" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/434176-az> .
+
+<http://www.wcvp-core.com/name/469413-az>
+      a       skos:Concept ;
+      skos:prefLabel "Zanthoxylum leprieurii" .
+
+<http://www.wcvp-core.com/taxon/434348-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia laxiflora" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/434348-az> .
+
+<http://www.wcvp-core.com/taxon/385007-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros viridicans" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/385007-wcs> .
+
+<http://www.wcvp-core.com/taxon/672545-az>
+      a       owl:Class ;
+      rdfs:label "Beilschmiedia mannii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Beilschmiedia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/672545-az> .
+
+<http://www.wcvp-core.com/taxon/834807-az>
+      a       owl:Class ;
+      rdfs:label "Guibourtia coleosperma" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Guibourtia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/834807-az> .
+
+<http://www.wcvp-core.com/name/NaN>
+      a       skos:Concept ;
+      skos:prefLabel "Dombeya acerifolia" , "Grewia barorum" , "Grewia nucifera" , "Grewia maintiranensis" , "Grewia androyensis" .
+
+<http://www.wcvp-core.com/name/1014521-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cryptocarya coriacea" .
+
+<http://www.wcvp-core.com/name/400254-az>
+      a       skos:Concept ;
+      skos:prefLabel "Olax" .
+
+<http://www.wcvp-core.com/name/598341-az>
+      a       skos:Concept ;
+      skos:prefLabel "Strychnos madagascariensis" .
+
+<http://www.wcvp-core.com/name/737124-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cordia platythyrsa" .
+
+<http://www.wcvp-core.com/taxon/Ebenaceae>
+      a       owl:Class ;
+      rdfs:label "Ebenaceae" .
+
+<http://www.wcvp-core.com/name/816660-az>
+      a       skos:Concept ;
+      skos:prefLabel "Garcinia afzelii" .
+
+<http://www.wcvp-core.com/name/680329-az>
+      a       skos:Concept ;
+      skos:prefLabel "Boscia longifolia" .
+
+<http://www.wcvp-core.com/name/812165-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ficus salicifolia" .
+
+<http://www.wcvp-core.com/taxon/199279-wcs>
+      a       owl:Class ;
+      rdfs:label "Syzygium bernieri" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Syzygium> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/199279-wcs> .
+
+<http://www.wcvp-core.com/taxon/800943-az>
+      a       owl:Class ;
+      rdfs:label "Erythrina mildbraedii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Erythrina> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/800943-az> .
+
+<http://www.wcvp-core.com/taxon/608673-az>
+      a       owl:Class ;
+      rdfs:label "Searsia rigida var. margaretae" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Searsia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/608673-az> .
+
+<http://www.wcvp-core.com/taxon/737012-az>
+      a       owl:Class ;
+      rdfs:label "Cordia millenii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cordia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/737012-az> .
+
+<http://www.wcvp-core.com/name/789542-az>
+      a       skos:Concept ;
+      skos:prefLabel "Entandrophragma candollei" .
+
+<http://www.wcvp-core.com/taxon/Pauridiantha>
+      a       owl:Class ;
+      rdfs:label "Pauridiantha" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Rubiaceae> .
+
+<http://www.wcvp-core.com/name/825258-az>
+      a       skos:Concept ;
+      skos:prefLabel "Gilbertiodendron preussii" .
+
+<http://www.wcvp-core.com/name/435861-az>
+      a       skos:Concept ;
+      skos:prefLabel "Trichoscypha oddonii" .
+
+<http://www.wcvp-core.com/taxon/434338-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia fatraea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/434338-az> .
+
+<http://www.wcvp-core.com/taxon/Millettia>
+      a       owl:Class ;
+      rdfs:label "Millettia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Fabaceae> .
+
+<http://www.wcvp-core.com/taxon/87998-wcs>
+      a       owl:Class ;
+      rdfs:label "Gambeya boiviniana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Gambeya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/87998-wcs> .
+
+<http://www.wcvp-core.com/name/535324-az>
+      a       skos:Concept ;
+      skos:prefLabel "Pterocarpus santalinoides" .
+
+<http://www.wcvp-core.com/name/470721-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ziziphus mucronata" .
+
+<http://www.wcvp-core.com/taxon/745889-az>
+      a       owl:Class ;
+      rdfs:label "Cryptocarya caryoptera" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cryptocarya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/745889-az> .
+
+<http://www.wcvp-core.com/name/1262975-az>
+      a       skos:Concept ;
+      skos:prefLabel "Combretum apiculatum subsp. apiculatum" .
+
+<http://www.wcvp-core.com/name/755466-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dalbergia bracteolata" .
+
+<http://www.wcvp-core.com/name/148123-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Pauridiantha" .
+
+<http://www.wcvp-core.com/taxon/469179-az>
+      a       owl:Class ;
+      rdfs:label "Zanthoxylum thouvenotii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Zanthoxylum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/469179-az> .
+
+<http://www.wcvp-core.com/taxon/199108-wcs>
+      a       owl:Class ;
+      rdfs:label "Synsepalum buluensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Synsepalum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/199108-wcs> .
+
+<http://www.wcvp-core.com/name/397581-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ochna afzelii" .
+
+<http://www.wcvp-core.com/taxon/384176-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros heudelotii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/384176-wcs> .
+
+<http://www.wcvp-core.com/taxon/598301-az>
+      a       owl:Class ;
+      rdfs:label "Strychnos mitis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Strychnos> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/598301-az> .
+
+<http://www.wcvp-core.com/taxon/Zanthoxylum>
+      a       owl:Class ;
+      rdfs:label "Zanthoxylum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Rutaceae> .
+
+<http://www.wcvp-core.com/taxon/708279-az>
+      a       owl:Class ;
+      rdfs:label "Celtis gomphophylla" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Celtis> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/708279-az> .
+
+<http://www.wcvp-core.com/taxon/398120-az>
+      a       owl:Class ;
+      rdfs:label "Ochna membranacea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ochna> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/398120-az> .
+
+<http://www.wcvp-core.com/name/536356-az>
+      a       skos:Concept ;
+      skos:prefLabel "Prioria joveri" .
+
+<http://www.wcvp-core.com/taxon/514979-az>
+      a       owl:Class ;
+      rdfs:label "Trichilia megalantha" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Trichilia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/514979-az> .
+
+<http://www.wcvp-core.com/taxon/NaN>
+      a       owl:Class ;
+      rdfs:label "Dombeya acerifolia" , "Grewia barorum" , "Grewia nucifera" , "Grewia maintiranensis" , "Grewia androyensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Grewia> , <http://www.wcvp-core.com/taxon/Dombeya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/NaN> .
+
+<http://www.wcvp-core.com/name/433988-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia seyrigii" .
+
+<http://www.wcvp-core.com/taxon/Loganiaceae>
+      a       owl:Class ;
+      rdfs:label "Loganiaceae" .
+
+<http://www.wcvp-core.com/taxon/674958-az>
+      a       owl:Class ;
+      rdfs:label "Berlinia auriculata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Berlinia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/674958-az> .
+
+<http://www.wcvp-core.com/taxon/384248-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros kamerunensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/384248-wcs> .
+
+<http://www.wcvp-core.com/name/468203-az>
+      a       skos:Concept ;
+      skos:prefLabel "Xylopia humblotiana" .
+
+<http://www.wcvp-core.com/taxon/360115-az>
+      a       owl:Class ;
+      rdfs:label "Maytenus albata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Maytenus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/360115-az> .
+
+<http://www.wcvp-core.com/taxon/Lecythidaceae>
+      a       owl:Class ;
+      rdfs:label "Lecythidaceae" .
+
+<http://www.wcvp-core.com/taxon/454506-az>
+      a       owl:Class ;
+      rdfs:label "Vepris louisii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vepris> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/454506-az> .
+
+<http://www.wcvp-core.com/taxon/755935-az>
+      a       owl:Class ;
+      rdfs:label "Dalbergia tricolor" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dalbergia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/755935-az> .
+
+<http://www.wcvp-core.com/taxon/627582-az>
+      a       owl:Class ;
+      rdfs:label "Albizia versicolor" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Albizia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/627582-az> .
+
+<http://www.wcvp-core.com/name/469406-az>
+      a       skos:Concept ;
+      skos:prefLabel "Zanthoxylum lemairei" .
+
+<http://www.wcvp-core.com/taxon/897311-az>
+      a       owl:Class ;
+      rdfs:label "Senegalia laeta" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Senegalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/897311-az> .
+
+<http://www.wcvp-core.com/taxon/1014521-az>
+      a       owl:Class ;
+      rdfs:label "Cryptocarya coriacea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cryptocarya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/1014521-az> .
+
+<http://www.wcvp-core.com/taxon/Malvaceae>
+      a       owl:Class ;
+      rdfs:label "Malvaceae" .
+
+<http://www.wcvp-core.com/taxon/Cassipourea>
+      a       owl:Class ;
+      rdfs:label "Cassipourea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Rhizophoraceae> .
+
+<http://www.wcvp-core.com/name/763466-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dialium dinklagei" .
+
+<http://www.wcvp-core.com/taxon/398186-az>
+      a       owl:Class ;
+      rdfs:label "Ochna holstii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ochna> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/398186-az> .
+
+<http://www.wcvp-core.com/taxon/65071-wcs>
+      a       owl:Class ;
+      rdfs:label "Drypetes thouarsii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Drypetes> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/65071-wcs> .
+
+<http://www.wcvp-core.com/taxon/400062-az>
+      a       owl:Class ;
+      rdfs:label "Ochna polycarpa" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ochna> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/400062-az> .
+
+<http://www.wcvp-core.com/taxon/925322-az>
+      a       owl:Class ;
+      rdfs:label "Homalium paniculatum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Homalium> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/925322-az> .
+
+<http://www.wcvp-core.com/name/1003419-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vachellia bellula" .
+
+<http://www.wcvp-core.com/name/925271-az>
+      a       skos:Concept ;
+      skos:prefLabel "Homalium longistylum" .
+
+<http://www.wcvp-core.com/name/809363-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ficus" .
+
+<http://www.wcvp-core.com/name/810315-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ficus elasticoides" .
+
+<http://www.wcvp-core.com/taxon/680359-az>
+      a       owl:Class ;
+      rdfs:label "Boscia senegalensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Boscia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/680359-az> .
+
+<http://www.wcvp-core.com/name/199279-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Syzygium bernieri" .
+
+<http://www.wcvp-core.com/name/704428-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cassipourea barteri" .
+
+<http://www.wcvp-core.com/taxon/Ochnaceae>
+      a       owl:Class ;
+      rdfs:label "Ochnaceae" .
+
+<http://www.wcvp-core.com/taxon/608657-az>
+      a       owl:Class ;
+      rdfs:label "Searsia pentheri" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Searsia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/608657-az> .
+
+<http://www.wcvp-core.com/name/64871-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Drypetes gerrardii" .
+
+<http://www.wcvp-core.com/taxon/752373-az>
+      a       owl:Class ;
+      rdfs:label "Cynometra sakalava" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cynometra> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/752373-az> .
+
+<http://www.wcvp-core.com/name/732363-az>
+      a       skos:Concept ;
+      skos:prefLabel "Combretum aculeatum" .
+
+<http://www.wcvp-core.com/taxon/736560-az>
+      a       owl:Class ;
+      rdfs:label "Cordia aurantiaca" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cordia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/736560-az> .
+
+<http://www.wcvp-core.com/taxon/88013-wcs>
+      a       owl:Class ;
+      rdfs:label "Gambeya subnuda" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Gambeya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/88013-wcs> .
+
+<http://www.wcvp-core.com/taxon/Synsepalum>
+      a       owl:Class ;
+      rdfs:label "Synsepalum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Sapotaceae> .
+
+<http://www.wcvp-core.com/taxon/Entandrophragma>
+      a       owl:Class ;
+      rdfs:label "Entandrophragma" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Meliaceae> .
+
+<http://www.wcvp-core.com/taxon/468244-az>
+      a       owl:Class ;
+      rdfs:label "Xylopia lamii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Xylopia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/468244-az> .
+
+<http://www.wcvp-core.com/name/1016450-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia engleri" .
+
+<http://www.wcvp-core.com/taxon/431439-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia calcicola" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/431439-az> .
+
+<http://www.wcvp-core.com/taxon/384328-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros longiflora" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/384328-wcs> .
+
+<http://www.wcvp-core.com/name/1230038-az>
+      a       skos:Concept ;
+      skos:prefLabel "Pachylobus normandii" .
+
+<http://www.wcvp-core.com/name/335969-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Nuxia verticillata" .
+
+<http://www.wcvp-core.com/taxon/148123-wcs>
+      a       owl:Class ;
+      rdfs:label "Pauridiantha" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Pauridiantha> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/148123-wcs> .
+
+<http://www.wcvp-core.com/name/755809-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dalbergia pervillei" .
+
+<http://www.wcvp-core.com/name/998828-az>
+      a       skos:Concept ;
+      skos:prefLabel "Senegalia ataxacantha" .
+
+<http://www.wcvp-core.com/name/832893-az>
+      a       skos:Concept ;
+      skos:prefLabel "Grewia apetala" .
+
+<http://www.wcvp-core.com/taxon/Erythrina>
+      a       owl:Class ;
+      rdfs:label "Erythrina" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Fabaceae> .
+
+<http://www.wcvp-core.com/taxon/672412-az>
+      a       owl:Class ;
+      rdfs:label "Beilschmiedia cinnamomea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Beilschmiedia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/672412-az> .
+
+<http://www.wcvp-core.com/name/383999-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros ferrea" .
+
+<http://www.wcvp-core.com/taxon/732575-az>
+      a       owl:Class ;
+      rdfs:label "Combretum erythrophyllum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Combretum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/732575-az> .
+
+<http://www.wcvp-core.com/taxon/609116-az>
+      a       owl:Class ;
+      rdfs:label "Vachellia karroo" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vachellia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/609116-az> .
+
+<http://www.wcvp-core.com/name/833088-az>
+      a       skos:Concept ;
+      skos:prefLabel "Grewia glyphaeoides" .
+
+<http://www.wcvp-core.com/name/64820-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Drypetes caustica" .
+
+<http://www.wcvp-core.com/taxon/Vachellia>
+      a       owl:Class ;
+      rdfs:label "Vachellia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Fabaceae> .
+
+<http://www.wcvp-core.com/taxon/755498-az>
+      a       owl:Class ;
+      rdfs:label "Dalbergia comorensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dalbergia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/755498-az> .
+
+<http://www.wcvp-core.com/taxon/774794-az>
+      a       owl:Class ;
+      rdfs:label "Dombeya" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dombeya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/774794-az> .
+
+<http://www.wcvp-core.com/name/811596-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ficus pachyclada" .
+
+<http://www.wcvp-core.com/taxon/1003181-az>
+      a       owl:Class ;
+      rdfs:label "Senegalia meridionalis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Senegalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/1003181-az> .
+
+<http://www.wcvp-core.com/taxon/199132-wcs>
+      a       owl:Class ;
+      rdfs:label "Synsepalum revolutum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Synsepalum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/199132-wcs> .
+
+<http://www.wcvp-core.com/taxon/627245-az>
+      a       owl:Class ;
+      rdfs:label "Albizia balabaka" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Albizia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/627245-az> .
+
+<http://www.wcvp-core.com/name/732678-az>
+      a       skos:Concept ;
+      skos:prefLabel "Combretum imberbe" .
+
+<http://www.wcvp-core.com/taxon/834811-az>
+      a       owl:Class ;
+      rdfs:label "Guibourtia demeusei" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Guibourtia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/834811-az> .
+
+<http://www.wcvp-core.com/taxon/745887-az>
+      a       owl:Class ;
+      rdfs:label "Cryptocarya capuronii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cryptocarya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/745887-az> .
+
+<http://www.wcvp-core.com/taxon/Combretaceae>
+      a       owl:Class ;
+      rdfs:label "Combretaceae" .
+
+<http://www.wcvp-core.com/name/384328-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros longiflora" .
+
+<http://www.wcvp-core.com/taxon/708137-az>
+      a       owl:Class ;
+      rdfs:label "Celtis adolfi-friderici" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Celtis> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/708137-az> .
+
+<http://www.wcvp-core.com/name/335936-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Nuxia floribunda" .
+
+<http://www.wcvp-core.com/taxon/42035-wcs>
+      a       owl:Class ;
+      rdfs:label "Cleistanthus caudatus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cleistanthus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/42035-wcs> .
+
+<http://www.wcvp-core.com/taxon/Drypetes>
+      a       owl:Class ;
+      rdfs:label "Drypetes" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Putranjivaceae> .
+
+<http://www.wcvp-core.com/name/148130-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Pauridiantha callicarpoides" .
+
+<http://www.wcvp-core.com/taxon/468968-az>
+      a       owl:Class ;
+      rdfs:label "Zanthoxylum rubescens" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Zanthoxylum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/468968-az> .
+
+<http://www.wcvp-core.com/taxon/535446-az>
+      a       owl:Class ;
+      rdfs:label "Pterocarpus soyauxii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Pterocarpus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/535446-az> .
+
+<http://www.wcvp-core.com/name/528731-az>
+      a       skos:Concept ;
+      skos:prefLabel "Rinorea pugionifera" .
+
+<http://www.wcvp-core.com/name/435853-az>
+      a       skos:Concept ;
+      skos:prefLabel "Trichoscypha lucens" .
+
+<http://www.wcvp-core.com/name/850274-az>
+      a       skos:Concept ;
+      skos:prefLabel "Hibiscus palmatifidus" .
+
+<http://www.wcvp-core.com/taxon/Daniellia>
+      a       owl:Class ;
+      rdfs:label "Daniellia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Fabaceae> .
+
+<http://www.wcvp-core.com/name/1003181-az>
+      a       skos:Concept ;
+      skos:prefLabel "Senegalia meridionalis" .
+
+<http://www.wcvp-core.com/taxon/Ziziphus>
+      a       owl:Class ;
+      rdfs:label "Ziziphus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Rhamnaceae> .
+
+<http://www.wcvp-core.com/taxon/383844-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros conocarpa" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/383844-wcs> .
+
+<http://www.wcvp-core.com/taxon/816924-az>
+      a       owl:Class ;
+      rdfs:label "Garcinia kola" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Garcinia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/816924-az> .
+
+<http://www.wcvp-core.com/name/87994-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Gambeya africana" .
+
+<http://www.wcvp-core.com/taxon/536360-az>
+      a       owl:Class ;
+      rdfs:label "Prioria balsamifera" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Prioria> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/536360-az> .
+
+<http://www.wcvp-core.com/taxon/434006-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia tricristata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/434006-az> .
+
+<http://www.wcvp-core.com/name/641623-az>
+      a       skos:Concept ;
+      skos:prefLabel "Anthocleista grandiflora" .
+
+<http://www.wcvp-core.com/name/64868-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Drypetes gabonensis" .
+
+<http://www.wcvp-core.com/taxon/451738-az>
+      a       owl:Class ;
+      rdfs:label "Vepris ampody" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vepris> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/451738-az> .
+
+<http://www.wcvp-core.com/taxon/755721-az>
+      a       owl:Class ;
+      rdfs:label "Dalbergia melanoxylon" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dalbergia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/755721-az> .
+
+<http://www.wcvp-core.com/name/752324-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cynometra madagascariensis" .
+
+<http://www.wcvp-core.com/taxon/Albizia>
+      a       owl:Class ;
+      rdfs:label "Albizia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Fabaceae> .
+
+<http://www.wcvp-core.com/name/64863-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Drypetes floribunda" .
+
+<http://www.wcvp-core.com/taxon/148153-wcs>
+      a       owl:Class ;
+      rdfs:label "Pauridiantha pyramidata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Pauridiantha> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/148153-wcs> .
+
+<http://www.wcvp-core.com/taxon/515478-az>
+      a       owl:Class ;
+      rdfs:label "Trichilia ornithothera" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Trichilia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/515478-az> .
+
+<http://www.wcvp-core.com/name/49480-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Croton brieyi" .
+
+<http://www.wcvp-core.com/name/672412-az>
+      a       skos:Concept ;
+      skos:prefLabel "Beilschmiedia cinnamomea" .
+
+<http://www.wcvp-core.com/taxon/681444-az>
+      a       owl:Class ;
+      rdfs:label "Brachystegia laurentii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Brachystegia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/681444-az> .
+
+<http://www.wcvp-core.com/name/816980-az>
+      a       skos:Concept ;
+      skos:prefLabel "Garcinia mannii" .
+
+<http://www.wcvp-core.com/taxon/763466-az>
+      a       owl:Class ;
+      rdfs:label "Dialium dinklagei" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dialium> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/763466-az> .
+
+<http://www.wcvp-core.com/name/755786-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dalbergia orientalis" .
+
+<http://www.wcvp-core.com/taxon/435851-az>
+      a       owl:Class ;
+      rdfs:label "Trichoscypha longifolia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Trichoscypha> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/435851-az> .
+
+<http://www.wcvp-core.com/name/624966-az>
+      a       skos:Concept ;
+      skos:prefLabel "Afzelia bipindensis" .
+
+<http://www.wcvp-core.com/taxon/608664-az>
+      a       owl:Class ;
+      rdfs:label "Searsia pyroides" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Searsia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/608664-az> .
+
+<http://www.wcvp-core.com/taxon/133162-wcs>
+      a       owl:Class ;
+      rdfs:label "Nauclea diderrichii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Nauclea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/133162-wcs> .
+
+<http://www.wcvp-core.com/name/384416-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros melanida" .
+
+<http://www.wcvp-core.com/taxon/64780-wcs>
+      a       owl:Class ;
+      rdfs:label "Drypetes afzelii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Drypetes> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/64780-wcs> .
+
+<http://www.wcvp-core.com/taxon/786146-az>
+      a       owl:Class ;
+      rdfs:label "Elaeodendron" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Elaeodendron> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/786146-az> .
+
+<http://www.wcvp-core.com/taxon/200233-wcs>
+      a       owl:Class ;
+      rdfs:label "Syzygium rowlandii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Syzygium> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/200233-wcs> .
+
+<http://www.wcvp-core.com/taxon/925315-az>
+      a       owl:Class ;
+      rdfs:label "Homalium oppositifolium" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Homalium> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/925315-az> .
+
+<http://www.wcvp-core.com/taxon/732482-az>
+      a       owl:Class ;
+      rdfs:label "Combretum celastroides" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Combretum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/732482-az> .
+
+<http://www.wcvp-core.com/name/383723-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros bipindensis" .
+
+<http://www.wcvp-core.com/name/704498-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cassipourea myriocarpa" .
+
+<http://www.wcvp-core.com/taxon/386136-az>
+      a       owl:Class ;
+      rdfs:label "Ocotea kenyensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ocotea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/386136-az> .
+
+<http://www.wcvp-core.com/taxon/Pachylobus>
+      a       owl:Class ;
+      rdfs:label "Pachylobus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Burseraceae> .
+
+<http://www.wcvp-core.com/taxon/Foetidia>
+      a       owl:Class ;
+      rdfs:label "Foetidia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Lecythidaceae> .
+
+<http://www.wcvp-core.com/taxon/732813-az>
+      a       owl:Class ;
+      rdfs:label "Combretum micranthum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Combretum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/732813-az> .
+
+<http://www.wcvp-core.com/name/469325-az>
+      a       skos:Concept ;
+      skos:prefLabel "Zanthoxylum decaryi" .
+
+<http://www.wcvp-core.com/name/736560-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cordia aurantiaca" .
+
+<http://www.wcvp-core.com/taxon/Sclerocarya>
+      a       owl:Class ;
+      rdfs:label "Sclerocarya" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Anacardiaceae> .
+
+<http://www.wcvp-core.com/taxon/384321-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros lokohensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/384321-wcs> .
+
+<http://www.wcvp-core.com/taxon/Monotes>
+      a       owl:Class ;
+      rdfs:label "Monotes" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dipterocarpaceae> .
+
+<http://www.wcvp-core.com/taxon/335969-wcs>
+      a       owl:Class ;
+      rdfs:label "Nuxia verticillata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Nuxia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/335969-wcs> .
+
+<http://www.wcvp-core.com/taxon/Guibourtia>
+      a       owl:Class ;
+      rdfs:label "Guibourtia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Fabaceae> .
+
+<http://www.wcvp-core.com/taxon/Lauraceae>
+      a       owl:Class ;
+      rdfs:label "Lauraceae" .
+
+<http://www.wcvp-core.com/taxon/Vepris>
+      a       owl:Class ;
+      rdfs:label "Vepris" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Rutaceae> .
+
+<http://www.wcvp-core.com/taxon/1016450-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia engleri" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/1016450-az> .
+
+<http://www.wcvp-core.com/taxon/213446-wcs>
+      a       owl:Class ;
+      rdfs:label "Vitex ferruginea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vitex> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/213446-wcs> .
+
+<http://www.wcvp-core.com/taxon/479830-az>
+      a       owl:Class ;
+      rdfs:label "Sclerocarya birrea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Sclerocarya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/479830-az> .
+
+<http://www.wcvp-core.com/taxon/Gambeya>
+      a       owl:Class ;
+      rdfs:label "Gambeya" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Sapotaceae> .
+
+<http://www.wcvp-core.com/taxon/812503-az>
+      a       owl:Class ;
+      rdfs:label "Ficus sycomorus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ficus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/812503-az> .
+
+<http://www.wcvp-core.com/taxon/609115-az>
+      a       owl:Class ;
+      rdfs:label "Vachellia gerrardii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vachellia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/609115-az> .
+
+<http://www.wcvp-core.com/taxon/383723-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros bipindensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/383723-wcs> .
+
+<http://www.wcvp-core.com/taxon/Nauclea>
+      a       owl:Class ;
+      rdfs:label "Nauclea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Rubiaceae> .
+
+<http://www.wcvp-core.com/name/708507-az>
+      a       skos:Concept ;
+      skos:prefLabel "Celtis toka" .
+
+<http://www.wcvp-core.com/name/42112-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Cleistanthus libericus" .
+
+<http://www.wcvp-core.com/taxon/598152-az>
+      a       owl:Class ;
+      rdfs:label "Strychnos spinosa" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Strychnos> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/598152-az> .
+
+<http://www.wcvp-core.com/taxon/Vitex>
+      a       owl:Class ;
+      rdfs:label "Vitex" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Lamiaceae> .
+
+<http://www.wcvp-core.com/taxon/42074-wcs>
+      a       owl:Class ;
+      rdfs:label "Cleistanthus gabonensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cleistanthus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/42074-wcs> .
+
+<http://www.wcvp-core.com/taxon/Sapotaceae>
+      a       owl:Class ;
+      rdfs:label "Sapotaceae" .
+
+<http://www.wcvp-core.com/name/755552-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dalbergia emirnensis" .
+
+<http://www.wcvp-core.com/name/999359-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vachellia etbaica" .
+
+<http://www.wcvp-core.com/name/335927-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Nuxia congesta" .
+
+<http://www.wcvp-core.com/taxon/397581-az>
+      a       owl:Class ;
+      rdfs:label "Ochna afzelii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ochna> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/397581-az> .
+
+<http://www.wcvp-core.com/taxon/704428-az>
+      a       owl:Class ;
+      rdfs:label "Cassipourea barteri" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cassipourea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/704428-az> .
+
+<http://www.wcvp-core.com/taxon/469248-az>
+      a       owl:Class ;
+      rdfs:label "Zanthoxylum tsihanimposa" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Zanthoxylum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/469248-az> .
+
+<http://www.wcvp-core.com/name/433998-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia sulcata" .
+
+<http://www.wcvp-core.com/taxon/400254-az>
+      a       owl:Class ;
+      rdfs:label "Olax" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Olax> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/400254-az> .
+
+<http://www.wcvp-core.com/taxon/536356-az>
+      a       owl:Class ;
+      rdfs:label "Prioria joveri" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Prioria> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/536356-az> .
+
+<http://www.wcvp-core.com/taxon/Moraceae>
+      a       owl:Class ;
+      rdfs:label "Moraceae" .
+
+<http://www.wcvp-core.com/taxon/763498-az>
+      a       owl:Class ;
+      rdfs:label "Dialium madagascariense" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dialium> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/763498-az> .
+
+<http://www.wcvp-core.com/name/468244-az>
+      a       skos:Concept ;
+      skos:prefLabel "Xylopia lamii" .
+
+<http://www.wcvp-core.com/taxon/1261474-az>
+      a       owl:Class ;
+      rdfs:label "Searsia pyroides var. pyroides" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Searsia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/1261474-az> .
+
+<http://www.wcvp-core.com/taxon/627300-az>
+      a       owl:Class ;
+      rdfs:label "Albizia dinklagei" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Albizia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/627300-az> .
+
+<http://www.wcvp-core.com/name/199548-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Syzygium emirnense" .
+
+<http://www.wcvp-core.com/name/358377-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Olea capensis subsp. enervis" .
+
+<http://www.wcvp-core.com/name/609121-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vachellia xanthophloea" .
+
+<http://www.wcvp-core.com/name/454506-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vepris louisii" .
+
+<http://www.wcvp-core.com/taxon/386341-az>
+      a       owl:Class ;
+      rdfs:label "Ocotea bullata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ocotea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/386341-az> .
+
+<http://www.wcvp-core.com/name/213829-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Vitex trichantha" .
+
+<http://www.wcvp-core.com/name/454456-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vepris gabonensis" .
+
+<http://www.wcvp-core.com/taxon/Oleaceae>
+      a       owl:Class ;
+      rdfs:label "Oleaceae" .
+
+<http://www.wcvp-core.com/taxon/627355-az>
+      a       owl:Class ;
+      rdfs:label "Albizia gummifera" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Albizia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/627355-az> .
+
+<http://www.wcvp-core.com/name/708279-az>
+      a       skos:Concept ;
+      skos:prefLabel "Celtis gomphophylla" .
+
+<http://www.wcvp-core.com/taxon/763459-az>
+      a       owl:Class ;
+      rdfs:label "Dialium bipindense" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dialium> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/763459-az> .
+
+<http://www.wcvp-core.com/taxon/470721-az>
+      a       owl:Class ;
+      rdfs:label "Ziziphus mucronata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ziziphus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/470721-az> .
+
+<http://www.wcvp-core.com/taxon/360109-az>
+      a       owl:Class ;
+      rdfs:label "Maytenus acuminata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Maytenus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/360109-az> .
+
+<http://www.wcvp-core.com/taxon/755739-az>
+      a       owl:Class ;
+      rdfs:label "Dalbergia mollis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dalbergia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/755739-az> .
+
+<http://www.wcvp-core.com/name/454401-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vepris verdoorniana" .
+
+<http://www.wcvp-core.com/name/199927-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Syzygium micropodum" .
+
+<http://www.wcvp-core.com/taxon/454412-az>
+      a       owl:Class ;
+      rdfs:label "Vepris soyauxii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vepris> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/454412-az> .
+
+<http://www.wcvp-core.com/taxon/367711-az>
+      a       owl:Class ;
+      rdfs:label "Millettia lane-poolei" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Millettia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/367711-az> .
+
+<http://www.wcvp-core.com/taxon/Boraginaceae>
+      a       owl:Class ;
+      rdfs:label "Boraginaceae" .
+
+<http://www.wcvp-core.com/name/812503-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ficus sycomorus" .
+
+<http://www.wcvp-core.com/name/468229-az>
+      a       skos:Concept ;
+      skos:prefLabel "Xylopia longipetala" .
+
+<http://www.wcvp-core.com/taxon/801013-az>
+      a       owl:Class ;
+      rdfs:label "Erythrina senegalensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Erythrina> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/801013-az> .
+
+<http://www.wcvp-core.com/taxon/355136-wcs>
+      a       owl:Class ;
+      rdfs:label "Olea capensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Olea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/355136-wcs> .
+
+<http://www.wcvp-core.com/name/816960-az>
+      a       skos:Concept ;
+      skos:prefLabel "Garcinia lucida" .
+
+<http://www.wcvp-core.com/taxon/385022-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros whyteana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/385022-wcs> .
+
+<http://www.wcvp-core.com/taxon/752324-az>
+      a       owl:Class ;
+      rdfs:label "Cynometra madagascariensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cynometra> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/752324-az> .
+
+<http://www.wcvp-core.com/name/431536-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia bentzoe" .
+
+<http://www.wcvp-core.com/taxon/84640-wcs>
+      a       owl:Class ;
+      rdfs:label "Foetidia obliqua" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Foetidia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/84640-wcs> .
+
+<http://www.wcvp-core.com/name/708362-az>
+      a       skos:Concept ;
+      skos:prefLabel "Celtis mildbraedii" .
+
+<http://www.wcvp-core.com/name/737232-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cordia sinensis" .
+
+<http://www.wcvp-core.com/taxon/598264-az>
+      a       owl:Class ;
+      rdfs:label "Strychnos innocua" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Strychnos> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/598264-az> .
+
+<http://www.wcvp-core.com/name/467893-az>
+      a       skos:Concept ;
+      skos:prefLabel "Xylopia rubescens" .
+
+<http://www.wcvp-core.com/taxon/88000-wcs>
+      a       owl:Class ;
+      rdfs:label "Gambeya boukokoensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Gambeya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/88000-wcs> .
+
+<http://www.wcvp-core.com/name/133181-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Nauclea gilletii" .
+
+<http://www.wcvp-core.com/taxon/681456-az>
+      a       owl:Class ;
+      rdfs:label "Brachystegia mildbraedii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Brachystegia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/681456-az> .
+
+<http://www.wcvp-core.com/taxon/834803-az>
+      a       owl:Class ;
+      rdfs:label "Guibourtia arnoldiana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Guibourtia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/834803-az> .
+
+<http://www.wcvp-core.com/name/680331-az>
+      a       skos:Concept ;
+      skos:prefLabel "Boscia madagascariensis" .
+
+<http://www.wcvp-core.com/taxon/199138-wcs>
+      a       owl:Class ;
+      rdfs:label "Synsepalum tsounkpe" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Synsepalum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/199138-wcs> .
+
+<http://www.wcvp-core.com/name/925315-az>
+      a       skos:Concept ;
+      skos:prefLabel "Homalium oppositifolium" .
+
+<http://www.wcvp-core.com/name/752296-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cynometra hankei" .
+
+<http://www.wcvp-core.com/taxon/704498-az>
+      a       owl:Class ;
+      rdfs:label "Cassipourea myriocarpa" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cassipourea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/704498-az> .
+
+<http://www.wcvp-core.com/taxon/199499-wcs>
+      a       owl:Class ;
+      rdfs:label "Syzygium danguyanum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Syzygium> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/199499-wcs> .
+
+<http://www.wcvp-core.com/taxon/87997-wcs>
+      a       owl:Class ;
+      rdfs:label "Gambeya beguei" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Gambeya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/87997-wcs> .
+
+<http://www.wcvp-core.com/taxon/64868-wcs>
+      a       owl:Class ;
+      rdfs:label "Drypetes gabonensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Drypetes> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/64868-wcs> .
+
+<http://www.wcvp-core.com/taxon/371623-az>
+      a       owl:Class ;
+      rdfs:label "Monotes madagascariensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Monotes> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/371623-az> .
+
+<http://www.wcvp-core.com/taxon/Lamiaceae>
+      a       owl:Class ;
+      rdfs:label "Lamiaceae" .
+
+<http://www.wcvp-core.com/taxon/434059-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia prunioides" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/434059-az> .
+
+<http://www.wcvp-core.com/name/598166-az>
+      a       skos:Concept ;
+      skos:prefLabel "Strychnos ternata" .
+
+<http://www.wcvp-core.com/name/609119-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vachellia tortilis" .
+
+<http://www.wcvp-core.com/name/755640-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dalbergia humbertii" .
+
+<http://www.wcvp-core.com/name/800877-az>
+      a       skos:Concept ;
+      skos:prefLabel "Erythrina hazomboay" .
+
+<http://www.wcvp-core.com/taxon/752296-az>
+      a       owl:Class ;
+      rdfs:label "Cynometra hankei" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cynometra> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/752296-az> .
+
+<http://www.wcvp-core.com/taxon/786260-az>
+      a       owl:Class ;
+      rdfs:label "Elaeodendron transvaalense" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Elaeodendron> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/786260-az> .
+
+<http://www.wcvp-core.com/name/536371-az>
+      a       skos:Concept ;
+      skos:prefLabel "Prioria buchholzii" .
+
+<http://www.wcvp-core.com/taxon/736523-az>
+      a       owl:Class ;
+      rdfs:label "Cordia africana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cordia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/736523-az> .
+
+<http://www.wcvp-core.com/taxon/708178-az>
+      a       owl:Class ;
+      rdfs:label "Celtis bifida" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Celtis> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/708178-az> .
+
+<http://www.wcvp-core.com/name/431551-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia avicennioides" .
+
+<http://www.wcvp-core.com/taxon/374549-az>
+      a       owl:Class ;
+      rdfs:label "Millettia zechiana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Millettia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/374549-az> .
+
+<http://www.wcvp-core.com/name/148162-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Pauridiantha viridiflora" .
+
+<http://www.wcvp-core.com/name/371623-az>
+      a       skos:Concept ;
+      skos:prefLabel "Monotes madagascariensis" .
+
+<http://www.wcvp-core.com/name/528497-az>
+      a       skos:Concept ;
+      skos:prefLabel "Rinorea" .
+
+<http://www.wcvp-core.com/taxon/384843-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros squamosa" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/384843-wcs> .
+
+<http://www.wcvp-core.com/name/434059-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia prunioides" .
+
+<http://www.wcvp-core.com/taxon/435853-az>
+      a       owl:Class ;
+      rdfs:label "Trichoscypha lucens" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Trichoscypha> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/435853-az> .
+
+<http://www.wcvp-core.com/taxon/Senegalia>
+      a       owl:Class ;
+      rdfs:label "Senegalia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Fabaceae> .
+
+<http://www.wcvp-core.com/taxon/Stilbaceae>
+      a       owl:Class ;
+      rdfs:label "Stilbaceae" .
+
+<http://www.wcvp-core.com/taxon/825241-az>
+      a       owl:Class ;
+      rdfs:label "Gilbertiodendron brachystegioides" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Gilbertiodendron> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/825241-az> .
+
+<http://www.wcvp-core.com/taxon/434433-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia leiocarpa" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/434433-az> .
+
+<http://www.wcvp-core.com/taxon/412159-az>
+      a       owl:Class ;
+      rdfs:label "Pachylobus macrophyllus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Pachylobus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/412159-az> .
+
+<http://www.wcvp-core.com/taxon/64824-wcs>
+      a       owl:Class ;
+      rdfs:label "Drypetes chevalieri" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Drypetes> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/64824-wcs> .
+
+<http://www.wcvp-core.com/taxon/Violaceae>
+      a       owl:Class ;
+      rdfs:label "Violaceae" .
+
+<http://www.wcvp-core.com/taxon/468229-az>
+      a       owl:Class ;
+      rdfs:label "Xylopia longipetala" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Xylopia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/468229-az> .
+
+<http://www.wcvp-core.com/taxon/925194-az>
+      a       owl:Class ;
+      rdfs:label "Homalium dewevrei" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Homalium> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/925194-az> .
+
+<http://www.wcvp-core.com/taxon/833088-az>
+      a       owl:Class ;
+      rdfs:label "Grewia glyphaeoides" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Grewia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/833088-az> .
+
+<http://www.wcvp-core.com/name/732575-az>
+      a       skos:Concept ;
+      skos:prefLabel "Combretum erythrophyllum" .
+
+<http://www.wcvp-core.com/taxon/834817-az>
+      a       owl:Class ;
+      rdfs:label "Guibourtia leonensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Guibourtia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/834817-az> .
+
+<http://www.wcvp-core.com/name/832881-az>
+      a       skos:Concept ;
+      skos:prefLabel "Grewia amplifolia" .
+
+<http://www.wcvp-core.com/taxon/468083-az>
+      a       owl:Class ;
+      rdfs:label "Xylopia buxifolia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Xylopia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/468083-az> .
+
+<http://www.wcvp-core.com/taxon/730669-az>
+      a       owl:Class ;
+      rdfs:label "Cola nitida" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cola> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/730669-az> .
+
+<http://www.wcvp-core.com/taxon/65006-wcs>
+      a       owl:Class ;
+      rdfs:label "Drypetes perrieri" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Drypetes> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/65006-wcs> .
+
+<http://www.wcvp-core.com/name/384196-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros hoyleana" .
+
+<http://www.wcvp-core.com/taxon/383848-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros cooperi" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/383848-wcs> .
+
+<http://www.wcvp-core.com/taxon/936595-az>
+      a       owl:Class ;
+      rdfs:label "Strychnos decussata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Strychnos> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/936595-az> .
+
+<http://www.wcvp-core.com/taxon/627226-az>
+      a       owl:Class ;
+      rdfs:label "Albizia altissima" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Albizia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/627226-az> .
+
+<http://www.wcvp-core.com/name/608657-az>
+      a       skos:Concept ;
+      skos:prefLabel "Searsia pentheri" .
+
+<http://www.wcvp-core.com/taxon/Cannabaceae>
+      a       owl:Class ;
+      rdfs:label "Cannabaceae" .
+
+<http://www.wcvp-core.com/taxon/Celastraceae>
+      a       owl:Class ;
+      rdfs:label "Celastraceae" .
+
+<http://www.wcvp-core.com/taxon/Diospyros>
+      a       owl:Class ;
+      rdfs:label "Diospyros" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ebenaceae> .
+
+<http://www.wcvp-core.com/taxon/367721-az>
+      a       owl:Class ;
+      rdfs:label "Millettia laurentii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Millettia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/367721-az> .
+
+<http://www.wcvp-core.com/name/817171-az>
+      a       skos:Concept ;
+      skos:prefLabel "Garcinia smeathmanii" .
+
+<http://www.wcvp-core.com/taxon/672646-az>
+      a       owl:Class ;
+      rdfs:label "Beilschmiedia rugosa" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Beilschmiedia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/672646-az> .
+
+<http://www.wcvp-core.com/name/65071-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Drypetes thouarsii" .
+
+<http://www.wcvp-core.com/name/708137-az>
+      a       skos:Concept ;
+      skos:prefLabel "Celtis adolfi-friderici" .
+
+<http://www.wcvp-core.com/taxon/Combretum>
+      a       owl:Class ;
+      rdfs:label "Combretum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Combretaceae> .
+
+<http://www.wcvp-core.com/taxon/384746-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros sakalavarum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/384746-wcs> .
+
+<http://www.wcvp-core.com/taxon/383999-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros ferrea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/383999-wcs> .
+
+<http://www.wcvp-core.com/name/431439-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia calcicola" .
+
+<http://www.wcvp-core.com/taxon/816674-az>
+      a       owl:Class ;
+      rdfs:label "Garcinia anjouanensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Garcinia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/816674-az> .
+
+<http://www.wcvp-core.com/taxon/433998-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia sulcata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/433998-az> .
+
+<http://www.wcvp-core.com/taxon/454484-az>
+      a       owl:Class ;
+      rdfs:label "Vepris parvicalyx" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vepris> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/454484-az> .
+
+<http://www.wcvp-core.com/taxon/468055-az>
+      a       owl:Class ;
+      rdfs:label "Xylopia danguyella" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Xylopia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/468055-az> .
+
+<http://www.wcvp-core.com/name/672646-az>
+      a       skos:Concept ;
+      skos:prefLabel "Beilschmiedia rugosa" .
+
+<http://www.wcvp-core.com/name/84640-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Foetidia obliqua" .
+
+<http://www.wcvp-core.com/taxon/Garcinia>
+      a       owl:Class ;
+      rdfs:label "Garcinia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Clusiaceae> .
+
+<http://www.wcvp-core.com/taxon/Olacaceae>
+      a       owl:Class ;
+      rdfs:label "Olacaceae" .
+
+<http://www.wcvp-core.com/taxon/Cryptocarya>
+      a       owl:Class ;
+      rdfs:label "Cryptocarya" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Lauraceae> .
+
+<http://www.wcvp-core.com/name/535567-az>
+      a       skos:Concept ;
+      skos:prefLabel "Pterocarpus erinaceus" .
+
+<http://www.wcvp-core.com/name/434017-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia superba" .
+
+<http://www.wcvp-core.com/name/454415-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vepris suaveolens" .
+
+<http://www.wcvp-core.com/name/199663-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Syzygium guineense" .
+
+<http://www.wcvp-core.com/name/590817-az>
+      a       skos:Concept ;
+      skos:prefLabel "Senegalia senegal" .
+
+<http://www.wcvp-core.com/taxon/933673-az>
+      a       owl:Class ;
+      rdfs:label "Ocotea cymosa" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ocotea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/933673-az> .
+
+<http://www.wcvp-core.com/name/681413-az>
+      a       skos:Concept ;
+      skos:prefLabel "Brachystegia eurycoma" .
+
+<http://www.wcvp-core.com/name/1230758-az>
+      a       skos:Concept ;
+      skos:prefLabel "Pachylobus klaineanus" .
+
+<http://www.wcvp-core.com/name/681456-az>
+      a       skos:Concept ;
+      skos:prefLabel "Brachystegia mildbraedii" .
+
+<http://www.wcvp-core.com/taxon/Homalium>
+      a       owl:Class ;
+      rdfs:label "Homalium" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Salicaceae> .
+
+<http://www.wcvp-core.com/taxon/400224-az>
+      a       owl:Class ;
+      rdfs:label "Olax subscorpioidea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Olax> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/400224-az> .
+
+<http://www.wcvp-core.com/taxon/1016440-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia myrtifolia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/1016440-az> .
+
+<http://www.wcvp-core.com/name/514973-az>
+      a       skos:Concept ;
+      skos:prefLabel "Trichilia emetica" .
+
+<http://www.wcvp-core.com/taxon/42112-wcs>
+      a       owl:Class ;
+      rdfs:label "Cleistanthus libericus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cleistanthus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/42112-wcs> .
+
+<http://www.wcvp-core.com/name/811562-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ficus oreodryadum" .
+
+<http://www.wcvp-core.com/taxon/817056-az>
+      a       owl:Class ;
+      rdfs:label "Garcinia ovalifolia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Garcinia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/817056-az> .
+
+<http://www.wcvp-core.com/name/834817-az>
+      a       skos:Concept ;
+      skos:prefLabel "Guibourtia leonensis" .
+
+<http://www.wcvp-core.com/taxon/850161-az>
+      a       owl:Class ;
+      rdfs:label "Hibiscus mandrarensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Hibiscus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/850161-az> .
+
+<http://www.wcvp-core.com/taxon/Ocotea>
+      a       owl:Class ;
+      rdfs:label "Ocotea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Lauraceae> .
+
+<http://www.wcvp-core.com/taxon/774944-az>
+      a       owl:Class ;
+      rdfs:label "Dombeya elliptica" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dombeya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/774944-az> .
+
+<http://www.wcvp-core.com/name/367711-az>
+      a       skos:Concept ;
+      skos:prefLabel "Millettia lane-poolei" .
+
+<http://www.wcvp-core.com/taxon/756760-az>
+      a       owl:Class ;
+      rdfs:label "Daniellia oblonga" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Daniellia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/756760-az> .
+
+<http://www.wcvp-core.com/taxon/752314-az>
+      a       owl:Class ;
+      rdfs:label "Cynometra letestui" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cynometra> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/752314-az> .
+
+<http://www.wcvp-core.com/taxon/810194-az>
+      a       owl:Class ;
+      rdfs:label "Ficus densifolia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ficus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/810194-az> .
+
+<http://www.wcvp-core.com/taxon/598166-az>
+      a       owl:Class ;
+      rdfs:label "Strychnos ternata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Strychnos> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/598166-az> .
+
+<http://www.wcvp-core.com/taxon/355603-wcs>
+      a       owl:Class ;
+      rdfs:label "Olea europaea subsp. cuspidata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Olea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/355603-wcs> .
+
+<http://www.wcvp-core.com/name/756761-az>
+      a       skos:Concept ;
+      skos:prefLabel "Daniellia ogea" .
+
+<http://www.wcvp-core.com/taxon/Pterocarpus>
+      a       owl:Class ;
+      rdfs:label "Pterocarpus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Fabaceae> .
+
+<http://www.wcvp-core.com/taxon/732500-az>
+      a       owl:Class ;
+      rdfs:label "Combretum collinum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Combretum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/732500-az> .
+
+<http://www.wcvp-core.com/name/774885-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dombeya burgessiae" .
+
+<http://www.wcvp-core.com/taxon/755711-az>
+      a       owl:Class ;
+      rdfs:label "Dalbergia maritima" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dalbergia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/755711-az> .
+
+<http://www.wcvp-core.com/name/383860-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros crassiflora" .
+
+<http://www.wcvp-core.com/name/469179-az>
+      a       skos:Concept ;
+      skos:prefLabel "Zanthoxylum thouvenotii" .
+
+<http://www.wcvp-core.com/taxon/674962-az>
+      a       owl:Class ;
+      rdfs:label "Berlinia bracteosa" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Berlinia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/674962-az> .
+
+<http://www.wcvp-core.com/name/434176-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia tropophylla" .
+
+<http://www.wcvp-core.com/name/397712-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ochna arborea" .
+
+<http://www.wcvp-core.com/taxon/Trichilia>
+      a       owl:Class ;
+      rdfs:label "Trichilia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Meliaceae> .
+
+<http://www.wcvp-core.com/taxon/786164-az>
+      a       owl:Class ;
+      rdfs:label "Elaeodendron buchananii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Elaeodendron> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/786164-az> .
+
+<http://www.wcvp-core.com/name/386341-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ocotea bullata" .
+
+<http://www.wcvp-core.com/name/431493-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia ankaranensis" .
+
+<http://www.wcvp-core.com/taxon/528326-az>
+      a       owl:Class ;
+      rdfs:label "Rinorea greveana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Rinorea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/528326-az> .
+
+<http://www.wcvp-core.com/taxon/Hibiscus>
+      a       owl:Class ;
+      rdfs:label "Hibiscus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Malvaceae> .
+
+<http://www.wcvp-core.com/taxon/528497-az>
+      a       owl:Class ;
+      rdfs:label "Rinorea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Rinorea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/528497-az> .
+
+<http://www.wcvp-core.com/taxon/Croton>
+      a       owl:Class ;
+      rdfs:label "Croton" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Euphorbiaceae> .
+
+<http://www.wcvp-core.com/name/598152-az>
+      a       skos:Concept ;
+      skos:prefLabel "Strychnos spinosa" .
+
+<http://www.wcvp-core.com/taxon/Gentianaceae>
+      a       owl:Class ;
+      rdfs:label "Gentianaceae" .
+
+<http://www.wcvp-core.com/taxon/999359-az>
+      a       owl:Class ;
+      rdfs:label "Vachellia etbaica" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vachellia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/999359-az> .
+
+<http://www.wcvp-core.com/taxon/133271-wcs>
+      a       owl:Class ;
+      rdfs:label "Nauclea pobeguinii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Nauclea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/133271-wcs> .
+
+<http://www.wcvp-core.com/taxon/Putranjivaceae>
+      a       owl:Class ;
+      rdfs:label "Putranjivaceae" .
+
+<http://www.wcvp-core.com/taxon/825258-az>
+      a       owl:Class ;
+      rdfs:label "Gilbertiodendron preussii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Gilbertiodendron> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/825258-az> .
+
+<http://www.wcvp-core.com/name/24516-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Bridelia ferruginea" .
+
+<http://www.wcvp-core.com/taxon/1016513-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia welwitschii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/1016513-az> .
+
+<http://www.wcvp-core.com/taxon/Beilschmiedia>
+      a       owl:Class ;
+      rdfs:label "Beilschmiedia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Lauraceae> .
+
+<http://www.wcvp-core.com/taxon/370054-az>
+      a       owl:Class ;
+      rdfs:label "Maytenus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Maytenus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/370054-az> .
+
+<http://www.wcvp-core.com/taxon/800877-az>
+      a       owl:Class ;
+      rdfs:label "Erythrina hazomboay" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Erythrina> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/800877-az> .
+
+<http://www.wcvp-core.com/name/708178-az>
+      a       skos:Concept ;
+      skos:prefLabel "Celtis bifida" .
+
+<http://www.wcvp-core.com/name/64952-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Drypetes madagascariensis" .
+
+<http://www.wcvp-core.com/name/431091-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia albida" .
+
+<http://www.wcvp-core.com/taxon/800761-az>
+      a       owl:Class ;
+      rdfs:label "Erythrina abyssinica" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Erythrina> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/800761-az> .
+
+<http://www.wcvp-core.com/taxon/746240-az>
+      a       owl:Class ;
+      rdfs:label "Cryptocarya spathulata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cryptocarya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/746240-az> .
+
+<http://www.wcvp-core.com/taxon/755466-az>
+      a       owl:Class ;
+      rdfs:label "Dalbergia bracteolata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dalbergia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/755466-az> .
+
+<http://www.wcvp-core.com/name/88000-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Gambeya boukokoensis" .
+
+<http://www.wcvp-core.com/name/50054-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Croton gratissimus" .
+
+<http://www.wcvp-core.com/name/398120-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ochna membranacea" .
+
+<http://www.wcvp-core.com/taxon/24516-wcs>
+      a       owl:Class ;
+      rdfs:label "Bridelia ferruginea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Bridelia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/24516-wcs> .
+
+<http://www.wcvp-core.com/taxon/384425-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros mespiliformis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/384425-wcs> .
+
+<http://www.wcvp-core.com/name/817055-az>
+      a       skos:Concept ;
+      skos:prefLabel "Garcinia orthoclada" .
+
+<http://www.wcvp-core.com/name/999244-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vachellia sieberiana" .
+
+<http://www.wcvp-core.com/name/199110-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Synsepalum cerasiferum" .
+
+<http://www.wcvp-core.com/name/385007-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros viridicans" .
+
+<http://www.wcvp-core.com/name/370054-az>
+      a       skos:Concept ;
+      skos:prefLabel "Maytenus" .
+
+<http://www.wcvp-core.com/taxon/680331-az>
+      a       owl:Class ;
+      rdfs:label "Boscia madagascariensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Boscia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/680331-az> .
+
+<http://www.wcvp-core.com/taxon/756761-az>
+      a       owl:Class ;
+      rdfs:label "Daniellia ogea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Daniellia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/756761-az> .
+
+<http://www.wcvp-core.com/taxon/Cleistanthus>
+      a       owl:Class ;
+      rdfs:label "Cleistanthus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Phyllanthaceae> .
+
+<http://www.wcvp-core.com/taxon/64952-wcs>
+      a       owl:Class ;
+      rdfs:label "Drypetes madagascariensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Drypetes> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/64952-wcs> .
+
+<http://www.wcvp-core.com/taxon/454401-az>
+      a       owl:Class ;
+      rdfs:label "Vepris verdoorniana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vepris> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/454401-az> .
+
+<http://www.wcvp-core.com/taxon/789547-az>
+      a       owl:Class ;
+      rdfs:label "Entandrophragma congoense" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Entandrophragma> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/789547-az> .
+
+<http://www.wcvp-core.com/taxon/Olea>
+      a       owl:Class ;
+      rdfs:label "Olea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Oleaceae> .
+
+<http://www.wcvp-core.com/name/199107-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Synsepalum brevipes" .
+
+<http://www.wcvp-core.com/name/468083-az>
+      a       skos:Concept ;
+      skos:prefLabel "Xylopia buxifolia" .
+
+<http://www.wcvp-core.com/name/746240-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cryptocarya spathulata" .
+
+<http://www.wcvp-core.com/taxon/354965-wcs>
+      a       owl:Class ;
+      rdfs:label "Olea schliebenii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Olea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/354965-wcs> .
+
+<http://www.wcvp-core.com/taxon/672558-az>
+      a       owl:Class ;
+      rdfs:label "Beilschmiedia microphylla" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Beilschmiedia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/672558-az> .
+
+<http://www.wcvp-core.com/taxon/609119-az>
+      a       owl:Class ;
+      rdfs:label "Vachellia tortilis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vachellia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/609119-az> .
+
+<http://www.wcvp-core.com/name/833463-az>
+      a       skos:Concept ;
+      skos:prefLabel "Grewia triflora" .
+
+<http://www.wcvp-core.com/taxon/817055-az>
+      a       owl:Class ;
+      rdfs:label "Garcinia orthoclada" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Garcinia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/817055-az> .
+
+<http://www.wcvp-core.com/taxon/384393-wcs>
+      a       owl:Class ;
+      rdfs:label "Diospyros mannii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Diospyros> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/384393-wcs> .
+
+<http://www.wcvp-core.com/taxon/998837-az>
+      a       owl:Class ;
+      rdfs:label "Senegalia burkei" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Senegalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/998837-az> .
+
+<http://www.wcvp-core.com/taxon/386125-az>
+      a       owl:Class ;
+      rdfs:label "Ocotea obtusata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ocotea> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/386125-az> .
+
+<http://www.wcvp-core.com/taxon/514973-az>
+      a       owl:Class ;
+      rdfs:label "Trichilia emetica" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Trichilia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/514973-az> .
+
+<http://www.wcvp-core.com/taxon/431536-az>
+      a       owl:Class ;
+      rdfs:label "Terminalia bentzoe" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Terminalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/431536-az> .
+
+<http://www.wcvp-core.com/name/335917-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Nuxia" .
+
+<http://www.wcvp-core.com/name/801013-az>
+      a       skos:Concept ;
+      skos:prefLabel "Erythrina senegalensis" .
+
+<http://www.wcvp-core.com/name/383644-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Diospyros analamerensis" .
+
+<http://www.wcvp-core.com/taxon/536371-az>
+      a       owl:Class ;
+      rdfs:label "Prioria buchholzii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Prioria> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/536371-az> .
+
+<http://www.wcvp-core.com/taxon/535379-az>
+      a       owl:Class ;
+      rdfs:label "Pterocarpus mildbraedii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Pterocarpus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/535379-az> .
+
+<http://www.wcvp-core.com/taxon/708362-az>
+      a       owl:Class ;
+      rdfs:label "Celtis mildbraedii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Celtis> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/708362-az> .
+
+<http://www.wcvp-core.com/taxon/Syzygium>
+      a       owl:Class ;
+      rdfs:label "Syzygium" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Myrtaceae> .
+
+<http://www.wcvp-core.com/name/627300-az>
+      a       skos:Concept ;
+      skos:prefLabel "Albizia dinklagei" .
+
+<http://www.wcvp-core.com/taxon/774885-az>
+      a       owl:Class ;
+      rdfs:label "Dombeya burgessiae" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dombeya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/774885-az> .
+
+<http://www.wcvp-core.com/taxon/925125-az>
+      a       owl:Class ;
+      rdfs:label "Homalium albiflorum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Homalium> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/925125-az> .
+
+<http://www.wcvp-core.com/name/434348-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia laxiflora" .
+
+<http://www.wcvp-core.com/name/468055-az>
+      a       skos:Concept ;
+      skos:prefLabel "Xylopia danguyella" .
+
+<http://www.wcvp-core.com/taxon/737258-az>
+      a       owl:Class ;
+      rdfs:label "Cordia subcordata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Cordia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/737258-az> .
+
+<http://www.wcvp-core.com/name/64824-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Drypetes chevalieri" .
+
+<http://www.wcvp-core.com/name/672545-az>
+      a       skos:Concept ;
+      skos:prefLabel "Beilschmiedia mannii" .
+
+<http://www.wcvp-core.com/name/434433-az>
+      a       skos:Concept ;
+      skos:prefLabel "Terminalia leiocarpa" .
+
+<http://www.wcvp-core.com/name/752314-az>
+      a       skos:Concept ;
+      skos:prefLabel "Cynometra letestui" .
+
+<http://www.wcvp-core.com/taxon/335925-wcs>
+      a       owl:Class ;
+      rdfs:label "Nuxia capitata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Nuxia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/335925-wcs> .
+
+<http://www.wcvp-core.com/name/386829-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ocotea perforata" .
+
+<http://www.wcvp-core.com/name/786164-az>
+      a       skos:Concept ;
+      skos:prefLabel "Elaeodendron buchananii" .
+
+<http://www.wcvp-core.com/name/755711-az>
+      a       skos:Concept ;
+      skos:prefLabel "Dalbergia maritima" .
+
+<http://www.wcvp-core.com/taxon/535436-az>
+      a       owl:Class ;
+      rdfs:label "Pterocarpus tinctorius" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Pterocarpus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/535436-az> .
+
+<http://www.wcvp-core.com/taxon/708507-az>
+      a       owl:Class ;
+      rdfs:label "Celtis toka" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Celtis> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/708507-az> .
+
+<http://www.wcvp-core.com/name/850162-az>
+      a       skos:Concept ;
+      skos:prefLabel "Hibiscus mangindranensis" .
+
+<http://www.wcvp-core.com/name/213879-wcs>
+      a       skos:Concept ;
+      skos:prefLabel "Vitex waterlotii" .
+
+<http://www.wcvp-core.com/taxon/755552-az>
+      a       owl:Class ;
+      rdfs:label "Dalbergia emirnensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Dalbergia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/755552-az> .
+
+<http://www.wcvp-core.com/name/674962-az>
+      a       skos:Concept ;
+      skos:prefLabel "Berlinia bracteosa" .
+
+<http://www.wcvp-core.com/taxon/397712-az>
+      a       owl:Class ;
+      rdfs:label "Ochna arborea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ochna> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/397712-az> .

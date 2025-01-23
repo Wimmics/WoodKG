@@ -1,0 +1,512 @@
+@prefix rr:      <http://www.w3.org/ns/r2rml#> .
+@prefix rml:     <http://semweb.mmlab.be/ns/rml#> .
+@prefix txrfp:   <http://taxref.mnhn.fr/lod/property/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix pl_tax:  <http://www.plant-taxonomy-kg.com/core#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xrr:     <http://i3s.unice.fr/xr2rml#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.wcvp-core.com/name/732678-az>
+      a       skos:Concept ;
+      skos:prefLabel "Combretum imberbe" .
+
+<http://www.wcvp-core.com/taxon/370054-az>
+      a       owl:Class ;
+      rdfs:label "Maytenus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Maytenus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/370054-az> .
+
+<http://www.wcvp-core.com/name/812498-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ficus sur" .
+
+<http://www.wcvp-core.com/taxon/609121-az>
+      a       owl:Class ;
+      rdfs:label "Vachellia xanthophloea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vachellia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/609121-az> .
+
+<http://www.wcvp-core.com/taxon/Combretaceae>
+      a       owl:Class ;
+      rdfs:label "Combretaceae" .
+
+<http://www.wcvp-core.com/taxon/598152-az>
+      a       owl:Class ;
+      rdfs:label "Strychnos spinosa" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Strychnos> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/598152-az> .
+
+<http://www.wcvp-core.com/taxon/Loganiaceae>
+      a       owl:Class ;
+      rdfs:label "Loganiaceae" .
+
+<http://www.wcvp-core.com/taxon/471069-az>
+      a       owl:Class ;
+      rdfs:label "Ziziphus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ziziphus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/471069-az> .
+
+<http://www.wcvp-core.com/name/898817-az>
+      a       skos:Concept ;
+      skos:prefLabel "Senegalia galpinii" .
+
+<http://www.wcvp-core.com/taxon/Ficus>
+      a       owl:Class ;
+      rdfs:label "Ficus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Moraceae> .
+
+<http://www.wcvp-core.com/taxon/Strychnos>
+      a       owl:Class ;
+      rdfs:label "Strychnos" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Loganiaceae> .
+
+<http://www.wcvp-core.com/name/598301-az>
+      a       skos:Concept ;
+      skos:prefLabel "Strychnos mitis" .
+
+<http://www.wcvp-core.com/name/608692-az>
+      a       skos:Concept ;
+      skos:prefLabel "Searsia tumulicola var. meeuseana" .
+
+<http://www.wcvp-core.com/taxon/360115-az>
+      a       owl:Class ;
+      rdfs:label "Maytenus albata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Maytenus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/360115-az> .
+
+<http://www.wcvp-core.com/name/590817-az>
+      a       skos:Concept ;
+      skos:prefLabel "Senegalia senegal" .
+
+<http://www.wcvp-core.com/taxon/810862-az>
+      a       owl:Class ;
+      rdfs:label "Ficus ingens" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ficus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/810862-az> .
+
+<http://www.wcvp-core.com/taxon/809363-az>
+      a       owl:Class ;
+      rdfs:label "Ficus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ficus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/809363-az> .
+
+<http://www.wcvp-core.com/name/898818-az>
+      a       skos:Concept ;
+      skos:prefLabel "Senegalia mellifera" .
+
+<http://www.wcvp-core.com/name/609119-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vachellia tortilis" .
+
+<http://www.wcvp-core.com/taxon/897316-az>
+      a       owl:Class ;
+      rdfs:label "Senegalia polyacantha" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Senegalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/897316-az> .
+
+<http://www.wcvp-core.com/taxon/732678-az>
+      a       owl:Class ;
+      rdfs:label "Combretum imberbe" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Combretum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/732678-az> .
+
+<http://www.wcvp-core.com/name/999244-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vachellia sieberiana" .
+
+<http://www.wcvp-core.com/taxon/Rhamnaceae>
+      a       owl:Class ;
+      rdfs:label "Rhamnaceae" .
+
+<http://www.wcvp-core.com/name/370054-az>
+      a       skos:Concept ;
+      skos:prefLabel "Maytenus" .
+
+<http://www.wcvp-core.com/taxon/598341-az>
+      a       owl:Class ;
+      rdfs:label "Strychnos madagascariensis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Strychnos> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/598341-az> .
+
+<http://www.wcvp-core.com/taxon/Ziziphus>
+      a       owl:Class ;
+      rdfs:label "Ziziphus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Rhamnaceae> .
+
+<http://www.wcvp-core.com/taxon/Fabaceae>
+      a       owl:Class ;
+      rdfs:label "Fabaceae" .
+
+<http://www.wcvp-core.com/taxon/898817-az>
+      a       owl:Class ;
+      rdfs:label "Senegalia galpinii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Senegalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/898817-az> .
+
+<http://www.wcvp-core.com/taxon/Maytenus>
+      a       owl:Class ;
+      rdfs:label "Maytenus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Celastraceae> .
+
+<http://www.wcvp-core.com/taxon/369492-az>
+      a       owl:Class ;
+      rdfs:label "Maytenus peduncularis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Maytenus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/369492-az> .
+
+<http://www.wcvp-core.com/taxon/Moraceae>
+      a       owl:Class ;
+      rdfs:label "Moraceae" .
+
+<http://www.wcvp-core.com/name/360109-az>
+      a       skos:Concept ;
+      skos:prefLabel "Maytenus acuminata" .
+
+<http://www.wcvp-core.com/name/608664-az>
+      a       skos:Concept ;
+      skos:prefLabel "Searsia pyroides" .
+
+<http://www.wcvp-core.com/taxon/999244-az>
+      a       owl:Class ;
+      rdfs:label "Vachellia sieberiana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vachellia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/999244-az> .
+
+<http://www.wcvp-core.com/taxon/Searsia>
+      a       owl:Class ;
+      rdfs:label "Searsia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Anacardiaceae> .
+
+<http://www.wcvp-core.com/taxon/1261474-az>
+      a       owl:Class ;
+      rdfs:label "Searsia pyroides var. pyroides" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Searsia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/1261474-az> .
+
+<http://www.wcvp-core.com/name/609121-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vachellia xanthophloea" .
+
+<http://www.wcvp-core.com/name/809363-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ficus" .
+
+<http://www.wcvp-core.com/taxon/Senegalia>
+      a       owl:Class ;
+      rdfs:label "Senegalia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Fabaceae> .
+
+<http://www.wcvp-core.com/taxon/609119-az>
+      a       owl:Class ;
+      rdfs:label "Vachellia tortilis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vachellia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/609119-az> .
+
+<http://www.wcvp-core.com/taxon/898818-az>
+      a       owl:Class ;
+      rdfs:label "Senegalia mellifera" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Senegalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/898818-az> .
+
+<http://www.wcvp-core.com/taxon/Anacardiaceae>
+      a       owl:Class ;
+      rdfs:label "Anacardiaceae" .
+
+<http://www.wcvp-core.com/name/897316-az>
+      a       skos:Concept ;
+      skos:prefLabel "Senegalia polyacantha" .
+
+<http://www.wcvp-core.com/name/609117-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vachellia nilotica" .
+
+<http://www.wcvp-core.com/taxon/608657-az>
+      a       owl:Class ;
+      rdfs:label "Searsia pentheri" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Searsia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/608657-az> .
+
+<http://www.wcvp-core.com/name/936595-az>
+      a       skos:Concept ;
+      skos:prefLabel "Strychnos decussata" .
+
+<http://www.wcvp-core.com/name/360115-az>
+      a       skos:Concept ;
+      skos:prefLabel "Maytenus albata" .
+
+<http://www.wcvp-core.com/name/598341-az>
+      a       skos:Concept ;
+      skos:prefLabel "Strychnos madagascariensis" .
+
+<http://www.wcvp-core.com/taxon/470721-az>
+      a       owl:Class ;
+      rdfs:label "Ziziphus mucronata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ziziphus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/470721-az> .
+
+<http://www.wcvp-core.com/taxon/360109-az>
+      a       owl:Class ;
+      rdfs:label "Maytenus acuminata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Maytenus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/360109-az> .
+
+<http://www.wcvp-core.com/name/479831-az>
+      a       skos:Concept ;
+      skos:prefLabel "Sclerocarya birrea subsp. caffra" .
+
+<http://www.wcvp-core.com/taxon/732500-az>
+      a       owl:Class ;
+      rdfs:label "Combretum collinum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Combretum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/732500-az> .
+
+<http://www.wcvp-core.com/name/609116-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vachellia karroo" .
+
+<http://www.wcvp-core.com/name/732575-az>
+      a       skos:Concept ;
+      skos:prefLabel "Combretum erythrophyllum" .
+
+<http://www.wcvp-core.com/name/369492-az>
+      a       skos:Concept ;
+      skos:prefLabel "Maytenus peduncularis" .
+
+<http://www.wcvp-core.com/taxon/609117-az>
+      a       owl:Class ;
+      rdfs:label "Vachellia nilotica" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vachellia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/609117-az> .
+
+<http://www.wcvp-core.com/name/732827-az>
+      a       skos:Concept ;
+      skos:prefLabel "Combretum molle" .
+
+<http://www.wcvp-core.com/name/1261474-az>
+      a       skos:Concept ;
+      skos:prefLabel "Searsia pyroides var. pyroides" .
+
+<http://www.wcvp-core.com/name/812165-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ficus salicifolia" .
+
+<http://www.wcvp-core.com/taxon/608664-az>
+      a       owl:Class ;
+      rdfs:label "Searsia pyroides" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Searsia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/608664-az> .
+
+<http://www.wcvp-core.com/taxon/608673-az>
+      a       owl:Class ;
+      rdfs:label "Searsia rigida var. margaretae" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Searsia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/608673-az> .
+
+<http://www.wcvp-core.com/name/609115-az>
+      a       skos:Concept ;
+      skos:prefLabel "Vachellia gerrardii" .
+
+<http://www.wcvp-core.com/name/479830-az>
+      a       skos:Concept ;
+      skos:prefLabel "Sclerocarya birrea" .
+
+<http://www.wcvp-core.com/name/732892-az>
+      a       skos:Concept ;
+      skos:prefLabel "Combretum paniculatum" .
+
+<http://www.wcvp-core.com/name/812503-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ficus sycomorus" .
+
+<http://www.wcvp-core.com/taxon/1262975-az>
+      a       owl:Class ;
+      rdfs:label "Combretum apiculatum subsp. apiculatum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Combretum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/1262975-az> .
+
+<http://www.wcvp-core.com/name/998828-az>
+      a       skos:Concept ;
+      skos:prefLabel "Senegalia ataxacantha" .
+
+<http://www.wcvp-core.com/taxon/936595-az>
+      a       owl:Class ;
+      rdfs:label "Strychnos decussata" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Strychnos> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/936595-az> .
+
+<http://www.wcvp-core.com/name/608657-az>
+      a       skos:Concept ;
+      skos:prefLabel "Searsia pentheri" .
+
+<http://www.wcvp-core.com/taxon/Celastraceae>
+      a       owl:Class ;
+      rdfs:label "Celastraceae" .
+
+<http://www.wcvp-core.com/taxon/812498-az>
+      a       owl:Class ;
+      rdfs:label "Ficus sur" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ficus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/812498-az> .
+
+<http://www.wcvp-core.com/name/732500-az>
+      a       skos:Concept ;
+      skos:prefLabel "Combretum collinum" .
+
+<http://www.wcvp-core.com/name/470721-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ziziphus mucronata" .
+
+<http://www.wcvp-core.com/name/1262975-az>
+      a       skos:Concept ;
+      skos:prefLabel "Combretum apiculatum subsp. apiculatum" .
+
+<http://www.wcvp-core.com/taxon/608692-az>
+      a       owl:Class ;
+      rdfs:label "Searsia tumulicola var. meeuseana" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Searsia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/608692-az> .
+
+<http://www.wcvp-core.com/taxon/479831-az>
+      a       owl:Class ;
+      rdfs:label "Sclerocarya birrea subsp. caffra" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Sclerocarya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/479831-az> .
+
+<http://www.wcvp-core.com/taxon/732575-az>
+      a       owl:Class ;
+      rdfs:label "Combretum erythrophyllum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Combretum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/732575-az> .
+
+<http://www.wcvp-core.com/name/598152-az>
+      a       skos:Concept ;
+      skos:prefLabel "Strychnos spinosa" .
+
+<http://www.wcvp-core.com/taxon/609116-az>
+      a       owl:Class ;
+      rdfs:label "Vachellia karroo" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vachellia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/609116-az> .
+
+<http://www.wcvp-core.com/taxon/Vachellia>
+      a       owl:Class ;
+      rdfs:label "Vachellia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Fabaceae> .
+
+<http://www.wcvp-core.com/name/471069-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ziziphus" .
+
+<http://www.wcvp-core.com/taxon/Sclerocarya>
+      a       owl:Class ;
+      rdfs:label "Sclerocarya" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Anacardiaceae> .
+
+<http://www.wcvp-core.com/taxon/Combretum>
+      a       owl:Class ;
+      rdfs:label "Combretum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Combretaceae> .
+
+<http://www.wcvp-core.com/taxon/732827-az>
+      a       owl:Class ;
+      rdfs:label "Combretum molle" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Combretum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/732827-az> .
+
+<http://www.wcvp-core.com/taxon/598301-az>
+      a       owl:Class ;
+      rdfs:label "Strychnos mitis" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Strychnos> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/598301-az> .
+
+<http://www.wcvp-core.com/taxon/590817-az>
+      a       owl:Class ;
+      rdfs:label "Senegalia senegal" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Senegalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/590817-az> .
+
+<http://www.wcvp-core.com/taxon/812165-az>
+      a       owl:Class ;
+      rdfs:label "Ficus salicifolia" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ficus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/812165-az> .
+
+<http://www.wcvp-core.com/name/608673-az>
+      a       skos:Concept ;
+      skos:prefLabel "Searsia rigida var. margaretae" .
+
+<http://www.wcvp-core.com/taxon/479830-az>
+      a       owl:Class ;
+      rdfs:label "Sclerocarya birrea" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Sclerocarya> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/479830-az> .
+
+<http://www.wcvp-core.com/taxon/732892-az>
+      a       owl:Class ;
+      rdfs:label "Combretum paniculatum" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Combretum> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/732892-az> .
+
+<http://www.wcvp-core.com/taxon/998828-az>
+      a       owl:Class ;
+      rdfs:label "Senegalia ataxacantha" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Senegalia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/998828-az> .
+
+<http://www.wcvp-core.com/name/810862-az>
+      a       skos:Concept ;
+      skos:prefLabel "Ficus ingens" .
+
+<http://www.wcvp-core.com/taxon/609115-az>
+      a       owl:Class ;
+      rdfs:label "Vachellia gerrardii" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Vachellia> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/609115-az> .
+
+<http://www.wcvp-core.com/taxon/812503-az>
+      a       owl:Class ;
+      rdfs:label "Ficus sycomorus" ;
+      rdfs:subClassOf <http://www.wcvp-core.com/taxon/Ficus> ;
+      txrfp:hasReferenceName
+              <http://www.wcvp-core.com/name/812503-az> .

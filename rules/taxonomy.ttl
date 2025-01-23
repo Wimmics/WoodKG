@@ -21,7 +21,7 @@
 	];
 	
 	rr:predicateObjectMap [
-		rr:predicate rdfs:SubClassOf;
+		rr:predicate rdfs:subClassOf;
 		rr:objectMap [
 			rr:template "http://www.wcvp-core.com/taxon/{$.parent_plant_name_id}";
 		];
@@ -170,7 +170,7 @@
 	rr:predicateObjectMap [
 		rr:predicate txrfp:hasReferenceName;
 		rr:objectMap [
-			rr:template "http://www.wcvp-core.com/name/{$.family}";
+			rr:template "http://www.wcvp-core.com/name/Family";
 		];
 	];
 	

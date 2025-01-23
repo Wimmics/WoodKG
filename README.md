@@ -46,3 +46,18 @@ This script focus on 4 African regions to fit the initial problem and database o
 | Asteraceae	| Brachylaena merana	| 11 |
 | Capparaceae	| Cadaba glandulosa	| 11 |
 | Capparaceae |	Cadaba rotundifolia	| 11 |
+
+## Acknowledgement
+
+- Inside Wood:
+
+**InsideWood. 2004-onwards. Published on the Internet. http://insidewood.lib.ncsu.edu/search [date of accession].**
+
+  Wheeler, E.A. 2011. InsideWood – A Web Resource For Hardwood Identification. IAWA Journal 32(2): 199-211. [PDF](https://insidewood.lib.ncsu.edu/files/insidewood/Wheeler.2011.InsideWood.pdf)
+  Wheeler, E.A., P.E. Gasson, & P. Baas. 2020. Using The InsideWood Web Site: Potentials And Pitfalls. IAWA Journal 41 (4): 412-462. [PDF](https://insidewood.lib.ncsu.edu/files/Wheeler.Gasson.Baas.2020.IW.pdf)
+
+- Plant Of the World Online:
+
+POWO (2023). "Plants of the World Online. Facilitated by the Royal Botanic Gardens, Kew. 
+Published on the Internet; http://www.plantsoftheworldonline.org/
+Retrieved 04 September 2023."
