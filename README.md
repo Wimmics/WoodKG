@@ -10,13 +10,13 @@ The graph merges botanical information from three main sources:
 2. **[InsideWood](http://insidewood.lib.ncsu.edu/)** – wood anatomical descriptions using IAWA features.
 3. **Southern African charcoal wood descriptions** – also based on IAWA features.
 
----
+
 
 ## 📦 Requirements
 
 All implementation is contained within a **Jupyter Notebook**.
 
----
+
 
 ## 🚀 Usage
 
@@ -36,7 +36,6 @@ This notebook:
   - one for RDF export,
   - another for machine learning purposes.
 
----
 
 ### 🧠 Wood Identification
 
@@ -48,7 +47,7 @@ Functionality:
 - Ranked by number of mismatches.
 - Focused on four African regions to match the initial dataset.
 
----
+
 
 ### 📊 Knowledge Graph Query Examples
 
@@ -56,7 +55,7 @@ Notebook: `QC_sparql.ipynb`
 
 Contains real use cases and their translation into SPARQL queries.
 
----
+
 
 ## 🔍 Identification Example
 
@@ -71,7 +70,7 @@ Example: “Type 7” sample from the SACHA database.
 | Loganiaceae   | Strychnos mitis                     | 9          |
 | ...           | ...                                 | ...        |
 
----
+
 
 ## 🙏 Acknowledgements
 
