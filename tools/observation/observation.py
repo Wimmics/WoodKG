@@ -1,4 +1,5 @@
 from observationFunctions import *
+from taxon_currated_to_taxon_filtered import extract_fields_to_jsonl
 
 iawa_thesaurus_folder = "../../input/iawa_thesaurus"
 currated_folder = f"{iawa_thesaurus_folder}/currated"
@@ -10,6 +11,7 @@ observation_output_folder = "temp/observation_output"
 def main():
 
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
+    extract_fields_to_jsonl("../../input/powo/currated","wcvpJson/wcvp_filtered.json")
 
     # Génère le fichier JSON utilisé par MongoDB pour mapper les propriétés IAWA
     cleaned_taxa_path = rewrite_taxa()
