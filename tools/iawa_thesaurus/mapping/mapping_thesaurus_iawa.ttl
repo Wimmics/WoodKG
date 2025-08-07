@@ -1,0 +1,83 @@
+@prefix xrr: <http://i3s.unice.fr/xr2rml#> .
+@prefix rr:  <http://www.w3.org/ns/r2rml#> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix txrfp: <http://taxref.mnhn.fr/lod/property/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix pl_tax: <http://www.plant-taxonomy-kg.com/core#> .
+@prefix taxref: <http://taxref.mnhn.fr/lod/resource/> .
+
+<#FOI>
+  a rr:TripleMap;
+  xrr:logicalSource [
+    xrr:query """
+      db.collection.find({
+        type: "featuresOfInterest"
+      })
+    """;
+    xrr:iterator "$"
+  ];
+  rr:subjectMap [
+    rr:template "https://featuresOfInterest/{id}";
+    rr:class skos:Concept;
+  ];
+  rr:predicateObjectMap [
+    rr:predicate skos:prefLabel ;
+    rr:objectMap [ xrr:reference "label_en" ] ;
+  ];
+  rr:predicateObjectMap [
+    rr:predicate skos:altLabel ;
+    rr:objectMap [ xrr:reference "label_fr" ] ;
+  ].
+<#OP>
+  a rr:TripleMap;
+  xrr:logicalSource [
+    xrr:query """
+      db.collection.find({
+        type: "observableProperties"
+      })
+    """;
+    xrr:iterator "$"
+  ];
+  rr:subjectMap [
+    rr:template "https://observedProperty/{id}";
+    rr:class skos:Concept;
+  ];
+  rr:predicateObjectMap [
+    rr:predicate skos:prefLabel ;
+    rr:objectMap [ xrr:reference "label_en" ] ;
+  ];
+  rr:predicateObjectMap [
+    rr:predicate skos:altLabel ;
+    rr:objectMap [ xrr:reference "label_fr" ] ;
+  ].
+
+<#VAL>
+  a rr:TripleMap;
+  xrr:logicalSource [
+    xrr:query """
+      db.collection.find({
+        type: "values"
+      })
+    """;
+    xrr:iterator "$"
+  ];
+  rr:subjectMap [
+    rr:template "https://values/{id}";
+    rr:class skos:Concept;
+  ];
+  rr:predicateObjectMap [
+    rr:predicate skos:prefLabel ;
+    rr:objectMap [ xrr:reference "label_en" ] ;
+  ];
+  rr:predicateObjectMap [
+    rr:predicate skos:altLabel ;
+    rr:objectMap [ xrr:reference "label_fr" ] ;
+  ].
+
+
+
+
