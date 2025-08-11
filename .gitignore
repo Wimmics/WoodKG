@@ -3,9 +3,8 @@ __pycache__/
 *.pyo
 *.zip
 
-xr2rml/mongo_db/*
-xr2rml/log/*
-xr2rml/output/*
+
+output/*.ttl
 
 Competency_questions/*
 tools/observation/wcvpJson/wcvpJson_filtré.json
