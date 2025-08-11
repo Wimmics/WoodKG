@@ -4,6 +4,9 @@ __pycache__/
 *.zip
 
 
+xr2rml/mongo_db/*
+xr2rml/log/*
+xr2rml/xr2rml_output/*
 output/*.ttl
 
 Competency_questions/*
