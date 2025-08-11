@@ -1,12 +1,13 @@
 __pycache__/
 *.pyc
 *.pyo
+*.zip
 
 xr2rml/mongo_db/*
 xr2rml/log/*
 xr2rml/output/*
 
 Competency_questions/*
-tools/observation/wcvpJson/*
+tools/observation/wcvpJson/wcvpJson_filtré.json
 input/powo/raw/*
 input/powo/currated/*

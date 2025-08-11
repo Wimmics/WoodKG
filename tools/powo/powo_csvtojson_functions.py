@@ -36,12 +36,12 @@ def wcvpJson(csv_folder, output_folder):
         [
             f
             for f in os.listdir(csv_folder)
-            if f.startswith("partie_") and f.endswith(".csv")
+            if  f.endswith(".csv")
         ]
     )
 
     if not csv_files:
-        print("❌ Aucun fichier 'partie_*.csv' trouvé dans le dossier.")
+        print("❌ Aucun fichier '*.csv' trouvé dans le dossier.")
         return
 
     for i, filename in enumerate(csv_files, start=1):

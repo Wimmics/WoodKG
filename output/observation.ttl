@@ -167,7 +167,7 @@
 
 <http://sample/OLI19-4>
       a       pl_tax:sample ;
-      taxref:hasTaxon <http://www.wcvp-core.com/taxon/2732827> ;
+      taxref:hasTaxon <http://www.wcvp-core.com/taxon/2732828> ;
       sosa:hasObservation <http://observation/OLI19-4/16> , <http://observation/OLI19-4/18> , <http://observation/OLI19-4/22> , <http://observation/OLI19-4/12> , <http://observation/OLI19-4/24> , <http://observation/OLI19-4/14> , <http://observation/OLI19-4/20> , <http://observation/OLI19-4/10> , <http://observation/OLI19-4/1> , <http://observation/OLI19-4/3> , <http://observation/OLI19-4/5> , <http://observation/OLI19-4/7> , <http://observation/OLI19-4/9> , <http://observation/OLI19-4/15> , <http://observation/OLI19-4/17> , <http://observation/OLI19-4/11> , <http://observation/OLI19-4/23> , <http://observation/OLI19-4/13> , <http://observation/OLI19-4/25> , <http://observation/OLI19-4/21> , <http://observation/OLI19-4/2> , <http://observation/OLI19-4/4> , <http://observation/OLI19-4/19> , <http://observation/OLI19-4/6> , <http://observation/OLI19-4/8> .
 
 <http://observation/BRS18-2-12/15>
@@ -4179,7 +4179,7 @@
 
 <http://sample/BRS18-2-29>
       a       pl_tax:sample ;
-      taxref:hasTaxon <http://www.wcvp-core.com/taxon/2766298> ;
+      taxref:hasTaxon <http://www.wcvp-core.com/taxon/2766297> ;
       sosa:hasObservation <http://observation/BRS18-2-29/18> , <http://observation/BRS18-2-29/28> , <http://observation/BRS18-2-29/16> , <http://observation/BRS18-2-29/26> , <http://observation/BRS18-2-29/10> , <http://observation/BRS18-2-29/6> , <http://observation/BRS18-2-29/20> , <http://observation/BRS18-2-29/8> , <http://observation/BRS18-2-29/14> , <http://observation/BRS18-2-29/24> , <http://observation/BRS18-2-29/12> , <http://observation/BRS18-2-29/22> , <http://observation/BRS18-2-29/1> , <http://observation/BRS18-2-29/3> , <http://observation/BRS18-2-29/5> , <http://observation/BRS18-2-29/17> , <http://observation/BRS18-2-29/27> , <http://observation/BRS18-2-29/15> , <http://observation/BRS18-2-29/19> , <http://observation/BRS18-2-29/7> , <http://observation/BRS18-2-29/21> , <http://observation/BRS18-2-29/9> , <http://observation/BRS18-2-29/25> , <http://observation/BRS18-2-29/13> , <http://observation/BRS18-2-29/23> , <http://observation/BRS18-2-29/11> , <http://observation/BRS18-2-29/2> , <http://observation/BRS18-2-29/4> .
 
 <http://observation/BRS18-2-16/1>
@@ -5796,7 +5796,7 @@
 
 <http://sample/BRS18-1-4>
       a       pl_tax:sample ;
-      taxref:hasTaxon <http://www.wcvp-core.com/taxon/2812166> ;
+      taxref:hasTaxon <http://www.wcvp-core.com/taxon/2812165> ;
       sosa:hasObservation <http://observation/BRS18-1-4/5> , <http://observation/BRS18-1-4/4> , <http://observation/BRS18-1-4/7> , <http://observation/BRS18-1-4/6> , <http://observation/BRS18-1-4/1> , <http://observation/BRS18-1-4/3> , <http://observation/BRS18-1-4/2> , <http://observation/BRS18-1-4/11> , <http://observation/BRS18-1-4/10> , <http://observation/BRS18-1-4/9> , <http://observation/BRS18-1-4/8> .
 
 <http://observation/BRS18-2-52/7>
@@ -6181,7 +6181,7 @@
 
 <http://sample/BRS18-1-3>
       a       pl_tax:sample ;
-      taxref:hasTaxon <http://www.wcvp-core.com/taxon/2543085> ;
+      taxref:hasTaxon <http://www.wcvp-core.com/taxon/2403456> ;
       sosa:hasObservation <http://observation/BRS18-1-3/7> , <http://observation/BRS18-1-3/8> , <http://observation/BRS18-1-3/5> , <http://observation/BRS18-1-3/6> , <http://observation/BRS18-1-3/3> , <http://observation/BRS18-1-3/4> , <http://observation/BRS18-1-3/1> , <http://observation/BRS18-1-3/2> , <http://observation/BRS18-1-3/20> , <http://observation/BRS18-1-3/22> , <http://observation/BRS18-1-3/11> , <http://observation/BRS18-1-3/10> , <http://observation/BRS18-1-3/21> , <http://observation/BRS18-1-3/9> , <http://observation/BRS18-1-3/17> , <http://observation/BRS18-1-3/16> , <http://observation/BRS18-1-3/19> , <http://observation/BRS18-1-3/18> , <http://observation/BRS18-1-3/13> , <http://observation/BRS18-1-3/12> , <http://observation/BRS18-1-3/23> , <http://observation/BRS18-1-3/15> , <http://observation/BRS18-1-3/14> .
 
 <http://observation/BRS18-2-32/14>
@@ -8313,7 +8313,7 @@
 
 <http://sample/BRS18-2-13>
       a       pl_tax:sample ;
-      taxref:hasTaxon <http://www.wcvp-core.com/taxon/2672150> ;
+      taxref:hasTaxon <http://www.wcvp-core.com/taxon/2672149> ;
       sosa:hasObservation <http://observation/BRS18-2-13/4> , <http://observation/BRS18-2-13/3> , <http://observation/BRS18-2-13/6> , <http://observation/BRS18-2-13/5> , <http://observation/BRS18-2-13/19> , <http://observation/BRS18-2-13/8> , <http://observation/BRS18-2-13/18> , <http://observation/BRS18-2-13/7> , <http://observation/BRS18-2-13/9> , <http://observation/BRS18-2-13/2> , <http://observation/BRS18-2-13/1> , <http://observation/BRS18-2-13/20> , <http://observation/BRS18-2-13/15> , <http://observation/BRS18-2-13/14> , <http://observation/BRS18-2-13/17> , <http://observation/BRS18-2-13/16> , <http://observation/BRS18-2-13/11> , <http://observation/BRS18-2-13/10> , <http://observation/BRS18-2-13/13> , <http://observation/BRS18-2-13/12> .
 
 <http://observation/BRS18-1-16/8>
@@ -8922,7 +8922,7 @@
 
 <http://sample/BRS18-2-11>
       a       pl_tax:sample ;
-      taxref:hasTaxon <http://www.wcvp-core.com/taxon/2543085> ;
+      taxref:hasTaxon <http://www.wcvp-core.com/taxon/2403456> ;
       sosa:hasObservation <http://observation/BRS18-2-11/39> , <http://observation/BRS18-2-11/28> , <http://observation/BRS18-2-11/38> , <http://observation/BRS18-2-11/27> , <http://observation/BRS18-2-11/29> , <http://observation/BRS18-2-11/40> , <http://observation/BRS18-2-11/42> , <http://observation/BRS18-2-11/31> , <http://observation/BRS18-2-11/41> , <http://observation/BRS18-2-11/30> , <http://observation/BRS18-2-11/44> , <http://observation/BRS18-2-11/33> , <http://observation/BRS18-2-11/32> , <http://observation/BRS18-2-11/43> , <http://observation/BRS18-2-11/24> , <http://observation/BRS18-2-11/35> , <http://observation/BRS18-2-11/34> , <http://observation/BRS18-2-11/37> , <http://observation/BRS18-2-11/26> , <http://observation/BRS18-2-11/36> , <http://observation/BRS18-2-11/25> .
 
 <http://observation/BRS18-2-39/7>
@@ -9831,7 +9831,7 @@
 
 <http://sample/BRS18-2-52>
       a       pl_tax:sample ;
-      taxref:hasTaxon <http://www.wcvp-core.com/taxon/2502980> ;
+      taxref:hasTaxon <http://www.wcvp-core.com/taxon/2502982> ;
       sosa:hasObservation <http://observation/BRS18-2-52/12> , <http://observation/BRS18-2-52/11> , <http://observation/BRS18-2-52/10> , <http://observation/BRS18-2-52/20> , <http://observation/BRS18-2-52/2> , <http://observation/BRS18-2-52/3> , <http://observation/BRS18-2-52/1> , <http://observation/BRS18-2-52/6> , <http://observation/BRS18-2-52/7> , <http://observation/BRS18-2-52/4> , <http://observation/BRS18-2-52/5> , <http://observation/BRS18-2-52/19> , <http://observation/BRS18-2-52/8> , <http://observation/BRS18-2-52/18> , <http://observation/BRS18-2-52/9> , <http://observation/BRS18-2-52/17> , <http://observation/BRS18-2-52/16> , <http://observation/BRS18-2-52/15> , <http://observation/BRS18-2-52/14> , <http://observation/BRS18-2-52/13> .
 
 <http://observation/BRS18-2-31/5>
