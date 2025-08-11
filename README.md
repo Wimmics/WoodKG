@@ -22,6 +22,9 @@ Clonez ou téléchargez XR2RML et placez-le dans un dossier nommé `XR2RML/` :
 git clone https://github.com/frmichel/morph-xr2rml XR2RML
 
 ### 2. WCVP - Taxonomie des plantes
+Depuis la racine du projet faites :
+
+mkdir -p input/powo/raw input/powo/currated
 
 Téléchargez les données taxonomiques du WCVP à l’adresse suivante :
 
@@ -31,7 +34,7 @@ Téléchargez le fichier `wccp_dwca.zip`, puis extrayez le fichier `wcvp_taxon.c
 
 Découpez ce fichier en sous-fichiers de 100 000 lignes pour faciliter le traitement :
 
-split -l 100000 -d --additional-suffix=.csv wcvp_taxon.csv project_root/input/powo/raw/wcvp_part_
+split -l 100000 -d --additional-suffix=.csv wcvp_taxon.csv input/powo/raw/wcvp_part_
 
 ## Fonctionnalités
 
