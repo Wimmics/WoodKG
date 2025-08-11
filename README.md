@@ -17,14 +17,27 @@ Avant de commencer, vous devez télécharger deux ressources importantes :
 
 ### 1. XR2RML
 
-Clonez ou téléchargez XR2RML et placez-le dans un dossier nommé `XR2RML/` :
+1. Placez-vous dans le dossier `xr2rml`.
 
-git clone https://github.com/frmichel/morph-xr2rml XR2RML
+2. Installez XR2RML en suivant les instructions disponibles ici :  
+   [morph-xr2rml Docker README](https://github.com/frmichel/morph-xr2rml/blob/master/docker/README.md)
+
+3. Ouvrez le fichier `mongo_tools/import-tools.sh`.
+
+4. Modifiez la ligne suivante :  
+   MONGO_IMPORT_MAXSIZE=16000000
+   pour augmenter la taille 
+   MONGO_IMPORT_MAXSIZE=160000000
+
+
+
+
 
 ### 2. WCVP - Taxonomie des plantes
 Depuis la racine du projet faites :
-
+```bash
 mkdir -p input/powo/raw input/powo/currated
+```
 
 Téléchargez les données taxonomiques du WCVP à l’adresse suivante :
 
@@ -33,9 +46,9 @@ https://sftp.kew.org/pub/data-repositories/WCVP/
 Téléchargez le fichier `wccp_dwca.zip`, puis extrayez le fichier `wcvp_taxon.csv`.
 
 Découpez ce fichier en sous-fichiers de 100 000 lignes pour faciliter le traitement :
-
+```bash
 split -l 100000 -d --additional-suffix=.csv wcvp_taxon.csv input/powo/raw/wcvp_part_
-
+```
 ## Fonctionnalités
 
 ### input
@@ -112,15 +125,16 @@ Quitte le menu.
 ## Exemple d'utilisation
 
 Voici un exemple d’exécution complète :
-
+```bash
 ./menu.sh
-
+```
 Puis dans le menu :  
 1 → pour générer le thésaurus IAWA JSON  
 5 → pour transformer les observations CEPAM  
 7 → et entrer ce chemin :
-
+```bash
 input/cepam_observations/currated/CEPAM_feature_net_taxa_and_numbers_homogene.json
+```
 
 ## Technologies utilisées
 
