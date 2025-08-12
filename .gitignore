@@ -3,13 +3,15 @@ __pycache__/
 *.pyo
 *.zip
 
-
+xr2rml/xr2rml_config/*
+xr2rml/mongo_tools/*
+xr2rml/mongo_import/*
 xr2rml/mongo_db/*
 xr2rml/log/*
 xr2rml/xr2rml_output/*
 output/*.ttl
 
 Competency_questions/*
-tools/observation/wcvpJson/wcvpJson_filtré.json
+tools/observation/wcvpJson/wcvp_filtered.json
 input/powo/raw/*
 input/powo/currated/*

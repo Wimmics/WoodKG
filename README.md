@@ -44,11 +44,9 @@ Téléchargez les données taxonomiques du WCVP à l’adresse suivante :
 https://sftp.kew.org/pub/data-repositories/WCVP/
 
 Téléchargez le fichier `wccp_dwca.zip`, puis extrayez le fichier `wcvp_taxon.csv`.
+Le placer dans `input/powo/raw`
 
-Découpez ce fichier en sous-fichiers de 100 000 lignes pour faciliter le traitement :
-```bash
-split -l 100000 -d --additional-suffix=.csv wcvp_taxon.csv input/powo/raw/wcvp_part_
-```
+Lancer le script dans `tools/powo/scripts/split_wcp.sh`
 ## Fonctionnalités
 
 ### input

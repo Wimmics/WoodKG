@@ -11,6 +11,7 @@ observation_output_folder = "temp/observation_output"
 def main():
 
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
+    os.makedirs("wcvpJson", exist_ok=True)
     extract_fields_to_jsonl("../../input/powo/currated","wcvpJson/wcvp_filtered.json")
 
     # Génère le fichier JSON utilisé par MongoDB pour mapper les propriétés IAWA
