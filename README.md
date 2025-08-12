@@ -46,7 +46,7 @@ https://sftp.kew.org/pub/data-repositories/WCVP/
 Téléchargez le fichier `wccp_dwca.zip`, puis extrayez le fichier `wcvp_taxon.csv`.
 Le placer dans `input/powo/raw`
 
-Lancer le script dans `tools/powo/scripts/split_wcp.sh`
+Lancer le script `./tools/powo/scripts/split_wcvp.sh`
 ## Fonctionnalités
 
 ### input
