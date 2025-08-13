@@ -8,6 +8,8 @@ xr2rml/mongo_tools/*
 xr2rml/mongo_import/*
 xr2rml/mongo_db/*
 xr2rml/log/*
+xr2rml/docker-compose.yml
+xr2rml/run.sh
 xr2rml/xr2rml_output/*
 output/*.ttl
 
