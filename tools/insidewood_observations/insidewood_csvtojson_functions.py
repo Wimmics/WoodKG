@@ -68,9 +68,7 @@ def remove_fossil_hardwood(input_file, output_file=None):
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(filtered_data, f, ensure_ascii=False, indent=2)
 
-    print(
-        f"✅ {len(data) - len(filtered_data)} lignes supprimées (Fossil Hardwood). Fichier : {output_file}"
-    )
+
     return output_file
 
 
@@ -106,7 +104,7 @@ def rename_json_keys(input_file, output_file=None):
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(new_data, f, ensure_ascii=False, indent=2)
 
-    print(f"✅ Clés renommées sauvegardées dans '{output_file}'")
+    
     return output_file
 
 
@@ -147,7 +145,7 @@ def filter_json_by_key_number(input_file, output_file=None, max_number=221):
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(filtered_data, f, ensure_ascii=False, indent=2)
 
-    print(f"✅ Fichier filtré sauvegardé dans '{output_file}'")
+    
     return output_file
 
 
@@ -188,7 +186,6 @@ def extract_taxa_and_numeric_keys(input_file, output_file=None):
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2, ensure_ascii=False)
 
-    print(f"✅ Extraction completed, result saved to '{output_file}'")
     return output_file
 
 
@@ -258,7 +255,7 @@ def parse_iawa_file(json_input_path, json_output_path):
     with open(json_output_path, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=4, ensure_ascii=False)
 
-    print(f"✅ Résultats écrits dans '{json_output_path}'")
+    
 
 
 def extract_iawa_information(json_obj):
@@ -322,7 +319,7 @@ def rewrite_taxa_with_genre(json_input_path, json_output_path=None):
     with open(json_output_path, "w", encoding="utf-8") as f:
         json.dump(updated_data, f, indent=4, ensure_ascii=False)
 
-    print(f"✅ JSON mis à jour avec les genres dans '{json_output_path}'")
+   
     return json_output_path
 
 
@@ -376,7 +373,7 @@ def transform_json_file(input_json_path):
     with open(output_json_path, "w", encoding="utf-8") as f:
         json.dump(transformed_list, f, ensure_ascii=False, indent=4)
 
-    print(f"✅ Transformation terminée, fichier sauvegardé sous : {output_json_path}")
+
     return output_json_path
 
 
@@ -384,4 +381,4 @@ def delete_json_files():
     for file in os.listdir("."):
         if file.endswith(".json") and os.path.isfile(file):
             os.remove(file)
-            print(f" Deleted: {file}")
+           

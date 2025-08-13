@@ -18,7 +18,7 @@ def extract_iawa_features_from_tsv(input_folder, temp_folder=temp_folder):
     Returns:
         str: Path to the generated JSON file.
     """
-    print(os.listdir(input_folder))
+   
     # Trouve le premier fichier .tsv dans le dossier
     for file in os.listdir(input_folder):
         if file.endswith(".tsv"):
@@ -62,7 +62,7 @@ def extract_iawa_features_from_tsv(input_folder, temp_folder=temp_folder):
     with open(output_file, "w", encoding="utf-8") as jsonfile:
         json.dump(final_json, jsonfile, indent=4, ensure_ascii=False)
 
-    print(f"JSON généré avec succès dans '{output_file}'")
+    
     return output_file
 
 
@@ -118,7 +118,7 @@ def extract_iawa_numbers_mapping(input_folder, temp_folder=temp_folder):
     with open(output_file, "w", encoding="utf-8") as jsonfile:
         json.dump({"iawaNumbers": iawaNumbers}, jsonfile, indent=4, ensure_ascii=False)
 
-    print(f"Dictionnaire iawaNumbers sauvegardé dans '{output_file}'")
+    
     return output_file
 
 
@@ -174,7 +174,7 @@ def map_features_to_iawa_ids(
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(numbered_features, f, indent=4, ensure_ascii=False)
 
-    print(f"✅ Numbered features JSON generated at: '{output_file}'")
+   
     return output_file
 
 
@@ -215,7 +215,7 @@ def pad_json_keys_to_3_digits(input_file, temp_folder=temp_folder):
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(new_data, f, ensure_ascii=False, indent=4)
 
-    print(f"Clés formatées sauvegardées dans '{output_path}'")
+  
     return output_path
 
 

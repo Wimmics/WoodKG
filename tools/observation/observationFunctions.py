@@ -89,7 +89,7 @@ def rewrite_taxa():
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(updated_data, f, indent=4, ensure_ascii=False)
 
-    print(f"JSON mis à jour avec les genres dans '{output_file}'")
+
     return output_file
 
 
@@ -166,7 +166,7 @@ def merge_species_by_ID(reference_folder, species_json_path):
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(new_species_list, f, indent=2, ensure_ascii=False)
 
-    print(f"Fichier fusionné généré avec succès : {output_file}")
+   
     return output_file
 
 
@@ -241,7 +241,6 @@ def split_measurements_from_file(input_file):
     with open(output_file, "w", encoding="utf-8") as f_out:
         json.dump(splited_data, f_out, ensure_ascii=False, indent=2)
 
-    print(f"Fichier '{output_file}' généré avec {len(splited_data)} entrées valides.")
     return output_file
 
 
@@ -287,7 +286,6 @@ def merge_taxa_with_details_by_valid_id(taxa_file, details_file):
     with open(output_file, "w", encoding="utf-8") as f_out:
         json.dump(result, f_out, ensure_ascii=False, indent=2)
 
-    print(f"Merge completed: {len(result)} entries written to '{output_file}'")
     return output_file
 
 
@@ -348,7 +346,6 @@ def enrich_taxa_with_taxonid_simple_match(input_file, jsonlines_folder):
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(data_a, f, indent=2, ensure_ascii=False)
 
-    print(f"File '{output_file}' enriched with taxonid via simple match.")
     return output_file
 
 
@@ -410,13 +407,10 @@ def enrich_taxa_with_taxonid_by_genus(input_json_path: str) -> str:
                     item["taxonid"] = taxonid
                     updated_count += 1
 
-    print(f"{updated_count} entries enriched by genus matching.")
-
     # Save enriched JSON
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-    print(f"Enriched file saved as: {output_file}")
     return output_file
 
 
@@ -487,7 +481,6 @@ def json_to_jsonlines(input_json_path):
             line = json.dumps(obj, ensure_ascii=False)
             f_out.write(line + "\n")
 
-    print(f"✅ Fichier '{output_file}' créé au format JSON Lines.")
     return output_file
 
 
