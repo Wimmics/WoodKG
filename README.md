@@ -20,7 +20,7 @@ The data mainly comes from CEPAM samples and the InsideWood database.
 
 Before starting, you must download two important resources:
 
-### 1. XR2RML
+### 1. Morph-XR2RML
 
 1. Go to the `xr2rml` folder.
 
@@ -145,4 +145,4 @@ input/cepam_observations/currated/CEPAM_feature_net_taxa_and_numbers_homogene.js
 
 - SPARQL, SOSA/SSN ontologies  
 - Morph-xR2RML  
-- Python
+- Python 3.10.12
