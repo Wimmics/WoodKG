@@ -1,144 +1,148 @@
 # WoodKG
 
-WoodKG est un projet de construction d’un graphe de connaissances reliant la taxonomie botanique et les caractéristiques anatomiques du bois définies par l’IAWA.  
-Les données proviennent principalement des échantillons du CEPAM et de la base InsideWood.
+WoodKG is a project to build a knowledge graph linking botanical taxonomy and wood anatomical features defined by IAWA.  
+The data mainly comes from CEPAM samples and the InsideWood database.
 
-- POWO pour [Plants Of the World Online](https://powo.science.kew.org/)
-- CEPAM pour  [Cultures – Environnements. Préhistoire, Antiquité, Moyen Âge](https://www.cepam.cnrs.fr/)
-- IAWA pour [International Association of Wood Anatomists](http://www.maderasenargentina.com.ar/archivos/IAWA_Committee1989.pdf)
+- POWO for [Plants Of the World Online](https://powo.science.kew.org/)
+- CEPAM for [Cultures – Environnements. Préhistoire, Antiquité, Moyen Âge](https://www.cepam.cnrs.fr/)
+- IAWA for [International Association of Wood Anatomists](http://www.maderasenargentina.com.ar/archivos/IAWA_Committee1989.pdf)
 - [InsideWood](https://insidewood.lib.ncsu.edu/search)
 
-## Table des matières
+## Usage
 
 - [Installation](#installation)
-- [Fonctionnalités](#fonctionnalités)
+- [Features](#features)
 - [Usage](#usage)
-- [Exemple d'utilisation](#exemple-dutilisation)
-- [Technologies utilisées](#technologies-utilisées)
+- [Example of use](#example-of-use)
+- [Technologies used](#technologies-used)
 
 ## Installation
 
-Avant de commencer, vous devez télécharger deux ressources importantes :
+Before starting, you must download two important resources:
 
 ### 1. XR2RML
 
-1. Placez-vous dans le dossier `xr2rml`.
+1. Go to the `xr2rml` folder.
 
-2. Installez XR2RML en suivant les instructions disponibles ici :  
+2. Install XR2RML following the instructions here:  
    [morph-xr2rml Docker README](https://github.com/frmichel/morph-xr2rml/blob/master/docker/README.md)
 
-3. Ouvrez le fichier `mongo_tools/import-tools.sh`.
+3. Open the file `mongo_tools/import-tools.sh`.
 
-4. Modifiez la ligne suivante :  
-   `MONGO_IMPORT_MAXSIZE=16000000`
-   pour augmenter la taille 
-   `MONGO_IMPORT_MAXSIZE=160000000`
+4. Modify the following line:  
+   ```bash 
+   MONGO_IMPORT_MAXSIZE=16000000
+   ```
+   to increase the size 
+   ```
+   MONGO_IMPORT_MAXSIZE=160000000
+   ```
 
-
-### 2. WCVP - Taxonomie des plantes
-Depuis la racine du projet faites :
+### 2. WCVP - Plant taxonomy
+From the project root, run:
 ```bash
 mkdir -p input/powo/raw input/powo/currated
 ```
 
-Téléchargez les données taxonomiques du WCVP à l’adresse suivante :
+Download the WCVP taxonomic data from the following address:
 
 https://sftp.kew.org/pub/data-repositories/WCVP/
 
-Téléchargez le fichier `wccp_dwca.zip`, puis extrayez le fichier `wcvp_taxon.csv`.
-Le placer dans `input/powo/raw`
+Download the file `wccp_dwca.zip`, then extract the file `wcvp_taxon.csv`.
+Place it in `input/powo/raw`.
 
-Lancer le script `./tools/powo/scripts/split_wcvp.sh`
-## Fonctionnalités
+Run the script `./tools/powo/scripts/split_wcvp.sh`
+
+## Features
 
 ### input
 
-Ce dossier contient toutes les sources de données :
-- powo/ : taxonomie WCVP,
-- [insidewood_observations/](input/insidewood_observations/) : observations InsideWood,
-- [cepam_observations/](input/cepam_observations/) : observations du CEPAM.
+This folder contains all the data sources:
+- powo/: WCVP taxonomy,
+- [insidewood_observations/](input/insidewood_observations/): InsideWood observations,
+- [cepam_observations/](input/cepam_observations/): CEPAM observations.
 
-Chaque sous-dossier contient :
-- `raw/` : fichiers bruts,
-- `currated/` : versions transformées prêtes à être utilisées.
+Each subfolder contains:
+- `raw/`: raw files,
+- `currated/`: transformed versions ready to be used.
 
 ### output
 
-Contient les graphes RDF générés :
-- la taxonomie POWO (powo_taxonomy_*.ttl),
-- les observations (InsideWood, CEPAM),
-- le thésaurus IAWA.
+Contains the generated RDF graphs:
+- the POWO taxonomy (powo_taxonomy_*.ttl),
+- the observations (InsideWood, CEPAM),
+- the IAWA thesaurus.
 
-Un fichier [wrong_taxonid.json](output/wrong_taxonid/observations_output_unique_sans_taxonid.json) indique les échantillons pour lesquels aucun identifiant taxonomique n’a été trouvé dans POWO.
+A file [wrong_taxonid.json](output/wrong_taxonid/observations_output_unique_sans_taxonid.json) indicates the samples for which no taxonomic identifier was found in POWO.
 
 ### tools
 
-Contient les scripts :
-- de transformation des fichiers raw vers currated,
-- de génération des fichiers RDF.
+Contains scripts:
+- for transforming raw files to currated,
+- for generating RDF files.
 
 ### xr2rml
 
-Contient les fichiers de mapping et de configuration nécessaires pour utiliser XR2RML.
+Contains mapping and configuration files necessary to use XR2RML.
 
 ## Usage
 
-Lancez le menu principal avec :
+Launch the main menu with:
 
-## Table des matières
+## Table of contents
 **./menu.sh**
 
-Le menu vous propose différentes options en appelant tous des scripts .sh se trouvant dans `tools/folder/scripts`:
+The menu offers different options by calling .sh scripts located in `tools/<subfolder>/scripts`:
 
 1. Generate IAWA thesaurus as JSON  
-Transforme les fichiers du thésaurus IAWA de raw vers currated.
-En utilisant `tools/iawa_thesaurus/scripts/thesaurus.sh` 
-et `tools/iawa_thesaurus/scripts/iawa_properties.sh` 
+Transforms the IAWA thesaurus files from [raw](/input/iawa_thesaurus/raw/) to [currated](/input/iawa_thesaurus/currated/).  
+Using `tools/iawa_thesaurus/scripts/thesaurus.sh`  
+and `tools/iawa_thesaurus/scripts/iawa_properties.sh` 
 
 2. Generate IAWA thesaurus as RDF  
-Génère thesaurus.ttl à partir des fichiers JSON.  
-A exécuter après l'option 1.
-En utilisant `tools/xr2rml/observation2xr2rml -thesaurus`
+Generates thesaurus.ttl in [output](/output/) from [JSON](/input/iawa_thesaurus/currated/) files.  
+Must be executed after option 1.  
+Using `tools/xr2rml/observation2xr2rml -thesaurus`
 
 3. Generate POWO taxonomy as JSON  
-Transforme les fichiers taxonomiques WCVP de raw vers currated.
-En utilisant `tools/powo/scripts/powo.sh`
+Transforms WCVP taxonomic files from [raw](/input/powo/raw/) to [currated](/input/powo/currated/).  
+Using `tools/powo/scripts/powo.sh`
 
 4. Generate POWO taxonomy as RDF  
-Génère les fichiers RDF powo_taxonomy_*.ttl à partir des fichiers JSON.
-En utilisant `tools/xr2rml/observation2xr2rml -taxon`
+Generates RDF files [powo_taxonomy_*.ttl](/output/) from [JSON](/input/powo/currated/) files.  
+Using `tools/xr2rml/observation2xr2rml -taxon`
 
 5. Generate CEPAM observations as JSON  
-Transforme les observations du CEPAM de raw vers currated.
-En utilisant `tools/cepam_observations/scripts/cepam_csvtojson.sh`
+Transforms CEPAM observations from [raw](/input/cepam_observations/raw/) to [currated](/input/cepam_observations/currated/).  
+Using `tools/cepam_observations/scripts/cepam_csvtojson.sh`
 
 6. Generate InsideWood observations as JSON  
-Transforme les observations d’InsideWood de raw vers currated.
-En utilisant `tools/insidewood_observations/scripts/insidewood_observations.sh`
+Transforms InsideWood observations from [raw](/input/insidewood_observations/raw/) to [currated](/input/insidewood_observations/currated/).  
+Using `tools/insidewood_observations/scripts/insidewood_observations.sh`
 
 7. Generate observations as RDF  
-Demande un fichier .json ou .csv (de type currated) et génère les observations au format RDF.
+Requires a .json file (currated type) and generates RDF observations in [output](/output/).
 
 8. Quit  
-Quitte le menu.
+Exit the menu.
 
-## Exemple d'utilisation
+## Example of use
 
-Voici un exemple d’exécution complète :
+Here is a complete execution example:
 ```bash
 ./menu.sh
 ```
-Puis dans le menu :  
-1 → pour générer le thésaurus IAWA JSON  
-3 → pour générer les fichiers currated de POWO
-5 → pour transformer les observations CEPAM  
-7 → et entrer ce chemin :
+Then in the menu:  
+- 1 → to generate the IAWA JSON thesaurus  
+- 3 → to generate the currated POWO files  
+- 5 → to transform CEPAM observations  
+- 7 → and enter this path:
 ```bash
 input/cepam_observations/currated/CEPAM_feature_net_taxa_and_numbers_homogene.json
 ```
 
-## Technologies utilisées
+## Technologies used
 
-- SPARQL, ontologies SOSA/SSN  
-- XR2RML  
+- SPARQL, SOSA/SSN ontologies  
+- Morph-xR2RML  
 - Python

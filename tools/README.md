@@ -16,7 +16,7 @@ Le répertoire `tools` est organisé en plusieurs sous-dossiers, chacun pouvant 
 
 ### xr2rml
 
-#### observation2xr2rml
+#### observation2xr2rml.sh
 
 Ce script effectue les opérations suivantes :
 - Copie le fichier de mapping approprié dans le dossier `xr2rml_config`.
@@ -24,6 +24,6 @@ Ce script effectue les opérations suivantes :
 - Exécute `xr2rml.sh` avec l’option `--taxon`, `--iawa`, ou `--thesaurus` selon les besoins.
 - Copie les résultats générés par XR2RML depuis `xr2rml_output` vers le dossier `output`.
 
-#### xr2rml
+#### xr2rmle.sh
 
 Ce fichier exécute l’un des scripts `run_mapping` pour générer les fichiers RDF à l’aide de XR2RML.
