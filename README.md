@@ -3,6 +3,11 @@
 WoodKG est un projet de construction d’un graphe de connaissances reliant la taxonomie botanique et les caractéristiques anatomiques du bois définies par l’IAWA.  
 Les données proviennent principalement des échantillons du CEPAM et de la base InsideWood.
 
+- POWO pour [Plants Of the World Online](https://powo.science.kew.org/)
+- CEPAM pour  [Cultures – Environnements. Préhistoire, Antiquité, Moyen Âge](https://www.cepam.cnrs.fr/)
+- IAWA pour [International Association of Wood Anatomists](http://www.maderasenargentina.com.ar/archivos/IAWA_Committee1989.pdf)
+- [InsideWood](https://insidewood.lib.ncsu.edu/search)
+
 ## Table des matières
 
 - [Installation](#installation)
@@ -53,12 +58,12 @@ Lancer le script `./tools/powo/scripts/split_wcvp.sh`
 
 Ce dossier contient toutes les sources de données :
 - powo/ : taxonomie WCVP,
-- insidewood/ : observations InsideWood,
-- cepam_observations/ : observations du CEPAM.
+- [insidewood_observations/](input/insidewood_observations/) : observations InsideWood,
+- [cepam_observations/](input/cepam_observations/) : observations du CEPAM.
 
 Chaque sous-dossier contient :
-- raw/ : fichiers bruts,
-- currated/ : versions transformées prêtes à être utilisées.
+- `raw/` : fichiers bruts,
+- `currated/` : versions transformées prêtes à être utilisées.
 
 ### output
 
@@ -67,7 +72,7 @@ Contient les graphes RDF générés :
 - les observations (InsideWood, CEPAM),
 - le thésaurus IAWA.
 
-Un fichier `wrong_taxonid.txt` indique les échantillons pour lesquels aucun identifiant taxonomique n’a été trouvé dans POWO.
+Un fichier [wrong_taxonid.json](output/wrong_taxonid/observations_output_unique_sans_taxonid.json) indique les échantillons pour lesquels aucun identifiant taxonomique n’a été trouvé dans POWO.
 
 ### tools
 
@@ -136,8 +141,6 @@ input/cepam_observations/currated/CEPAM_feature_net_taxa_and_numbers_homogene.js
 
 ## Technologies utilisées
 
-- RDF, Turtle, JSON, CSV  
 - SPARQL, ontologies SOSA/SSN  
 - XR2RML  
-- Bash  
 - Python

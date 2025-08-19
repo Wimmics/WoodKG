@@ -506,7 +506,7 @@ def extract_unique_taxon_without_taxonid(json_input_path: str) -> int:
     os.makedirs(output_folder, exist_ok=True)
 
     basename = os.path.splitext(os.path.basename(json_input_path))[0]
-    output_file = os.path.join(output_folder, f"{basename}_unique_sans_taxonid.json")
+    output_file = os.path.join(output_folder, "wrong_taxon_id.json")
 
     seen_taxa = set()
     count = 0
