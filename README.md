@@ -30,12 +30,9 @@ Avant de commencer, vous devez télécharger deux ressources importantes :
 3. Ouvrez le fichier `mongo_tools/import-tools.sh`.
 
 4. Modifiez la ligne suivante :  
-   MONGO_IMPORT_MAXSIZE=16000000
+   `MONGO_IMPORT_MAXSIZE=16000000`
    pour augmenter la taille 
-   MONGO_IMPORT_MAXSIZE=160000000
-
-
-
+   `MONGO_IMPORT_MAXSIZE=160000000`
 
 
 ### 2. WCVP - Taxonomie des plantes
@@ -133,6 +130,7 @@ Voici un exemple d’exécution complète :
 ```
 Puis dans le menu :  
 1 → pour générer le thésaurus IAWA JSON  
+3 → pour générer les fichiers currated de POWO
 5 → pour transformer les observations CEPAM  
 7 → et entrer ce chemin :
 ```bash
