@@ -128,3 +128,19 @@ dmypy.json
 # Pyre type checker
 .pyre/
 .ipynb_checkpoints/*
+
+xr2rml/xr2rml_config/*
+xr2rml/mongo_tools/*
+xr2rml/mongo_import/*
+xr2rml/mongo_db/*
+xr2rml/log/*
+xr2rml/docker-compose.yml
+xr2rml/run.sh
+xr2rml/xr2rml_output/*
+output/*.ttl
+tools/observation/temp/*
+
+Competency_questions/*
+tools/observation/wcvpJson/wcvp_filtered.json
+input/powo/raw/*
+input/powo/currated/*

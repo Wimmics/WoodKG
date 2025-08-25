@@ -1,63 +1,148 @@
 # WoodKG
-WoodKG is a knowledge graph for African Wood charcoal studies. This repository contains the details of graph building and wood identification algorithm.
-The graph is a merge of plant informations coming from: (1) Plant Of the World Online (POWO) which describe up to date taxonomic name, plants hierarchy and geolocation; (2) InsideWood wood charcoal description which use the International Association of Wood Anatomists (IAWA) features list and (3) the Southern African wood CHArcoal description using the IAWA features list.
 
-# Requierement
+WoodKG is a project to build a knowledge graph linking botanical taxonomy and wood anatomical features defined by IAWA.  
+The data mainly comes from CEPAM samples and the InsideWood database.
 
-All the implementation is contains in a Jupyter Notebook
+- POWO for [Plants Of the World Online](https://powo.science.kew.org/)
+- CEPAM for [Cultures – Environnements. Préhistoire, Antiquité, Moyen Âge](https://www.cepam.cnrs.fr/)
+- IAWA for [International Association of Wood Anatomists](http://www.maderasenargentina.com.ar/archivos/IAWA_Committee1989.pdf)
+- [InsideWood](https://insidewood.lib.ncsu.edu/search)
 
-# Usage
+## Usage
 
-- Wood Description update
+- [Installation](#installation)
+- [Features](#features)
+- [Usage](#usage)
+- [Example of use](#example-of-use)
+- [Technologies used](#technologies-used)
 
-The jupyter notebook "burnwood_extract" contains all steps to extract from unstructured text in CSV columns, the familly, genus and taxa of a sample from both InsideWood and IAWA databases and match its accepted label in the POWO taxonomy. It will also translate IAWA features symbole into specific number between 0 and 3 (0 for total absence, 1 for doubtfull presence, 2 for not systematic presence and 3 for presence) and produce a CSV that will be lift into RDF graph with mapping rules. A second CSV is produce to be used for machine learning purpouse.
+## Installation
 
-- Knowledge graph use case examples
+Before starting, you must download two important resources:
 
-The jupyter notebook "QC_sparql" contains example of possible use cases and SPARQL translation of those use cases.
+### 1. Morph-XR2RML
 
-- Wood Identification
+1. Go to the `xr2rml` folder.
 
-The identlib.py script take a csv of wood description and give the closest spicies based on their IAWA features. The list is order by number of mismatches.
-This script focus on 4 African regions to fit the initial problem and database of wood sample.
+2. Install XR2RML following the instructions here:  
+   [morph-xr2rml Docker README](https://github.com/frmichel/morph-xr2rml/blob/master/docker/README.md)
 
-# Example of identification
+3. Open the file `mongo_tools/import-tools.sh`.
 
-"Type 7" sample of SACHA database.
+4. Modify the following line:  
+   ```bash 
+   MONGO_IMPORT_MAXSIZE=16000000
+   ```
+   to increase the size 
+   ```
+   MONGO_IMPORT_MAXSIZE=160000000
+   ```
 
-| Family | Taxa | Mismatchs |
-|---|---|---|
-| Olea |	Olea europaea subsp. cuspidata	| 7 |
-| Olea	| Olea capensis subsp. enervis	| 8 |
-| Oleaceae	| Olea schliebenii	| 8 |
-| Asteraceae	| Brachylaena huillensis	| 9 |
-| Loganiaceae	| Strychnos mitis	| 9 |
-| Olea	| Olea europaea subsp. cuspidata	| 9 |
-| Ebenaceae	| Diospyros abyssinica	| 10 |
-| Fabaceae	| Bauhinia tomentosa	| 10 |
-| Malvaceae	| Dombeya rotundifolia	| 10 |
-| Oleaceae	| Olea capensis	| 10 |
-| Phyllanthaceae	|Cleistanthus capuronii	| 10 |
-| Rhamnaceae	| Lasiodiscus mildbraedii	| 10 |
-|Sapindaceae	| Dodonaea viscosa	| 10 |
-| Sapotaceae	| Synsepalum revolutum	| 10 |
-| Apocynaceae	| Carissa spinarum	| 11 |
-| Asteraceae	| Brachylaena discolor	| 11 |
-| Asteraceae	| Brachylaena merana	| 11 |
-| Capparaceae	| Cadaba glandulosa	| 11 |
-| Capparaceae |	Cadaba rotundifolia	| 11 |
+### 2. WCVP - Plant taxonomy
+From the project root, run:
+```bash
+mkdir -p input/powo/raw input/powo/currated
+```
 
-## Acknowledgement
+Download the WCVP taxonomic data from the following address:
 
-- Inside Wood:
+https://sftp.kew.org/pub/data-repositories/WCVP/
 
-**InsideWood. 2004-onwards. Published on the Internet. http://insidewood.lib.ncsu.edu/search [date of accession].**
+Download the file `wccp_dwca.zip`, then extract the file `wcvp_taxon.csv`.
+Place it in `input/powo/raw`.
 
-  Wheeler, E.A. 2011. InsideWood – A Web Resource For Hardwood Identification. IAWA Journal 32(2): 199-211. [PDF](https://insidewood.lib.ncsu.edu/files/insidewood/Wheeler.2011.InsideWood.pdf)
-  Wheeler, E.A., P.E. Gasson, & P. Baas. 2020. Using The InsideWood Web Site: Potentials And Pitfalls. IAWA Journal 41 (4): 412-462. [PDF](https://insidewood.lib.ncsu.edu/files/Wheeler.Gasson.Baas.2020.IW.pdf)
+Run the script `./tools/powo/scripts/split_wcvp.sh`
 
-- Plant Of the World Online:
+## Features
 
-POWO (2023). "Plants of the World Online. Facilitated by the Royal Botanic Gardens, Kew. 
-Published on the Internet; http://www.plantsoftheworldonline.org/
-Retrieved 04 September 2023."
+### input
+
+This folder contains all the data sources:
+- powo/: WCVP taxonomy,
+- [insidewood_observations/](input/insidewood_observations/): InsideWood observations,
+- [cepam_observations/](input/cepam_observations/): CEPAM observations.
+
+Each subfolder contains:
+- `raw/`: raw files,
+- `currated/`: transformed versions ready to be used.
+
+### output
+
+Contains the generated RDF graphs:
+- the POWO taxonomy (powo_taxonomy_*.ttl),
+- the observations (InsideWood, CEPAM),
+- the IAWA thesaurus.
+
+A file [wrong_taxonid.json](output/wrong_taxonid/observations_output_unique_sans_taxonid.json) indicates the samples for which no taxonomic identifier was found in POWO.
+
+### tools
+
+Contains scripts:
+- for transforming raw files to currated,
+- for generating RDF files.
+
+### xr2rml
+
+Contains mapping and configuration files necessary to use XR2RML.
+
+## Usage
+
+Launch the main menu with:
+
+## Table of contents
+**./menu.sh**
+
+The menu offers different options by calling .sh scripts located in `tools/<subfolder>/scripts`:
+
+1. Generate IAWA thesaurus as JSON  
+Transforms the IAWA thesaurus files from [raw](/input/iawa_thesaurus/raw/) to [currated](/input/iawa_thesaurus/currated/).  
+Using `tools/iawa_thesaurus/scripts/thesaurus.sh`  
+and `tools/iawa_thesaurus/scripts/iawa_properties.sh` 
+
+2. Generate IAWA thesaurus as RDF  
+Generates thesaurus.ttl in [output](/output/) from [JSON](/input/iawa_thesaurus/currated/) files.  
+Must be executed after option 1.  
+Using `tools/xr2rml/observation2xr2rml -thesaurus`
+
+3. Generate POWO taxonomy as JSON  
+Transforms WCVP taxonomic files from [raw](/input/powo/raw/) to [currated](/input/powo/currated/).  
+Using `tools/powo/scripts/powo.sh`
+
+4. Generate POWO taxonomy as RDF  
+Generates RDF files [powo_taxonomy_*.ttl](/output/) from [JSON](/input/powo/currated/) files.  
+Using `tools/xr2rml/observation2xr2rml -taxon`
+
+5. Generate CEPAM observations as JSON  
+Transforms CEPAM observations from [raw](/input/cepam_observations/raw/) to [currated](/input/cepam_observations/currated/).  
+Using `tools/cepam_observations/scripts/cepam_csvtojson.sh`
+
+6. Generate InsideWood observations as JSON  
+Transforms InsideWood observations from [raw](/input/insidewood_observations/raw/) to [currated](/input/insidewood_observations/currated/).  
+Using `tools/insidewood_observations/scripts/insidewood_observations.sh`
+
+7. Generate observations as RDF  
+Requires a .json file (currated type) and generates RDF observations in [output](/output/).
+
+8. Quit  
+Exit the menu.
+
+## Example of use
+
+Here is a complete execution example:
+```bash
+./menu.sh
+```
+Then in the menu:  
+- 1 → to generate the IAWA JSON thesaurus  
+- 3 → to generate the currated POWO files  
+- 5 → to transform CEPAM observations  
+- 7 → and enter this path:
+```bash
+input/cepam_observations/currated/CEPAM_feature_net_taxa_and_numbers_homogene.json
+```
+
+## Technologies used
+
+- SPARQL, SOSA/SSN ontologies  
+- Morph-xR2RML  
+- Python 3.10.12
