@@ -12,7 +12,7 @@ fi
 
 rm -rf "$DEST_DIR/"*.json
 
-    cp "$SOURCE_FILE" "$DEST_DIR/"
-    echo "✅ Copied: $SOURCE_FILE to $DEST_DIR"
+cp "$SOURCE_FILE" "$DEST_DIR/"
+echo "✅ Copied: $SOURCE_FILE to $DEST_DIR"
 
 

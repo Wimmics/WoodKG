@@ -1,12 +1,16 @@
 # WoodKG
 
-WoodKG is a project to build a knowledge graph linking botanical taxonomy and wood anatomical features defined by IAWA.  
-The data mainly comes from CEPAM samples and the InsideWood database.
+WoodKG is a knowledge graph for African Wood charcoal studies. 
+This repository contains the tools that are used to build the sub-parts of the graph.
 
-- POWO for [Plants Of the World Online](https://powo.science.kew.org/)
-- CEPAM for [Cultures – Environnements. Préhistoire, Antiquité, Moyen Âge](https://www.cepam.cnrs.fr/)
-- IAWA for [International Association of Wood Anatomists](http://www.maderasenargentina.com.ar/archivos/IAWA_Committee1989.pdf)
-- [InsideWood](https://insidewood.lib.ncsu.edu/search)
+WoodKG aggregates various sources in a unified semantic model:
+- [Plants Of the World Online](https://powo.science.kew.org/) (POWO) which describes up to date taxonomic name and geolocation;
+- [World Checklist of Vascular Plants](https://powo.science.kew.org/about-wcvp) (WCVP) is the taxonomic names backbone that POWO relies on;
+- [International Association of Wood Anatomists](http://www.maderasenargentina.com.ar/archivos/IAWA_Committee1989.pdf)'s features list (IAWA);
+- [InsideWood](https://insidewood.lib.ncsu.edu/search)'s charcoal descriptions;
+- the Southern African wood CHArcoal description proided by research lab [Cultures – Environnements. Préhistoire, Antiquité, Moyen Âge](https://www.cepam.cnrs.fr/) (CEPAM)
+Descriptions coming from InsideWood and CEPAM both use IAWA's features list.
+
 
 ## Usage
 
@@ -18,14 +22,13 @@ The data mainly comes from CEPAM samples and the InsideWood database.
 
 ## Installation
 
-Before starting, you must download two important resources:
+Before starting, you must download two resources:
 
-### 1. Morph-XR2RML
+### 1. [Morph-XR2RML](https://github.com/frmichel/morph-xr2rml/)
 
 1. Go to the `xr2rml` folder.
 
-2. Install XR2RML following the instructions here:  
-   [morph-xr2rml Docker README](https://github.com/frmichel/morph-xr2rml/blob/master/docker/README.md)
+2. Deploy the necessary files and folders following the [Docker installation instructions](https://github.com/frmichel/morph-xr2rml/blob/master/docker/README.md).
 
 3. Open the file `mongo_tools/import-tools.sh`.
 
@@ -39,19 +42,19 @@ Before starting, you must download two important resources:
    ```
 
 ### 2. WCVP - Plant taxonomy
+Run the commands below to download the WCVP taxonomic data `wccp_dwca.zip`, extract the file `wcvp_taxon.csv` and place it in `input/powo/raw`.
+
 From the project root, run:
 ```bash
 mkdir -p input/powo/raw input/powo/currated
+cd input/powo/raw
+wget https://sftp.kew.org/pub/data-repositories/WCVP/wcvp_dwca.zip
+unzip wcvp_dwca.zip wcvp_taxon.csv
 ```
 
-Download the WCVP taxonomic data from the following address:
+Then, return to the project root and run the script `./tools/powo/scripts/split_wcvp.sh`.
+This will split the csv file into chunks of maximum 100000 lines each.
 
-https://sftp.kew.org/pub/data-repositories/WCVP/
-
-Download the file `wccp_dwca.zip`, then extract the file `wcvp_taxon.csv`.
-Place it in `input/powo/raw`.
-
-Run the script `./tools/powo/scripts/split_wcvp.sh`
 
 ## Features
 
