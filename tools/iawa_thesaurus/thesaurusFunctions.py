@@ -18,7 +18,7 @@ def normalize_id(identifier):
     return identifier  # Return as-is if no match
 
 
-def convert_iawa_tsv_to_json_three_dicts(input_folder):
+def convert_iawa_tsv_to_json_three_dicts(input_folder, currated_folder):
     """
     Convert IAWA TSV files to a structured JSON format with three dictionaries.
     The TSV file should be in the format:
@@ -33,7 +33,7 @@ def convert_iawa_tsv_to_json_three_dicts(input_folder):
         if file.endswith(".tsv"):
             input_csv = os.path.join(input_folder, file)
             base_name = os.path.splitext(file)[0]
-            output_file = f"{base_name}_structured.json"
+            output_file = os.path.join(currated_folder, f"{base_name}_structured.json")
             break
     else:
         print("❌ No .tsv file found in IawaProperties_import.")
@@ -85,7 +85,7 @@ def convert_iawa_tsv_to_json_three_dicts(input_folder):
     with open(output_file, "w", encoding="utf-8") as jsonfile:
         json.dump(final_json, jsonfile, indent=4, ensure_ascii=False)
 
-    print(f"Structured JSON successfully generated in '{output_file}'")
+    print(f"Converted IAWA thesaurus from TSV to JSON in '{output_file}'")
     return output_file
 
 
@@ -149,10 +149,10 @@ def generate_value_combinations(values):
 
 def generate_full_combined_oneline_json(input_file: str):
     """
-    Génère un fichier JSONL (une ligne JSON par entrée) à partir du fichier structuré,
+    Génère un fichier JSONL (une document JSON par ligne) à partir du fichier structuré,
     avec les valeurs combinées produites par `generate_value_combinations`.
 
-    Chaque ligne contiendra un champ "type" : "featuresOfInterest", "observableProperties", ou "values".
+    Chaque ligne contient un champ "type" : "featuresOfInterest", "observableProperties", ou "values".
     """
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
@@ -183,7 +183,7 @@ def generate_full_combined_oneline_json(input_file: str):
             entry = {"id": id_, "type": "values", **content}
             f_out.write(json.dumps(entry, ensure_ascii=False) + "\n")
 
-    print(f"JSONL avec combinaisons généré dans '{output_file}'")
+    print(f"JSONL file (one document per line) with combined values saved in: '{output_file}'")
     return output_file
 
 

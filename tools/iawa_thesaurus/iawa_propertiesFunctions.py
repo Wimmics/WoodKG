@@ -11,14 +11,14 @@ temp_folder = "temp"
 def extract_iawa_features_from_tsv(input_folder, temp_folder=temp_folder):
     """
     Finds the first .tsv file in the IawaProperties_import directory,
-    extracts the features of interest (FOI), operations (OP), and values (VAL),
+    extracts the features of interest (FOI), observable properties (OP), and values (VAL),
     and writes the result to a JSON file in the current directory.
     Args:
         None
     Returns:
         str: Path to the generated JSON file.
     """
-   
+
     # Trouve le premier fichier .tsv dans le dossier
     for file in os.listdir(input_folder):
         if file.endswith(".tsv"):
@@ -62,7 +62,6 @@ def extract_iawa_features_from_tsv(input_folder, temp_folder=temp_folder):
     with open(output_file, "w", encoding="utf-8") as jsonfile:
         json.dump(final_json, jsonfile, indent=4, ensure_ascii=False)
 
-    
     return output_file
 
 
@@ -118,7 +117,6 @@ def extract_iawa_numbers_mapping(input_folder, temp_folder=temp_folder):
     with open(output_file, "w", encoding="utf-8") as jsonfile:
         json.dump({"iawaNumbers": iawaNumbers}, jsonfile, indent=4, ensure_ascii=False)
 
-    
     return output_file
 
 
@@ -174,7 +172,6 @@ def map_features_to_iawa_ids(
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(numbered_features, f, indent=4, ensure_ascii=False)
 
-   
     return output_file
 
 
@@ -215,7 +212,6 @@ def pad_json_keys_to_3_digits(input_file, temp_folder=temp_folder):
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(new_data, f, ensure_ascii=False, indent=4)
 
-  
     return output_path
 
 
@@ -301,9 +297,7 @@ def generate_combinations_from_json(
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(new_data, f, ensure_ascii=False, indent=4)
 
-    print(
-        f"\033[0;32m✅ Combinaisons générées et sauvegardées dans '{output_file}'\033[0m"
-    )
+    print(f"✅ Values of OP saved in: '{output_file}'\033[0m")
 
 
 def extract_foi_op_from_tsv(export_folder, folder_path):
@@ -352,7 +346,7 @@ def extract_foi_op_from_tsv(export_folder, folder_path):
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=4, ensure_ascii=False)
 
-    print(f"✅ JSON écrit dans : {output_file}")
+    print(f"✅ List of FoI and OP saved in: {output_file}")
 
 
 def delete_json_files(temp_folder=temp_folder):

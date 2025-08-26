@@ -1,0 +1,1220 @@
+{
+    "featuresOfInterest": {
+        "010": {
+            "label_en": "growth ring",
+            "label_fr": "Cerne de croissance"
+        },
+        "028": {
+            "label_en": "vessels",
+            "label_fr": "Puits vaisseau-rayon"
+        },
+        "019": {
+            "label_en": "perforation Plate",
+            "label_fr": "Parenchyme axial paratrachéal (parenchyme axial)"
+        },
+        "012": {
+            "label_en": "Intervessel pits",
+            "label_fr": "Puits intervasculaires"
+        },
+        "029": {
+            "label_en": "Vestured pits",
+            "label_fr": "Vaisseaux"
+        },
+        "027": {
+            "label_en": "Vessel-ray pits",
+            "label_fr": "Lumières des vaisseaux"
+        },
+        "011": {
+            "label_en": "Helical thickenings",
+            "label_fr": "Épaississements hélicoïdaux"
+        },
+        "026": {
+            "label_en": "Vessel Lumina",
+            "label_fr": "Trachéides vasculaires / vasicentriques"
+        },
+        "025": {
+            "label_en": "Vascular /vasicentric tracheids",
+            "label_fr": "Structure en étages"
+        },
+        "009": {
+            "label_en": "FibresPits",
+            "label_fr": "Puits de fibres"
+        },
+        "016": {
+            "label_en": "Septate fibres",
+            "label_fr": "Cellule de rayon"
+        },
+        "015": {
+            "label_en": "NonSeptate fibres",
+            "label_fr": "Inclusion minérale"
+        },
+        "008": {
+            "label_en": "Fibres",
+            "label_fr": "Fibres"
+        },
+        "002": {
+            "label_en": "Axial parenchyma",
+            "label_fr": "Parenchyme axial"
+        },
+        "001": {
+            "label_en": "Apotracheal Axial parenchyma",
+            "label_fr": "Parenchyme axial apotrachéal"
+        },
+        "018": {
+            "label_en": "Paratracheal Axial parenchyma",
+            "label_fr": "Parenchyme axial paratrachéal"
+        },
+        "004": {
+            "label_en": "Banded parenchyma",
+            "label_fr": "Parenchyme en bandes"
+        },
+        "003": {
+            "label_en": "Axial parenchyma strand",
+            "label_fr": "Brin de parenchyme axial"
+        },
+        "021": {
+            "label_en": "Rays",
+            "label_fr": "Cristal prismatique"
+        },
+        "022": {
+            "label_en": "Rays cell",
+            "label_fr": "Rayons"
+        },
+        "024": {
+            "label_en": "Storied structure",
+            "label_fr": "Corps siliceux"
+        },
+        "017": {
+            "label_en": "Oil and/or mucilage cell",
+            "label_fr": "Fibres non septées"
+        },
+        "006": {
+            "label_en": "Canals",
+            "label_fr": "Canaux"
+        },
+        "013": {
+            "label_en": "Laticifers or tanniniferous Tubes",
+            "label_fr": "Laticifères ou tubes à tanin"
+        },
+        "005": {
+            "label_en": "cambial variant",
+            "label_fr": "Variante cambiale"
+        },
+        "014": {
+            "label_en": "mineral inclusion",
+            "label_fr": "Inclusion minérale"
+        },
+        "020": {
+            "label_en": "Prismatic crystal",
+            "label_fr": "Plaque de perforation"
+        },
+        "007": {
+            "label_en": "Druses",
+            "label_fr": "Druses"
+        },
+        "023": {
+            "label_en": "Silica Bodies",
+            "label_fr": "Fibres septées"
+        }
+    },
+    "observableProperties": {
+        "002": {
+            "label_en": "boundary marks",
+            "label_fr": "marques de délimitation"
+        },
+        "008": {
+            "label_en": "prorosity",
+            "label_fr": "porosité"
+        },
+        "001": {
+            "label_en": "arrangement",
+            "label_fr": "agencement"
+        },
+        "015": {
+            "label_en": "vessels grouping",
+            "label_fr": "groupement des vaisseaux"
+        },
+        "011": {
+            "label_en": "shape",
+            "label_fr": "forme"
+        },
+        "007": {
+            "label_en": "number of bars in scalariform perforation plates",
+            "label_fr": "nombre de barres dans les plaques de perforation scalariformes"
+        },
+        "004": {
+            "label_en": "length",
+            "label_fr": "longueur"
+        },
+        "009": {
+            "label_en": "presence of vestured pits",
+            "label_fr": "présence de ponctuations vesturées"
+        },
+        "005": {
+            "label_en": "location",
+            "label_fr": "localisation"
+        },
+        "006": {
+            "label_en": "mean tangential diameter of vessel lumina",
+            "label_fr": "diamètre tangentiel moyen de la lumière des vaisseaux"
+        },
+        "013": {
+            "label_en": "tyloses and deposits in vessels",
+            "label_fr": "tyloses et dépôts dans les vaisseaux"
+        },
+        "012": {
+            "label_en": "thickness of fibre walls",
+            "label_fr": "épaisseur des parois des fibres"
+        },
+        "016": {
+            "label_en": "width",
+            "label_fr": "largeur"
+        },
+        "010": {
+            "label_en": "ray height",
+            "label_fr": "hauteur des rayons"
+        },
+        "003": {
+            "label_en": "cellular composition",
+            "label_fr": "composition cellulaire"
+        },
+        "014": {
+            "label_en": "Types",
+            "label_fr": "types"
+        }
+    },
+    "values": {
+        "001": {
+            "label_en": "boundaries distinct",
+            "label_fr": "limites distinctes",
+            "foi": "growth ring",
+            "op": "boundary marks"
+        },
+        "002": {
+            "label_en": "indistinct or absent",
+            "label_fr": "limites indistinctes ou absentes",
+            "foi": "growth ring",
+            "op": "boundary marks"
+        },
+        "003": {
+            "label_en": "ring-porous",
+            "label_fr": "porosité annulaire",
+            "foi": "vessels",
+            "op": "prorosity"
+        },
+        "004": {
+            "label_en": "semi-ring-porous",
+            "label_fr": "porosité semi-annulaire",
+            "foi": "vessels",
+            "op": "prorosity"
+        },
+        "005": {
+            "label_en": "diffuse-porous",
+            "label_fr": "porosité diffuse",
+            "foi": "vessels",
+            "op": "prorosity"
+        },
+        "006": {
+            "label_en": "vessels in tangential bands",
+            "label_fr": "Vaisseaux en bandes tangentielles",
+            "foi": "vessels",
+            "op": "arrangement"
+        },
+        "007": {
+            "label_en": "Vessels in diagonal and/or radial pattern",
+            "label_fr": "Vaisseaux en motif diagonal et/ou radial",
+            "foi": "vessels",
+            "op": "arrangement"
+        },
+        "008": {
+            "label_en": "Vessels in dendritic pattern",
+            "label_fr": "Vaisseaux en motif dendritique",
+            "foi": "vessels",
+            "op": "arrangement"
+        },
+        "009": {
+            "label_en": "Vessels exclusively solitary (90% or more)",
+            "label_fr": "Vaisseaux exclusivement solitaires (90 % ou plus)",
+            "foi": "vessels",
+            "op": "vessels grouping"
+        },
+        "010": {
+            "label_en": "Vessels in radial multiples of 4 or more common",
+            "label_fr": "Vaisseaux en multiples radiaux de 4 ou plus courants",
+            "foi": "vessels",
+            "op": "vessels grouping"
+        },
+        "011": {
+            "label_en": "Vessel clusters common",
+            "label_fr": "Grappes de vaisseaux courantes",
+            "foi": "vessels",
+            "op": "vessels grouping"
+        },
+        "012": {
+            "label_en": "Solitary vessel outline angular",
+            "label_fr": "Contour des vaisseaux solitaires anguleux",
+            "foi": "vessels",
+            "op": "shape"
+        },
+        "013": {
+            "label_en": "Simple perforation plates",
+            "label_fr": "Plaques perforées simples",
+            "foi": "perforation Plate",
+            "op": "shape"
+        },
+        "014": {
+            "label_en": "Scalariform perforation plates",
+            "label_fr": "Plaques perforées scalariformes",
+            "foi": "perforation Plate",
+            "op": "shape"
+        },
+        "015": {
+            "label_en": "Scalariform perforation plates with ≤ 10 bars",
+            "label_fr": "Plaques de perforation scalariformes avec ≤ 10 barres",
+            "foi": "perforation Plate",
+            "op": "number of bars in scalariform perforation plates"
+        },
+        "016": {
+            "label_en": "Scalariform perforation plates with 10–20 bars",
+            "label_fr": "Plaques de perforation scalariformes avec 10–20 barres",
+            "foi": "perforation Plate",
+            "op": "number of bars in scalariform perforation plates"
+        },
+        "017": {
+            "label_en": "Scalariform perforation plates with 20–40 bars",
+            "label_fr": "Plaques de perforation scalariformes avec 20–40 barres",
+            "foi": "perforation Plate",
+            "op": "number of bars in scalariform perforation plates"
+        },
+        "018": {
+            "label_en": "Scalariform perforation plates with ≥ 40 bars",
+            "label_fr": "Plaques de perforation scalariformes avec ≥ 40 barres",
+            "foi": "perforation Plate",
+            "op": "number of bars in scalariform perforation plates"
+        },
+        "019": {
+            "label_en": "Reticulate, foraminate, and /or other types of multiple perforation plates",
+            "label_fr": "Plaques perforées réticulées, foraminées et/ou autres types de plaques perforées multiples",
+            "foi": "perforation Plate",
+            "op": "shape"
+        },
+        "020": {
+            "label_en": "Intervessel pits scalariform",
+            "label_fr": "Ponctuations intervasculaires scalariformes",
+            "foi": "Intervessel pits",
+            "op": "shape"
+        },
+        "021": {
+            "label_en": "Intervessel pits opposite",
+            "label_fr": "Ponctuations intervasculaires opposées",
+            "foi": "Intervessel pits",
+            "op": "shape"
+        },
+        "022": {
+            "label_en": "Intervessel pits alternate",
+            "label_fr": "Ponctuations intervasculaires alternées",
+            "foi": "Intervessel pits",
+            "op": "shape"
+        },
+        "023": {
+            "label_en": "Shape of alternate pits polygonal",
+            "label_fr": "Forme des ponctuations alternées polygonale",
+            "foi": "Intervessel pits",
+            "op": "shape"
+        },
+        "024": {
+            "label_en": "– ≤ 4 μm",
+            "label_fr": "– ≤ 4 μm",
+            "foi": "Intervessel pits",
+            "op": "length"
+        },
+        "025": {
+            "label_en": "– 4–7 μm",
+            "label_fr": "– 4–7 μm",
+            "foi": "Intervessel pits",
+            "op": "length"
+        },
+        "026": {
+            "label_en": "– 7–10 μm",
+            "label_fr": "– 7–10 μm",
+            "foi": "Intervessel pits",
+            "op": "length"
+        },
+        "027": {
+            "label_en": "– ≥ 10 μm",
+            "label_fr": "– ≥ 10 μm",
+            "foi": "Intervessel pits",
+            "op": "length"
+        },
+        "029": {
+            "label_en": "TRUE",
+            "label_fr": "VRAI",
+            "foi": "Vestured pits",
+            "op": "presence of vestured pits"
+        },
+        "030": {
+            "label_en": "Vessel–ray pits with distinct borders; similar to intervessel pits in size and shape through-out the ray cell",
+            "label_fr": "Pits vaisseaux-rayons avec des bords distincts ; similaires aux pits inter-vaisseaux en taille et en forme dans toute la cellule rayonnante",
+            "foi": "Vessel-ray pits",
+            "op": "shape"
+        },
+        "031": {
+            "label_en": "Vessel–ray pits with much reduced borders to apparently simple: pits rounded or angular",
+            "label_fr": "Pits vaisseaux-rayons avec des bords très réduits à apparemment simples : pits arrondis ou angulaires",
+            "foi": "Vessel-ray pits",
+            "op": "shape"
+        },
+        "032": {
+            "label_en": "Vessel–ray pits with much reduced borders to apparently simple: pits horizontal (scalariform, gash-like) to vertical (palisade)",
+            "label_fr": "Pits vaisseaux-rayons avec des bords très réduits à apparemment simples : pits horizontaux (scalaires, en forme d'entaille) à verticaux (palissade)",
+            "foi": "Vessel-ray pits",
+            "op": "shape"
+        },
+        "033": {
+            "label_en": "Vessel–ray pits of two distinct sizes or types in the same ray cell",
+            "label_fr": "Pores vaso-rayés de deux tailles ou types distincts dans la même cellule rayonnante",
+            "foi": "Vessel-ray pits",
+            "op": "shape"
+        },
+        "034": {
+            "label_en": "Vessel–ray pits unilaterally compound and coarse (over 10 μm)",
+            "label_fr": "Pores vaso-rayés composés unilatéralement et grossiers (plus de 10 μm)",
+            "foi": "Vessel-ray pits",
+            "op": "shape"
+        },
+        "035": {
+            "label_en": "Vessel–ray pits restricted to marginal rows",
+            "label_fr": "Pores vaso-rayés limités aux rangées marginales",
+            "foi": "Vessel-ray pits",
+            "op": "shape"
+        },
+        "036": {
+            "label_en": "TRUE",
+            "label_fr": "VRAI",
+            "foi": "Helical thickenings",
+            "op": "presence (of Helical thickenings in vessel elements)"
+        },
+        "037": {
+            "label_en": "Helical thickenings throughout body of vessel element",
+            "label_fr": "Épaississements hélicoïdaux dans tout le corps des éléments vasculaires",
+            "foi": "Helical thickenings",
+            "op": "location"
+        },
+        "038": {
+            "label_en": "Helical thickenings only in vessel element tails",
+            "label_fr": "Épaississements hélicoïdaux uniquement dans les queues des éléments vasculaires",
+            "foi": "Helical thickenings",
+            "op": "location"
+        },
+        "039": {
+            "label_en": "Helical thickenings only in narrower vessel elements",
+            "label_fr": "Épaississements hélicoïdaux uniquement dans les éléments vasculaires plus étroits",
+            "foi": "Helical thickenings",
+            "op": "location"
+        },
+        "040": {
+            "label_en": "≤ 50 μm",
+            "label_fr": "≤ 50 μm",
+            "foi": "Vessel Lumina",
+            "op": "mean tangential diameter of vessel lumina"
+        },
+        "041": {
+            "label_en": "50–100 μm",
+            "label_fr": "50–100 μm",
+            "foi": "Vessel Lumina",
+            "op": "mean tangential diameter of vessel lumina"
+        },
+        "042": {
+            "label_en": "100–200 μm",
+            "label_fr": "100–200 μm",
+            "foi": "Vessel Lumina",
+            "op": "mean tangential diameter of vessel lumina"
+        },
+        "043": {
+            "label_en": "≥ 200 μm",
+            "label_fr": "≥ 200 μm",
+            "foi": "Vessel Lumina",
+            "op": "mean tangential diameter of vessel lumina"
+        },
+        "046": {
+            "label_en": "≤ 5 vessels per square millimetre",
+            "label_fr": "≤ 5 vaisseaux par millimètre carré",
+            "foi": "vessels",
+            "op": "vessels density"
+        },
+        "047": {
+            "label_en": "5–20 vessels per square millimetre",
+            "label_fr": "5 à 20 vaisseaux par millimètre carré",
+            "foi": "vessels",
+            "op": "vessels density"
+        },
+        "048": {
+            "label_en": "20–40 vessels per square millimetre",
+            "label_fr": "20 à 40 vaisseaux par millimètre carré",
+            "foi": "vessels",
+            "op": "vessels density"
+        },
+        "049": {
+            "label_en": "40–100 vessels per square millimetre",
+            "label_fr": "40 à 100 vaisseaux par millimètre carré",
+            "foi": "vessels",
+            "op": "vessels density"
+        },
+        "050": {
+            "label_en": "≥ 100 vessels per square millimetre",
+            "label_fr": "≥ 100 vaisseaux par millimètre carré",
+            "foi": "vessels",
+            "op": "vessels density"
+        },
+        "052": {
+            "label_en": "≤ 350 μm",
+            "label_fr": "≤ 350 μm",
+            "foi": "vessels",
+            "op": "length"
+        },
+        "053": {
+            "label_en": "350–800 μm",
+            "label_fr": "350–800 μm",
+            "foi": "vessels",
+            "op": "length"
+        },
+        "054": {
+            "label_en": "≥ 800 μm",
+            "label_fr": "≥ 800 μm",
+            "foi": "vessels",
+            "op": "length"
+        },
+        "056": {
+            "label_en": "Tyloses common",
+            "label_fr": "Tyloses courants",
+            "foi": "vessels",
+            "op": "tyloses and deposits in vessels"
+        },
+        "057": {
+            "label_en": "Tyloses sclerotic",
+            "label_fr": "Tyloses sclérotiques",
+            "foi": "vessels",
+            "op": "tyloses and deposits in vessels"
+        },
+        "058": {
+            "label_en": "Gums and other deposits in heartwood vessels",
+            "label_fr": "Gommes et autres dépôts dans les vaisseaux du bois de cœur",
+            "foi": "vessels",
+            "op": "tyloses and deposits in vessels"
+        },
+        "059": {
+            "label_en": "FALSE",
+            "label_fr": "FAUX",
+            "foi": "vessels",
+            "op": "presence of vessels"
+        },
+        "060": {
+            "label_en": "TRUE",
+            "label_fr": "VRAI",
+            "foi": "Vascular /vasicentric tracheids",
+            "op": "presence of Vascular /vasicentric tracheids"
+        },
+        "061": {
+            "label_en": "Fibres with simple to minutely bordered pits",
+            "label_fr": "Fibres avec des ponctuations simples très finement bordées",
+            "foi": "FibresPits",
+            "op": "shape"
+        },
+        "062": {
+            "label_en": "Fibres with distinctly bordered pits",
+            "label_fr": "Fibres avec des ponctuations nettement bordées",
+            "foi": "FibresPits",
+            "op": "shape"
+        },
+        "063": {
+            "label_en": "Fibre pits common in both radial and tangential walls",
+            "label_fr": "Pits fibreux communs dans les parois radiales et tangentielles",
+            "foi": "FibresPits",
+            "op": "location"
+        },
+        "063b": {
+            "label_en": "Fibre pits common in radial or tangential walls",
+            "label_fr": "Pits fibreux communs dans les parois radiales ou tangentielles",
+            "foi": "FibresPits",
+            "op": "location"
+        },
+        "064": {
+            "label_en": "Helical thickenings in ground tissue fibres",
+            "label_fr": "Épaississements hélicoïdaux dans les fibres du tissu fondamental",
+            "foi": "Helical thickenings",
+            "op": "location"
+        },
+        "065": {
+            "label_en": "TRUE",
+            "label_fr": "VRAI",
+            "foi": "Septate fibres",
+            "op": "presence of septate fibres"
+        },
+        "065b": {
+            "label_en": "FALSE",
+            "label_fr": "FAUX",
+            "foi": "Septate fibres",
+            "op": "presence of septate fibres"
+        },
+        "066": {
+            "label_en": "TRUE",
+            "label_fr": "VRAI",
+            "foi": "NonSeptate fibres",
+            "op": "presence of nonSeptate fibres"
+        },
+        "066b": {
+            "label_en": "FALSE",
+            "label_fr": "FAUX",
+            "foi": "NonSeptate fibres",
+            "op": "presence of nonseptate fibres"
+        },
+        "067": {
+            "label_en": "Parenchyma-like fibre bands alternating with ordinary fibres",
+            "label_fr": "Bandes de fibres de type parenchyme alternant avec des fibres ordinaires",
+            "foi": "Septate fibres",
+            "op": "arrangement"
+        },
+        "068": {
+            "label_en": "Fibres very thin-walled",
+            "label_fr": "Fibres à paroi très mince",
+            "foi": "Fibres",
+            "op": "thickness of fibre walls"
+        },
+        "069": {
+            "label_en": "Fibres thin- to thick-walled",
+            "label_fr": "Fibres à paroi mince à épaisse",
+            "foi": "Fibres",
+            "op": "thickness of fibre walls"
+        },
+        "070": {
+            "label_en": "Fibres very thick-walled",
+            "label_fr": "Fibres à paroi très épaisse",
+            "foi": "Fibres",
+            "op": "thickness of fibre walls"
+        },
+        "071": {
+            "label_en": "≤ 900 μm",
+            "label_fr": "≤ 900 μm",
+            "foi": "Fibres",
+            "op": "length"
+        },
+        "072": {
+            "label_en": "900–1600 μm",
+            "label_fr": "900–1600 μm",
+            "foi": "Fibres",
+            "op": "length"
+        },
+        "073": {
+            "label_en": "≥ 1600 μm",
+            "label_fr": "≥ 1600 μm",
+            "foi": "Fibres",
+            "op": "length"
+        },
+        "075": {
+            "label_en": "FALSE",
+            "label_fr": "FAUX",
+            "foi": "Axial parenchyma",
+            "op": "presence of Axial parenchyma"
+        },
+        "076": {
+            "label_en": "Axial parenchyma diffuse",
+            "label_fr": "Parenchyme axial diffus",
+            "foi": "Apotracheal Axial parenchyma",
+            "op": "arrangement"
+        },
+        "077": {
+            "label_en": "Axial parenchyma diffuse-in-aggregates",
+            "label_fr": "Parenchyme axial diffus en agrégats",
+            "foi": "Apotracheal Axial parenchyma",
+            "op": "arrangement"
+        },
+        "078": {
+            "label_en": "Axial parenchyma scanty paratracheal",
+            "label_fr": "Parenchyme axial paratrachéal clairsemé",
+            "foi": "Paratracheal Axial parenchyma",
+            "op": "arrangement"
+        },
+        "079": {
+            "label_en": "Axial parenchyma vasicentric",
+            "label_fr": "Parenchyme axial vasicentrique",
+            "foi": "Paratracheal Axial parenchyma",
+            "op": "arrangement"
+        },
+        "080": {
+            "label_en": "Axial parenchyma aliform",
+            "label_fr": "Parenchyme axial aliforme",
+            "foi": "Paratracheal Axial parenchyma",
+            "op": "arrangement"
+        },
+        "081": {
+            "label_en": "Axial parenchyma lozenge-aliform",
+            "label_fr": "Parenchyme axial losange-aliforme",
+            "foi": "Paratracheal Axial parenchyma",
+            "op": "arrangement"
+        },
+        "082": {
+            "label_en": "Axial parenchyma winged-aliform",
+            "label_fr": "Parenchyme axial aliforme ailé",
+            "foi": "Paratracheal Axial parenchyma",
+            "op": "arrangement"
+        },
+        "083": {
+            "label_en": "Axial parenchyma confluent",
+            "label_fr": "Parenchyme axial confluent",
+            "foi": "Paratracheal Axial parenchyma",
+            "op": "arrangement"
+        },
+        "084": {
+            "label_en": "Axial parenchyma unilateral paratracheal",
+            "label_fr": "Parenchyme axial paratrachéal unilatéral",
+            "foi": "Paratracheal Axial parenchyma",
+            "op": "arrangement"
+        },
+        "085": {
+            "label_en": "Axial parenchyma bands more than three cells wide",
+            "label_fr": "Bandes de parenchyme axial de plus de trois cellules de large",
+            "foi": "Banded parenchyma",
+            "op": "arrangement"
+        },
+        "086": {
+            "label_en": "Axial parenchyma in narrow bands or lines up to three cells wide",
+            "label_fr": "Parenchyme axial en bandes étroites ou en lignes de trois cellules de large maximum",
+            "foi": "Banded parenchyma",
+            "op": "arrangement"
+        },
+        "087": {
+            "label_en": "Axial parenchyma reticulate",
+            "label_fr": "Parenchyme axial réticulé",
+            "foi": "Banded parenchyma",
+            "op": "arrangement"
+        },
+        "088": {
+            "label_en": "Axial parenchyma scalariform",
+            "label_fr": "Parenchyme axial scalariforme",
+            "foi": "Banded parenchyma",
+            "op": "arrangement"
+        },
+        "089": {
+            "label_en": "Axial parenchyma in marginal or in seemingly marginal bands",
+            "label_fr": "Parenchyme axial en bandes marginales ou apparemment marginales",
+            "foi": "Banded parenchyma",
+            "op": "arrangement"
+        },
+        "090": {
+            "label_en": "Fusiform parenchyma cells",
+            "label_fr": "Cellules parenchymateuses fusiformes",
+            "foi": "Axial parenchyma strand",
+            "op": "length"
+        },
+        "091": {
+            "label_en": "Two cells per parenchyma strand",
+            "label_fr": "Deux cellules par filament parenchymateux",
+            "foi": "Axial parenchyma strand",
+            "op": "length"
+        },
+        "092": {
+            "label_en": "Four (3–4) cells per parenchyma strand",
+            "label_fr": "Quatre (3-4) cellules par filament parenchymateux",
+            "foi": "Axial parenchyma strand",
+            "op": "length"
+        },
+        "093": {
+            "label_en": "Eight (5–8) cells per parenchyma strand",
+            "label_fr": "Huit (5-8) cellules par filament parenchymateux",
+            "foi": "Axial parenchyma strand",
+            "op": "length"
+        },
+        "094": {
+            "label_en": "Over eight cells per parenchyma strand",
+            "label_fr": "Plus de huit cellules par filament parenchymateux",
+            "foi": "Axial parenchyma strand",
+            "op": "length"
+        },
+        "095": {
+            "label_en": "Unlignified parenchyma",
+            "label_fr": "Parenchyme non lignifié",
+            "foi": "Axial parenchyma strand",
+            "op": "length"
+        },
+        "096": {
+            "label_en": "Rays exclusively uniseriate",
+            "label_fr": "Rayons exclusivement unisériés",
+            "foi": "Rays",
+            "op": "width"
+        },
+        "097": {
+            "label_en": "Ray width 1 to 3 cells",
+            "label_fr": "Largeur des rayons de 1 à 3 cellules",
+            "foi": "Rays",
+            "op": "width"
+        },
+        "098": {
+            "label_en": "Larger rays commonly 4- to 10-seriate",
+            "label_fr": "Rayons plus grands généralement de 4 à 10 séries",
+            "foi": "Rays",
+            "op": "width"
+        },
+        "099": {
+            "label_en": "Larger rays commonly >10-seriate",
+            "label_fr": "Rayons plus grands généralement >10 séries",
+            "foi": "Rays",
+            "op": "width"
+        },
+        "100": {
+            "label_en": "Rays with multiseriate portion(s) as wide as uniseriate portions",
+            "label_fr": "Rayons avec une ou plusieurs parties multisériées aussi larges que les parties unisériées",
+            "foi": "Rays",
+            "op": "width"
+        },
+        "101": {
+            "label_en": "Aggregate rays",
+            "label_fr": "Rayons agrégés",
+            "foi": "Rays",
+            "op": "arrangement"
+        },
+        "102": {
+            "label_en": ">1 mm",
+            "label_fr": ">1 mm",
+            "foi": "Rays",
+            "op": "ray height"
+        },
+        "103": {
+            "label_en": "presence of Rays of two distinct sizes",
+            "label_fr": "Présence de rayons de deux tailles distinctes",
+            "foi": "Rays",
+            "op": "width"
+        },
+        "104": {
+            "label_en": "All ray cells procumbent",
+            "label_fr": "Toutes les cellules des rayons sont couchées",
+            "foi": "Rays cell",
+            "op": "cellular composition"
+        },
+        "105": {
+            "label_en": "All ray cells upright and / or square",
+            "label_fr": "Toutes les cellules des rayons sont dressées et/ou carrées",
+            "foi": "Rays cell",
+            "op": "cellular composition"
+        },
+        "106": {
+            "label_en": "Body ray cells procumbent with one row of upright and / or square marginal cells",
+            "label_fr": "Les cellules des rayons du corps sont couchées avec une rangée de cellules marginales dressées et/ou carrées",
+            "foi": "Rays cell",
+            "op": "cellular composition"
+        },
+        "107": {
+            "label_en": "Body ray cells procumbent with mostly 2–4 rows of upright and / or square marginal cells",
+            "label_fr": "Les cellules des rayons du corps sont couchées avec principalement 2 à 4 rangées de cellules marginales dressées et/ou carrées",
+            "foi": "Rays cell",
+            "op": "cellular composition"
+        },
+        "108": {
+            "label_en": "Body ray cells procumbent with over 4 rows of upright and /or square marginal cells",
+            "label_fr": "Les cellules des rayons du corps sont couchées avec plus de 4 rangées de cellules marginales dressées et/ou carrées",
+            "foi": "Rays cell",
+            "op": "cellular composition"
+        },
+        "109": {
+            "label_en": "Rays with procumbent, square and upright cells mixed throughout the ray",
+            "label_fr": "Rayons avec des cellules couchées, carrées et dressées mélangées dans tout le rayon",
+            "foi": "Rays cell",
+            "op": "cellular composition"
+        },
+        "110": {
+            "label_en": "Sheath cells",
+            "label_fr": "Cellules de gaines",
+            "foi": "Rays cell",
+            "op": "cellular composition"
+        },
+        "111": {
+            "label_en": "Tile cells",
+            "label_fr": "Cellules en tuiles",
+            "foi": "Rays cell",
+            "op": "cellular composition"
+        },
+        "112": {
+            "label_en": "Perforated ray cells",
+            "label_fr": "Cellules des rayons perforées",
+            "foi": "Rays cell",
+            "op": "cellular composition"
+        },
+        "113": {
+            "label_en": "Disjunctive ray parenchyma cell walls",
+            "label_fr": "Parois cellulaires du parenchyme rayonnant disjonctives",
+            "foi": "Rays",
+            "op": "Shape"
+        },
+        "114": {
+            "label_en": "≤ 4 /mm",
+            "label_fr": "≤ 4 /mm",
+            "foi": "Rays",
+            "op": "rays per millimetre"
+        },
+        "115": {
+            "label_en": "4–12 /mm",
+            "label_fr": "4–12 /mm",
+            "foi": "Rays",
+            "op": "rays per millimetre"
+        },
+        "116": {
+            "label_en": "≥ 12 /mm",
+            "label_fr": "≥ 12 /mm",
+            "foi": "Rays",
+            "op": "rays per millimetre"
+        },
+        "117": {
+            "label_en": "FALSE",
+            "label_fr": "FAUX",
+            "foi": "Rays",
+            "op": "presence (of Rays)"
+        },
+        "118": {
+            "label_en": "All rays storied",
+            "label_fr": "Tous les rayons sont étagés",
+            "foi": "Storied structure",
+            "op": "arrangement"
+        },
+        "119": {
+            "label_en": "Low rays storied, high rays non-storied.",
+            "label_fr": "Rayons bas étagés, rayons hauts non étagés.",
+            "foi": "Storied structure",
+            "op": "arrangement"
+        },
+        "120": {
+            "label_en": "Axial parenchyma and/or vessel elements storied",
+            "label_fr": "Parenchyme axial et/ou éléments vasculaires étagés",
+            "foi": "Storied structure",
+            "op": "arrangement"
+        },
+        "121": {
+            "label_en": "Fibres storied",
+            "label_fr": "Fibres étagées",
+            "foi": "Storied structure",
+            "op": "arrangement"
+        },
+        "122": {
+            "label_en": "Rays and /or axial elements irregularly storied",
+            "label_fr": "Rayons et/ou éléments axiaux irrégulièrement étagés",
+            "foi": "Storied structure",
+            "op": "arrangement"
+        },
+        "123": {
+            "label_en": "Number of ray tiers per axial mm",
+            "label_fr": "Nombre de niveaux de rayons par mm axial",
+            "foi": "Storied structure",
+            "op": "arrangement"
+        },
+        "124": {
+            "label_en": "Oil and /or mucilage cells associated with ray parenchyma",
+            "label_fr": "Cellules huileuses et/ou mucilagineuses associées au parenchyme rayonnant",
+            "foi": "Oil and/or mucilage cell",
+            "op": "location"
+        },
+        "125": {
+            "label_en": "Oil and /or mucilage cells associated with axial parenchyma",
+            "label_fr": "Cellules huileuses et/ou mucilagineuses associées au parenchyme axial",
+            "foi": "Oil and/or mucilage cell",
+            "op": "location"
+        },
+        "126": {
+            "label_en": "Oil and /or mucilage cells present among fibres",
+            "label_fr": "Cellules huileuses et/ou mucilagineuses présentes parmi les fibres",
+            "foi": "Oil and/or mucilage cell",
+            "op": "location"
+        },
+        "127": {
+            "label_en": "Axial canals in long tangential lines",
+            "label_fr": "Canaux axiaux en longues lignes tangentielles",
+            "foi": "Canals",
+            "op": "arrangement"
+        },
+        "128": {
+            "label_en": "Axial canals in short tangential lines",
+            "label_fr": "Canaux axiaux en courtes lignes tangentielles",
+            "foi": "Canals",
+            "op": "arrangement"
+        },
+        "129": {
+            "label_en": "Axial canals diffuse",
+            "label_fr": "Canaux axiaux diffus",
+            "foi": "Canals",
+            "op": "arrangement"
+        },
+        "130": {
+            "label_en": "Radial canals",
+            "label_fr": "Canaux radiaux",
+            "foi": "Canals",
+            "op": "arrangement"
+        },
+        "131": {
+            "label_en": "Intercellular canals of traumatic origin",
+            "label_fr": "Canaux intercellulaires d'origine traumatique",
+            "foi": "Canals",
+            "op": "arrangement"
+        },
+        "132": {
+            "label_en": "TRUE",
+            "label_fr": "VRAI",
+            "foi": "Laticifers or tanniniferous Tubes",
+            "op": "presence of Laticifers or tanniniferous Tubes"
+        },
+        "133": {
+            "label_en": "Included phloem, concentric",
+            "label_fr": "Phloème inclus, concentrique",
+            "foi": "cambial variant",
+            "op": "arrangement"
+        },
+        "134": {
+            "label_en": "Included phloem, diffuse",
+            "label_fr": "Phloème inclus, diffus",
+            "foi": "cambial variant",
+            "op": "arrangement"
+        },
+        "135": {
+            "label_en": "Other cambial variants",
+            "label_fr": "Autres variantes cambiales",
+            "foi": "cambial variant",
+            "op": "arrangement"
+        },
+        "136": {
+            "label_en": "Prismatic crystal",
+            "label_fr": "Cristaux prismatiques",
+            "foi": "mineral inclusion",
+            "op": "Types"
+        },
+        "137": {
+            "label_en": "Prismatic crystals in upright and /or square ray cells",
+            "label_fr": "Cristaux prismatiques dans les cellules rayonnantes dressées et/ou carrées",
+            "foi": "Prismatic crystal",
+            "op": "location"
+        },
+        "138": {
+            "label_en": "Prismatic crystals in procumbent ray cells",
+            "label_fr": "Cristaux prismatiques dans les cellules rayonnantes couchées",
+            "foi": "Prismatic crystal",
+            "op": "location"
+        },
+        "139": {
+            "label_en": "Prismatic crystals in radial alignment in procumbent ray cells",
+            "label_fr": "Cristaux prismatiques alignés radialement dans les cellules rayonnantes couchées",
+            "foi": "Prismatic crystal",
+            "op": "location"
+        },
+        "140": {
+            "label_en": "Prismatic crystals in chambered upright and /or square ray cells",
+            "label_fr": "Cristaux prismatiques dans les cellules rayonnées verticales et/ou carrées à chambres",
+            "foi": "Prismatic crystal",
+            "op": "location"
+        },
+        "141": {
+            "label_en": "Prismatic crystals in nonchambered axial parenchyma cells",
+            "label_fr": "Cristaux prismatiques dans les cellules du parenchyme axial sans chambres",
+            "foi": "Prismatic crystal",
+            "op": "location"
+        },
+        "142": {
+            "label_en": "Prismatic crystals in chambered axial parenchyma cells",
+            "label_fr": "Cristaux prismatiques dans les cellules du parenchyme axial à chambres",
+            "foi": "Prismatic crystal",
+            "op": "location"
+        },
+        "143": {
+            "label_en": "Prismatic crystals in fibres",
+            "label_fr": "Cristaux prismatiques dans les fibres",
+            "foi": "Prismatic crystal",
+            "op": "location"
+        },
+        "144": {
+            "label_en": "druses",
+            "label_fr": "druses",
+            "foi": "mineral inclusion",
+            "op": "Types"
+        },
+        "145": {
+            "label_en": "Druses in ray parenchyma cells",
+            "label_fr": "Druses dans les cellules du parenchyme rayonnant",
+            "foi": "Druses",
+            "op": "location"
+        },
+        "146": {
+            "label_en": "Druses in axial parenchyma cells",
+            "label_fr": "Druses dans les cellules du parenchyme axial",
+            "foi": "Druses",
+            "op": "location"
+        },
+        "147": {
+            "label_en": "Druses in fibres",
+            "label_fr": "Druses dans les fibres",
+            "foi": "Druses",
+            "op": "location"
+        },
+        "148": {
+            "label_en": "Druses in chambered cells",
+            "label_fr": "Druses dans les cellules à compartiments",
+            "foi": "Druses",
+            "op": "location"
+        },
+        "149": {
+            "label_en": "Raphides",
+            "label_fr": "Raphides",
+            "foi": "mineral inclusion",
+            "op": "Types"
+        },
+        "150": {
+            "label_en": "Acicular crystals",
+            "label_fr": "Cristaux aciculaires",
+            "foi": "mineral inclusion",
+            "op": "Types"
+        },
+        "151": {
+            "label_en": "Styloids and /or elongated crystals",
+            "label_fr": "Cristaux styloïdes et/ou allongés",
+            "foi": "mineral inclusion",
+            "op": "Types"
+        },
+        "152": {
+            "label_en": "Crystals of other shapes",
+            "label_fr": "Cristaux d'autres formes",
+            "foi": "mineral inclusion",
+            "op": "Types"
+        },
+        "153": {
+            "label_en": "Crystal sand",
+            "label_fr": "Sable cristallin",
+            "foi": "mineral inclusion",
+            "op": "Types"
+        },
+        "154": {
+            "label_en": "More than one crystal of about the same size per cell or chamber",
+            "label_fr": "Plus d'un cristal de taille similaire par cellule ou chambre",
+            "foi": "mineral inclusion",
+            "op": "arrangement"
+        },
+        "155": {
+            "label_en": "Two distinct sizes of crystals per cell or chamber",
+            "label_fr": "Deux tailles distinctes de cristaux par cellule ou chambre",
+            "foi": "mineral inclusion",
+            "op": "arrangement"
+        },
+        "156": {
+            "label_en": "Crystals in enlarged cells",
+            "label_fr": "Cristaux dans des cellules élargies",
+            "foi": "mineral inclusion",
+            "op": "arrangement"
+        },
+        "157": {
+            "label_en": "Crystals in tyloses",
+            "label_fr": "Cristaux dans des tyloses",
+            "foi": "mineral inclusion",
+            "op": "arrangement"
+        },
+        "158": {
+            "label_en": "Cystoliths",
+            "label_fr": "Cystolithes",
+            "foi": "mineral inclusion",
+            "op": "Types"
+        },
+        "159": {
+            "label_en": "Silica Bodies",
+            "label_fr": "Corps siliceux",
+            "foi": "mineral inclusion",
+            "op": "Types"
+        },
+        "160": {
+            "label_en": "Silica bodies in ray cells",
+            "label_fr": "Corps siliceux dans les cellules rayonnées",
+            "foi": "Silica Bodies",
+            "op": "location"
+        },
+        "161": {
+            "label_en": "Silica bodies in axial parenchyma cells",
+            "label_fr": "Corps siliceux dans les cellules du parenchyme axial",
+            "foi": "Silica Bodies",
+            "op": "location"
+        },
+        "162": {
+            "label_en": "Silica bodies in fibres",
+            "label_fr": "Corps siliceux dans les fibres",
+            "foi": "Silica Bodies",
+            "op": "location"
+        },
+        "163": {
+            "label_en": "Vitreous silica",
+            "label_fr": "Silice vitreuse",
+            "foi": "mineral inclusion",
+            "op": "Types"
+        },
+        "101b": {
+            "label_en": "regular arrangement of rays",
+            "label_fr": "Disposition régulière des rayons",
+            "foi": "Rays",
+            "op": "arrangement"
+        },
+        "102b": {
+            "label_en": "<=1 mm(regular)",
+            "label_fr": "<=1 mm",
+            "foi": "Rays",
+            "op": "ray height"
+        },
+        "113b": {
+            "label_en": "Regular ray parenchyma cell walls",
+            "label_fr": "Parois cellulaires régulières du parenchyme rayonnant",
+            "foi": "Rays",
+            "op": "shape"
+        },
+        "117b": {
+            "label_en": "TRUE",
+            "label_fr": "VRAI",
+            "foi": "Rays",
+            "op": "presence (of Rays)"
+        },
+        "012b": {
+            "label_en": "Solitary vessel outline circular",
+            "label_fr": "Contour des vaisseaux solitaires circulaire",
+            "foi": "vessels",
+            "op": "shape"
+        },
+        "132b": {
+            "label_en": "FALSE",
+            "label_fr": "FAUX",
+            "foi": "Laticifers or tanniniferous Tubes",
+            "op": "presence of Laticifers or tanniniferous Tubes"
+        },
+        "029b": {
+            "label_en": "FALSE",
+            "label_fr": "FAUX",
+            "foi": "Vestured pits",
+            "op": "presence of vestured pits"
+        },
+        "036b": {
+            "label_en": "FALSE",
+            "label_fr": "FAUX",
+            "foi": "Helical thickenings",
+            "op": "presence (of Helical thickenings in vessel elements)"
+        },
+        "059b": {
+            "label_en": "TRUE",
+            "label_fr": "VRAI",
+            "foi": "vessels",
+            "op": "presence of vessels"
+        },
+        "060b": {
+            "label_en": "FALSE",
+            "label_fr": "FAUX",
+            "foi": "Vascular /vasicentric tracheids",
+            "op": "presence of Vascular /vasicentric tracheids"
+        },
+        "067b": {
+            "label_en": "regular arrangement",
+            "label_fr": "Disposition régulière",
+            "foi": "Septate fibres",
+            "op": "arrangement"
+        },
+        "075b": {
+            "label_en": "TRUE",
+            "label_fr": "VRAI",
+            "foi": "Axial parenchyma",
+            "op": "presence of Axial parenchyma"
+        }
+    }
+}

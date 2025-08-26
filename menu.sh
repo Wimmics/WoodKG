@@ -21,7 +21,7 @@ dossier_est_vide() {
 }
 
 while true; do
-    clear
+    echo
     echo "========= WoodKGL2 Menu ========="
     echo "1) Generate IAWA thesaurus as JSON"
     echo "2) Generate IAWA thesaurus as RDF"
@@ -36,7 +36,7 @@ while true; do
 
     case $choice in
         1)
-            echo "Launching Iawa properties..."
+            echo "Generating IAWA Feature of Interest (FoI), Observable Properties (OP) and OP values..."
             bash "$IAWA_PROPERTIES_DIR/scripts/iawa_properties.sh"
             echo "Launching Thesaurus Processing..."
             bash "$IAWA_PROPERTIES_DIR/scripts/thesaurus.sh"

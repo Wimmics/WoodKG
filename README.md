@@ -60,33 +60,27 @@ This will split the csv file into chunks of maximum 100000 lines each.
 
 ### input
 
-This folder contains all the data sources:
-- powo/: WCVP taxonomy,
-- [insidewood_observations/](input/insidewood_observations/): InsideWood observations,
-- [cepam_observations/](input/cepam_observations/): CEPAM observations.
+This folder contains the data sources: WCVP taxonomy (`powo/`), [InsideWood observations](input/insidewood_observations/), [CEPAM observations](input/cepam_observations/).
 
-Each folder contains the following subfolders:
-- `raw/`: raw files,
-- `currated/`: transformed versions ready to be used.
+Each folder contains the subfolders `raw/` for the raw files, and `currated/`for the transformed versions ready to be used for RDF generation.
 
 ### output
 
 Contains the generated RDF files:
-- the POWO taxonomy (powo_taxonomy_*.ttl),
-- the observations (InsideWood, CEPAM),
-- the IAWA thesaurus.
+the POWO taxonomy (powo_taxonomy_*.ttl),
+the observations (InsideWood, CEPAM),
+the IAWA thesaurus.
 
 File [wrong_taxonid.json](output/wrong_taxonid/wrong_taxon_id.json) gives the samples for which no taxonomic identifier was found in POWO.
 
 ### tools
 
-Contains scripts:
-- for transforming raw files to currated,
-- for generating RDF files.
+Contains the scripts for transforming raw files to currated files, and currated files to RDF files.
 
 ### xr2rml
 
-Contains mapping and configuration files necessary to use XR2RML.
+Contains the mapping and configuration files necessary to use Morph-xR2RML.
+
 
 ## Usage
 
@@ -98,9 +92,7 @@ Launch the main menu with:
 The menu offers different options by calling .sh scripts located in `tools/<subfolder>/scripts`:
 
 1. Generate IAWA thesaurus as JSON  
-Transforms the IAWA thesaurus files from [raw](/input/iawa_thesaurus/raw/) to [currated](/input/iawa_thesaurus/currated/).  
-Using `tools/iawa_thesaurus/scripts/thesaurus.sh`  
-and `tools/iawa_thesaurus/scripts/iawa_properties.sh` 
+Transforms the IAWA thesaurus files from [raw](/input/iawa_thesaurus/raw/) to [currated](/input/iawa_thesaurus/currated/) using `tools/iawa_thesaurus/scripts/thesaurus.sh` and `tools/iawa_thesaurus/scripts/iawa_properties.sh`.
 
 2. Generate IAWA thesaurus as RDF  
 Generates thesaurus.ttl in [output](/output/) from [JSON](/input/iawa_thesaurus/currated/) files.  
