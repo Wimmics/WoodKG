@@ -56,7 +56,7 @@ Then, return to the project root and run the script `./tools/powo/scripts/split_
 This will split the csv file into chunks of maximum 100000 lines each.
 
 
-## Features
+## Structure
 
 ### input
 
@@ -65,18 +65,18 @@ This folder contains all the data sources:
 - [insidewood_observations/](input/insidewood_observations/): InsideWood observations,
 - [cepam_observations/](input/cepam_observations/): CEPAM observations.
 
-Each subfolder contains:
+Each folder contains the following subfolders:
 - `raw/`: raw files,
 - `currated/`: transformed versions ready to be used.
 
 ### output
 
-Contains the generated RDF graphs:
+Contains the generated RDF files:
 - the POWO taxonomy (powo_taxonomy_*.ttl),
 - the observations (InsideWood, CEPAM),
 - the IAWA thesaurus.
 
-A file [wrong_taxonid.json](output/wrong_taxonid/observations_output_unique_sans_taxonid.json) indicates the samples for which no taxonomic identifier was found in POWO.
+File [wrong_taxonid.json](output/wrong_taxonid/wrong_taxon_id.json) gives the samples for which no taxonomic identifier was found in POWO.
 
 ### tools
 
