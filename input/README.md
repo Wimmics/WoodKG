@@ -48,7 +48,7 @@ Les identifiants des propriétés sont normalisés sur trois chiffres.
 
     Certaines valeurs correspondent à des unions. Les liens vers `foiAndOP.json` se font via les champs `property` et `feature`.
 
-  - `iawa_thesaurus.json` : fichier utilisé par XR2RML pour générer le RDF du thésaurus.
+  - `iawa_thesaurus.json` : fichier utilisé par Morph-xR2RML pour générer le RDF du thésaurus.
 
 ---
 
@@ -64,4 +64,4 @@ Les identifiants des propriétés sont normalisés sur trois chiffres.
 ### powo
 
 - `raw/` : contient la version brute du fichier CSV téléchargé depuis POWO (WCVP).
-- `currated/` : contient sa version transformée en JSON, exploitable par XR2RML.
+- `currated/` : contient sa version transformée en JSON, exploitable par Morph-xR2RML.

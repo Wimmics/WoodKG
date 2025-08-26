@@ -43,8 +43,8 @@ while true; do
             read -p "Press Enter to continue..."
             ;;
         2)
-            echo "Launching XR2RML for thesaurus..."
-            bash "$SCRIPT_PATH/observation2xr2rml.sh" -thesaurus
+            echo "Translating IAWA thesaurus to RDF..."
+            bash "$SCRIPT_PATH/observation2xr2rml.sh" --thesaurus
             read -p "Press Enter to continue..."
             ;;
         3)
@@ -52,11 +52,9 @@ while true; do
             bash "$POWO_DIR/scripts/powo.sh"
             read -p "Press Enter to continue..."
             ;;
-       
         4)
-
-            echo "Launching XR2RML for taxon..."
-            bash "$SCRIPT_PATH/observation2xr2rml.sh" -taxon
+            echo "Translating POWO taxonimy to RDF..."
+            bash "$SCRIPT_PATH/observation2xr2rml.sh" --taxon
             read -p "Press Enter to continue..."
             ;;
         5)
@@ -70,7 +68,7 @@ while true; do
             read -p "Press Enter to continue..."
             ;;
         7)
-            echo "Launching Observation Processing..."
+            echo "Translating observation to RDF..."
 
             # Demande du chemin à l'utilisateur
             read -p "Please enter the path to the input file: " inputFILE
@@ -90,9 +88,8 @@ while true; do
                 bash "$OBSERVATION_DIR/scripts/observation.sh" "$inputFILE"
             fi
 
-
-            echo "Launching XR2RML for iawa properties..."
-            bash "$SCRIPT_PATH/observation2xr2rml.sh" -iawa
+            echo "Launching Morph-xR2RML for iawa properties..."
+            bash "$SCRIPT_PATH/observation2xr2rml.sh" --observation
 
             read -p "Press Enter to continue..."
             ;;

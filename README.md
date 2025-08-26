@@ -24,7 +24,7 @@ Descriptions coming from InsideWood and CEPAM both use IAWA's features list.
 
 Before starting, you must download two resources:
 
-### 1. [Morph-XR2RML](https://github.com/frmichel/morph-xr2rml/)
+### 1. [Morph-xR2RML](https://github.com/frmichel/morph-xr2rml/)
 
 1. Go to the `xr2rml` folder.
 
@@ -100,20 +100,16 @@ Must be executed after option 1.
 Using `tools/xr2rml/observation2xr2rml -thesaurus`
 
 3. Generate POWO taxonomy as JSON  
-Transforms WCVP taxonomic files from [raw](/input/powo/raw/) to [currated](/input/powo/currated/).  
-Using `tools/powo/scripts/powo.sh`
+Transforms WCVP taxonomic files from [raw](/input/powo/raw/) to [currated](/input/powo/currated/) using `tools/powo/scripts/powo.sh`.
 
 4. Generate POWO taxonomy as RDF  
-Generates RDF files [powo_taxonomy_*.ttl](/output/) from [JSON](/input/powo/currated/) files.  
-Using `tools/xr2rml/observation2xr2rml -taxon`
+Generates RDF files [powo_taxonomy_*.ttl](/output/) from [JSON](/input/powo/currated/) files using `tools/xr2rml/observation2xr2rml -taxon`.
 
 5. Generate CEPAM observations as JSON  
-Transforms CEPAM observations from [raw](/input/cepam_observations/raw/) to [currated](/input/cepam_observations/currated/).  
-Using `tools/cepam_observations/scripts/cepam_csvtojson.sh`
+Transforms CEPAM observations from [raw](/input/cepam_observations/raw/) to [currated](/input/cepam_observations/currated/) using `tools/cepam_observations/scripts/.cepam_csvtojson.sh`
 
 6. Generate InsideWood observations as JSON  
-Transforms InsideWood observations from [raw](/input/insidewood_observations/raw/) to [currated](/input/insidewood_observations/currated/).  
-Using `tools/insidewood_observations/scripts/insidewood_observations.sh`
+Transforms InsideWood observations from [raw](/input/insidewood_observations/raw/) to [currated](/input/insidewood_observations/currated/) using `tools/insidewood_observations/scripts/insidewood_observations.sh`.
 
 7. Generate observations as RDF  
 Requires a .json file (currated type) and generates RDF observations in [output](/output/).
