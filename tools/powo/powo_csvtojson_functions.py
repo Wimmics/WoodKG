@@ -23,7 +23,7 @@ def convert_csv_to_json_lines(csv_path, json_lines_path):
 
 
 def wcvpJson(csv_folder, output_folder):
-    """Convertit tous les fichiers CSV d’un dossier en fichiers JSON Lines.
+    """Convertit tous les fichiers CSV d'un dossier en fichiers JSON Lines.
 
     Args:
         csv_folder (str): Dossier contenant les CSV.
@@ -32,13 +32,7 @@ def wcvpJson(csv_folder, output_folder):
     os.makedirs(output_folder, exist_ok=True)
 
     # Liste triée des fichiers CSV commençant par "partie_" et finissant par ".csv"
-    csv_files = sorted(
-        [
-            f
-            for f in os.listdir(csv_folder)
-            if  f.endswith(".csv")
-        ]
-    )
+    csv_files = sorted([f for f in os.listdir(csv_folder) if f.endswith(".csv")])
 
     if not csv_files:
         print("❌ Aucun fichier '*.csv' trouvé dans le dossier.")
@@ -48,5 +42,5 @@ def wcvpJson(csv_folder, output_folder):
         csv_path = os.path.join(csv_folder, filename)
         json_output = os.path.join(output_folder, f"powo_taxonomy_{i}.json")
 
-        print(f"✅ Traitement de {csv_path} → {json_output}")
+        print(f"✅ Converting {csv_path} -> {json_output}")
         convert_csv_to_json_lines(csv_path, json_output)

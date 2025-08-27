@@ -45,26 +45,26 @@ while true; do
             ;;
         2)
             echo "Translating IAWA thesaurus to RDF..."
-            echo "Invoking $SCRIPT_PATH/observation2xr2rml.sh --thesaurus"
-            bash "$SCRIPT_PATH/observation2xr2rml.sh --thesaurus"
+            echo "Invoking $SCRIPT_PATH/run_xr2rml.sh --thesaurus"
+            bash "$SCRIPT_PATH/run_xr2rml.sh" --thesaurus
             ;;
         3)
-            echo "Launching POWO taxonomy processing..."
+            echo "Processing POWO taxonomy ..."
             echo "Invoking $POWO_DIR/scripts/powo.sh"
-            bash "$POWO_DIR/scripts/powo.sh"
+            python3 "$POWO_DIR/powo_csvtojson.py"
             ;;
         4)
-            echo "Translating POWO taxonimy to RDF..."
-            echo "Invoking $SCRIPT_PATH/observation2xr2rml.sh" --taxon
-            bash "$SCRIPT_PATH/observation2xr2rml.sh" --taxon
+            echo "Translating POWO taxonomy to RDF..."
+            echo "Invoking $SCRIPT_PATH/run_xr2rml.sh" --taxon
+            bash "$SCRIPT_PATH/run_xr2rml.sh" --taxon
             ;;
         5)
-            echo "Launching CEPAM observations processing..."
+            echo "Processing CEPAM observations..."
             echo "Invoking $CEPAM_DIR/scripts/cepam_csvtojson.sh"
             bash "$CEPAM_DIR/scripts/cepam_csvtojson.sh"
             ;;
         6)
-            echo "Launching InsideWood observations processing..."
+            echo "Processing InsideWood observations..."
             echo "Invoking $INSIDEWOOD_DIR/scripts/insidewood_observations.sh"
             bash "$INSIDEWOOD_DIR/scripts/insidewood_observations.sh"
             ;;
@@ -90,7 +90,7 @@ while true; do
             fi
 
             echo "Launching Morph-xR2RML for iawa properties..."
-            bash "$SCRIPT_PATH/observation2xr2rml.sh" --observation
+            bash "$SCRIPT_PATH/run_xr2rml.sh" --observation
             ;;
 
         8)

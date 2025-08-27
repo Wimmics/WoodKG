@@ -26,7 +26,7 @@ while [[ $# -gt 0 ]]; do
                 echo "Processing file #$FILE_NUMBER: $(basename "$FILE")"
                 cp "$FILE" "$PROJECT_ROOT/xr2rml/mongo_import/"
 
-                bash "$SCRIPT_DIR/xr2rml.sh" --taxon "-$FILE_NUMBER"
+                bash "$PROJECT_ROOT/xr2rml/run_mapping_taxon.sh" "-$FILE_NUMBER"
                 cp "$PROJECT_ROOT/xr2rml/xr2rml_output/powo_taxonomy_$FILE_NUMBER.ttl" "$PROJECT_ROOT/output/"
                 echo "Output file: $PROJECT_ROOT/output/powo_taxonomy_$FILE_NUMBER.ttl"
             done
@@ -65,7 +65,6 @@ while [[ $# -gt 0 ]]; do
             ;;
         *)
             echo "Option inconnue : $1"
-            show_help
             exit 1
             ;;
     esac

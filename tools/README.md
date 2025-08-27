@@ -13,14 +13,10 @@ Le répertoire `tools` est organisé en plusieurs sous-dossiers, chacun pouvant 
 
 ### xr2rml
 
-#### observation2xr2rml.sh
+#### run_xr2rml.sh
 
 Ce script effectue les opérations suivantes :
 - Copie le fichier de mapping approprié dans le dossier `xr2rml_config`.
 - Copie le fichier JSON dans `mongo_import`.
 - Exécute `xr2rml.sh` avec l’option `--taxon`, `--observation`, ou `--thesaurus` selon les besoins.
 - Copie les résultats générés par Morph-xR2RML depuis `xr2rml_output` vers le dossier `output`.
-
-#### xr2rml.sh
-
-Ce fichier exécute l’un des scripts `run_mapping` pour générer les fichiers RDF à l’aide de Morph-xR2RML.
