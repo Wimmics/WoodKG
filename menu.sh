@@ -37,35 +37,36 @@ while true; do
     case $choice in
         1)
             echo "Generating IAWA Feature of Interest (FoI), Observable Properties (OP) and OP values..."
+            echo "Invoking $IAWA_PROPERTIES_DIR/scripts/iawa_properties.sh"
             bash "$IAWA_PROPERTIES_DIR/scripts/iawa_properties.sh"
             echo "Launching Thesaurus Processing..."
+            echo "Invoking $IAWA_PROPERTIES_DIR/scripts/thesaurus.sh"
             bash "$IAWA_PROPERTIES_DIR/scripts/thesaurus.sh"
-            read -p "Press Enter to continue..."
             ;;
         2)
             echo "Translating IAWA thesaurus to RDF..."
-            bash "$SCRIPT_PATH/observation2xr2rml.sh" --thesaurus
-            read -p "Press Enter to continue..."
+            echo "Invoking $SCRIPT_PATH/observation2xr2rml.sh --thesaurus"
+            bash "$SCRIPT_PATH/observation2xr2rml.sh --thesaurus"
             ;;
         3)
             echo "Launching POWO taxonomy processing..."
+            echo "Invoking $POWO_DIR/scripts/powo.sh"
             bash "$POWO_DIR/scripts/powo.sh"
-            read -p "Press Enter to continue..."
             ;;
         4)
             echo "Translating POWO taxonimy to RDF..."
+            echo "Invoking $SCRIPT_PATH/observation2xr2rml.sh" --taxon
             bash "$SCRIPT_PATH/observation2xr2rml.sh" --taxon
-            read -p "Press Enter to continue..."
             ;;
         5)
             echo "Launching CEPAM observations processing..."
+            echo "Invoking $CEPAM_DIR/scripts/cepam_csvtojson.sh"
             bash "$CEPAM_DIR/scripts/cepam_csvtojson.sh"
-            read -p "Press Enter to continue..."
             ;;
         6)
             echo "Launching InsideWood observations processing..."
+            echo "Invoking $INSIDEWOOD_DIR/scripts/insidewood_observations.sh"
             bash "$INSIDEWOOD_DIR/scripts/insidewood_observations.sh"
-            read -p "Press Enter to continue..."
             ;;
         7)
             echo "Translating observation to RDF..."
@@ -90,8 +91,6 @@ while true; do
 
             echo "Launching Morph-xR2RML for iawa properties..."
             bash "$SCRIPT_PATH/observation2xr2rml.sh" --observation
-
-            read -p "Press Enter to continue..."
             ;;
 
         8)

@@ -11,49 +11,56 @@ rm -rf "$PROJECT_ROOT/xr2rml/xr2rml_output/*.ttl"
 while [[ $# -gt 0 ]]; do
     case "$1" in
         --taxon)
-            echo "xR2RML mapping file: $PROJECT_ROOT/tools/powo/mapping/mapping_powo.ttl"
-            cp "$PROJECT_ROOT/tools/powo/mapping/mapping_powo.ttl" "$PROJECT_ROOT/xr2rml/xr2rml_config/"
+            mappingfile="$PROJECT_ROOT/tools/powo/mapping/mapping_powo.ttl"
+            echo "xR2RML mapping file: $mappingfile"
+            cp "$mappingfile" "$PROJECT_ROOT/xr2rml/xr2rml_config/"
             FILES=("$PROJECT_ROOT/input/powo/currated"/*)
             TOTAL_FILES=${#FILES[@]}
-            echo "$TOTAL_FILES fichiers trouvés dans Powo/"
+            echo "$TOTAL_FILES files found in powo/"
 
             for ((i=0; i<TOTAL_FILES; i++)); do
                 FILE="${FILES[$i]}"
                 FILE_NUMBER=$((i+1))
 
-                echo "Traitement du fichier $FILE_NUMBER : $(basename "$FILE")"
-
-                # Nettoyer mongo_import et copier le fichier courant
                 rm -rf "$PROJECT_ROOT/xr2rml/mongo_import"/*
+                echo "Processing file #$FILE_NUMBER: $(basename "$FILE")"
                 cp "$FILE" "$PROJECT_ROOT/xr2rml/mongo_import/"
 
-                # Appel du script avec -taxon -<numéro>
                 bash "$SCRIPT_DIR/xr2rml.sh" --taxon "-$FILE_NUMBER"
-
-                # Copier le résultat généré
                 cp "$PROJECT_ROOT/xr2rml/xr2rml_output/powo_taxonomy_$FILE_NUMBER.ttl" "$PROJECT_ROOT/output/"
+                echo "Output file: $PROJECT_ROOT/output/powo_taxonomy_$FILE_NUMBER.ttl"
             done
 
             exit 0
             ;;
 
         --thesaurus)
-            echo "xR2RML mapping file: $PROJECT_ROOT/tools/iawa_thesaurus/mapping/mapping_thesaurus_iawa.ttl"
-            cp "$PROJECT_ROOT/tools/iawa_thesaurus/mapping/mapping_thesaurus_iawa.ttl" "$PROJECT_ROOT/xr2rml/xr2rml_config/"
-            echo "JSON file to translate: $PROJECT_ROOT/input/iawa_thesaurus/currated/iawa_thesaurus.json"
-            cp "$PROJECT_ROOT/input/iawa_thesaurus/currated/iawa_thesaurus.json" "$PROJECT_ROOT/xr2rml/mongo_import"
-            bash "$SCRIPT_DIR/xr2rml.sh" --thesaurus
+            mappingfile="$PROJECT_ROOT/tools/iawa_thesaurus/mapping/mapping_thesaurus_iawa.ttl"
+            echo "xR2RML mapping file: $mappingfile"
+            cp "$mappingfile" "$PROJECT_ROOT/xr2rml/xr2rml_config/"
+
+            sourcefile="$PROJECT_ROOT/input/iawa_thesaurus/currated/iawa_thesaurus.json"
+            echo "Source data to translate to RDF: $sourcefile"
+            cp "$sourcefile" "$PROJECT_ROOT/xr2rml/mongo_import"
+
+            bash "$PROJECT_ROOT/xr2rml/run_mapping_thesaurus.sh"
             cp "$PROJECT_ROOT/xr2rml/xr2rml_output/thesaurus.ttl" "$PROJECT_ROOT/output/"
+            echo "Output file: $PROJECT_ROOT/output/thesaurus.ttl"
             exit 0
             ;;
 
         --observation)
-            echo "xR2RML mapping file: $PROJECT_ROOT/tools/observation/mapping/mapping_observation.ttl"
-            cp "$PROJECT_ROOT/tools/observation/mapping/mapping_observation.ttl" "$PROJECT_ROOT/xr2rml/xr2rml_config/"
-            echo "JSON file to translate: $PROJECT_ROOT/tools/observation/temp/observation_output/observations_output.json"
-            cp "$PROJECT_ROOT/tools/observation/temp/observation_output/observations_output.json" "$PROJECT_ROOT/xr2rml/mongo_import"
-            bash "$SCRIPT_DIR/xr2rml.sh" --observation
+            mappingfile="PROJECT_ROOT/tools/observation/mapping/mapping_observation.ttl"
+            echo "xR2RML mapping file: $mappingfile"
+            cp "$mappingfile" "$PROJECT_ROOT/xr2rml/xr2rml_config/"
+
+            sourcefile="$PROJECT_ROOT/tools/observation/temp/observation_output/observations_output.json"
+            echo "Source data to translate to RDF: $sourcefile"
+            cp "$sourcefile" "$PROJECT_ROOT/xr2rml/mongo_import"
+
+            bash "$PROJECT_ROOT/xr2rml/run_mapping_observation.sh"
             cp "$PROJECT_ROOT/xr2rml/xr2rml_output/observation.ttl" "$PROJECT_ROOT/output/"
+            echo "Output file: $PROJECT_ROOT/output/observation.ttl"
             exit 0
             ;;
         *)

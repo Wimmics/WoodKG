@@ -13,12 +13,7 @@
 <#FOI>
   a rr:TripleMap;
   xrr:logicalSource [
-    xrr:query """
-      db.collection.find({
-        type: "featuresOfInterest"
-      })
-    """;
-    xrr:iterator "$"
+    xrr:query """db.collection.find({ type: "featuresOfInterest" )""";
   ];
   rr:subjectMap [
     rr:template "https://featuresOfInterest/{id}";
@@ -26,21 +21,18 @@
   ];
   rr:predicateObjectMap [
     rr:predicate skos:prefLabel ;
-    rr:objectMap [ xrr:reference "label_en" ] ;
+    rr:objectMap [ xrr:reference "label_en"; rr:language "en" ] ;
   ];
   rr:predicateObjectMap [
-    rr:predicate skos:altLabel ;
-    rr:objectMap [ xrr:reference "label_fr" ] ;
+    rr:predicate skos:prefLabel ;
+    rr:objectMap [ xrr:reference "label_fr"; rr:language "fr" ] ;
   ].
+
+
 <#OP>
   a rr:TripleMap;
   xrr:logicalSource [
-    xrr:query """
-      db.collection.find({
-        type: "observableProperties"
-      })
-    """;
-    xrr:iterator "$"
+    xrr:query """db.collection.find({ type: "observableProperties" })""";
   ];
   rr:subjectMap [
     rr:template "https://observedProperty/{id}";
@@ -48,22 +40,18 @@
   ];
   rr:predicateObjectMap [
     rr:predicate skos:prefLabel ;
-    rr:objectMap [ xrr:reference "label_en" ] ;
+    rr:objectMap [ xrr:reference "label_en"; rr:language "en" ] ;
   ];
   rr:predicateObjectMap [
-    rr:predicate skos:altLabel ;
-    rr:objectMap [ xrr:reference "label_fr" ] ;
+    rr:predicate skos:prefLabel ;
+    rr:objectMap [ xrr:reference "label_fr"; rr:language "fr" ] ;
   ].
+
 
 <#VAL>
   a rr:TripleMap;
   xrr:logicalSource [
-    xrr:query """
-      db.collection.find({
-        type: "values"
-      })
-    """;
-    xrr:iterator "$"
+    xrr:query """db.collection.find({ type: "values" })""";
   ];
   rr:subjectMap [
     rr:template "https://values/{id}";
@@ -71,13 +59,9 @@
   ];
   rr:predicateObjectMap [
     rr:predicate skos:prefLabel ;
-    rr:objectMap [ xrr:reference "label_en" ] ;
+    rr:objectMap [ xrr:reference "label_en"; rr:language "en" ] ;
   ];
   rr:predicateObjectMap [
-    rr:predicate skos:altLabel ;
-    rr:objectMap [ xrr:reference "label_fr" ] ;
+    rr:predicate skos:prefLabel ;
+    rr:objectMap [ xrr:reference "label_fr"; rr:language "fr" ] ;
   ].
-
-
-
-

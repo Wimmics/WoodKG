@@ -41,6 +41,9 @@ Before starting, you must download two resources:
    MONGO_IMPORT_MAXSIZE=160000000
    ```
 
+Start Morph-xR2RML containers with `docker-compose up -d`.
+
+
 ### 2. WCVP - Plant taxonomy
 Run the commands below to download the WCVP taxonomic data `wccp_dwca.zip`, extract the file `wcvp_taxon.csv` and place it in `input/powo/raw`.
 
@@ -95,15 +98,13 @@ The menu offers different options by calling .sh scripts located in `tools/<subf
 Transforms the IAWA thesaurus files from [raw](/input/iawa_thesaurus/raw/) to [currated](/input/iawa_thesaurus/currated/) using `tools/iawa_thesaurus/scripts/thesaurus.sh` and `tools/iawa_thesaurus/scripts/iawa_properties.sh`.
 
 2. Generate IAWA thesaurus as RDF  
-Generates thesaurus.ttl in [output](/output/) from [JSON](/input/iawa_thesaurus/currated/) files.  
-Must be executed after option 1.  
-Using `tools/xr2rml/observation2xr2rml -thesaurus`
+Generates thesaurus.ttl in [output](/output/) from [JSON](/input/iawa_thesaurus/currated/) files using `tools/xr2rml/observation2xr2rml --thesaurus`. Must be executed after option 1.  
 
 3. Generate POWO taxonomy as JSON  
 Transforms WCVP taxonomic files from [raw](/input/powo/raw/) to [currated](/input/powo/currated/) using `tools/powo/scripts/powo.sh`.
 
 4. Generate POWO taxonomy as RDF  
-Generates RDF files [powo_taxonomy_*.ttl](/output/) from [JSON](/input/powo/currated/) files using `tools/xr2rml/observation2xr2rml -taxon`.
+Generates RDF files [powo_taxonomy_*.ttl](/output/) from [JSON](/input/powo/currated/) files using `tools/xr2rml/observation2xr2rml --taxon`.
 
 5. Generate CEPAM observations as JSON  
 Transforms CEPAM observations from [raw](/input/cepam_observations/raw/) to [currated](/input/cepam_observations/currated/) using `tools/cepam_observations/scripts/.cepam_csvtojson.sh`
