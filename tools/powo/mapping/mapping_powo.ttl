@@ -13,11 +13,7 @@
 <#accepted>
   a rr:TripleMap;
   xrr:logicalSource [
-    xrr:query """
-      db.collection.find({
-        taxonomicstatus: "Accepted"
-      })
-    """;
+    xrr:query """db.collection.find({ taxonomicstatus: "Accepted" })""";
   ];
   rr:subjectMap [
     rr:template "http://www.wcvp-core.com/taxon/{$.taxonid}";
@@ -42,13 +38,11 @@
     ];
   ].
 
+
 <#Name>
   a rr:TripleMap;
   xrr:logicalSource [
-    xrr:query """
-      db.collection.find({
-      })
-    """;
+    xrr:query """db.collection.find({})""";
   ];
   rr:subjectMap [
     rr:template "http://www.wcvp-core.com/name/{$.taxonid}";
@@ -87,16 +81,12 @@
     ];
   ].
 
+
 <#synonym>
   a rr:TripleMap;
   xrr:logicalSource [
-    xrr:query """
-      db.collection.find({
-        taxonomicstatus: { $ne: "Accepted" }
-      })
-    """;
+    xrr:query """db.collection.find({taxonomicstatus: { $ne: "Accepted" }})""";
   ];
-
   rr:subjectMap [
     rr:template "http://www.wcvp-core.com/taxon/{$.acceptednameusageid}";
     rr:class owl:Class;
@@ -107,4 +97,3 @@
       rr:template "http://www.wcvp-core.com/name/{$.taxonid}";
     ];
   ].
-

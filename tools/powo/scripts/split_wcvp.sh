@@ -15,7 +15,7 @@ for file in "$SCRIPT_DIR/../../../input/powo/raw/wcvp_part_"*.csv; do
 done
 
 # Supprimer le fichier temporaire
-rm header.csv
+rm -f header.csv
 
 # Supprimer le fichier CSV d'origine (optionnel)
-rm "$SCRIPT_DIR/../../../input/powo/raw/wcvp_taxon.csv"
+rm -f "$SCRIPT_DIR/../../../input/powo/raw/wcvp_taxon.csv"
