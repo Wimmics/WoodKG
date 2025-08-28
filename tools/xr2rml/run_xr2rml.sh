@@ -26,12 +26,10 @@ while [[ $# -gt 0 ]]; do
                 echo "Processing file #$FILE_NUMBER: $(basename "$FILE")"
                 cp "$FILE" "$PROJECT_ROOT/xr2rml/mongo_import/"
 
-                bash "$PROJECT_ROOT/xr2rml/run_mapping_taxon.sh" "-$FILE_NUMBER"
+                bash "$SCRIPT_DIR/run_mapping_taxon.sh" "-$FILE_NUMBER"
                 cp "$PROJECT_ROOT/xr2rml/xr2rml_output/powo_taxonomy_$FILE_NUMBER.ttl" "$PROJECT_ROOT/output/"
                 echo "Output file: $PROJECT_ROOT/output/powo_taxonomy_$FILE_NUMBER.ttl"
             done
-
-            exit 0
             ;;
 
         --thesaurus)
@@ -43,7 +41,7 @@ while [[ $# -gt 0 ]]; do
             echo "Source data to translate to RDF: $sourcefile"
             cp "$sourcefile" "$PROJECT_ROOT/xr2rml/mongo_import"
 
-            bash "$PROJECT_ROOT/xr2rml/run_mapping_thesaurus.sh"
+            bash "$SCRIPT_DIR/run_mapping_thesaurus.sh"
             cp "$PROJECT_ROOT/xr2rml/xr2rml_output/thesaurus.ttl" "$PROJECT_ROOT/output/"
             echo "Output file: $PROJECT_ROOT/output/thesaurus.ttl"
             exit 0
@@ -58,7 +56,7 @@ while [[ $# -gt 0 ]]; do
             echo "Source data to translate to RDF: $sourcefile"
             cp "$sourcefile" "$PROJECT_ROOT/xr2rml/mongo_import"
 
-            bash "$PROJECT_ROOT/xr2rml/run_mapping_observation.sh"
+            bash "$SCRIPT_DIR/run_mapping_observation.sh"
             cp "$PROJECT_ROOT/xr2rml/xr2rml_output/observation.ttl" "$PROJECT_ROOT/output/"
             echo "Output file: $PROJECT_ROOT/output/observation.ttl"
             exit 0

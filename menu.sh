@@ -23,12 +23,12 @@ dossier_est_vide() {
 while true; do
     echo
     echo "========= WoodKGL2 Menu ========="
-    echo "1) Generate IAWA thesaurus as JSON"
+    echo "1) Preprocess IAWA thesaurus"
     echo "2) Generate IAWA thesaurus as RDF"
-    echo "3) Generate POWO taxonomy as JSON"
+    echo "3) Preprocess POWO taxonomy"
     echo "4) Generate POWO taxonomy as RDF"
-    echo "5) Generate CEPAM observations as JSON"
-    echo "6) Generate InsideWood observations as JSON"
+    echo "5) Preprocess CEPAM observations"
+    echo "6) Preprocess InsideWood observations"
     echo "7) Generate observations as RDF"
     echo "8) Quit"
     echo "================================="

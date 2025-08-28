@@ -129,13 +129,7 @@ dmypy.json
 .pyre/
 .ipynb_checkpoints/*
 
-xr2rml/xr2rml_config/*
-xr2rml/mongo_tools/*
-xr2rml/mongo_import/*
-xr2rml/mongo_db/*
-xr2rml/log/*
-xr2rml/docker-compose.yml
-xr2rml/xr2rml_output/*
+xr2rml/*
 output/*.ttl
 tools/observation/temp/*
 

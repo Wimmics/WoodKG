@@ -26,12 +26,9 @@ Before starting, you must download two resources:
 
 ### 1. [Morph-xR2RML](https://github.com/frmichel/morph-xr2rml/)
 
-1. Go to the `xr2rml` folder.
-
-2. Deploy the necessary files and folders following the [Docker installation instructions](https://github.com/frmichel/morph-xr2rml/blob/master/docker/README.md).
-
+1. Create folder `xr2rml`.
+2. CD to `xr2rml` and install the necessary files and folders following the [Docker installation instructions](https://github.com/frmichel/morph-xr2rml/blob/master/docker/README.md).
 3. Open the file `mongo_tools/import-tools.sh`.
-
 4. Modify the following line:  
    ```bash 
    MONGO_IMPORT_MAXSIZE=16000000
@@ -79,10 +76,6 @@ File [wrong_taxonid.json](output/wrong_taxonid/wrong_taxon_id.json) gives the sa
 ### tools
 
 Contains the scripts for transforming raw files to currated files, and currated files to RDF files.
-
-### xr2rml
-
-Contains the mapping and configuration files necessary to use Morph-xR2RML.
 
 
 ## Usage
