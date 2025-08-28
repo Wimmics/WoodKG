@@ -17,7 +17,7 @@ Chaque dossier présent dans le répertoire `input` est structuré en deux sous-
 ### cepam_observations
 
 - `raw/` : contient un fichier CSV téléchargeable des observations issues du CEPAM.
-- `currated/` : contient une version transformée de ce fichier au format JSON, utilisable directement par mon code.
+- `currated/` : contient une version transformée de ce fichier au format JSON.
 
 Exemple de structure JSON :
 

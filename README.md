@@ -64,6 +64,8 @@ This folder contains the data sources: WCVP taxonomy (`powo/`), [InsideWood obse
 
 Each folder contains the subfolders `raw/` for the raw files, and `currated/`for the transformed versions ready to be used for RDF generation.
 
+[More details.](input/README.md)
+
 ### output
 
 Contains the generated RDF files:

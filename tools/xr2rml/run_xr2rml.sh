@@ -37,6 +37,7 @@ while [[ $# -gt 0 ]]; do
             echo "xR2RML mapping file: $mappingfile"
             cp "$mappingfile" "$PROJECT_ROOT/xr2rml/xr2rml_config/"
 
+            rm -rf "$PROJECT_ROOT/xr2rml/mongo_import"/*
             sourcefile="$PROJECT_ROOT/input/iawa_thesaurus/currated/iawa_thesaurus.json"
             echo "Source data to translate to RDF: $sourcefile"
             cp "$sourcefile" "$PROJECT_ROOT/xr2rml/mongo_import"
