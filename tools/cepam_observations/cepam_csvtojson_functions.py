@@ -35,7 +35,6 @@ def csv_to_json(csv_filepath):
     with open(json_filepath, mode="w", encoding="utf-8") as json_file:
         json.dump(data, json_file, indent=2, ensure_ascii=False)
 
-    
     return json_filepath
 
 
@@ -99,7 +98,6 @@ def extract_taxa_and_numeric_keys(input_file, output_file=None):
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2, ensure_ascii=False)
 
-    
     return output_file
 
 
@@ -160,10 +158,7 @@ def transform_json_file(input_json_path, export_dir):
     with open(output_json_path, "w", encoding="utf-8") as f:
         json.dump(transformed_list, f, ensure_ascii=False, indent=4)
 
-    print(
-        f"\033[0;32m✅ Transformation terminée, fichier sauvegardé sous : {output_json_path}\033[0m"
-    )
-
+    print(f"✅ Processing completed. Output file: {output_json_path}")
     return output_json_path
 
 

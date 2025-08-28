@@ -8,13 +8,9 @@ def main():
         if len(argv) > 1
         else "../../input/cepam_observations/raw/CEPAM_feature_net.csv"
     )
-    export_dir = (
-        "../../input/Observation/Observation_input"
-        if len(argv) > 1
-        else "../../input/cepam_observations/currated"
-    )
+    export_dir = "../../input/cepam_observations/currated"
 
-    print("📂 Chemin du fichier CSV :", csv_file)
+    print(f"📂Input CSV file: {csv_file}")
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
     json_file = csv_to_json(csv_file)

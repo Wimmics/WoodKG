@@ -1,24 +1,28 @@
 # WoodKG
 
-WoodKG is a knowledge graph for African Wood charcoal studies. 
-This repository contains the tools that are used to build the sub-parts of the graph.
+WoodKG is a knowledge graph for African Wood charcoal studies.
+This repository contains the tools that are used to build the 3 graphs that are linked together and form WoodKG:
+- a biological taxonomy providing IRIs for taxa and scientific names,
+- a thesaurus of anatomical characteristics being observed,
+- the observations of charcoal samples.
 
-WoodKG aggregates various sources in a unified semantic model:
-- [Plants Of the World Online](https://powo.science.kew.org/) (POWO) which describes up to date taxonomic name and geolocation;
-- [World Checklist of Vascular Plants](https://powo.science.kew.org/about-wcvp) (WCVP) is the taxonomic names backbone that POWO relies on;
-- [International Association of Wood Anatomists](http://www.maderasenargentina.com.ar/archivos/IAWA_Committee1989.pdf)'s features list (IAWA);
-- [InsideWood](https://insidewood.lib.ncsu.edu/search)'s charcoal descriptions;
-- the Southern African wood CHArcoal description proided by research lab [Cultures – Environnements. Préhistoire, Antiquité, Moyen Âge](https://www.cepam.cnrs.fr/) (CEPAM)
+The data sources are the following:
+- [Plants Of the World Online](https://powo.science.kew.org/) (POWO) which describes up to date taxonomic name and geolocation, and the [World Checklist of Vascular Plants](https://powo.science.kew.org/about-wcvp) (WCVP) is the taxonomic names backbone that POWO relies on;
+- [International Association of Wood Anatomists](http://www.maderasenargentina.com.ar/archivos/IAWA_Committee1989.pdf)'s features list (IAWA). From this list we have derived a representation centered around the concepts of Feature of Interest (FoI), Observable Property (OP) and values, available as a [shared document](https://docs.google.com/spreadsheets/d/1PUWlXuF0ph-XoZLRLSvAEFjLJwu-esHQfoGm06nKwRs/edit?usp=sharing);
+- Charcoal observations coming from 2 sources:
+    - [InsideWood](https://insidewood.lib.ncsu.edu/search)'s charcoal descriptions;
+    - the Southern African wood CHArcoal description proided by research lab [Cultures – Environnements. Préhistoire, Antiquité, Moyen Âge](https://www.cepam.cnrs.fr/) (CEPAM)
 Descriptions coming from InsideWood and CEPAM both use IAWA's features list.
 
 
-## Usage
+## Table of Concent
 
 - [Installation](#installation)
 - [Features](#features)
 - [Usage](#usage)
 - [Example of use](#example-of-use)
 - [Technologies used](#technologies-used)
+
 
 ## Installation
 
@@ -52,7 +56,7 @@ wget https://sftp.kew.org/pub/data-repositories/WCVP/wcvp_dwca.zip
 unzip wcvp_dwca.zip wcvp_taxon.csv
 ```
 
-Then, return to the project root and run the script `./tools/powo/scripts/split_wcvp.sh`.
+Then, return to the project root and run the script `./tools/powo/split_wcvp.sh`.
 This will split the csv file into chunks of maximum 100000 lines each.
 
 
@@ -82,10 +86,7 @@ Contains the scripts for transforming raw files to currated files, and currated 
 
 ## Usage
 
-Launch the main menu with:
-
-## Table of contents
-**./menu.sh**
+Launch the main menu with: ``./menu.sh``
 
 The menu offers different options by calling .sh scripts located in `tools/<subfolder>/scripts`:
 
@@ -113,7 +114,7 @@ Requires a .json file (currated type) and generates RDF observations in [output]
 8. Quit  
 Exit the menu.
 
-## Example of use
+### Example of use
 
 Here is a complete execution example:
 ```bash

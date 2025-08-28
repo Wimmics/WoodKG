@@ -9,9 +9,11 @@ currated_folder = insidewood_observations_folder + "/currated"
 
 
 def convert_first_tsv_in_insidewood():
-    """Converts the first .tsv file found in the raw folder to a JSON file.
+    """
+    Converts the first .tsv file found in the raw folder to a JSON file.
     Returns:
-        str: Path to the converted JSON file."""
+        str: Path to the converted JSON file.
+    """
 
     # Liste les fichiers .tsv
     tsv_files = [f for f in os.listdir(raw_folder) if f.endswith(".tsv")]
@@ -27,6 +29,7 @@ def convert_first_tsv_in_insidewood():
     # Génére un chemin de sortie dans le dossier courant
     output_file_name = os.path.splitext(filename)[0] + ".json"
     output_path = os.path.join(os.getcwd(), output_file_name)
+    print(f"📂Input TSV file: {output_file_name}")
 
     # Convertit
     data = []
@@ -38,18 +41,20 @@ def convert_first_tsv_in_insidewood():
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-    print(f"✅ Fichier converti : {output_path}")
+    print(f"Converted to: {output_path}")
     return output_path
 
 
 def remove_fossil_hardwood(input_file, output_file=None):
-    """Removes entries with 'Fossil Hardwood' in the 'Type of Wood' field.
+    """
+    Removes entries with 'Fossil Hardwood' in the 'Type of Wood' field.
     Args:
         input_file (str): Path to the input JSON file.
         output_file (str, optional): Path to the output JSON file.
                                      If None, creates one with suffix '_no_fossil.json'
     Returns:
-        str: Path to the output JSON file."""
+        str: Path to the output JSON file.
+    """
     # Charger les données JSON
     with open(input_file, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -68,18 +73,20 @@ def remove_fossil_hardwood(input_file, output_file=None):
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(filtered_data, f, ensure_ascii=False, indent=2)
 
-
+    print(f"Converted to: {output_file}")
     return output_file
 
 
 def rename_json_keys(input_file, output_file=None):
-    """Renames keys in the JSON file by removing 'MH' or 'mh' from keys that start with a number.
+    """
+    Renames keys in the JSON file by removing 'MH' or 'mh' from keys that start with a number.
     Args:
         input_file (str): Path to the input JSON file.
         output_file (str, optional): Path to the output JSON file.
                                      If None, creates one with suffix '_without_mh.json'
     Returns:
-        str: Path to the output JSON file."""
+        str: Path to the output JSON file.
+    """
 
     def clean_key(key):
         # Supprime les "MH"/"mh" dans les clés de type "1MH", "23mh", etc.
@@ -104,19 +111,21 @@ def rename_json_keys(input_file, output_file=None):
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(new_data, f, ensure_ascii=False, indent=2)
 
-    
+    print(f"Converted to: {output_file}")
     return output_file
 
 
 def filter_json_by_key_number(input_file, output_file=None, max_number=221):
-    """Filters the JSON file to keep only keys that start with a number less than or equal to max_number.
+    """
+    Filters the JSON file to keep only keys that start with a number less than or equal to max_number.
     Args:
         input_file (str): Path to the input JSON file.
         output_file (str, optional): Path to the output JSON file.
                                      If None, creates one with suffix '_filtered.json'
         max_number (int): Maximum number for filtering keys.
     Returns:
-        str: Path to the output JSON file."""
+        str: Path to the output JSON file.
+    """
 
     def get_number(key):
         match = re.match(r"^(\d+)", key)
@@ -145,7 +154,7 @@ def filter_json_by_key_number(input_file, output_file=None, max_number=221):
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(filtered_data, f, ensure_ascii=False, indent=2)
 
-    
+    print(f"Converted to: {output_file}")
     return output_file
 
 
@@ -186,11 +195,13 @@ def extract_taxa_and_numeric_keys(input_file, output_file=None):
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2, ensure_ascii=False)
 
+    print(f"Converted to: {output_file}")
     return output_file
 
 
 def extract_iawa_information(json_obj):
-    """Extracts family, genre, usual name, and original string from the 'Taxa' field of a JSON object.
+    """
+    Extracts family, genre, usual name, and original string from the 'Taxa' field of a JSON object.
     Args:
         json_obj (dict): JSON object containing the 'Taxa' field.
     Returns:
@@ -226,7 +237,8 @@ def extract_iawa_information(json_obj):
 
 
 def parse_iawa_file(json_input_path, json_output_path):
-    """Parses a JSON file to extract IAWA information and writes the results to a new JSON file.
+    """
+    Parses a JSON file to extract IAWA information and writes the results to a new JSON file.
     Args:
         json_input_path (str): Path to the input JSON file.
         json_output_path (str, optional): Path to the output JSON file.
@@ -255,11 +267,11 @@ def parse_iawa_file(json_input_path, json_output_path):
     with open(json_output_path, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=4, ensure_ascii=False)
 
-    
-
 
 def extract_iawa_information(json_obj):
-    """Extracts family, genre, usual name, and original string from the 'Taxa' field of a JSON object.
+    """
+    Extracts family, genre, usual name, and original string from the 'Taxa' field of a JSON object.
+
     Args:
         json_obj (dict): JSON object containing the 'Taxa' field.
     Returns:
@@ -291,7 +303,9 @@ def extract_iawa_information(json_obj):
 
 
 def rewrite_taxa_with_genre(json_input_path, json_output_path=None):
-    """Rewrites the 'Taxa' field in a JSON file to only contain the genre.
+    """
+    Rewrites the 'Taxa' field in a JSON file to only contain the genre.
+
     Args:
         json_input_path (str): Path to the input JSON file.
         json_output_path (str, optional): Path to the output JSON file.
@@ -319,12 +333,14 @@ def rewrite_taxa_with_genre(json_input_path, json_output_path=None):
     with open(json_output_path, "w", encoding="utf-8") as f:
         json.dump(updated_data, f, indent=4, ensure_ascii=False)
 
-   
+    print(f"Converted to: {json_output_path}")
     return json_output_path
 
 
 def transform_single_taxa_dict(input_dict):
-    """Transforms a single dictionary by renaming 'Taxa' to 'Taxon' and formatting numeric keys.
+    """
+    Transforms a single dictionary by renaming 'Taxa' to 'Taxon' and formatting numeric keys.
+    
     Args:
         input_dict (dict): The input dictionary to transform.
     Returns:
@@ -354,12 +370,13 @@ def transform_single_taxa_dict(input_dict):
 
 
 def transform_json_file(input_json_path):
-    """Transforms a JSON file by applying specific transformations to each dictionary.
+    """
+    Transforms a JSON file by applying specific transformations to each dictionary.
+
     Args:
         input_json_path (str): Path to the input JSON file.
     """
     # Création du chemin du dossier d'export
-
     os.makedirs(currated_folder, exist_ok=True)  # Crée le dossier s'il n'existe pas
 
     base_name = os.path.splitext(os.path.basename(input_json_path))[0]
@@ -373,7 +390,7 @@ def transform_json_file(input_json_path):
     with open(output_json_path, "w", encoding="utf-8") as f:
         json.dump(transformed_list, f, ensure_ascii=False, indent=4)
 
-
+    print(f"✅ Processing completed. Output file: {output_json_path}")
     return output_json_path
 
 
@@ -381,4 +398,3 @@ def delete_json_files():
     for file in os.listdir("."):
         if file.endswith(".json") and os.path.isfile(file):
             os.remove(file)
-           

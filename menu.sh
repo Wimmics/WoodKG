@@ -4,15 +4,11 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FOLDER_PATH="$SCRIPT_DIR/tools/transfer"
 SCRIPT_PATH="$SCRIPT_DIR/tools/xr2rml"
 
-
-
-OBSERVATION_DIR="$SCRIPT_DIR/tools/observation"
 IAWA_PROPERTIES_DIR="$SCRIPT_DIR/tools/iawa_thesaurus"
-CEPAM_DIR="$SCRIPT_DIR/tools/CEPAM"
 POWO_DIR="$SCRIPT_DIR/tools/powo"
+OBSERVATION_DIR="$SCRIPT_DIR/tools/observation"
 CEPAM_DIR="$SCRIPT_DIR/tools/cepam_observations"
 INSIDEWOOD_DIR="$SCRIPT_DIR/tools/insidewood_observations"
-
 
 
 # Fonction : retourne vrai si le dossier est vide ou inexistant
@@ -37,11 +33,14 @@ while true; do
     case $choice in
         1)
             echo "Generating IAWA Feature of Interest (FoI), Observable Properties (OP) and OP values..."
-            echo "Invoking $IAWA_PROPERTIES_DIR/scripts/iawa_properties.sh"
-            bash "$IAWA_PROPERTIES_DIR/scripts/iawa_properties.sh"
+            echo "Invoking $IAWA_PROPERTIES_DIR/iawa_properties.py"
+            mkdir -p "$IAWA_PROPERTIES_DIR/temp"
+            python3 "$IAWA_PROPERTIES_DIR/iawa_properties.py"
+
             echo "Launching Thesaurus Processing..."
-            echo "Invoking $IAWA_PROPERTIES_DIR/scripts/thesaurus.sh"
-            bash "$IAWA_PROPERTIES_DIR/scripts/thesaurus.sh"
+            echo "Invoking $IAWA_PROPERTIES_DIR/thesaurus.py"
+            mkdir -p "$IAWA_PROPERTIES_DIR/temp"
+            python3 "$IAWA_PROPERTIES_DIR/thesaurus.py"            
             ;;
         2)
             echo "Translating IAWA thesaurus to RDF..."
@@ -50,7 +49,7 @@ while true; do
             ;;
         3)
             echo "Processing POWO taxonomy ..."
-            echo "Invoking $POWO_DIR/scripts/powo.sh"
+            echo "Invoking $POWO_DIR/powo_csvtojson.py"
             python3 "$POWO_DIR/powo_csvtojson.py"
             ;;
         4)
@@ -60,13 +59,14 @@ while true; do
             ;;
         5)
             echo "Processing CEPAM observations..."
-            echo "Invoking $CEPAM_DIR/scripts/cepam_csvtojson.sh"
-            bash "$CEPAM_DIR/scripts/cepam_csvtojson.sh"
+            echo "Invoking $CEPAM_DIR/cepam_csvtojson.py"
+            mkdir -p "$CEPAM_DIR/temp"
+            python3 "$CEPAM_DIR/cepam_csvtojson.py"
             ;;
         6)
             echo "Processing InsideWood observations..."
-            echo "Invoking $INSIDEWOOD_DIR/scripts/insidewood_observations.sh"
-            bash "$INSIDEWOOD_DIR/scripts/insidewood_observations.sh"
+            echo "Invoking $INSIDEWOOD_DIR/insidewood_csvtojson.py"
+            python3 "$INSIDEWOOD_DIR/insidewood_csvtojson.py"
             ;;
         7)
             echo "Translating observation to RDF..."
