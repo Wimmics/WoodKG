@@ -11,6 +11,8 @@ def main():
     export_dir = "../../input/cepam_observations/currated"
 
     print(f"📂Input CSV file: {csv_file}")
+
+    # CD to the path of current script
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
     json_file = csv_to_json(csv_file)
@@ -20,4 +22,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    delete_json_files("temp")

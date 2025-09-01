@@ -7,20 +7,23 @@ import shutil
 
 
 def csv_to_json(csv_filepath):
-    """Convert a CSV file to a JSON file.
+    """
+    Convert a CSV file to a JSON file. This is an array where each subdocument is
+    the content of one line in the original csv file. Columns are not renamed.
+
     Args:
         csv_filepath (str): path to the CSV file to convert
     Returns:
-        str: path to the created JSON file
+        str: path to the created JSON file. 
     Raises:
         FileNotFoundError: if the CSV file does not exist
         ValueError: if the file is not a CSV file
     """
     if not os.path.isfile(csv_filepath):
-        raise FileNotFoundError(f"❌ Fichier introuvable : {csv_filepath}")
+        raise FileNotFoundError(f"❌ Cannot find file {csv_filepath}")
 
     if not csv_filepath.lower().endswith(".csv"):
-        raise ValueError("❌ Le fichier doit être au format .csv")
+        raise ValueError("❌ Filename must end with .csv")
 
     csv_filename = os.path.splitext(os.path.basename(csv_filepath))[0]
     json_filepath = f"temp/{csv_filename}.json"
@@ -35,12 +38,15 @@ def csv_to_json(csv_filepath):
     with open(json_filepath, mode="w", encoding="utf-8") as json_file:
         json.dump(data, json_file, indent=2, ensure_ascii=False)
 
+    print(f"Converted to: {json_filepath}")
     return json_filepath
 
 
 def extract_taxa_and_numeric_keys(input_file, output_file=None):
     """
     Extracts the 'Taxa' key and all keys that start with a number.
+    Output fields are "Taxon", "sampleID" and all the fields starting with a digit 
+    e.g. "1 - Growth ring boundaries distinct".
 
     Args:
         input_file (str): path to the input JSON file
@@ -48,7 +54,7 @@ def extract_taxa_and_numeric_keys(input_file, output_file=None):
                                      If None, creates one with suffix '_taxa_and_numbers.json'
 
     Returns:
-        str: path to the output JSON file
+        str: path to the output JSON file.
     """
     with open(input_file, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -57,7 +63,7 @@ def extract_taxa_and_numeric_keys(input_file, output_file=None):
     for entry in data:
         new_entry = {}
 
-        taxon_keys = {"taxaname", "taxa name", "taxa", "taxon", "taxaname", "taxa_name"}
+        taxon_keys = {"taxaname", "taxa name", "taxa", "taxon", "taxa_name"}
         sample_id_keys = {
             "sampleid",
             "sample id",
@@ -74,6 +80,7 @@ def extract_taxa_and_numeric_keys(input_file, output_file=None):
             if normalized_key in taxon_keys:
                 taxon_value = entry[key]
                 break
+        new_entry["Taxon"] = taxon_value
 
         # Find the value for 'Sample ID'
         sample_id_value = ""
@@ -82,8 +89,8 @@ def extract_taxa_and_numeric_keys(input_file, output_file=None):
             if normalized_key in sample_id_keys:
                 sample_id_value = entry[key]
                 break
-        new_entry["Taxon"] = taxon_value
         new_entry["sampleID"] = sample_id_value
+
         # Keep keys that start with a number
         for key, value in entry.items():
             if re.match(r"^\d+", key):
@@ -98,17 +105,20 @@ def extract_taxa_and_numeric_keys(input_file, output_file=None):
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2, ensure_ascii=False)
 
+    print(f"Converted to: {output_file}")
     return output_file
 
 
 def transform_single_taxa_dict(input_dict):
-    """Transform a single dictionary by:
+    """
+    Transform a single subdocument in the observations by:
     - Ignoring empty string values
-    - Extracting the number at the beginning of each key
-    - Converting the key to a 3-digit string if it starts with a number
+    - Extracting the number at the beginning of each key and converting it to a 3-digit string
     - Keeping the key as is if it does not start with a number
+    
     Args:
         input_dict (dict): the input dictionary to transform
+    
     Returns:
         dict: the transformed dictionary
     """
@@ -134,10 +144,14 @@ def transform_single_taxa_dict(input_dict):
 
 
 def transform_json_file(input_json_path, export_dir):
-    """Transform a JSON file by applying the transformation to each dictionary in the list.
+    """
+    Transform the JSON file resulting from extract_taxa_and_numeric_keys(), by applying
+    transformations to each subdocument.
+
     Args:
         input_json_path (str): path to the input JSON file
         export_dir (str): directory where the transformed JSON file will be saved
+
     Returns:
         str: path to the transformed JSON file
     """
@@ -162,7 +176,3 @@ def transform_json_file(input_json_path, export_dir):
     return output_json_path
 
 
-def delete_json_files(filepath):
-    for file in os.listdir(filepath):
-        if file.endswith(".json") and os.path.isfile(os.path.join(filepath, file)):
-            os.remove(os.path.join(filepath, file))

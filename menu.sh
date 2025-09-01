@@ -62,6 +62,7 @@ while true; do
             echo "Invoking $CEPAM_DIR/cepam_csvtojson.py"
             mkdir -p "$CEPAM_DIR/temp"
             python3 "$CEPAM_DIR/cepam_csvtojson.py"
+            rm -rf "$CEPAM_DIR/temp"
             ;;
         6)
             echo "Processing InsideWood observations..."
@@ -69,7 +70,7 @@ while true; do
             python3 "$INSIDEWOOD_DIR/insidewood_csvtojson.py"
             ;;
         7)
-            echo "Translating observation to RDF..."
+            echo "Translating observations to RDF..."
 
             # Demande du chemin à l'utilisateur
             read -p "Please enter the path to the input file: " inputFILE
