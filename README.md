@@ -94,7 +94,7 @@ The menu offers different options by calling .sh scripts located in `tools/<subf
 Transforms the IAWA thesaurus files from [raw](/input/iawa_thesaurus/raw/) to [currated](/input/iawa_thesaurus/currated/) using `tools/iawa_thesaurus/scripts/thesaurus.sh` and `tools/iawa_thesaurus/scripts/iawa_properties.sh`.
 
 2. Generate IAWA thesaurus as RDF  
-Generates thesaurus.ttl in [output](/output/) from [JSON](/input/iawa_thesaurus/currated/) files using `tools/xr2rml/observation2xr2rml --thesaurus`. Must be executed after option 1.  
+Generates iawa_thesaurus.ttl in [output](/output/) from [JSON](/input/iawa_thesaurus/currated/) files using `tools/xr2rml/observation2xr2rml --thesaurus`. Must be executed after option 1.  
 
 3. Generate POWO taxonomy as JSON  
 Transforms WCVP taxonomic files from [raw](/input/powo/raw/) to [currated](/input/powo/currated/) using `tools/powo/scripts/powo.sh`.

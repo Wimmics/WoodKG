@@ -18,4 +18,4 @@ docker exec -w /mongo_tools $MONGO_CONTAINER \
 # --- Run the translation to RDF
 # Note that at start-up Morph-xR2RML shows 3 SLF4J warning messages, just ignore them.
 docker exec -w /xr2rml_config $XR2RML_CONTAINER \
-   /bin/bash run_xr2rml_template.sh mapping_thesaurus_iawa.ttl thesaurus.ttl dataset1.0 $COLLECTION
+   /bin/bash run_xr2rml_template.sh mapping_thesaurus_iawa.ttl iawa_thesaurus.ttl dataset1.0 $COLLECTION

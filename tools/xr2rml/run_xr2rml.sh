@@ -43,8 +43,8 @@ while [[ $# -gt 0 ]]; do
             cp "$sourcefile" "$PROJECT_ROOT/xr2rml/mongo_import"
 
             bash "$SCRIPT_DIR/run_mapping_thesaurus.sh"
-            cp "$PROJECT_ROOT/xr2rml/xr2rml_output/thesaurus.ttl" "$PROJECT_ROOT/output/"
-            echo "Output file: $PROJECT_ROOT/output/thesaurus.ttl"
+            cp "$PROJECT_ROOT/xr2rml/xr2rml_output/iawa_thesaurus.ttl" "$PROJECT_ROOT/output/"
+            echo "Output file: $PROJECT_ROOT/output/iawa_thesaurus.ttl"
             exit 0
             ;;
 
