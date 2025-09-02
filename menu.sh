@@ -73,24 +73,22 @@ while true; do
             echo "Translating observations to RDF..."
 
             # Demande du chemin à l'utilisateur
-            read -p "Please enter the path to the input file: " inputFILE
-
-            # Vérification : est-ce un fichier ?
-            if [ ! -f "$inputFILE" ]; then
-                echo "❌ Error: '$inputFILE' is not a valid file."
+            read -p "Please enter the path to the input file: " INPUT_FILE
+            if [ ! -f "$INPUT_FILE" ]; then
+                echo "❌ Error: '$INPUT_FILE' is not a valid file."
                 read -p "Press Enter to continue..."
                 break
             fi
 
-            # Détection du type de fichier
-            bash "$OBSERVATION_DIR/scripts/detect_file_type.sh" "$inputFILE"
+            mkdir -p "$OBSERVATION_DIR/temp/observation_output"
+            INPUT_DIR="$OBSERVATION_DIR/temp/observation_input"
+            mkdir -p "$INPUT_DIR"
+            cp "$INPUT_FILE" "$INPUT_DIR/"
+            echo "Copied $INPUT_FILE to $INPUT_DIR"
+            python3 "$OBSERVATION_DIR/observation.py"
 
-            # Si succès, on enchaîne avec observation.sh en lui passant le chemin du fichier
-            if [ $? -eq 0 ]; then
-                bash "$OBSERVATION_DIR/scripts/observation.sh" "$inputFILE"
-            fi
-
-            echo "Launching Morph-xR2RML for iawa properties..."
+            exit
+            echo "Launching Morph-xR2RML for observations..."
             bash "$SCRIPT_PATH/run_xr2rml.sh" --observation
             ;;
 
