@@ -1,42 +1,84 @@
 from observationFunctions import *
-from taxon_currated_to_taxon_filtered import extract_fields_to_jsonl
+from taxon_currated_to_taxon_filtered import taxonomy_to_single_jsonl
 
-iawa_thesaurus_folder = "../../input/iawa_thesaurus"
-currated_folder = f"{iawa_thesaurus_folder}/currated"
-iawa_values_path = f"{currated_folder}/values.json"
-foi_op_mapping_path = f"{currated_folder}/foiAndOp.json"
-observation_output_folder = "temp/observation_output"
+iawa_folder = "../../input/iawa_thesaurus"
+iawa_currated_folder = f"{iawa_folder}/currated"
+iawa_values_file = f"{iawa_currated_folder}/values.json"
+foi_op_mapping_file = f"{iawa_currated_folder}/foiAndOp.json"
 
+output_folder = "../../output"
+temp_folder = "temp"
+temp_input = f"{temp_folder}/observation_input"
+temp_powo = f"{temp_folder}/powo"
 
-def main():
-
-    os.chdir(os.path.dirname(os.path.abspath(__file__)))
-    os.makedirs("wcvpJson", exist_ok=True)
-    extract_fields_to_jsonl("../../input/powo/currated","wcvpJson/wcvp_filtered.json")
-
-    # Génère le fichier JSON utilisé par MongoDB pour mapper les propriétés IAWA
-    cleaned_taxa_path = rewrite_taxa()
-    taxa_grouped_by_id = merge_species_by_ID(currated_folder, cleaned_taxa_path)
-    observation_dict = split_measurements_from_file(taxa_grouped_by_id)
-    taxa_with_properties = merge_taxa_with_details_by_valid_id(
-        observation_dict, iawa_values_path
-    )
-    taxa_with_ids = enrich_taxa_with_taxonid_simple_match(
-        taxa_with_properties, jsonlines_folder="wcvpJson"
-    )
-    taxa_enriched_by_genus = enrich_taxa_with_taxonid_by_genus(taxa_with_ids)
-    final_observation_json = enrich_json_with_ids(
-        observations_path=taxa_enriched_by_genus, mapping_path=foi_op_mapping_path
-    )
-    jsonlines_output_path = json_to_jsonlines(final_observation_json)
-    extract_unique_taxon_without_taxonid(jsonlines_output_path)
-
-    print("\033[32mScript executed successfully!\033[0m")
-    print(
-        "\033[32mOutput files are located in the 'Observation_output' directory.\033[0m"
-    )
+# Codes couleur ANSI
+RED = "\033[31m"
+GREEN = "\033[32m"
+RESET = "\033[0m"
 
 
 if __name__ == "__main__":
-    main()
-    delete_json_files("temp")
+
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+    # Rewrite the observations with taxon names formatted exactly as "genus species"
+    obs_files = [f for f in os.listdir(temp_input) if f.endswith(".json")]
+    if len(obs_files) == 0:
+        print("❌ No JSON file found in observation_input.")
+        exit(-1)
+    elif len(obs_files) > 1:
+        print("❌ More than one JSON file found in observation_input.")
+        exit(-1)
+    obs_with_reformatted_taxa = f"{temp_folder}/obs_1_reformatted_taxon_names.json"
+    reformat_taxon_names(
+        os.path.join(temp_input, obs_files[0]), obs_with_reformatted_taxa
+    )
+    print(f"Reformated taxon names in observations: {obs_with_reformatted_taxa}")
+
+    # Reformat observations by concatenating the IAWA values by group (feature of interest, observable property)
+    obs_merge_iawa_vals = f"{temp_folder}/obs_2_merged_values.json"
+    merge_iawa_values(
+        obs_with_reformatted_taxa,
+        f"{iawa_currated_folder}/values.json",
+        obs_merge_iawa_vals,
+    )
+    print(f"Reformated observations with aggregated IAWA values: {obs_merge_iawa_vals}")
+
+    # Turn multi-measuremlent observations into single-measurement observations
+    measurements_file = f"{temp_folder}/obs_3_individual.json"
+    split_obs_to_measurements(obs_merge_iawa_vals, measurements_file)
+    print(f"Turned observations into single measurements: {measurements_file}")
+
+    # Enrich each observation with IAWA value, property and feature
+    obs_with_iawa = f"{temp_folder}/obs_4_individual_with_iawa.json"
+    enrich_obs_with_iawa_details(
+        measurements_file, iawa_values_file, foi_op_mapping_file, obs_with_iawa
+    )
+    print(f"Enriched observations with IAWA property/feature: {obs_with_iawa}")
+
+    # Generate a single file from the generated POWO files and remove syntactically incorrect entries
+    os.makedirs(temp_powo, exist_ok=True)
+    taxonomy_to_single_jsonl(
+        "../../input/powo/currated", f"{temp_powo}/wcvp_filtered.json"
+    )
+    print(f"Generated single-file taxonomy: {temp_powo}/wcvp_filtered.json")
+
+    # Enrich each observation with the POWO/WCVP taxon ID based on the taxon name
+    obs_with_taxa = f"{temp_folder}/obs_5_individual_with_iawa_taxa.json"
+    enrich_obs_with_taxon_simple_match(obs_with_iawa, temp_powo, obs_with_taxa)
+    print(f"Enriched observations with POWO taxon id: {obs_with_taxa}")
+
+    # Convert the JSON file into a "JSON-line" file ie. with 1 JSON document per line
+    os.makedirs(output_folder, exist_ok=True)
+
+    obs_file_jsonlines = os.path.join(output_folder, "observations_output.json")
+    json_to_jsonlines(obs_with_taxa, obs_file_jsonlines)
+    print(f"{GREEN}Final file of observations: {obs_file_jsonlines}.{RESET}")
+
+    output_file = os.path.join(output_folder, "unmatched_taxa.json")
+    extract_obs_without_taxonid(obs_file_jsonlines, output_file)
+    print(f"Observations not matched with a POWO taxon id (if any): {output_file}")
+
+    print(f"{GREEN}Script completed.{RESET}")
+
+    # delete_json_files("temp")

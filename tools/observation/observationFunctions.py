@@ -4,22 +4,22 @@ import re
 from collections import defaultdict
 import glob
 
-temp_folder = "temp"
-input_folder = f"{temp_folder}/observation_input"
-output_folder = f"{temp_folder}/observation_output"
 
+def extract_taxonomic_information(taxon_name):
+    """
+    Extracts family, "genus species", usual name, and original string from the given JSON object.
 
-def extract_iawa_information(json_obj):
-    """Extracts family, genre, usual name, and original string from the given JSON object.
     Args:
-        json_obj (dict): The JSON object containing the 'Taxon' field.
+        taxon_name (string): value of the 'Taxon' field in an observation
+
     Returns:
-        tuple: A tuple containing family, genre, usual name, and original string.
+        tuple: (family, "genus species", usual name, original string)
     """
     family = ""
-    original_string = json_obj["Taxon"].replace("?", "")
+    original_string = taxon_name
+    taxon_name = taxon_name.replace("?", "")
 
-    for x in original_string.split("|"):
+    for x in taxon_name.split("|"):
         x = x.replace("Synonym:", "").strip()
 
         family_match = re.search(r"[A-Z][A-Z]+\s[A-Z][A-Z]+|[A-Z][A-Z]+", x)
@@ -33,54 +33,33 @@ def extract_iawa_information(json_obj):
             r"[A-Z][a-z]+\.*",
             x,
         )
-        genre = genre_match.group(0) if genre_match else ""
+        genus_species = genre_match.group(0) if genre_match else ""
 
         usual_name_match = re.search(r"\([A-Z][A-Z,\s]+\)", x)
         usual_name = usual_name_match.group(0) if usual_name_match else ""
 
-        return family, genre, usual_name, original_string
+        # print((family, genus_species, usual_name, original_string))
+        return family, genus_species, usual_name, original_string
 
 
-def rewrite_taxa():
-    """Rewrites the taxa in the Observation_input folder to match the expected format for InsideWood.
+def reformat_taxon_names(input_file: str, output_file: str):
+    """
+    Rewrites an observation file after reformating the taxon name as "genus species"
 
     Args:
-        None
-    Returns:
-        str: The path to the updated JSON file with taxa rewritten.
+        input_file (str): JSON observations file.
+        output_file (str): output JSON file where the rewritten taxa will be saved.
     """
 
-    json_files = [f for f in os.listdir(input_folder) if f.endswith(".json")]
-
-    if len(json_files) == 0:
-        print("❌ Aucun fichier JSON trouvé dans le dossier Observation_input.")
-        return None
-    elif len(json_files) > 1:
-        print(
-            "❌ Plus d'un fichier JSON trouvé dans Observation_input, merci de n'en laisser qu'un seul."
-        )
-        return None
-
-    input_file = json_files[0]
-    input_path = os.path.join(input_folder, input_file)
-
-    if not os.path.exists(temp_folder):
-        os.makedirs(temp_folder)
-    if temp_folder.endswith("/"):
-        output_file = f"{temp_folder}validNames.json"
-    else:
-        output_file = f"{temp_folder}/validNames.json"
-
-    with open(input_path, "r", encoding="utf-8") as f:
+    with open(input_file, "r", encoding="utf-8") as f:
         data = json.load(f)
-
     updated_data = []
 
     for obj in data:
         try:
-            _, genre, _, _ = extract_iawa_information(obj)
+            _, genus_species, _, _ = extract_taxonomic_information(obj["Taxon"])
             new_obj = obj.copy()
-            new_obj["Taxon"] = genre  # Remplacement du champ "Taxon"
+            new_obj["Taxon"] = genus_species  # Remplacement du champ "Taxon"
             updated_data.append(new_obj)
         except Exception as e:
             print(f"Erreur lors du traitement de l'entrée : {obj}\n{e}")
@@ -88,103 +67,102 @@ def rewrite_taxa():
 
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(updated_data, f, indent=4, ensure_ascii=False)
+    return
 
 
-    return output_file
+def merge_iawa_values(obs_file, iawa_values_file, output_file):
+    """
+    Combine the IAWA values sharing the same observable property and feature of interest.
 
-
-def merge_species_by_ID(reference_folder, species_json_path):
-    """Combine the IDs of values sharing the same observable property and feature of interest.
-
-    This function groups measurement IDs that observe the same property on the same
+    This function groups measurement IDs that observe the same property of the same
     feature of interest. Useful for merging related observations in datasets where
     properties and targets overlap
 
-        Args:
-            reference_folder (str): Path to the folder containing the reference of the IDs.
-            species_json_path (str): Path to the JSON file containing species data.
-        Returns:
-            str: Path to the output JSON file with merged species data.
-
-
+    Args:
+        obs_file (str): file with observations containing modified taxon names.
+        iawa_values_file (str): file containing the pre-computed IAWA values.
+        output_file (str): path to the output JSON file with merged species data.
     """
 
-    reference_json_filename = "values.json"
-    reference_json_path = os.path.join(reference_folder, reference_json_filename)
+    # Charger le fichier des valeurs IAWA
+    if not os.path.isfile(iawa_values_file):
+        raise FileNotFoundError(f"❌ File '{iawa_values_file}' does not exist.")
+    with open(iawa_values_file, "r", encoding="utf-8") as f:
+        iawa_values = json.load(f)
 
-    if not os.path.isfile(reference_json_path):
-        raise FileNotFoundError(
-            f"❌ Le fichier '{reference_json_filename}' est introuvable dans le dossier '{reference_folder}'."
-        )
-    if temp_folder.endswith("/"):
-        output_file = f"{temp_folder}mergedbyid.json"
-    else:
-        output_file = f"{temp_folder}/mergedbyid.json"
-    # Charger le fichier de référence
-    with open(reference_json_path, "r", encoding="utf-8") as f:
-        reference_data = json.load(f)
-
-    # Grouper les IDs par (feature, property)
-    grouped_ids_dict = defaultdict(list)
-    for id_, info in reference_data.items():
+    # Grouper les valeurs IAWA par (feature, property)
+    # Input: has documents like:
+    #  { "nnn": { "value": "...", "property": "...", "feature": "..." }}
+    #  { "ppp": { "value": "...", "property": "...", "feature": "..." }}
+    # Output dictionnary is like
+    #  { (property, feature): [nnn, ppp, ...] }
+    grouped_vals = defaultdict(list)
+    for id_, info in iawa_values.items():
         key = (info.get("feature"), info.get("property"))
-        grouped_ids_dict[key].append(id_)
-
+        grouped_vals[key].append(id_)
     # Garder uniquement les groupes avec plus d'un ID
-    list_of_lists = [ids for ids in grouped_ids_dict.values() if len(ids) > 1]
+    grouped_vals_multi = [ids for ids in grouped_vals.values() if len(ids) > 1]
 
-    # Charger la liste d'espèces
-    with open(species_json_path, "r", encoding="utf-8") as f:
-        species_list = json.load(f)
+    # Charger les observations
+    with open(obs_file, "r", encoding="utf-8") as f:
+        obs_list = json.load(f)
 
-    # Traiter chaque espèce avec un sampleID incrémental
-    new_species_list = []
-    sample_id_counter = 1
+    new_obs_list = []
+    sample_id_counter = 0
+    for obs in obs_list:
 
-    for main_data in species_list:
-        new_data = {"Taxon": main_data["Taxon"], "sampleID": sample_id_counter}
-        sample_id_counter += 1
+        # Si une observation a un sampleID le garder, sinon attribuer un nouveau sampleID incrémental
+        if hasattr(obs, "sampleID"):
+            new_data = {"Taxon": obs["Taxon"], "sampleID": obs["sampleID"]}
+        else:
+            new_data = {"Taxon": obs["Taxon"], "sampleID": sample_id_counter}
+            sample_id_counter += 1
 
-        used_ids = set()
-
-        for group in list_of_lists:
-            present_ids = [id_ for id_ in group if id_ in main_data]
-            if len(present_ids) > 1:
-                merged_key = "".join(present_ids)
-                merged_value = "".join([main_data[id_] for id_ in present_ids])
+        # Grouper les valeurs IAWA par (feature, property)
+        used_vals = set()
+        for group in grouped_vals_multi:
+            present_vals = [_val for _val in group if _val in obs]
+            if len(present_vals) > 1:
+                merged_key = "".join(present_vals)
+                merged_value = "".join([obs[_val] for _val in present_vals])
                 new_data[merged_key] = merged_value
-                used_ids.update(present_ids)
+                used_vals.update(present_vals)
 
         # Ajouter les champs non fusionnés
-        for key, value in main_data.items():
-            if key not in used_ids and key != "Taxon":
+        for key, value in obs.items():
+            if key not in used_vals and key != "Taxon":
                 new_data[key] = value
 
-        new_species_list.append(new_data)
+        new_obs_list.append(new_data)
 
     # Sauvegarder dans un fichier
     with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(new_species_list, f, indent=2, ensure_ascii=False)
-
-   
-    return output_file
+        json.dump(new_obs_list, f, indent=2, ensure_ascii=False)
 
 
-def split_measurements_by_id(data):
-    """Splits compound measurement records into individual observations.
-
-    For each non-empty measurement in the input data, creates a new entry with a unique
-    Observation ID, preserving the associated taxon and sample ID. Each new entry represents
-    a single observed property linked to its taxon.
-
-    Args:
-        data (list): List of dictionaries. Each dictionary represents a grouped record,
-        with keys like 'Taxon', 'sampleID', and measurement fields.
-
-    Returns:
-        list: A list of dictionaries, where each dictionary is a distinct observation
-        with a unique Observation ID.
+def split_obs_to_measurements(input_file, output_file):
     """
+    Transforms an observation file where an observation contains multiple measurements done at once,
+    into observation with an individual measurement that are assigned a unique Observation ID,
+    preserving the associated taxon and sample ID.
+    The format of each measurement is as follows:
+    ```
+    {   "Observationid": 1,
+        "Taxon": "Sclerocarya birrea",
+        "iawa_val_key": "031033",
+        "031033": "3133",
+        "sampleID": "BRS18-2-31"
+    }
+    ```
+    Args:
+        input_file (str): file with observations containing aggregated IAWA values,
+                with keys like 'Taxon', 'sampleID', and measurement fields.
+        output_file (str): output JSON file for individual measturements.
+    """
+
+    with open(input_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
     all_results = []
     current_id = 1
     last_taxa = None
@@ -200,12 +178,11 @@ def split_measurements_by_id(data):
         for key, val in obj.items():
             if key in ["Taxon", "sampleID"]:
                 continue
-
             if val:  # ignore vide ou None
                 new_entry = {
                     "Observationid": current_id,
                     "Taxon": taxa,
-                    "VALID": key,
+                    "iawa_val_key": key,
                     key: val,
                 }
                 if sample_id is not None:
@@ -214,108 +191,94 @@ def split_measurements_by_id(data):
                 all_results.append(new_entry)
                 current_id += 1
 
-    return all_results
-
-
-def split_measurements_from_file(input_file):
-    """Processes a JSON file and splits grouped measurements into individual observations.
-
-    Reads measurement data from a JSON file, applies the splitting process to
-    generate individual observations, and writes the result to a new JSON file.
-
-    Args:
-        input_file (str): Path to the input JSON file containing grouped measurement records.
-
-    Returns:
-        str: Path to the generated output file.
-    """
-    if temp_folder.endswith("/"):
-        output_file = f"{temp_folder}dico.json"
-    else:
-        output_file = f"{temp_folder}/dico.json"
-    with open(input_file, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
-    splited_data = split_measurements_by_id(data)
-
     with open(output_file, "w", encoding="utf-8") as f_out:
-        json.dump(splited_data, f_out, ensure_ascii=False, indent=2)
-
-    return output_file
+        json.dump(all_results, f_out, ensure_ascii=False, indent=2)
 
 
-def merge_taxa_with_details_by_valid_id(taxa_file, details_file):
+def enrich_obs_with_iawa_details(
+    input_file, iawa_values_file, iawa_foi_op_file, output_file
+):
     """
-    Merges taxa entries with corresponding detail information based on the 'VAlID' field.
+    Adds to observation entries the corresponding IAWA information
+    about the value ('iawa_val_key' field), and the ids of the feature of interest (FOI)
+    and observable property (OP)
 
     Args:
-        taxa_file (str): Path to the JSON file containing the main taxa data (list of entries).
-        details_file (str): Path to the JSON file containing detail mappings keyed by 'VAlID'.
-
-    Returns:
-        str: Path to the generated merged JSON file.
+        input_file (str): file containing the observation data
+        iawa_values_file (str): file containing the detail of IAWA values
+        iawa_foi_op_file (str): file containing IAWA FOIs and OPs
+        output_file (str): output JSON file for individual measturements.
     """
-    if temp_folder.endswith("/"):
-        output_file = f"{temp_folder}mergedTaxa.json"
-    else:
-        output_file = f"{temp_folder}/mergedTaxa.json"
-    # Load main taxa data
-    with open(taxa_file, "r", encoding="utf-8") as f1:
-        taxa_data = json.load(f1)
 
-    # Load details data
-    with open(details_file, "r", encoding="utf-8") as f2:
-        details_data = json.load(f2)
+    # Load observation data
+    with open(input_file, "r", encoding="utf-8") as f1:
+        obs_data = json.load(f1)
+
+    # Load IAWA values
+    with open(iawa_values_file, "r", encoding="utf-8") as f2:
+        iawa_values = json.load(f2)
+
+    # Load IAWA FOIs and OPs
+    with open(iawa_foi_op_file, "r", encoding="utf-8") as f3:
+        iawa_foi_ops = json.load(f3)
 
     result = []
-
-    for entry in taxa_data:
+    for entry in obs_data:
         merged_entry = dict(entry)  # make a copy for modification
+        iawa_key = entry.get("iawa_val_key")
 
-        valid = entry.get("VALID")
+        if iawa_key and iawa_key in iawa_values:
+            iawa_value = iawa_values[iawa_key]
+            merged_entry["value"] = iawa_value.get("value", "")
 
-        if valid and valid in details_data:
-            detail = details_data[valid]
-            merged_entry["value"] = detail.get("value", "")
-            merged_entry["property"] = detail.get("property", "")
-            merged_entry["feature"] = detail.get("feature", "")
+            iawa_property = iawa_value.get("property", "")
+            merged_entry["property"] = iawa_property
+            op_id = iawa_foi_ops.get("OP", {}).get(iawa_property, "000")
+            merged_entry["property_id"] = op_id
+
+            iawa_feature = iawa_value.get("feature", "")
+            merged_entry["feature"] = iawa_feature
+            foi_id = iawa_foi_ops.get("FOI", {}).get(iawa_feature, "000")
+            merged_entry["feature_id"] = foi_id
 
         result.append(merged_entry)
 
-    # Save merged output to JSON
     with open(output_file, "w", encoding="utf-8") as f_out:
         json.dump(result, f_out, ensure_ascii=False, indent=2)
 
-    return output_file
 
-
-def enrich_taxa_with_taxonid_simple_match(input_file, jsonlines_folder):
+def enrich_obs_with_taxon_simple_match(
+    input_file: str, taxo_folder: str, output_file: str
+):
     """
-    Enriches taxa entries in the input JSON file by adding taxon IDs based on simple case-insensitive
-    matching of scientific names found in multiple JSON Lines files within a folder.
+    Enriches observation entries by adding the POWO/WCVP taxon IDs.
+    Matching scientific names is simple case-insensitive.
+    If the "genus species" name is not found, then try to match with the genus name only.
 
     Args:
-        input_file (str): Path to the input JSON file containing taxa data.
-        jsonlines_folder (str): Path to the folder containing JSON Lines (.json) files with taxon info.
-
-    Returns:
-        str: Path to the enriched output JSON file.
+        input_file (str): file containing the observation data
+        taxo_folder (str): folder containing JSON-Line files with taxonomic info formatted like:
+            ```
+                {
+                    "taxonid": "3152367",
+                    "family": "Polypodiaceae",
+                    "genus": "Elaphoglossum",
+                    "scientfiicname": "Elaphoglossum pygmaeum"
+                }
+            ```
+            Note: the double 'i' typo in 'scientfiicname' is how it comes from in WCVP.
+        output_file (str): output JSON file for individual measurements.
     """
-    if temp_folder.endswith("/"):
-        output_file = f"{temp_folder}enrichedTaxa.json"
-    else:
-        output_file = f"{temp_folder}/enrichedTaxa.json"
 
-    # Load main JSON data
+    # Load observation data
     with open(input_file, "r", encoding="utf-8") as f:
-        data_a = json.load(f)
+        obs_data = json.load(f)
 
     # Build dictionary mapping lowercase scientific name -> taxonid
     scientific_name_to_taxonid = {}
 
-    # Read JSON Lines files in the folder
-    pattern = os.path.join(jsonlines_folder, "*.json")
-    for filename in glob.glob(pattern):
+    # Read taxonomy files from the folder
+    for filename in glob.glob(os.path.join(taxo_folder, "*.json")):
         try:
             with open(filename, "r", encoding="utf-8") as f:
                 for line in f:
@@ -334,154 +297,39 @@ def enrich_taxa_with_taxonid_simple_match(input_file, jsonlines_folder):
             print(f"Read error in {filename}: {e}")
 
     # Enrich data with taxonid using simple lowercase match
-    for item in data_a:
+    for item in obs_data:
         taxon_name = item.get("Taxon")
         if taxon_name:
-            key = taxon_name.lower().strip()
-            taxonid = scientific_name_to_taxonid.get(key)
+            taxonid = scientific_name_to_taxonid.get(taxon_name.lower().strip())
             if taxonid:
                 item["taxonid"] = taxonid
+            else:
+                # If 'taxonid' not found, then match the genus name
+                genus = taxon_name.strip().split()[0].lower()
+                if genus:
+                    taxonid = scientific_name_to_taxonid.get(genus)
+                    if taxonid:
+                        item["taxonid"] = taxonid
 
-    # Save enriched JSON
     with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(data_a, f, indent=2, ensure_ascii=False)
-
-    return output_file
+        json.dump(obs_data, f, indent=2, ensure_ascii=False)
 
 
-def enrich_taxa_with_taxonid_by_genus(input_json_path: str) -> str:
-    """
-    Enriches taxa entries in the input JSON file by adding taxon IDs based on matching the genus name
-    (the first word of the taxon name) to scientific names found in multiple JSON Lines files in the 'wcvpJson' folder.
-
-    Args:
-        input_json_path (str): Path to the input JSON file containing taxa data.
-
-
-    Returns:
-        str: Path to the enriched output JSON file.
-    """
-    if temp_folder.endswith("/"):
-        output_file = f"{temp_folder}enriched_by_genus.json"
-    else:
-        output_file = f"{temp_folder}/enriched_by_genus.json"
-    # Load data to enrich
-    with open(input_json_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
-    # Build scientific name -> taxonid dictionary from JSON Lines files
-    scientific_name_to_taxonid = {}
-    for filename in glob.glob("wcvpJson/*.json"):
-        try:
-            with open(filename, "r", encoding="utf-8") as f_part:
-                for line in f_part:
-                    line = line.strip()
-                    if not line:
-                        continue
-                    try:
-                        entry = json.loads(line)
-                        name = entry.get("scientfiicname")  # typo preserved
-                        taxonid = entry.get("taxonid")
-                        if name and taxonid:
-                            scientific_name_to_taxonid[name.lower().strip()] = taxonid
-                    except json.JSONDecodeError:
-                        continue
-        except Exception:
-            continue
-
-    # Helper function: get genus name (first word of taxon name, lowercased)
-    def get_genus(taxa_name):
-        if not taxa_name:
-            return None
-        return taxa_name.strip().split()[0].lower()
-
-    # Enrich items missing 'taxonid' by matching the genus name
-    updated_count = 0
-    for item in data:
-        if "taxonid" not in item:
-            taxa_name = item.get("Taxon")
-            genus = get_genus(taxa_name)
-            if genus:
-                taxonid = scientific_name_to_taxonid.get(genus)
-                if taxonid:
-                    item["taxonid"] = taxonid
-                    updated_count += 1
-
-    # Save enriched JSON
-    with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-
-    return output_file
-
-
-def enrich_json_with_ids(observations_path, mapping_path):
-    """Enriches the observations JSON file with FOIID and OPID based on a mapping file.
-    Args:
-        observations_path (str): Path to the observations JSON file.
-        mapping_path (str): Path to the mapping JSON file containing FOI and OP mappings.
-
-        Returns:
-            str: Path to the enriched output JSON file.
-    """
-    if temp_folder.endswith("/"):
-        output_file = f"{temp_folder}enriched_observations.json"
-    else:
-        output_file = f"{temp_folder}/enriched_observations.json"
-    # Charger les fichiers JSON
-    with open(observations_path, "r", encoding="utf-8") as f:
-        observations = json.load(f)
-
-    with open(mapping_path, "r", encoding="utf-8") as f:
-        mapping = json.load(f)
-
-    # Ajouter FOIID et OPID à chaque observation
-    for obs in observations:
-        feature = obs.get("feature")
-        property_ = obs.get("property")
-        foi_id = mapping.get("FOI", {}).get(feature, "000")
-        op_id = mapping.get("OP", {}).get(property_, "000")
-
-        obs["FOIID"] = foi_id
-        obs["OPID"] = op_id
-
-    # Définir le chemin du fichier de sortie si non spécifié
-    if output_file is None:
-        base, ext = os.path.splitext(observations_path)
-        output_file = base + "_enriched.json"
-
-    # Sauvegarder le JSON enrichi
-    with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(observations, f, indent=2)
-
-    return output_file
-
-
-def json_to_jsonlines(input_json_path):
+def json_to_jsonlines(input_file, output_file):
     """
     Converts a JSON file to JSON Lines format and saves it in the 'Observation_output' directory.
     Args:
-        input_json_path (str): Path to the input JSON file.
+        input_file (str): JSON file containing the observation data
+        output_file (str): output file in JSON-line format
+    """
 
-    Returns:
-        None"""
-    # S'assurer que le dossier Observation_output existe
-
-    os.makedirs(output_folder, exist_ok=True)
-
-    if temp_folder.endswith("/"):
-        output_file = f"{output_folder}observations_output.json"
-    else:
-        output_file = f"{output_folder}/observations_output.json"
-
-    with open(input_json_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
+    with open(input_file, "r", encoding="utf-8") as f:
+        obs_data = json.load(f)
 
     with open(output_file, "w", encoding="utf-8") as f_out:
-        for obj in data:
+        for obj in obs_data:
             line = json.dumps(obj, ensure_ascii=False)
             f_out.write(line + "\n")
-
-    return output_file
 
 
 def delete_json_files(file_path):
@@ -491,37 +339,30 @@ def delete_json_files(file_path):
             os.remove(os.path.join(file_path, file))
 
 
-def extract_unique_taxon_without_taxonid(json_input_path: str) -> int:
+def extract_obs_without_taxonid(input_file: str, output_file: str) -> int:
     """
-    Reads a JSON lines file, extracts objects without 'taxonid' but with a unique 'Taxon',
-    writes these objects in a fixed output folder, and returns the number of extracted items.
+    Reads observations in JSON-line format and extracts those with a 'Taxon' but no 'taxonid'.
+    Writes these observations unmatched with a taxon id in the output file.
 
     Args:
-        json_input_path (str): Path to the input JSON lines file.
-
-    Returns:
-        int: Number of extracted items.
+        input_file (str): JSON file containing the observation data in JSON-line format
+        output_file (str): output file in JSON-line format containing the taxa without taxon id
     """
-    output_folder = "../../output/wrong_taxonid"
-    os.makedirs(output_folder, exist_ok=True)
-
-    basename = os.path.splitext(os.path.basename(json_input_path))[0]
-    output_file = os.path.join(output_folder, "wrong_taxon_id.json")
 
     seen_taxa = set()
     count = 0
 
-    with open(json_input_path, "r", encoding="utf-8") as f_in, open(
+    with open(input_file, "r", encoding="utf-8") as f_in, open(
         output_file, "w", encoding="utf-8"
     ) as f_out:
         for line in f_in:
             try:
-                data = json.loads(line)
-                if "taxonid" not in data and "Taxon" in data:
-                    taxon = data["Taxon"].strip()
+                obs_data = json.loads(line)
+                if "taxonid" not in obs_data and "Taxon" in obs_data:
+                    taxon = obs_data["Taxon"].strip()
                     if taxon and taxon not in seen_taxa:
                         seen_taxa.add(taxon)
-                        f_out.write(json.dumps(data, ensure_ascii=False) + "\n")
+                        f_out.write(json.dumps(obs_data, ensure_ascii=False) + "\n")
                         count += 1
             except json.JSONDecodeError as e:
                 print(f"Ligne invalide ignorée : {e}")
@@ -532,13 +373,8 @@ def extract_unique_taxon_without_taxonid(json_input_path: str) -> int:
     RESET = "\033[0m"
 
     if count == 0:
-        print(
-            f"{GREEN}For all your taxa we find a valid taxon ID in the powo database{RESET}"
-        )
+        print(f"{GREEN}All observations were matched with a taxon id in POWO{RESET}")
     else:
         print(
-            f"{RED}{count} taxa we couldn't find a valid taxon ID for in the POWO database{RESET}"
+            f"{RED}{count} observations could not be matched with a taxon in POWOZ{RESET}"
         )
-    print(
-        f"{GREEN}You can see which taxa are invalid in the file: {output_file}{RESET}"
-    )

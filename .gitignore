@@ -130,10 +130,7 @@ dmypy.json
 .ipynb_checkpoints/*
 
 xr2rml/*
-output/*.ttl
+output/*
 tools/observation/temp/*
-
-Competency_questions/*
-tools/observation/wcvpJson/wcvp_filtered.json
 input/powo/raw/*
 input/powo/currated/*
