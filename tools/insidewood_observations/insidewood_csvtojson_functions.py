@@ -369,29 +369,27 @@ def transform_single_taxa_dict(input_dict):
     return result
 
 
-def transform_json_file(input_json_path):
+def transform_json_file(input_file, output_file):
     """
     Transforms a JSON file by applying specific transformations to each dictionary.
 
     Args:
-        input_json_path (str): Path to the input JSON file.
+        input_file (str): input JSON observations file.
+        output_file (str): output observations file.
     """
     # Création du chemin du dossier d'export
     os.makedirs(currated_folder, exist_ok=True)  # Crée le dossier s'il n'existe pas
 
-    base_name = os.path.splitext(os.path.basename(input_json_path))[0]
-    output_json_path = os.path.join(currated_folder, f"{base_name}_homogene.json")
-
-    with open(input_json_path, "r", encoding="utf-8") as f:
+    with open(input_file, "r", encoding="utf-8") as f:
         input_list = json.load(f)
 
     transformed_list = [transform_single_taxa_dict(taxa) for taxa in input_list]
 
-    with open(output_json_path, "w", encoding="utf-8") as f:
+    with open(output_file, "w", encoding="utf-8") as f:
         json.dump(transformed_list, f, ensure_ascii=False, indent=4)
 
-    print(f"✅ Processing completed. Output file: {output_json_path}")
-    return output_json_path
+    print(f"✅ Processing completed. Output file: {output_file}")
+    return output_file
 
 
 def delete_json_files():

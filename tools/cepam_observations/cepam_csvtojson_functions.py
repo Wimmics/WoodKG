@@ -14,7 +14,7 @@ def csv_to_json(csv_filepath):
     Args:
         csv_filepath (str): path to the CSV file to convert
     Returns:
-        str: path to the created JSON file. 
+        str: path to the created JSON file.
     Raises:
         FileNotFoundError: if the CSV file does not exist
         ValueError: if the file is not a CSV file
@@ -45,7 +45,7 @@ def csv_to_json(csv_filepath):
 def extract_taxa_and_numeric_keys(input_file, output_file=None):
     """
     Extracts the 'Taxa' key and all keys that start with a number.
-    Output fields are "Taxon", "sampleID" and all the fields starting with a digit 
+    Output fields are "Taxon", "sampleID" and all the fields starting with a digit
     e.g. "1 - Growth ring boundaries distinct".
 
     Args:
@@ -115,10 +115,10 @@ def transform_single_taxa_dict(input_dict):
     - Ignoring empty string values
     - Extracting the number at the beginning of each key and converting it to a 3-digit string
     - Keeping the key as is if it does not start with a number
-    
+
     Args:
         input_dict (dict): the input dictionary to transform
-    
+
     Returns:
         dict: the transformed dictionary
     """
@@ -143,36 +143,22 @@ def transform_single_taxa_dict(input_dict):
     return result
 
 
-def transform_json_file(input_json_path, export_dir):
+def transform_json_file(input_json_path, output_file):
     """
     Transform the JSON file resulting from extract_taxa_and_numeric_keys(), by applying
     transformations to each subdocument.
 
     Args:
         input_json_path (str): path to the input JSON file
-        export_dir (str): directory where the transformed JSON file will be saved
-
-    Returns:
-        str: path to the transformed JSON file
+        output_file (str): final output file
     """
-
-    # Supprimer tout le contenu du dossier s'il existe
-    if os.path.exists(export_dir):
-        shutil.rmtree(export_dir)
-    os.makedirs(export_dir, exist_ok=True)
-
-    base_name = os.path.splitext(os.path.basename(input_json_path))[0]
-    output_json_path = os.path.join(export_dir, f"{base_name}_homogene.json")
 
     with open(input_json_path, "r", encoding="utf-8") as f:
         input_list = json.load(f)
 
     transformed_list = [transform_single_taxa_dict(taxa) for taxa in input_list]
 
-    with open(output_json_path, "w", encoding="utf-8") as f:
+    with open(output_file, "w", encoding="utf-8") as f:
         json.dump(transformed_list, f, ensure_ascii=False, indent=4)
 
-    print(f"✅ Processing completed. Output file: {output_json_path}")
-    return output_json_path
-
-
+    print(f"✅ Processing completed. Output file: {output_file}")
