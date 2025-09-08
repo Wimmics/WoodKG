@@ -86,7 +86,7 @@ while true; do
                 break
             fi
 
-            mkdir -p "$OBSERVATION_DIR/temp/output"
+            mkdir -p "output"
             INPUT_DIR="$OBSERVATION_DIR/temp/input"
             mkdir -p "$INPUT_DIR"
             cp "$INPUT_FILE" "$INPUT_DIR/"

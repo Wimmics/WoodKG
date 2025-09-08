@@ -53,7 +53,7 @@ while [[ $# -gt 0 ]]; do
             echo "xR2RML mapping file: $mappingfile"
             cp "$mappingfile" "$PROJECT_ROOT/xr2rml/xr2rml_config/"
 
-            sourcefile="$PROJECT_ROOT/tools/observation/temp/output/observations.json"
+            sourcefile="$PROJECT_ROOT/output/observations.json"
             echo "Source data to translate to RDF: $sourcefile"
             rm -rf "$PROJECT_ROOT/xr2rml/mongo_import"/*
             cp "$sourcefile" "$PROJECT_ROOT/xr2rml/mongo_import"

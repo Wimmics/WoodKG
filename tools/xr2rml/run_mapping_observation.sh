@@ -13,7 +13,7 @@ XR2RML_CONTAINER=$(docker ps --format=='{{.Names}}' | grep "morph-xr2rml" | cut 
 
 # --- Import the JSON files of a directory into MongoDB
 docker exec -w /mongo_tools $MONGO_CONTAINER \
-   /bin/bash import-json-files.sh $DB $COLLECTION id
+   /bin/bash import-json-files.sh $DB $COLLECTION Observationid
 
 # --- Run the translation to RDF
 # Note that at start-up Morph-xR2RML shows 3 SLF4J warning messages, just ignore them.
