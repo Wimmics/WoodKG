@@ -61,6 +61,11 @@ while true; do
             echo "Processing CEPAM observations..."
             echo "Invoking $CEPAM_DIR/cepam_csvtojson.py"
             mkdir -p "$CEPAM_DIR/temp"
+
+            output_dir=input/cepam_observations/currated
+            rm -rf $output_dir
+            mkdir -p $output_dir
+            
             python3 "$CEPAM_DIR/cepam_csvtojson.py"
             rm -rf "$CEPAM_DIR/temp"
             ;;

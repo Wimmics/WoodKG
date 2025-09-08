@@ -168,6 +168,7 @@ def generate_full_combined_oneline_json(input_file: str, output_file: str):
     # Combine les valeurs (fonction fournie ailleurs)
     combined_values = generate_value_combinations(original_values)
 
+    output_file = os.path.abspath(output_file)
     with open(output_file, "w", encoding="utf-8") as f_out:
         # Écrit chaque feature
         for id_, content in features.items():
