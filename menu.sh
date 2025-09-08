@@ -65,7 +65,7 @@ while true; do
             output_dir=input/cepam_observations/currated
             rm -rf $output_dir
             mkdir -p $output_dir
-            
+
             python3 "$CEPAM_DIR/cepam_csvtojson.py"
             rm -rf "$CEPAM_DIR/temp"
             ;;
@@ -75,6 +75,7 @@ while true; do
             python3 "$INSIDEWOOD_DIR/insidewood_csvtojson.py"
             ;;
         7)
+            echo
             echo "Translating observations to RDF..."
 
             # Demande du chemin à l'utilisateur
@@ -85,14 +86,14 @@ while true; do
                 break
             fi
 
-            mkdir -p "$OBSERVATION_DIR/temp/observation_output"
-            INPUT_DIR="$OBSERVATION_DIR/temp/observation_input"
+            mkdir -p "$OBSERVATION_DIR/temp/output"
+            INPUT_DIR="$OBSERVATION_DIR/temp/input"
             mkdir -p "$INPUT_DIR"
             cp "$INPUT_FILE" "$INPUT_DIR/"
             echo "Copied $INPUT_FILE to $INPUT_DIR"
             python3 "$OBSERVATION_DIR/observation.py"
 
-            exit
+            echo
             echo "Launching Morph-xR2RML for observations..."
             bash "$SCRIPT_PATH/run_xr2rml.sh" --observation
             ;;

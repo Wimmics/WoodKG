@@ -49,12 +49,13 @@ while [[ $# -gt 0 ]]; do
             ;;
 
         --observation)
-            mappingfile="PROJECT_ROOT/tools/observation/mapping/mapping_observation.ttl"
+            mappingfile="$PROJECT_ROOT/tools/observation/mapping/mapping_observation.ttl"
             echo "xR2RML mapping file: $mappingfile"
             cp "$mappingfile" "$PROJECT_ROOT/xr2rml/xr2rml_config/"
 
-            sourcefile="$PROJECT_ROOT/tools/observation/temp/observation_output/observations_output.json"
+            sourcefile="$PROJECT_ROOT/tools/observation/temp/output/observations.json"
             echo "Source data to translate to RDF: $sourcefile"
+            rm -rf "$PROJECT_ROOT/xr2rml/mongo_import"/*
             cp "$sourcefile" "$PROJECT_ROOT/xr2rml/mongo_import"
 
             bash "$SCRIPT_DIR/run_mapping_observation.sh"

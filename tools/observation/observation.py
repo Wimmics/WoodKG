@@ -8,7 +8,7 @@ foi_op_mapping_file = f"{iawa_currated_folder}/foiAndOp.json"
 
 output_folder = "../../output"
 temp_folder = "temp"
-temp_input = f"{temp_folder}/observation_input"
+temp_input = f"{temp_folder}/input"
 temp_powo = f"{temp_folder}/powo"
 
 # Codes couleur ANSI
@@ -24,10 +24,10 @@ if __name__ == "__main__":
     # Rewrite the observations with taxon names formatted exactly as "genus species"
     obs_files = [f for f in os.listdir(temp_input) if f.endswith(".json")]
     if len(obs_files) == 0:
-        print("❌ No JSON file found in observation_input.")
+        print("❌ No JSON file found in $temp_input.")
         exit(-1)
     elif len(obs_files) > 1:
-        print("❌ More than one JSON file found in observation_input.")
+        print("❌ More than one JSON file found in $temp_input.")
         exit(-1)
     obs_with_reformatted_taxa = f"{temp_folder}/obs_1_reformatted_taxon_names.json"
     reformat_taxon_names(
@@ -71,14 +71,12 @@ if __name__ == "__main__":
     # Convert the JSON file into a "JSON-line" file ie. with 1 JSON document per line
     os.makedirs(output_folder, exist_ok=True)
 
-    obs_file_jsonlines = os.path.join(output_folder, "observations_output.json")
+    obs_file_jsonlines = os.path.abspath(os.path.join(output_folder, "observations.json"))
     json_to_jsonlines(obs_with_taxa, obs_file_jsonlines)
     print(f"{GREEN}Final file of observations: {obs_file_jsonlines}.{RESET}")
 
     output_file = os.path.join(output_folder, "unmatched_taxa.json")
     extract_obs_without_taxonid(obs_file_jsonlines, output_file)
     print(f"Observations not matched with a POWO taxon id (if any): {output_file}")
-
-    print(f"{GREEN}Script completed.{RESET}")
 
     # delete_json_files("temp_folder")

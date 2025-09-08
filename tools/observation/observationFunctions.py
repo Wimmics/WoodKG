@@ -317,7 +317,7 @@ def enrich_obs_with_taxon_simple_match(
 
 def json_to_jsonlines(input_file, output_file):
     """
-    Converts a JSON file to JSON Lines format and saves it in the 'Observation_output' directory.
+    Converts a JSON file to JSON Lines format
     Args:
         input_file (str): JSON file containing the observation data
         output_file (str): output file in JSON-line format
@@ -362,14 +362,13 @@ def extract_obs_without_taxonid(input_file: str, output_file: str) -> int:
 
     # Codes couleur ANSI
     RED = "\033[31m"
-    GREEN = "\033[32m"
     RESET = "\033[0m"
 
     if count == 0:
-        print(f"{GREEN}All observations were matched with a taxon id in POWO{RESET}")
+        print(f"All observations were matched with a taxon id in POWO")
     else:
         print(
-            f"{RED}{count} observations could not be matched with a taxon in POWOZ{RESET}"
+            f"{RED}{count} observations could not be matched with a taxon in POWO{RESET}"
         )
 
 
