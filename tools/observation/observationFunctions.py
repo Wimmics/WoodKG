@@ -332,13 +332,6 @@ def json_to_jsonlines(input_file, output_file):
             f_out.write(line + "\n")
 
 
-def delete_json_files(file_path):
-    """Deletes all JSON files in the specified directory."""
-    for file in os.listdir(file_path):
-        if file.endswith(".json") and os.path.isfile(os.path.join(file_path, file)):
-            os.remove(os.path.join(file_path, file))
-
-
 def extract_obs_without_taxonid(input_file: str, output_file: str) -> int:
     """
     Reads observations in JSON-line format and extracts those with a 'Taxon' but no 'taxonid'.
@@ -378,3 +371,10 @@ def extract_obs_without_taxonid(input_file: str, output_file: str) -> int:
         print(
             f"{RED}{count} observations could not be matched with a taxon in POWOZ{RESET}"
         )
+
+
+def delete_json_files(file_path):
+    """Deletes all JSON files in the specified directory."""
+    for file in os.listdir(file_path):
+        if file.endswith(".json") and os.path.isfile(os.path.join(file_path, file)):
+            os.remove(os.path.join(file_path, file))

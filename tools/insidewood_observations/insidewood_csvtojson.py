@@ -11,7 +11,7 @@ def main():
 
     # Build output filename from source file name
     file_nopath = os.path.basename(json_file)
-    output_file = os.path.join(currated_folder, f"{file_nopath}")
+    output_file = os.path.abspath(os.path.join(currated_folder, f"{file_nopath}"))
 
     transform_json_file(
         rewrite_taxa_with_genre(

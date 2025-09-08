@@ -81,4 +81,4 @@ if __name__ == "__main__":
 
     print(f"{GREEN}Script completed.{RESET}")
 
-    # delete_json_files("temp")
+    # delete_json_files("temp_folder")

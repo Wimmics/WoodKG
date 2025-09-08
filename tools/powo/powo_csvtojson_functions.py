@@ -39,8 +39,8 @@ def wcvpJson(csv_folder, output_folder):
         return
 
     for i, filename in enumerate(csv_files, start=1):
-        csv_path = os.path.join(csv_folder, filename)
-        json_output = os.path.join(output_folder, f"powo_taxonomy_{i}.json")
+        csv_path = os.path.abspath(os.path.join(csv_folder, filename))
+        json_output = os.path.abspath(os.path.join(output_folder, f"powo_taxonomy_{i}.json"))
 
         print(f"✅ Converting {csv_path} -> {json_output}")
         convert_csv_to_json_lines(csv_path, json_output)

@@ -24,8 +24,8 @@ def convert_first_tsv_in_insidewood():
 
     # Prend le premier fichier
     filename = tsv_files[0]
-    tsv_file_path = os.path.join(raw_folder, filename)
-    print(f"📂Input TSV file: {filename}")
+    tsv_file_path = os.path.abspath(os.path.join(raw_folder, filename))
+    print(f"📂Input TSV file: {tsv_file_path}")
 
     # Génére un chemin de sortie dans le dossier courant
     output_file_name = os.path.splitext(filename)[0] + ".json"

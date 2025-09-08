@@ -7,9 +7,5 @@ raw = os.path.join(folder_path, "raw")
 currated = os.path.join(folder_path, "currated")
 
 
-def main():
-    wcvpJson(raw, currated)
-
-
 if __name__ == "__main__":
-    main()
+    wcvpJson(raw, currated)

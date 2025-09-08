@@ -31,9 +31,9 @@ def convert_iawa_tsv_to_json_three_dicts(input_folder, currated_folder):
     # Find the first .tsv file
     for file in os.listdir(input_folder):
         if file.endswith(".tsv"):
-            input_csv = os.path.join(input_folder, file)
+            input_csv = os.path.abspath(os.path.join(input_folder, file))
             base_name = os.path.splitext(file)[0]
-            output_file = os.path.join(currated_folder, f"{base_name}_structured.json")
+            output_file = os.path.abspath(os.path.join(currated_folder, f"{base_name}_structured.json"))
             break
     else:
         print("❌ No .tsv file found in IawaProperties_import.")
@@ -42,6 +42,8 @@ def convert_iawa_tsv_to_json_three_dicts(input_folder, currated_folder):
     features_of_interest = {}
     observable_properties = {}
     values = {}
+
+    print(f"Processing input file: '{input_csv}'")
 
     with open(input_csv, newline="", encoding="utf-8") as csvfile:
         reader = csv.DictReader(csvfile, delimiter="\t")
@@ -147,14 +149,13 @@ def generate_value_combinations(values):
     return result
 
 
-def generate_full_combined_oneline_json(input_file: str):
+def generate_full_combined_oneline_json(input_file: str, output_file: str):
     """
     Génère un fichier JSONL (une document JSON par ligne) à partir du fichier structuré,
     avec les valeurs combinées produites par `generate_value_combinations`.
 
     Chaque ligne contient un champ "type" : "featuresOfInterest", "observableProperties", ou "values".
     """
-    os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
     with open(input_file, "r", encoding="utf-8") as f:
         full_data = json.load(f)

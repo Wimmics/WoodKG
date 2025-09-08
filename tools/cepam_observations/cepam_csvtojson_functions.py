@@ -26,7 +26,7 @@ def csv_to_json(csv_filepath):
         raise ValueError("❌ Filename must end with .csv")
 
     csv_filename = os.path.splitext(os.path.basename(csv_filepath))[0]
-    json_filepath = f"temp/{csv_filename}.json"
+    json_filepath = os.path.abspath(f"temp/{csv_filename}.json")
 
     # Lire le CSV et écrire le JSON
     data = []
@@ -101,6 +101,7 @@ def extract_taxa_and_numeric_keys(input_file, output_file=None):
     if output_file is None:
         base_filename = os.path.splitext(os.path.basename(input_file))[0]
         output_file = f"temp/{base_filename}_taxa_and_numbers.json"
+        output_file = os.path.abspath(output_file)
 
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=2, ensure_ascii=False)

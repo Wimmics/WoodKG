@@ -22,7 +22,7 @@ def extract_iawa_features_from_tsv(input_folder, temp_folder=temp_folder):
     # Trouve le premier fichier .tsv dans le dossier
     for file in os.listdir(input_folder):
         if file.endswith(".tsv"):
-            input_csv = os.path.join(input_folder, file)
+            input_csv = os.path.abspath(os.path.join(input_folder, file))
             base_name = os.path.splitext(file)[0]
             # Crée le nom du fichier JSON de sortie
             if not os.path.exists(temp_folder):
@@ -35,6 +35,8 @@ def extract_iawa_features_from_tsv(input_folder, temp_folder=temp_folder):
     else:
         print("❌ Aucun fichier .tsv trouvé dans IawaProperties_import.")
         return None
+
+    print(f"Processing input file: '{input_csv}'")
 
     # Structure : FOI > OP > [VAL...]
     features = defaultdict(lambda: defaultdict(list))
@@ -287,7 +289,7 @@ def generate_combinations_from_json(
     os.makedirs(output_file_dir, exist_ok=True)
 
     # Nom complet du fichier de sortie
-    output_file = os.path.join(output_file_dir, "values.json")
+    output_file = os.path.abspath(os.path.join(output_file_dir, "values.json"))
 
     with open(input_file, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -342,7 +344,7 @@ def extract_foi_op_from_tsv(export_folder, folder_path):
     os.makedirs(export_folder, exist_ok=True)
 
     # Écriture du JSON
-    output_file = os.path.join(export_folder, "foiAndOp.json")
+    output_file = os.path.abspath(os.path.join(export_folder, "foiAndOp.json"))
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(result, f, indent=4, ensure_ascii=False)
 
