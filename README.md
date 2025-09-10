@@ -18,10 +18,9 @@ Descriptions coming from InsideWood and CEPAM both use IAWA's features list.
 ## Table of Concent
 
 - [Installation](#installation)
-- [Features](#features)
+- [Repository Structure](#repository-structure)
 - [Usage](#usage)
-- [Example of use](#example-of-use)
-- [Technologies used](#technologies-used)
+- [Requirements](#requirements)
 
 
 ## Installation
@@ -60,24 +59,27 @@ Then, return to the project root and run the script `./tools/powo/split_wcvp.sh`
 This will split the csv file into chunks of maximum 100000 lines each.
 
 
-## Structure
+## Repository Structure
 
 ### input
 
-This folder contains the data sources: WCVP taxonomy (`powo/`), [InsideWood observations](input/insidewood_observations/), [CEPAM observations](input/cepam_observations/).
+This folder contains the data sources: WCVP taxonomy (`powo/`), [input/iawa_thesaurus](IAWA thesaurus), [InsideWood observations](input/insidewood_observations/), [CEPAM observations](input/cepam_observations/).
 
-Each folder contains the subfolders `raw/` for the raw files, and `currated/`for the transformed versions ready to be used for RDF generation.
+Each folder contains two subfolders:
+    - `raw/` for the raw files downloaded from their respective sources,
+    - `currated/`for the transformed versions ready to be used for RDF generation.
 
 [More details.](input/README.md)
 
 ### output
 
 Contains the generated RDF files:
-the POWO taxonomy (powo_taxonomy_*.ttl),
-the observations (InsideWood, CEPAM),
-the IAWA thesaurus.
+- the POWO taxonomy (powo_taxonomy_*.ttl),
+- the IAWA thesaurus.
+- the InsideWood or CEPAM observations (observations.ttl)
 
-File [wrong_taxonid.json](output/wrong_taxonid/wrong_taxon_id.json) gives the samples for which no taxonomic identifier was found in POWO.
+File [unmatched_taxa.json](output/unmatched_taxa.json) gives the observations for which no taxonomic identifier was found in POWO.
+
 
 ### tools
 
@@ -129,7 +131,7 @@ Then in the menu:
 input/cepam_observations/currated/CEPAM_feature_net_taxa_and_numbers_homogene.json
 ```
 
-## Technologies used
+## Requirements
 
 - SPARQL, SOSA/SSN ontologies  
 - Morph-xR2RML  

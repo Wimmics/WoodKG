@@ -1,67 +1,54 @@
 # input
 
-Chaque dossier présent dans le répertoire `input` est structuré en deux sous-dossiers :
+This directory contains the input data used to generate the WoodKG knowledge graph.
 
-- `raw/` : contient les fichiers bruts, tels que téléchargés depuis leurs sources respectives sur Internet.
-- `currated/` : contient les fichiers transformés à l’aide de mes scripts, adaptés à la génération de graphes RDF.
+### iawa_thesaurus
 
-## Table des matières
+- `raw/`: contains a TSV file representing the IAWA thesaurus modeling, developed by the WIMMICS team. This is an export from this [Google Sheet](https://docs.google.com/spreadsheets/d/1PUWlXuF0ph-XoZLRLSvAEFjLJwu-esHQfoGm06nKwRs/edit?usp=sharing)
+- `currated/`: contains three JSON files:
+    - `foiAndOP.json`: two dictionaries referencing the *features of interest* and *observable properties* with their respective identifiers.
+    - `values.json`: contains the values of the observable properties, in the following format:
 
-- [cepam_observations](#cepam_observations)
-- [iawa_thesaurus](#iawa_thesaurus)
-- [insidewood_observations](#insidewood_observations)
-- [powo](#powo)
+                "001002": {
+                    "value": "boundaries distinct or indistinct or absent",
+                    "property": "boundary marks",
+                    "feature": "growth ring"
+                }
+
+        Some values correspond to unions. Links to `foiAndOP.json` are made via the `property` and `feature` fields.
+
+    - `iawa_thesaurus.json`: file used by Morph-xR2RML to generate the thesaurus RDF.
 
 ---
 
 ### cepam_observations
 
-- `raw/` : contient un fichier CSV téléchargeable des observations issues du CEPAM.
-- `currated/` : contient une version transformée de ce fichier au format JSON.
+- `raw/`: contains a downloadable CSV file of observations provided by researchers of the CEPAM.
+- `currated/`: contains a transformed version of this file in JSON format.
 
-Exemple de structure JSON :
+JSON structure example:
 
-    {
-      "Taxon": "Sclerocarya birrea subsp caffra",
-      "sampleID": "BRS18-2-31",
-      "001": "1",
-      "005": "5"
-    }
-
-Les identifiants des propriétés sont normalisés sur trois chiffres.
-
----
-
-### iawa_thesaurus
-
-- `raw/` : contient un fichier TSV représentant la modélisation du thésaurus IAWA, développée avec l’équipe WIMMICS.
-- `currated/` : contient trois fichiers JSON :
-
-  - `foiAndOP.json` : deux dictionnaires référençant les *features of interest* et les *observable properties*, avec leurs identifiants respectifs.
-  - `values.json` : contient les valeurs observées selon le format suivant :
-
-        "001002": {
-          "value": "boundaries distinct or indistinct or absent",
-          "property": "boundary marks",
-          "feature": "growth ring"
+        {
+            "Taxon": "Sclerocarya birrea subsp caffra",
+            "sampleID": "BRS18-2-31",
+            "001": "1",
+            "005": "5"
         }
 
-    Certaines valeurs correspondent à des unions. Les liens vers `foiAndOP.json` se font via les champs `property` et `feature`.
-
-  - `iawa_thesaurus.json` : fichier utilisé par Morph-xR2RML pour générer le RDF du thésaurus.
+Property identifiers are normalized to three digits.
 
 ---
 
 ### insidewood_observations
 
-- `raw/` : contient un fichier CSV téléchargeable depuis le site InsideWood :  
-  https://insidewood.lib.ncsu.edu/search
-
-- `currated/` : contient une version transformée de ce fichier, au même format que celui du CEPAM.
+- `raw/`: contains a CSV file downloadable from the InsideWood website: https://insidewood.lib.ncsu.edu/search. 
+  Do get it you must do a search by IAWA code (e.g. '1p') or keyword.
+  Then on the Search Results page, click the "Select All Description Results" checkbox and "Export nnn Selected Results" link.
+- `currated/`: contains a transformed version of this file, in the same format as CEPAM.
 
 ---
 
 ### powo
 
-- `raw/` : contient la version brute du fichier CSV téléchargé depuis POWO (WCVP).
-- `currated/` : contient sa version transformée en JSON, exploitable par Morph-xR2RML.
+- `raw/`: contains the raw version of the CSV file downloaded from POWO (WCVP).
+- `currated/`: contains its transformed JSON version, usable by Morph-xR2RML.
