@@ -43,7 +43,7 @@ Property identifiers are normalized to three digits.
 
 - `raw/`: contains a CSV file downloadable from the InsideWood website: https://insidewood.lib.ncsu.edu/search. 
   Do get it you must do a search by IAWA code (e.g. '1p') or keyword.
-  Then on the Search Results page, click the "Select All Description Results" checkbox and "Export nnn Selected Results" link.
+  Then, on the Search Results page, click the "Select All Description Results" checkbox and "Export nnn Selected Results" link.
 - `currated/`: contains a transformed version of this file, in the same format as CEPAM.
 
 ---

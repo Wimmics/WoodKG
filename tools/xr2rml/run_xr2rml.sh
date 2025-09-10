@@ -29,6 +29,7 @@ while [[ $# -gt 0 ]]; do
                 bash "$SCRIPT_DIR/run_mapping_taxon.sh" "-$FILE_NUMBER"
                 cp "$PROJECT_ROOT/xr2rml/xr2rml_output/powo_taxonomy_$FILE_NUMBER.ttl" "$PROJECT_ROOT/output/"
                 echo "Output file: $PROJECT_ROOT/output/powo_taxonomy_$FILE_NUMBER.ttl"
+                echo
             done
             ;;
 

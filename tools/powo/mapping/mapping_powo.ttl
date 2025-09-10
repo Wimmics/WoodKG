@@ -1,15 +1,17 @@
 @prefix xrr:        <http://i3s.unice.fr/xr2rml#> .
 @prefix rr:         <http://www.w3.org/ns/r2rml#> .
 @prefix rml:        <http://semweb.mmlab.be/ns/rml#> .
+
+@prefix dct:        <http://purl.org/dc/terms/> .
+@prefix foaf:       <ttp://xmlns.com/foaf/0.1/> .
+@prefix owl:        <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs:       <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rdf:        <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix owl:        <http://www.w3.org/2002/07/owl#> .
 @prefix xsd:        <http://www.w3.org/2001/XMLSchema#> .
 @prefix txrfp:      <http://taxref.mnhn.fr/lod/property/> .
+@prefix schema:     <http://schema.org/> .
 @prefix skos:       <http://www.w3.org/2004/02/skos/core#> .
-@prefix taxref:     <http://taxref.mnhn.fr/lod/resource/> .
 
-@base   <https://ns.inria.fr/woodkg/> .
 
 <#Taxon>
   a rr:TripleMap;
@@ -17,43 +19,42 @@
     xrr:query """db.collection.find({ taxonomicstatus: "Accepted" })""";
   ];
   rr:subjectMap [
-    rr:template "http://www.wcvp-core.com/taxon/{$.taxonid}";
+    rr:template "http://ns.inria.fr/wcvp/taxon/{$.taxonid}";
     rr:class owl:Class;
   ];
   rr:predicateObjectMap [
     rr:predicate rdfs:subClassOf;
-    rr:objectMap [
-      rr:template "http://www.wcvp-core.com/taxon/{$.parentnameusageid}";
-    ];
+    rr:objectMap [ rr:template "http://ns.inria.fr/wcvp/taxon/{$.parentnameusageid}" ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicate dct:identifier;
+    rr:objectMap [ xrr:reference "$.taxonid" ];
+  ];
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label;
+    rr:objectMap [ xrr:reference "$.scientfiicname" ];
   ];
   rr:predicateObjectMap [
     rr:predicate txrfp:taxonRank;
-    rr:objectMap [
-      rr:template "http://taxref.mnhn.fr/lod/taxrank/{$.taxonrank}";
-    ];
+    rr:objectMap [ rr:template "http://taxref.mnhn.fr/lod/taxrank/{$.taxonrank}" ];
   ];
   rr:predicateObjectMap [
     rr:predicate txrfp:hasReferenceName;
-    rr:objectMap [
-      rr:template "http://www.wcvp-core.com/name/{$.taxonid}";
-    ];
+    rr:objectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ];
   ].
 
 
-<#axonSynonym>
+<#TaxonSynonym>
   a rr:TripleMap;
   xrr:logicalSource [
     xrr:query """db.collection.find({ taxonomicstatus: {$ne: "Accepted"} })""";
   ];
   rr:subjectMap [
-    rr:template "http://www.wcvp-core.com/taxon/{$.acceptednameusageid}";
-    rr:class owl:Class;
+    rr:template "http://ns.inria.fr/wcvp/taxon/{$.acceptednameusageid}";
   ];
   rr:predicateObjectMap [
     rr:predicate txrfp:hasSynonym;
-    rr:objectMap [
-      rr:template "http://www.wcvp-core.com/name/{$.taxonid}";
-    ];
+    rr:objectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ];
   ].
 
 
@@ -63,39 +64,29 @@
     xrr:query """db.collection.find({})""";
   ];
   rr:subjectMap [
-    rr:template "http://www.wcvp-core.com/name/{$.taxonid}";
+    rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}";
     rr:class skos:Concept;
   ];
   rr:predicateObjectMap [
-    rr:predicate rdfs:label, skos:prefLabel;
+    rr:predicate skos:prefLabel;
     rr:objectMap [
-      xrr:reference "$.scientfiicname";
-      rr:datatype xsd:string;
+      rr:template "{$.scientfiicname} {$.scientfiicnameauthorship}";
+      rr:termType rr:Literal;
     ];
   ];
     rr:predicateObjectMap [
     rr:predicate txrfp:taxonRank;
-    rr:objectMap [
-      rr:template "http://taxref.mnhn.fr/lod/taxrank/{$.taxonrank}";
-    ];
+    rr:objectMap [ rr:template "http://taxref.mnhn.fr/lod/taxrank/{$.taxonrank}" ];
   ];
   rr:predicateObjectMap [
     rr:predicate txrfp:hasAuthority;
-    rr:objectMap [
-      xrr:reference "$.scientfiicnameauthorship";
-      rr:datatype xsd:string;
-    ];
+    rr:objectMap [ xrr:reference "$.scientfiicnameauthorship" ];
   ];
   rr:predicateObjectMap [
-    rr:predicate owl:sameAs;
-    rr:objectMap [
-      xrr:reference "$.references";
-    ];
+    rr:predicate foaf:homepage, schema:mainEntityOfPage;
+    rr:objectMap [ xrr:reference "$.references" ];
   ];
   rr:predicateObjectMap [
     rr:predicate skos:broader;
-    rr:objectMap [
-      rr:template "http://www.wcvp-core.com/name/{$.parentnameusageid}";
-    ];
+    rr:objectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.parentnameusageid}" ];
   ].
-
