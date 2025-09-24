@@ -11,7 +11,7 @@
 <#FOI>
   a rr:TripleMap;
   xrr:logicalSource [
-    xrr:query """db.collection.find({ type: "featuresOfInterest" )""";
+    xrr:query """db.collection.find({ type: "featuresOfInterest" })""";
   ];
   rr:subjectMap [
     rr:template "http://ns.inria.fr/iawa/featureOfInterest/{id}";
@@ -33,7 +33,7 @@
     xrr:query """db.collection.find({ type: "observableProperties" })""";
   ];
   rr:subjectMap [
-    rr:template "http://ns.inria.fr/iawa/observedProperty/{id}";
+    rr:template "http://ns.inria.fr/iawa/observableProperty/{id}";
     rr:class skos:Concept;
   ];
   rr:predicateObjectMap [
