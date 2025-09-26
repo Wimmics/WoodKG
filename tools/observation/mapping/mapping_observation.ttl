@@ -41,7 +41,7 @@
     rr:class sio:SIO_001050; # Sample
   ];
     rr:predicateObjectMap [
-    rr:predicate sosa:hasObservation;
+    rr:predicate sio:SIO_000629; # is subject of
     rr:objectMap [ rr:template "http://ns.inria.fr/woodkg/observation/{$.sampleID}/{$.Observationid}" ];
   ];
     rr:predicateObjectMap [
