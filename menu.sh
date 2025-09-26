@@ -89,6 +89,7 @@ while true; do
             mkdir -p "output"
             INPUT_DIR="$OBSERVATION_DIR/temp/input"
             mkdir -p "$INPUT_DIR"
+            rm -f "$INPUT_DIR"/*
             cp "$INPUT_FILE" "$INPUT_DIR/"
             echo "Copied $INPUT_FILE to $INPUT_DIR"
             python3 "$OBSERVATION_DIR/observation.py"

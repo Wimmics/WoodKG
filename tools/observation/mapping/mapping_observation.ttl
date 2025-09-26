@@ -20,15 +20,15 @@
   ];
   rr:predicateObjectMap [
     rr:predicate sosa:hasFeatureOfInterest;
-    rr:objectMap [ rr:template "http://ns.inria.fr/iawa/featureOfInterest/{$.FOIID}" ];
+    rr:objectMap [ rr:template "http://ns.inria.fr/iawa/featureOfInterest/{$.feature_id}" ];
   ];
   rr:predicateObjectMap [
     rr:predicate sosa:observedProperty;
-    rr:objectMap [ rr:template "http://ns.inria.fr/iawa/observedProperty/{$.OPID}" ];
+    rr:objectMap [ rr:template "http://ns.inria.fr/iawa/observableProperty/{$.property_id}" ];
   ];
   rr:predicateObjectMap [
     rr:predicate sosa:hasResult;
-    rr:objectMap [ rr:template "http://ns.inria.fr/iawa/value/{$.VALID}" ];
+    rr:objectMap [ rr:template "http://ns.inria.fr/iawa/value/{$.iawa_val_key}" ];
   ].
 
 <#Sample>
