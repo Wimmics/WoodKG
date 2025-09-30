@@ -35,7 +35,7 @@
     rr:objectMap [ xrr:reference "$.scientfiicname" ];
   ];
   rr:predicateObjectMap [
-    rr:predicate txrfp:taxonRank;
+    rr:predicate ;
     rr:objectMap [ rr:template "http://taxref.mnhn.fr/lod/taxrank/{$.taxonrank}" ];
   ];
   rr:predicateObjectMap [
@@ -75,7 +75,7 @@
     ];
   ];
     rr:predicateObjectMap [
-    rr:predicate txrfp:taxonRank;
+    rr:predicate txrfp:hasRank;
     rr:objectMap [ rr:template "http://taxref.mnhn.fr/lod/taxrank/{$.taxonrank}" ];
   ];
   rr:predicateObjectMap [
