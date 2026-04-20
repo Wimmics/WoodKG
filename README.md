@@ -7,11 +7,12 @@ This repository contains the tools that are used to build the 3 graphs that are 
 - the observations of charcoal samples.
 
 The data sources are the following:
-- [Plants Of the World Online](https://powo.science.kew.org/) (POWO) which describes up to date taxonomic name and geolocation, and the [World Checklist of Vascular Plants](https://powo.science.kew.org/about-wcvp) (WCVP) is the taxonomic names backbone that POWO relies on;
-- [International Association of Wood Anatomists](http://www.maderasenargentina.com.ar/archivos/IAWA_Committee1989.pdf)'s features list (IAWA). From this list we have derived a representation centered around the concepts of Feature of Interest (FoI), Observable Property (OP) and values, available as a [shared document](https://docs.google.com/spreadsheets/d/1PUWlXuF0ph-XoZLRLSvAEFjLJwu-esHQfoGm06nKwRs/edit?usp=sharing);
+- [Plants Of the World Online](https://powo.science.kew.org/) (POWO) describes up to date taxonomic name and geolocation. The [World Checklist of Vascular Plants](https://powo.science.kew.org/about-wcvp) (WCVP) is the taxonomic names backbone that POWO relies on;
+- [International Association of Wood Anatomists's features list](http://www.maderasenargentina.com.ar/archivos/IAWA_Committee1989.pdf) (IAWA). From this list we have derived a representation centered around the concepts of Feature of Interest (FoI), Observable Property (OP) and values, available as a [shared document](https://docs.google.com/spreadsheets/d/1PUWlXuF0ph-XoZLRLSvAEFjLJwu-esHQfoGm06nKwRs/edit?usp=sharing);
 - Charcoal observations coming from 2 sources:
     - [InsideWood](https://insidewood.lib.ncsu.edu/search)'s charcoal descriptions;
-    - the Southern African wood CHArcoal description proided by research lab [Cultures – Environnements. Préhistoire, Antiquité, Moyen Âge](https://www.cepam.cnrs.fr/) (CEPAM)
+    - The Southern African wood CHArcoal description proided by research lab [Cultures – Environnements. Préhistoire, Antiquité, Moyen Âge](https://www.cepam.cnrs.fr/) (CEPAM).
+
 Descriptions coming from InsideWood and CEPAM both use IAWA's features list.
 
 
@@ -63,34 +64,34 @@ This will split the csv file into chunks of maximum 100000 lines each.
 
 ### input
 
-This folder contains the data sources: WCVP taxonomy (`powo/`), [input/iawa_thesaurus](IAWA thesaurus), [InsideWood observations](input/insidewood_observations/), [CEPAM observations](input/cepam_observations/).
+This folder contains the data sources: [WCVP taxonomy](input/powo/), [IAWA thesaurus](input/iawa_thesaurus/), [InsideWood observations](input/insidewood_observations/), [CEPAM observations](input/cepam_observations/).
 
 Each folder contains two subfolders:
-    - `raw/` for the raw files downloaded from their respective sources,
-    - `currated/`for the transformed versions ready to be used for RDF generation.
+- `raw/` for the raw files downloaded from their respective sources,
+- `currated/`for the transformed versions ready to be used for RDF generation.
 
 [More details.](input/README.md)
 
 ### output
 
 Contains the generated RDF files:
-- the POWO taxonomy (powo_taxonomy_*.ttl),
-- the IAWA thesaurus.
-- the InsideWood or CEPAM observations (observations.ttl)
+- the POWO taxonomy (powo_taxonomy_*.ttl)
+- the IAWA thesaurus
+- the InsideWood or CEPAM observations (observations_*.ttl)
 
 File [unmatched_taxa.json](output/unmatched_taxa.json) gives the observations for which no taxonomic identifier was found in POWO.
 
 
 ### tools
 
-Contains the scripts for transforming raw files to currated files, and currated files to RDF files.
+Contains the scripts for transforming raw files into currated files, and currated files into RDF files.
 
 
 ## Usage
 
 Launch the main menu with: ``./menu.sh``
 
-The menu offers different options by calling .sh scripts located in `tools/<subfolder>/scripts`:
+The menu offers different options by calling bash scripts located in `tools/<subfolder>/scripts`:
 
 1. Generate IAWA thesaurus as JSON  
 Transforms the IAWA thesaurus files from [raw](/input/iawa_thesaurus/raw/) to [currated](/input/iawa_thesaurus/currated/) using `tools/iawa_thesaurus/scripts/thesaurus.sh` and `tools/iawa_thesaurus/scripts/iawa_properties.sh`.
@@ -133,6 +134,5 @@ input/cepam_observations/currated/CEPAM_feature_net_taxa_and_numbers_homogene.js
 
 ## Requirements
 
-- SPARQL, SOSA/SSN ontologies  
 - Morph-xR2RML  
-- Python 3.10.12
+- Python >3.10.12
