@@ -19,7 +19,7 @@ rm -rf $PROJECT_ROOT/xr2rml/mongo_import/*
 
 case "$1" in
     --wcvp)
-        MAPPING_FILE="$PROJECT_ROOT/tools/wcvp/mapping/mapping_wcvp.ttl"
+        MAPPING_FILE="$PROJECT_ROOT/tools/wcvp/mapping_wcvp.ttl"
         echo "xR2RML mapping file: $MAPPING_FILE"
         cp $MAPPING_FILE $XR2RML_CONFIG
         
@@ -44,7 +44,7 @@ case "$1" in
         ;;
 
     --thesaurus)
-        MAPPING_FILE="$PROJECT_ROOT/tools/iawa_thesaurus/mapping/mapping_thesaurus_iawa.ttl"
+        MAPPING_FILE="$PROJECT_ROOT/tools/iawa_thesaurus/mapping_thesaurus_iawa.ttl"
         echo "xR2RML mapping file: $MAPPING_FILE"
         cp $MAPPING_FILE $XR2RML_CONFIG
 
@@ -59,7 +59,7 @@ case "$1" in
         ;;
 
     --observation)
-        MAPPING_FILE="$PROJECT_ROOT/tools/observation/mapping/mapping_observation.ttl"
+        MAPPING_FILE="$PROJECT_ROOT/tools/observation/mapping_observation.ttl"
         echo "xR2RML mapping file: $MAPPING_FILE"
         cp $MAPPING_FILE $XR2RML_CONFIG
 

@@ -1,0 +1,172 @@
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix txrfp: <http://taxref.mnhn.fr/lod/property/> .
+@prefix xrr: <http://i3s.unice.fr/xr2rml#> .
+
+<#Taxon> a rr:TripleMap ;
+  xrr:logicalSource [
+    xrr:query """db.collection.find({ taxonomicstatus: "Accepted" })""" ;
+  ] ;
+  rr:subjectMap [
+    rr:template "http://ns.inria.fr/wcvp/taxon/{$.taxonid}" ;
+    rr:class owl:Class ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:subClassOf ;
+    rr:objectMap [ rr:template "http://ns.inria.fr/wcvp/taxon/{$.parentnameusageid}" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dwc:taxonID ;
+    rr:objectMap [ xrr:reference "$.taxonid" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:label ;
+    rr:objectMap [ xrr:reference "$.scientfiicname" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate txrfp:hasRank ;
+    rr:objectMap [ rr:template "http://taxref.mnhn.fr/lod/taxrank/{$.taxonrank}" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dwc:taxonRank ;
+    rr:objectMap [ xrr:reference "$.taxonrank" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate txrfp:hasReferenceName ;
+    rr:objectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ] ;
+  ] .
+
+<#AllNames> a rr:TripleMap ;
+  xrr:logicalSource [ xrr:query """db.collection.find({})""" ] ;
+  rr:subjectMap [
+    rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ;
+    rr:class skos:Concept ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate skos:prefLabel ;
+    rr:objectMap [
+      rr:template "{$.scientfiicname} {$.scientfiicnameauthorship}" ;
+      rr:termType rr:Literal ;
+    ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dwc:scientificName ;
+    rr:objectMap [ xrr:reference "$.scientfiicname" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dwc:scientificNameID ;
+    rr:objectMap [ xrr:reference "$.taxonid" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dwc:scientificNameAuthorship ;
+    rr:objectMap [ xrr:reference "$.scientfiicnameauthorship" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dwc:namePublishedIn ;
+    rr:objectMap [ xrr:reference "$.namepublishedin" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate txrfp:hasRank ;
+    rr:objectMap [ rr:template "http://taxref.mnhn.fr/lod/taxrank/{$.taxonrank}" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dwc:taxonRank ;
+    rr:objectMap [ xrr:reference "$.taxonrank" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate skos:broader ;
+    rr:objectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.parentnameusageid}" ] ;
+  ] ;
+  
+  # Additional DwC terms
+  rr:predicateObjectMap [
+    rr:predicate dwc:family ;
+    rr:objectMap [ xrr:reference "$.family" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dwc:genus ;
+    rr:objectMap [ xrr:reference "$.genus" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dwc:specificEpithet ;
+    rr:objectMap [ xrr:reference "$.specificepithet" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dwc:infraspecificEpithet ;
+    rr:objectMap [ xrr:reference "$.infraspecificepithet" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate schema:mainEntityOfPage ;
+    rr:objectMap [ xrr:reference "$.references" ] ;
+  ] ;
+   .
+# ==================== Taxonomic Status Mapping ====================
+
+# Set name's taxonomic status when it can be appended to the namespace
+<#NameTaxonomicStatus> a rr:TripleMap ;
+  xrr:logicalSource [
+    xrr:query """db.collection.find({ $or: [ {taxonomicstatus: "Accepted"}, {taxonomicstatus: "Synonym"}, {taxonomicstatus: "Illegitimate"}, {taxonomicstatus: "Invalid"}, {taxonomicstatus: "Misapplied"}, {taxonomicstatus: "Orthographic"}, {taxonomicstatus: "Unplaced"} ] })""" ;
+  ] ;
+  rr:subjectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ] ;
+  rr:predicateObjectMap [
+    rr:predicate dwc:taxonomicStatus ;
+    rr:objectMap [ xrr:reference "$.taxonomicstatus" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate txrfp:hasTaxonomicStatus ;
+    rr:objectMap [ xrr:template "http://ns.inria.fr/wcvp/taxonomicStatus/{$.taxonomicstatus}" ] ;
+  ] .
+
+# Set name's taxonomic status when it cannot be directly appended to the namespace
+<#TaxonomicStatus_ArtificialHybrid> a rr:TripleMap ;
+  xrr:logicalSource [ xrr:query """db.collection.find({taxonomicstatus: "Artificial Hybrid"})""" ] ;
+  rr:subjectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ] ;
+  rr:predicateObjectMap [
+    rr:predicate dwc:taxonomicStatus ;
+    rr:objectMap [ xrr:reference "$.taxonomicstatus" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate txrfp:hasTaxonomicStatus ;
+    rr:object <http://ns.inria.fr/wcvp/taxonomicStatus/ArtificialHybrid> ;
+  ] .
+
+<#TaxonomicStatus_ProvisionallyAccepted> a rr:TripleMap ;
+  xrr:logicalSource [ xrr:query """db.collection.find({taxonomicstatus: "Provisionally Accepted"})""" ] ;
+  rr:subjectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ] ;
+  rr:predicateObjectMap [
+    rr:predicate dwc:taxonomicStatus ;
+    rr:objectMap [ xrr:reference "$.taxonomicstatus" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate txrfp:hasTaxonomicStatus ;
+    rr:object <http://ns.inria.fr/wcvp/taxonomicStatus/ProvisionallyAccepted> ;
+  ] .
+
+# ==================== Link Names and Taxa ====================
+<#LinkTaxonToSynonym> a rr:TripleMap ;
+  xrr:logicalSource [ xrr:query """db.collection.find({ taxonomicstatus: "Synonym" })""" ] ;
+  rr:subjectMap [
+    rr:template "http://ns.inria.fr/wcvp/taxon/{$.acceptednameusageid}" ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate txrfp:hasSynonym ;
+    rr:objectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ] ;
+  ] .
+
+# Link names to the accepted name when the taxonomic status is none of "Synonym" or "Accepted"
+<#LinkNameTaxon> a rr:TripleMap ;
+  xrr:logicalSource [
+    xrr:query """db.collection.find({ $not: { $or: [ {taxonomicstatus: "Accepted"}, {taxonomicstatus: "Synonym"} ] }})"""
+  ] ;
+  rr:subjectMap [
+    rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate rdfs:seeAlso ;
+    rr:objectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.acceptednameusageid}" ] ;
+  ] .
