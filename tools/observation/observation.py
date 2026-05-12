@@ -9,7 +9,7 @@ foi_op_mapping_file = f"{iawa_currated_folder}/foiAndOp.json"
 output_folder = "../../output"
 temp_folder = "temp"
 temp_input = f"{temp_folder}/input"
-temp_powo = f"{temp_folder}/powo"
+temp_wcvp = f"{temp_folder}/wcvp"
 
 # Codes couleur ANSI
 RED = "\033[31m"
@@ -56,17 +56,17 @@ if __name__ == "__main__":
     )
     print(f"Enriched observations with IAWA property/feature: {obs_with_iawa}")
 
-    # Generate a single file from the generated POWO files and remove syntactically incorrect entries
-    os.makedirs(temp_powo, exist_ok=True)
+    # Generate a single file from the generated WCVP files and remove syntactically incorrect entries
+    os.makedirs(temp_wcvp, exist_ok=True)
     taxonomy_to_single_jsonl(
-        "../../input/powo/currated", f"{temp_powo}/wcvp_filtered.json"
+        "../../input/wcvp/currated", f"{temp_wcvp}/wcvp_filtered.json"
     )
-    print(f"Generated single-file taxonomy: {temp_powo}/wcvp_filtered.json")
+    print(f"Generated single-file taxonomy: {temp_wcvp}/wcvp_filtered.json")
 
-    # Enrich each observation with the POWO/WCVP taxon ID based on the taxon name
+    # Enrich each observation with the WCVP taxon ID based on the taxon name
     obs_with_taxa = f"{temp_folder}/obs_5_individual_with_iawa_taxa.json"
-    enrich_obs_with_taxon_simple_match(obs_with_iawa, temp_powo, obs_with_taxa)
-    print(f"Enriched observations with POWO taxon id: {obs_with_taxa}")
+    enrich_obs_with_taxon_simple_match(obs_with_iawa, temp_wcvp, obs_with_taxa)
+    print(f"Enriched observations with WCVP taxon id: {obs_with_taxa}")
 
     # Convert the JSON file into a "JSON-line" file ie. with 1 JSON document per line
     os.makedirs(output_folder, exist_ok=True)
@@ -77,6 +77,6 @@ if __name__ == "__main__":
 
     output_file = os.path.join(output_folder, "unmatched_taxa.json")
     extract_obs_without_taxonid(obs_file_jsonlines, output_file)
-    print(f"Observations not matched with a POWO taxon id (if any): {output_file}")
+    print(f"Observations not matched with a WCVP taxon id (if any): {output_file}")
 
     # delete_json_files("temp_folder")

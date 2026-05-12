@@ -46,17 +46,17 @@ Start Morph-xR2RML containers with `docker-compose up -d`.
 
 
 ### 2. WCVP - Plant taxonomy
-Run the commands below to download the WCVP taxonomic data `wccp_dwca.zip`, extract the file `wcvp_taxon.csv` and place it in `input/powo/raw`.
+Run the commands below to download the WCVP taxonomic data `wccp_dwca.zip`, extract the file `wcvp_taxon.csv` and place it in `input/wcvp/raw`.
 
 From the project root, run:
 ```bash
-mkdir -p input/powo/raw input/powo/currated
-cd input/powo/raw
+mkdir -p input/wcvp/raw input/wcvp/currated
+cd input/wcvp/raw
 wget https://sftp.kew.org/pub/data-repositories/WCVP/wcvp_dwca.zip
 unzip wcvp_dwca.zip wcvp_taxon.csv
 ```
 
-Then, return to the project root and run the script `./tools/powo/split_wcvp.sh`.
+Then, return to the project root and run the script `./tools/wcvp/split_wcvp.sh`.
 This will split the csv file into chunks of maximum 100000 lines each.
 
 
@@ -64,7 +64,7 @@ This will split the csv file into chunks of maximum 100000 lines each.
 
 ### input
 
-This folder contains the data sources: [WCVP taxonomy](input/powo/), [IAWA thesaurus](input/iawa_thesaurus/), [InsideWood observations](input/insidewood_observations/), [CEPAM observations](input/cepam_observations/).
+This folder contains the data sources: [WCVP taxonomy](input/wcvp/), [IAWA thesaurus](input/iawa_thesaurus/), [InsideWood observations](input/insidewood_observations/), [CEPAM observations](input/cepam_observations/).
 
 Each folder contains two subfolders:
 - `raw/` for the raw files downloaded from their respective sources,
@@ -75,11 +75,11 @@ Each folder contains two subfolders:
 ### output
 
 Contains the generated RDF files:
-- the POWO taxonomy (powo_taxonomy_*.ttl)
+- the WCVP taxonomy (wcvp_taxonomy_*.ttl)
 - the IAWA thesaurus
 - the InsideWood or CEPAM observations (observations_*.ttl)
 
-File [unmatched_taxa.json](output/unmatched_taxa.json) gives the observations for which no taxonomic identifier was found in POWO.
+File [unmatched_taxa.json](output/unmatched_taxa.json) gives the observations for which no taxonomic identifier was found in WCVP.
 
 
 ### tools
@@ -99,11 +99,11 @@ Transforms the IAWA thesaurus files from [raw](/input/iawa_thesaurus/raw/) to [c
 2. Generate IAWA thesaurus as RDF  
 Generates iawa_thesaurus.ttl in [output](/output/) from [JSON](/input/iawa_thesaurus/currated/) files using `tools/xr2rml/observation2xr2rml --thesaurus`. Must be executed after option 1.  
 
-3. Generate POWO taxonomy as JSON  
-Transforms WCVP taxonomic files from [raw](/input/powo/raw/) to [currated](/input/powo/currated/) using `tools/powo/scripts/powo.sh`.
+3. Generate WCVP taxonomy as JSON  
+Transforms WCVP taxonomic files from [raw](/input/wcvp/raw/) to [currated](/input/wcvp/currated/) using `tools/wcvp/scripts/wcvp.sh`.
 
-4. Generate POWO taxonomy as RDF  
-Generates RDF files [powo_taxonomy_*.ttl](/output/) from [JSON](/input/powo/currated/) files using `tools/xr2rml/observation2xr2rml --taxon`.
+4. Generate WCVP taxonomy as RDF  
+Generates RDF files [wcvp_taxonomy_*.ttl](/output/) from [JSON](/input/wcvp/currated/) files using `tools/xr2rml/observation2xr2rml --taxon`.
 
 5. Generate CEPAM observations as JSON  
 Transforms CEPAM observations from [raw](/input/cepam_observations/raw/) to [currated](/input/cepam_observations/currated/) using `tools/cepam_observations/scripts/.cepam_csvtojson.sh`
@@ -125,7 +125,7 @@ Here is a complete execution example:
 ```
 Then in the menu:  
 - 1 → to generate the IAWA JSON thesaurus  
-- 3 → to generate the currated POWO files  
+- 3 → to generate the currated WCVP files  
 - 5 → to transform CEPAM observations  
 - 7 → and enter this path:
 ```bash

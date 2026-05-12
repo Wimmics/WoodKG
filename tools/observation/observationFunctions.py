@@ -251,7 +251,7 @@ def enrich_obs_with_taxon_simple_match(
     input_file: str, taxo_folder: str, output_file: str
 ):
     """
-    Enriches observation entries by adding the POWO/WCVP taxon IDs.
+    Enriches observation entries by adding the WCVP taxon IDs.
     Matching scientific names is simple case-insensitive.
     If the "genus species" name is not found, then try to match with the genus name only.
 
@@ -365,10 +365,10 @@ def extract_obs_without_taxonid(input_file: str, output_file: str) -> int:
     RESET = "\033[0m"
 
     if count == 0:
-        print(f"All observations were matched with a taxon id in POWO")
+        print(f"All observations were matched with a taxon id in WCVP")
     else:
         print(
-            f"{RED}{count} observations could not be matched with a taxon in POWO{RESET}"
+            f"{RED}{count} observations could not be matched with a taxon in WCVP{RESET}"
         )
 
 

@@ -9,7 +9,7 @@ COLLECTION=collection
 # --- Gestion de l'argument pour sélectionner le numéro de taxon
 if [[ $1 =~ ^-([0-9]+)$ ]]; then
     TAXON_NUMBER="${BASH_REMATCH[1]}"
-    TAXON_FILE="powo_taxonomy_${TAXON_NUMBER}.ttl"
+    TAXON_FILE="wcvp_taxonomy_${TAXON_NUMBER}.ttl"
 else
     echo "Usage: $0 -<number>    (ex: $0 -1)"
     exit 1
@@ -24,4 +24,4 @@ docker exec -w /mongo_tools "$MONGO_CONTAINER" \
 
 # --- Run the translation to RDF
 docker exec -w /xr2rml_config "$XR2RML_CONTAINER" \
-   /bin/bash run_xr2rml_template.sh mapping_powo.ttl "$TAXON_FILE" dataset1.0 $COLLECTION
+   /bin/bash run_xr2rml_template.sh mapping_wcvp.ttl "$TAXON_FILE" dataset1.0 $COLLECTION

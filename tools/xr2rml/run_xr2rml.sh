@@ -11,12 +11,12 @@ rm -rf "$PROJECT_ROOT/xr2rml/xr2rml_output/*.ttl"
 while [[ $# -gt 0 ]]; do
     case "$1" in
         --taxon)
-            mappingfile="$PROJECT_ROOT/tools/powo/mapping/mapping_powo.ttl"
+            mappingfile="$PROJECT_ROOT/tools/wcvp/mapping/mapping_wcvp.ttl"
             echo "xR2RML mapping file: $mappingfile"
             cp "$mappingfile" "$PROJECT_ROOT/xr2rml/xr2rml_config/"
-            FILES=("$PROJECT_ROOT/input/powo/currated"/*)
+            FILES=("$PROJECT_ROOT/input/wcvp/currated"/*)
             TOTAL_FILES=${#FILES[@]}
-            echo "$TOTAL_FILES files found in powo/"
+            echo "$TOTAL_FILES files found in wcvp/"
 
             for ((i=0; i<TOTAL_FILES; i++)); do
                 FILE="${FILES[$i]}"
@@ -27,8 +27,8 @@ while [[ $# -gt 0 ]]; do
                 cp "$FILE" "$PROJECT_ROOT/xr2rml/mongo_import/"
 
                 bash "$SCRIPT_DIR/run_mapping_taxon.sh" "-$FILE_NUMBER"
-                cp "$PROJECT_ROOT/xr2rml/xr2rml_output/powo_taxonomy_$FILE_NUMBER.ttl" "$PROJECT_ROOT/output/"
-                echo "Output file: $PROJECT_ROOT/output/powo_taxonomy_$FILE_NUMBER.ttl"
+                cp "$PROJECT_ROOT/xr2rml/xr2rml_output/wcvp_taxonomy_$FILE_NUMBER.ttl" "$PROJECT_ROOT/output/"
+                echo "Output file: $PROJECT_ROOT/output/wcvp_taxonomy_$FILE_NUMBER.ttl"
                 echo
             done
             ;;

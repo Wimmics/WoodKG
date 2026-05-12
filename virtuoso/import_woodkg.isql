@@ -8,7 +8,7 @@ SPARQL CLEAR GRAPH  <http://ns.inria.fr/woodkg/graph/insidewood_observations>;
 delete from DB.DBA.LOAD_LIST;
 
 ld_dir ('import', 'iawa_thesaurus.ttl', 'http://ns.inria.fr/iawa/graph');
-ld_dir ('import', 'powo_taxonomy_%.ttl', 'http://ns.inria.fr/wvcp/graph');
+ld_dir ('import', 'wcvp_taxonomy_%.ttl', 'http://ns.inria.fr/wvcp/graph');
 ld_dir ('import', 'observations_cepam.ttl', 'http://ns.inria.fr/woodkg/graph/cepam_observations');
 ld_dir ('import', 'observations_insidewood.ttl', 'http://ns.inria.fr/woodkg/graph/insidewood_observations');
 

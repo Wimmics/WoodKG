@@ -48,7 +48,7 @@ Property identifiers are normalized to three digits.
 
 ---
 
-### powo
+### wcvp
 
-- `raw/`: contains the raw version of the CSV file downloaded from POWO (WCVP).
+- `raw/`: contains the raw version of the CSV file downloaded from (WCVP).
 - `currated/`: contains its transformed JSON version, usable by Morph-xR2RML.

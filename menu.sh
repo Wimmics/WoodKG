@@ -5,7 +5,7 @@ FOLDER_PATH="$SCRIPT_DIR/tools/transfer"
 SCRIPT_PATH="$SCRIPT_DIR/tools/xr2rml"
 
 IAWA_PROPERTIES_DIR="$SCRIPT_DIR/tools/iawa_thesaurus"
-POWO_DIR="$SCRIPT_DIR/tools/powo"
+WCVP_DIR="$SCRIPT_DIR/tools/wcvp"
 OBSERVATION_DIR="$SCRIPT_DIR/tools/observation"
 CEPAM_DIR="$SCRIPT_DIR/tools/cepam_observations"
 INSIDEWOOD_DIR="$SCRIPT_DIR/tools/insidewood_observations"
@@ -21,8 +21,8 @@ while true; do
     echo "========= WoodKGL2 Menu ========="
     echo "1) Preprocess IAWA thesaurus"
     echo "2) Generate IAWA thesaurus as RDF"
-    echo "3) Preprocess POWO taxonomy"
-    echo "4) Generate POWO taxonomy as RDF"
+    echo "3) Preprocess WCVP taxonomy"
+    echo "4) Generate WCVP taxonomy as RDF"
     echo "5) Preprocess CEPAM observations"
     echo "6) Preprocess InsideWood observations"
     echo "7) Generate observations as RDF"
@@ -48,12 +48,12 @@ while true; do
             bash "$SCRIPT_PATH/run_xr2rml.sh" --thesaurus
             ;;
         3)
-            echo "Processing POWO taxonomy ..."
-            echo "Invoking $POWO_DIR/powo_csvtojson.py"
-            python3 "$POWO_DIR/powo_csvtojson.py"
+            echo "Processing WCVP taxonomy ..."
+            echo "Invoking $WCVP_DIR/wcvp_csvtojson.py"
+            python3 "$WCVP_DIR/wcvp_csvtojson.py"
             ;;
         4)
-            echo "Translating POWO taxonomy to RDF..."
+            echo "Translating WCVP taxonomy to RDF..."
             echo "Invoking $SCRIPT_PATH/run_xr2rml.sh" --taxon
             bash "$SCRIPT_PATH/run_xr2rml.sh" --taxon
             ;;
