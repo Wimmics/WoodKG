@@ -11,11 +11,6 @@ CEPAM_DIR="$SCRIPT_DIR/tools/cepam_observations"
 INSIDEWOOD_DIR="$SCRIPT_DIR/tools/insidewood_observations"
 
 
-# Fonction : retourne vrai si le dossier est vide ou inexistant
-dossier_est_vide() {
-    [[ ! -d "$1" || -z "$(ls -A "$1" 2>/dev/null)" ]]
-}
-
 while true; do
     echo
     echo "========= WoodKGL2 Menu ========="
@@ -54,18 +49,17 @@ while true; do
             ;;
         4)
             echo "Translating WCVP taxonomy to RDF..."
-            echo "Invoking $SCRIPT_PATH/run_xr2rml.sh" --taxon
-            bash "$SCRIPT_PATH/run_xr2rml.sh" --taxon
+            echo "Invoking $SCRIPT_PATH/run_xr2rml.sh --wcvp"
+            bash "$SCRIPT_PATH/run_xr2rml.sh" --wcvp
             ;;
         5)
             echo "Processing CEPAM observations..."
             echo "Invoking $CEPAM_DIR/cepam_csvtojson.py"
-            mkdir -p "$CEPAM_DIR/temp"
 
+            mkdir -p "$CEPAM_DIR/temp"
             output_dir=input/cepam_observations/currated
             rm -rf $output_dir
             mkdir -p $output_dir
-
             python3 "$CEPAM_DIR/cepam_csvtojson.py"
             rm -rf "$CEPAM_DIR/temp"
             ;;
@@ -104,7 +98,7 @@ while true; do
             exit 0
             ;;
         *)
-            echo "Invalid option."
+            echo "❌ Invalid option."
             read -p "Press Enter to continue..."
             ;;
     esac
