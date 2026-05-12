@@ -32,7 +32,7 @@ Before starting, you must download two resources:
 
 1. Create folder `xr2rml`.
 2. CD to `xr2rml` and install the necessary files and folders following the [Docker installation instructions](https://github.com/frmichel/morph-xr2rml/blob/master/docker/README.md).
-3. Open the file `mongo_tools/import-tools.sh`.
+3. Open file `xr2rml/mongo_tools/import-tools.sh`.
 4. Modify the following line:  
    ```bash 
    MONGO_IMPORT_MAXSIZE=16000000
