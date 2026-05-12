@@ -91,6 +91,8 @@ Contains the scripts for transforming raw files into currated files, and currate
 
 Launch the main menu with: ``./menu.sh``
 
+**Generation of RDF with Morph-xR2RML requires sudo rights to launch Docker.**
+
 The menu offers different options by calling bash scripts located in `tools/<subfolder>/scripts`:
 
 1. Generate IAWA thesaurus as JSON  

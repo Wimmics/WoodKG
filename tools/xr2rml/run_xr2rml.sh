@@ -10,63 +10,65 @@ help()
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 
-rm -rf "$PROJECT_ROOT/xr2rml/mongo_import/*"
-rm -rf "$PROJECT_ROOT/xr2rml/xr2rml_config/mapping*.ttl"
-rm -rf "$PROJECT_ROOT/xr2rml/xr2rml_output/*.ttl"
+XR2RML_CONFIG="$PROJECT_ROOT/xr2rml/xr2rml_config"
+XR2RML_OUTPUT="$PROJECT_ROOT/xr2rml/xr2rml_output"
 
+rm -rf $XR2RML_CONFIG/mapping*.ttl
+rm -rf $XR2RML_OUTPUT/*
+rm -rf $PROJECT_ROOT/xr2rml/mongo_import/*
 
 case "$1" in
     --wcvp)
-        mappingfile="$PROJECT_ROOT/tools/wcvp/mapping/mapping_wcvp.ttl"
-        echo "xR2RML mapping file: $mappingfile"
-        cp "$mappingfile" "$PROJECT_ROOT/xr2rml/xr2rml_config/"
-        FILES=("$PROJECT_ROOT/input/wcvp/currated"/*)
-        TOTAL_FILES=${#FILES[@]}
-        echo "$TOTAL_FILES files found in wcvp/"
+        MAPPING_FILE="$PROJECT_ROOT/tools/wcvp/mapping/mapping_wcvp.ttl"
+        echo "xR2RML mapping file: $MAPPING_FILE"
+        cp $MAPPING_FILE $XR2RML_CONFIG
+        
+        INPUT_DIR="$PROJECT_ROOT/input/wcvp/currated/"
+        FILES=($INPUT_DIR/*)
+        NO_FILES=${#FILES[@]}
+        echo "$NO_FILES files found in $INPUT_DIR"
 
-        for ((i=0; i<TOTAL_FILES; i++)); do
-            FILE="${FILES[$i]}"
-            FILE_NUMBER=$((i+1))
+        for ((FILE_NUMBER=0; FILE_NUMBER<NO_FILES; FILE_NUMBER++)); do
+            echo "=========================================================================="
+            FILE="${FILES[$FILE_NUMBER]}"
+            echo "Processing file" $(basename "$FILE")
+            rm -rf $PROJECT_ROOT/xr2rml/mongo_import/*
+            cp $FILE $PROJECT_ROOT/xr2rml/mongo_import/
 
-            rm -rf "$PROJECT_ROOT/xr2rml/mongo_import"/*
-            echo "Processing file #$FILE_NUMBER: $(basename "$FILE")"
-            cp "$FILE" "$PROJECT_ROOT/xr2rml/mongo_import/"
-
-            bash "$SCRIPT_DIR/run_mapping_wcvp.sh" "-$FILE_NUMBER"
-            cp "$PROJECT_ROOT/xr2rml/xr2rml_output/wcvp_taxonomy_$FILE_NUMBER.ttl" "$PROJECT_ROOT/output/"
-            echo "Output file: $PROJECT_ROOT/output/wcvp_taxonomy_$FILE_NUMBER.ttl"
+            bash $SCRIPT_DIR/run_xr2rml_wcvp.sh $(basename "$FILE")
+            OUTPUT_FILE=($XR2RML_OUTPUT/*)
+            echo "Output file: ${OUTPUT_FILE[0]}"
+            mv $XR2RML_OUTPUT/* $PROJECT_ROOT/output/
             echo
         done
         ;;
 
     --thesaurus)
-        mappingfile="$PROJECT_ROOT/tools/iawa_thesaurus/mapping/mapping_thesaurus_iawa.ttl"
-        echo "xR2RML mapping file: $mappingfile"
-        cp "$mappingfile" "$PROJECT_ROOT/xr2rml/xr2rml_config/"
+        MAPPING_FILE="$PROJECT_ROOT/tools/iawa_thesaurus/mapping/mapping_thesaurus_iawa.ttl"
+        echo "xR2RML mapping file: $MAPPING_FILE"
+        cp $MAPPING_FILE $XR2RML_CONFIG
 
-        rm -rf "$PROJECT_ROOT/xr2rml/mongo_import"/*
-        sourcefile="$PROJECT_ROOT/input/iawa_thesaurus/currated/iawa_thesaurus.json"
-        echo "Source data to translate to RDF: $sourcefile"
-        cp "$sourcefile" "$PROJECT_ROOT/xr2rml/mongo_import"
+        INPUT_FILE="$PROJECT_ROOT/input/iawa_thesaurus/currated/iawa_thesaurus.json"
+        echo "Input data to translate to RDF: $INPUT_FILE"
+        cp $INPUT_FILE $PROJECT_ROOT/xr2rml/mongo_import
 
-        bash "$SCRIPT_DIR/run_mapping_thesaurus.sh"
-        cp "$PROJECT_ROOT/xr2rml/xr2rml_output/iawa_thesaurus.ttl" "$PROJECT_ROOT/output/"
+        bash $SCRIPT_DIR/run_xr2rml_thesaurus.sh
+        cp $XR2RML_OUTPUT/iawa_thesaurus.ttl $PROJECT_ROOT/output/
         echo "Output file: $PROJECT_ROOT/output/iawa_thesaurus.ttl"
         exit 0
         ;;
 
     --observation)
-        mappingfile="$PROJECT_ROOT/tools/observation/mapping/mapping_observation.ttl"
-        echo "xR2RML mapping file: $mappingfile"
-        cp "$mappingfile" "$PROJECT_ROOT/xr2rml/xr2rml_config/"
+        MAPPING_FILE="$PROJECT_ROOT/tools/observation/mapping/mapping_observation.ttl"
+        echo "xR2RML mapping file: $MAPPING_FILE"
+        cp $MAPPING_FILE $XR2RML_CONFIG
 
-        sourcefile="$PROJECT_ROOT/output/observations.json"
-        echo "Source data to translate to RDF: $sourcefile"
-        rm -rf "$PROJECT_ROOT/xr2rml/mongo_import"/*
-        cp "$sourcefile" "$PROJECT_ROOT/xr2rml/mongo_import"
+        INPUT_FILE="$PROJECT_ROOT/output/observations.json"
+        echo "Input data to translate to RDF: $INPUT_FILE"
+        cp $INPUT_FILE $PROJECT_ROOT/xr2rml/mongo_import
 
-        bash "$SCRIPT_DIR/run_mapping_observation.sh"
-        cp "$PROJECT_ROOT/xr2rml/xr2rml_output/observation.ttl" "$PROJECT_ROOT/output/"
+        bash $SCRIPT_DIR/run_xr2rml_observation.sh
+        cp $XR2RML_OUTPUT/observation.ttl $PROJECT_ROOT/output/
         echo "Output file: $PROJECT_ROOT/output/observation.ttl"
         exit 0
         ;;

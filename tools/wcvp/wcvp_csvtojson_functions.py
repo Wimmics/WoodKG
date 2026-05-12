@@ -38,9 +38,8 @@ def wcvpJson(csv_folder, output_folder):
         print("❌ Aucun fichier '*.csv' trouvé dans le dossier.")
         return
 
-    for i, filename in enumerate(csv_files, start=1):
+    for i, filename in enumerate(csv_files, start=0):
         csv_path = os.path.abspath(os.path.join(csv_folder, filename))
-        json_output = os.path.abspath(os.path.join(output_folder, f"wcvp_taxonomy_{i}.json"))
-
+        json_output = os.path.abspath(os.path.join(output_folder, f"wcvp_taxonomy_{i:02d}.json"))
         print(f"✅ Converting {csv_path} -> {json_output}")
         convert_csv_to_json_lines(csv_path, json_output)
