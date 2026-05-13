@@ -9,9 +9,7 @@
 @prefix xrr: <http://i3s.unice.fr/xr2rml#> .
 
 <#Taxon> a rr:TripleMap ;
-  xrr:logicalSource [
-    xrr:query """db.collection.find({ taxonomicstatus: "Accepted" })""" ;
-  ] ;
+  xrr:logicalSource [ xrr:query """db.collection.find({taxonomicstatus: "Accepted"})""" ] ;
   rr:subjectMap [
     rr:template "http://ns.inria.fr/wcvp/taxon/{$.taxonid}" ;
     rr:class owl:Class ;
@@ -27,10 +25,6 @@
   rr:predicateObjectMap [
     rr:predicate rdfs:label ;
     rr:objectMap [ xrr:reference "$.scientfiicname" ] ;
-  ] ;
-  rr:predicateObjectMap [
-    rr:predicate txrfp:hasRank ;
-    rr:objectMap [ rr:template "http://taxref.mnhn.fr/lod/taxrank/{$.taxonrank}" ] ;
   ] ;
   rr:predicateObjectMap [
     rr:predicate dwc:taxonRank ;
@@ -59,10 +53,6 @@
     rr:objectMap [ xrr:reference "$.scientfiicname" ] ;
   ] ;
   rr:predicateObjectMap [
-    rr:predicate dwc:scientificNameID ;
-    rr:objectMap [ xrr:reference "$.taxonid" ] ;
-  ] ;
-  rr:predicateObjectMap [
     rr:predicate dwc:scientificNameAuthorship ;
     rr:objectMap [ xrr:reference "$.scientfiicnameauthorship" ] ;
   ] ;
@@ -71,12 +61,20 @@
     rr:objectMap [ xrr:reference "$.namepublishedin" ] ;
   ] ;
   rr:predicateObjectMap [
-    rr:predicate txrfp:hasRank ;
-    rr:objectMap [ rr:template "http://taxref.mnhn.fr/lod/taxrank/{$.taxonrank}" ] ;
+    rr:predicate dwc:scientificNameID ;
+    rr:objectMap [ xrr:reference "$.taxonid" ] ;
   ] ;
   rr:predicateObjectMap [
     rr:predicate dwc:taxonRank ;
     rr:objectMap [ xrr:reference "$.taxonrank" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dwc:taxonomicStatus ;
+    rr:objectMap [ xrr:reference "$.taxonomicstatus" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate txrfp:hasTaxonomicStatus ;
+    rr:objectMap [ rr:template "http://ns.inria.fr/wcvp/taxonomicStatus/{$.taxonomicstatus}" ] ;
   ] ;
   rr:predicateObjectMap [
     rr:predicate skos:broader ;
@@ -103,70 +101,46 @@
   rr:predicateObjectMap [
     rr:predicate schema:mainEntityOfPage ;
     rr:objectMap [ xrr:reference "$.references" ] ;
-  ] ;
-   .
-# ==================== Taxonomic Status Mapping ====================
-
-# Set name's taxonomic status when it can be appended to the namespace
-<#NameTaxonomicStatus> a rr:TripleMap ;
-  xrr:logicalSource [
-    xrr:query """db.collection.find({ $or: [ {taxonomicstatus: "Accepted"}, {taxonomicstatus: "Synonym"}, {taxonomicstatus: "Illegitimate"}, {taxonomicstatus: "Invalid"}, {taxonomicstatus: "Misapplied"}, {taxonomicstatus: "Orthographic"}, {taxonomicstatus: "Unplaced"} ] })""" ;
-  ] ;
-  rr:subjectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ] ;
-  rr:predicateObjectMap [
-    rr:predicate dwc:taxonomicStatus ;
-    rr:objectMap [ xrr:reference "$.taxonomicstatus" ] ;
-  ] ;
-  rr:predicateObjectMap [
-    rr:predicate txrfp:hasTaxonomicStatus ;
-    rr:objectMap [ xrr:template "http://ns.inria.fr/wcvp/taxonomicStatus/{$.taxonomicstatus}" ] ;
-  ] .
-
-# Set name's taxonomic status when it cannot be directly appended to the namespace
-<#TaxonomicStatus_ArtificialHybrid> a rr:TripleMap ;
-  xrr:logicalSource [ xrr:query """db.collection.find({taxonomicstatus: "Artificial Hybrid"})""" ] ;
-  rr:subjectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ] ;
-  rr:predicateObjectMap [
-    rr:predicate dwc:taxonomicStatus ;
-    rr:objectMap [ xrr:reference "$.taxonomicstatus" ] ;
-  ] ;
-  rr:predicateObjectMap [
-    rr:predicate txrfp:hasTaxonomicStatus ;
-    rr:object <http://ns.inria.fr/wcvp/taxonomicStatus/ArtificialHybrid> ;
-  ] .
-
-<#TaxonomicStatus_ProvisionallyAccepted> a rr:TripleMap ;
-  xrr:logicalSource [ xrr:query """db.collection.find({taxonomicstatus: "Provisionally Accepted"})""" ] ;
-  rr:subjectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ] ;
-  rr:predicateObjectMap [
-    rr:predicate dwc:taxonomicStatus ;
-    rr:objectMap [ xrr:reference "$.taxonomicstatus" ] ;
-  ] ;
-  rr:predicateObjectMap [
-    rr:predicate txrfp:hasTaxonomicStatus ;
-    rr:object <http://ns.inria.fr/wcvp/taxonomicStatus/ProvisionallyAccepted> ;
   ] .
 
 # ==================== Link Names and Taxa ====================
 <#LinkTaxonToSynonym> a rr:TripleMap ;
-  xrr:logicalSource [ xrr:query """db.collection.find({ taxonomicstatus: "Synonym" })""" ] ;
-  rr:subjectMap [
-    rr:template "http://ns.inria.fr/wcvp/taxon/{$.acceptednameusageid}" ;
-  ] ;
+  xrr:logicalSource [ xrr:query """db.collection.find({taxonomicstatus: "Synonym"})""" ] ;
+  rr:subjectMap [ rr:template "http://ns.inria.fr/wcvp/taxon/{$.acceptednameusageid}" ] ;
   rr:predicateObjectMap [
     rr:predicate txrfp:hasSynonym ;
     rr:objectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ] ;
   ] .
 
-# Link names to the accepted name when the taxonomic status is none of "Synonym" or "Accepted"
+# Link names where taxonomic status is none of "Synonym" or "Accepted" to the accepted name
 <#LinkNameTaxon> a rr:TripleMap ;
   xrr:logicalSource [
-    xrr:query """db.collection.find({ $not: { $or: [ {taxonomicstatus: "Accepted"}, {taxonomicstatus: "Synonym"} ] }})"""
+    xrr:query """db.collection.find({$and: [ {taxonomicstatus: {$ne: "Accepted"}}, {taxonomicstatus: {$ne: "Synonym"}} ]})"""
   ] ;
-  rr:subjectMap [
-    rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ;
-  ] ;
+  rr:subjectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ] ;
   rr:predicateObjectMap [
     rr:predicate rdfs:seeAlso ;
     rr:objectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.acceptednameusageid}" ] ;
+  ] .
+
+# ==================== Taxonomic ranks of taxa and accepted names ====================
+
+<#TaxonRank> a rr:TripleMap ;
+  xrr:logicalSource [
+    xrr:query """db.collection.find({ $and: [{taxonomicstatus: "Accepted"}, {$or: [{taxonrank: "Forma"}, {taxonrank: "Genus"}, {taxonrank: "Species"}, {taxonrank: "SubForma"}, {taxonrank: "SubSpecies"}, {taxonrank: "SubVarietas"}, {taxonrank: "Varietas"}] }]})""" ;
+  ] ;
+  rr:subjectMap [ rr:template "http://ns.inria.fr/wcvp/taxon/{$.taxonid}" ] ;
+  rr:predicateObjectMap [
+    rr:predicate txrfp:hasRank ;
+    rr:objectMap [ rr:template "http://taxref.mnhn.fr/lod/taxrank/{$.taxonrank}" ] ;
+  ] .
+
+<#NameRank> a rr:TripleMap ;
+  xrr:logicalSource [
+    xrr:query """db.collection.find({$or: [{taxonrank: "Forma"}, {taxonrank: "Genus"}, {taxonrank: "Species"}, {taxonrank: "SubForma"}, {taxonrank: "SubSpecies"}, {taxonrank: "SubVarietas"}, {taxonrank: "Varietas"}] })""" ;
+  ] ;
+  rr:subjectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ] ;
+  rr:predicateObjectMap [
+    rr:predicate txrfp:hasRank ;
+    rr:objectMap [ rr:template "http://taxref.mnhn.fr/lod/taxrank/{$.taxonrank}" ] ;
   ] .
