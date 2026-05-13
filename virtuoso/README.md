@@ -16,15 +16,17 @@ Script `run_import_woodkg.sh`connects to the running Virtuoso Docker container a
 
 Named graphs:
   - `http://ns.inria.fr/iawa/graph`: contains the IAWA thesaurus (file `iawa_thesaurus.ttl`)
-  - `http://ns.inria.fr/wvcp/graph`: contains the WCVP taxonomy (files `wcvp_taxonomy_*.ttl`)
+  - `http://ns.inria.fr/wcvp/graph`: contains the WCVP taxonomy (files `wcvp_taxonomy_*.ttl`)
   - `http://ns.inria.fr/woodkg/graph/cepam_observations`: contains the CEPAM observations (file `observations_cepam.ttl`)
   - `http://ns.inria.fr/woodkg/graph/insidewood_observations`: contains the InsideWood observations (file `observations_insidewood.ttl`)
 
 
 ### Usage
 
+Adapt file `import_woodkg.isql` by commenting out lines as necessary.
+
 ```bash
-export VIRTUOSO_DBA_PWD=yourpassword
+export VIRTUOSO_DBA_PWD=your_virtuoso_password
 cd WoodKG/virtuoso
 ./run_virtuoso.sh
 ./run_import_woodkg.sh

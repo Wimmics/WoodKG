@@ -5,7 +5,7 @@ This document describes a representation of WCVP (World Checklist of Vascular Pl
 To account for the semantics of represented resources, we model nomenclatural information as a thesaurus wherein each concept denotes a scientific name along with its taxonomic rank, status, authority etc. 
 By contrast, taxonomic information is modeled as an ontology wherein each class denotes a taxon linked to its accepted name and synonyms thereof.
 
-The modeling relies primarily on the Darwin Core (DwC) RDF vocabulary, making it fully aligned with the DwC-A distribution of WVCP.
+The modeling relies primarily on the Darwin Core (DwC) RDF vocabulary, making it fully aligned with the DwC-A distribution of WCVP.
 However since most DwC (datatype) properties have literals as an object, it is complemented with (object) properties and resources for taxonomic ranks and statuses.
 
 
