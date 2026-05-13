@@ -1,16 +1,18 @@
 log_enable(3,1);
 
-SPARQL CLEAR GRAPH  <http://ns.inria.fr/iawa/graph>;
+-- SPARQL CLEAR GRAPH  <http://ns.inria.fr/iawa/graph>;
 SPARQL CLEAR GRAPH  <http://ns.inria.fr/wvcp/graph>;
-SPARQL CLEAR GRAPH  <http://ns.inria.fr/woodkg/graph/cepam_observations>;
-SPARQL CLEAR GRAPH  <http://ns.inria.fr/woodkg/graph/insidewood_observations>;
+-- SPARQL CLEAR GRAPH  <http://ns.inria.fr/woodkg/graph/cepam_observations>;
+-- SPARQL CLEAR GRAPH  <http://ns.inria.fr/woodkg/graph/insidewood_observations>;
+-- SPARQL CLEAR GRAPH  <http://ns.inria.fr/woodkg/graph/static>;
 
 delete from DB.DBA.LOAD_LIST;
 
-ld_dir ('import', 'iawa_thesaurus.ttl', 'http://ns.inria.fr/iawa/graph');
-ld_dir ('import', 'wcvp_taxonomy_%.ttl', 'http://ns.inria.fr/wvcp/graph');
-ld_dir ('import', 'observations_cepam.ttl', 'http://ns.inria.fr/woodkg/graph/cepam_observations');
-ld_dir ('import', 'observations_insidewood.ttl', 'http://ns.inria.fr/woodkg/graph/insidewood_observations');
+-- ld_dir ('output',  'iawa_thesaurus.ttl',          'http://ns.inria.fr/iawa/graph');
+ld_dir ('output',  'wcvp_taxonomy_%.ttl',         'http://ns.inria.fr/wvcp/graph');
+-- ld_dir ('output',  'observations_cepam.ttl',      'http://ns.inria.fr/woodkg/graph/cepam_observations');
+-- ld_dir ('output',  'observations_insidewood.ttl', 'http://ns.inria.fr/woodkg/graph/insidewood_observations');
+-- ld_dir ('dataset', '%.ttl',                       'http://ns.inria.fr/woodkg/graph/static');
 
 rdf_loader_run();
 SELECT * FROM DB.DBA.load_list;
@@ -18,4 +20,4 @@ checkpoint;
 urilbl_ac_init_db();
 s_rank();
 
-SPARQL SELECT DISTINCT ?g (COUNT(*) as ?triples) WHERE { GRAPH ?g {?s ?p ?o} };
+SPARQL SELECT DISTINCT ?g (COUNT(*) as ?triples) WHERE { GRAPH ?g {?s ?p ?o} } ORDER BY ?g;

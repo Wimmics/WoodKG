@@ -9,10 +9,12 @@ def convert_value(value):
 
     This applies to taxonomic ranks and taxonomic status.
 
+    # Taxonomic ranks
     Here are all the taxonomic ranks found in WCVP:
     Convariety, ecas., Form, Genus, grex, lusus, , microf., microgène, modif., monstr., nid,
     nothof., nothosubsp., nothovar., positio, proles, provar., psp., Species, stirps, , subap.,
     Subform, subproles, Subspecies, subspecioid, Subvariety, Variety
+
     Only the following ones are translated to IRIs:
     Form, Genus, Species, Subform, Subspecies, Subvariety, Variety
 

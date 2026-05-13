@@ -1,4 +1,4 @@
-# WoodKG
+# WoodKG – African Wood Charcoal Knowledge Graph
 
 WoodKG is a knowledge graph for African Wood charcoal studies.
 This repository contains the tools that are used to build the 3 graphs that are linked together and form WoodKG:
