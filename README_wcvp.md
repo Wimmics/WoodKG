@@ -1,6 +1,6 @@
 # WCVP Knowledge Graph Documentation
 
-This document describes a representation of WCVP (World Checklist of Vascular Plants) as a KG in the Resource Description Format (RDF).
+This document describes a representation of [WCVP](https://powo.science.kew.org/about-wcvp) (World Checklist of Vascular Plants) as a KG in the Resource Description Format (RDF).
 
 To account for the semantics of represented resources, we model nomenclatural information as a thesaurus wherein each concept denotes a scientific name along with its taxonomic rank, status, authority etc. 
 By contrast, taxonomic information is modeled as an ontology wherein each class denotes a taxon linked to its accepted name and synonyms thereof.
