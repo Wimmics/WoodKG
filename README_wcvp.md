@@ -8,6 +8,16 @@ By contrast, taxonomic information is modeled as an ontology wherein each class 
 The modeling relies primarily on the Darwin Core (DwC) RDF vocabulary, making it fully aligned with the DwC-A distribution of WCVP.
 However since most DwC (datatype) properties have literals as an object, it is complemented with (object) properties and resources for taxonomic ranks and statuses.
 
+## Used prefixes
+
+```turtle
+@prefix dwc:     <http://rs.tdwg.org/dwc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix schema:  <http://schema.org/> .
+@prefix txrfp:   <http://taxref.mnhn.fr/lod/property/> .
+```
 
 ## Taxon
 

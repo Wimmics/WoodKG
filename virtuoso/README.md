@@ -27,7 +27,7 @@ Adapt file `import_woodkg.isql` by commenting out lines as necessary.
 
 ```bash
 export VIRTUOSO_DBA_PWD=your_virtuoso_password
-cd WoodKG/virtuoso
+cd virtuoso
 ./run_virtuoso.sh
 ./run_import_woodkg.sh
 ```
