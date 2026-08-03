@@ -49,7 +49,7 @@ wcvpts:Orthographic a skos:Concept ;
 
 wcvpts:Unplaced a skos:Concept ;
   skos:prefLabel "Unplaced"@en ;
-  skos:definition "A taxonomic name that cannot be accepted, nor can it be put into synonymy."@en ;
+  skos:definition "A taxonomic name that cannot be accepted, nor can it be put into synonymy (e.g. the genus to which the name belongs is not accepted)."@en ;
   skos:inScheme wcvpts:TaxonomicStatusCollection .
 
 wcvpts:ArtificialHybrid a skos:Concept ;

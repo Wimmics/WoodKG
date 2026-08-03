@@ -1,21 +1,21 @@
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix rr: <http://www.w3.org/ns/r2rml#> .
-@prefix schema: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix txrfp: <http://taxref.mnhn.fr/lod/property/> .
+
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
 @prefix xrr: <http://i3s.unice.fr/xr2rml#> .
+
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
+@prefix schema: <http://schema.org/> .
+@prefix wcvpp: <http://ns.inria.fr/wcvp/property/> .
 
 <#Taxon> a rr:TripleMap ;
   xrr:logicalSource [ xrr:query """db.collection.find({taxonomicstatus: "Accepted"})""" ] ;
   rr:subjectMap [
     rr:template "http://ns.inria.fr/wcvp/taxon/{$.taxonid}" ;
-    rr:class owl:Class ;
+    rr:class skos:Concept ;
   ] ;
   rr:predicateObjectMap [
-    rr:predicate rdfs:subClassOf ;
+    rr:predicate skos:broader ;
     rr:objectMap [ rr:template "http://ns.inria.fr/wcvp/taxon/{$.parentnameusageid}" ] ;
   ] ;
   rr:predicateObjectMap [
@@ -23,7 +23,7 @@
     rr:objectMap [ xrr:reference "$.taxonid" ] ;
   ] ;
   rr:predicateObjectMap [
-    rr:predicate rdfs:label ;
+    rr:predicate skos:prefLabel ;
     rr:objectMap [ xrr:reference "$.scientfiicname" ] ;
   ] ;
   rr:predicateObjectMap [
@@ -31,7 +31,7 @@
     rr:objectMap [ xrr:reference "$.taxonrank" ] ;
   ] ;
   rr:predicateObjectMap [
-    rr:predicate txrfp:hasReferenceName ;
+    rr:predicate wcvpp:hasReferenceName ;
     rr:objectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ] ;
   ] .
 
@@ -73,7 +73,7 @@
     rr:objectMap [ xrr:reference "$.taxonomicstatus" ] ;
   ] ;
   rr:predicateObjectMap [
-    rr:predicate txrfp:hasTaxonomicStatus ;
+    rr:predicate wcvpp:hasTaxonomicStatus ;
     rr:objectMap [ rr:template "http://ns.inria.fr/wcvp/taxonomicStatus/{$.taxonomicstatus}" ] ;
   ] ;
   rr:predicateObjectMap [
@@ -108,7 +108,7 @@
   xrr:logicalSource [ xrr:query """db.collection.find({taxonomicstatus: "Synonym"})""" ] ;
   rr:subjectMap [ rr:template "http://ns.inria.fr/wcvp/taxon/{$.acceptednameusageid}" ] ;
   rr:predicateObjectMap [
-    rr:predicate txrfp:hasSynonym ;
+    rr:predicate wcvpp:hasSynonym ;
     rr:objectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ] ;
   ] .
 
@@ -123,7 +123,7 @@
     rr:objectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.acceptednameusageid}" ] ;
   ] .
 
-# ==================== Taxonomic ranks of taxa and accepted names ====================
+# ==================== Taxonomic ranks of taxa and names ====================
 
 <#TaxonRank> a rr:TripleMap ;
   xrr:logicalSource [
@@ -131,7 +131,7 @@
   ] ;
   rr:subjectMap [ rr:template "http://ns.inria.fr/wcvp/taxon/{$.taxonid}" ] ;
   rr:predicateObjectMap [
-    rr:predicate txrfp:hasRank ;
+    rr:predicate wcvpp:hasRank ;
     rr:objectMap [ rr:template "http://taxref.mnhn.fr/lod/taxrank/{$.taxonrank}" ] ;
   ] .
 
@@ -141,6 +141,6 @@
   ] ;
   rr:subjectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ] ;
   rr:predicateObjectMap [
-    rr:predicate txrfp:hasRank ;
+    rr:predicate wcvpp:hasRank ;
     rr:objectMap [ rr:template "http://taxref.mnhn.fr/lod/taxrank/{$.taxonrank}" ] ;
   ] .
