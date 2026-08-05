@@ -1,5 +1,6 @@
 @prefix gbif: <http://rs.gbif.org/vocabulary/gbif/TaxonomicStatus/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wcvp: <http://ns.inria.fr/wcvp/> .
 @prefix wcvpts: <http://ns.inria.fr/wcvp/taxonomicStatus/> .
 
 wcvpts:TaxonomicStatusCollection a skos:Collection ;
@@ -11,53 +12,53 @@ wcvpts:Accepted a skos:Concept ;
   skos:definition "A taxonomic name that is currently recognized as the correct name for a taxon within a given taxonomic treatment or authority. In botany, an accepted name is taxonomically accepted and may differ from merely being validly published."@en ;
   skos:scopeNote "In botanical nomenclature, acceptance is a taxonomic opinion distinct from nomenclatural validity. In zoological nomenclature, the term 'valid name' is generally used instead of 'accepted name'."@en ;
   skos:exactMatch gbif:accepted ;
-  skos:inScheme wcvpts:TaxonomicStatusCollection .
+  skos:inScheme wcvp: .
 
 wcvpts:Valid a skos:Concept ;
   skos:prefLabel "Valid"@en ;
   skos:definition "In zoology, a 'valid name' is the correct name for a taxon."@en ;
   skos:scopeNote "In zoological nomenclature, 'valid' commonly means the accepted and correct name of a taxon. In botanical nomenclature, 'validly published' indicates that a name satisfies the formal publication requirements of the International Code of Nomenclature, independently of its taxonomic acceptance."@en ;
-  skos:inScheme wcvpts:TaxonomicStatusCollection .
+  skos:inScheme wcvp: .
 
 wcvpts:Synonym a skos:Concept ;
   skos:prefLabel "Synonym"@en ;
   skos:definition "A taxonomic name that refers to the same taxon as another name but is not the accepted name."@en ;
   skos:exactMatch gbif:synonym ;
-  skos:inScheme wcvpts:TaxonomicStatusCollection .
+  skos:inScheme wcvp: .
 
 wcvpts:Illegitimate a skos:Concept ;
   skos:prefLabel "Illegitimate"@en ;
   skos:altLabel "Nomen illegitimum" ;
   skos:definition "A taxonomic name that contravenes one or more nomenclatural rules and is therefore not validly usable."@en ;
-  skos:inScheme wcvpts:TaxonomicStatusCollection .
+  skos:inScheme wcvp: .
 
 wcvpts:Invalid a skos:Concept ;
   skos:prefLabel "Invalid"@en ;
   skos:definition "A taxonomic name that was not validly published according to the applicable nomenclatural code."@en ;
-  skos:inScheme wcvpts:TaxonomicStatusCollection .
+  skos:inScheme wcvp: .
 
 wcvpts:Misapplied a skos:Concept ;
   skos:prefLabel "Misapplied"@en ;
   skos:definition "A taxonomic name that has been incorrectly applied to a taxon by one or more authors."@en ;
   skos:exactMatch gbif:misapplied ;
-  skos:inScheme wcvpts:TaxonomicStatusCollection .
+  skos:inScheme wcvp: .
 
 wcvpts:Orthographic a skos:Concept ;
   skos:prefLabel "Orthographic"@en ;
   skos:definition "A spelling variant or orthographic form of a taxonomic name."@en ;
-  skos:inScheme wcvpts:TaxonomicStatusCollection .
+  skos:inScheme wcvp: .
 
 wcvpts:Unplaced a skos:Concept ;
   skos:prefLabel "Unplaced"@en ;
   skos:definition "A taxonomic name that cannot be accepted, nor can it be put into synonymy (e.g. the genus to which the name belongs is not accepted)."@en ;
-  skos:inScheme wcvpts:TaxonomicStatusCollection .
+  skos:inScheme wcvp: .
 
 wcvpts:ArtificialHybrid a skos:Concept ;
   skos:prefLabel "Artificial Hybrid"@en ;
   skos:definition "A taxon resulting from an artificially created hybridization event."@en ;
-  skos:inScheme wcvpts:TaxonomicStatusCollection .
+  skos:inScheme wcvp: .
 
 wcvpts:ProvisionallyAccepted a skos:Concept ;
   skos:prefLabel "Provisionally Accepted"@en ;
   skos:definition "A taxonomic name that is temporarily accepted pending further taxonomic review or evidence."@en ;
-  skos:inScheme wcvpts:TaxonomicStatusCollection .
+  skos:inScheme wcvp: .

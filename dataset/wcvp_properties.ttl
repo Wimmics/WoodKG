@@ -7,6 +7,7 @@
 @prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
 @prefix wdt: <http://www.wikidata.org/prop/direct/> .
 
+@prefix wcvp: <http://ns.inria.fr/wcvp/> .
 @prefix wcvpp: <http://ns.inria.fr/wcvp/property/> .
 @prefix taxrefp: <http://taxref.mnhn.fr/lod/property/> .
 
@@ -15,7 +16,7 @@
 # ============================================================
 
 wcvpp:hasRank a owl:ObjectProperty ;
-    rdfs:isDefinedBy <http://ns.inria.fr/wcvp> ;
+    rdfs:isDefinedBy wcvp: ;
     rdfs:label "has taxonomic rank"@en ;
     dct:description "Relates a scientific name or a taxon to a taxonimical rank"@en ;
     rdfs:comment "This property is not equivalent to http://rs.tdwg.org/ontology/voc/TaxonConcept#rank nor http://rs.tdwg.org/ontology/voc/TaxonName#rank whose domains are http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept and http://rs.tdwg.org/ontology/voc/TaxonName#TaxonName respectively, whereas we want to use wcvpprop:hasRank with taxa AND scientific names implemented as implemented as instances of skos:Concept. "@en ;
@@ -25,21 +26,21 @@ wcvpp:hasRank a owl:ObjectProperty ;
     rdfs:seeAlso taxrefp:hasRank, dwc:taxonRank, <http://rs.tdwg.org/ontology/voc/TaxonName#rank>, <http://rs.tdwg.org/ontology/voc/TaxonConcept#rank> .
 
 wcvpp:hasReferenceName a owl:ObjectProperty ;
-    rdfs:isDefinedBy <http://ns.inria.fr/wcvp> ;
+    rdfs:isDefinedBy wcvp: ;
     rdfs:label "has reference name"@en ;
     dct:description "Relates a taxon to its reference (valid) scientific name"@en ;
     rdfs:comment "DwC's scientificName property is recommended to be used with a literal object, and does not distinguish between reference vs. synonym names. Hence this property."@en ;
     rdfs:seeAlso taxrefp:hasReferenceName, dwc:scientificName .
 
 wcvpp:hasSynonym a owl:ObjectProperty ;
-    rdfs:isDefinedBy <http://ns.inria.fr/wcvp> ;
+    rdfs:isDefinedBy wcvp: ;
     rdfs:label "has synonym name"@en ;
     dct:description "Relates a taxon to one of its synonyms"@en ;
     rdfs:comment "DwC's scientificName property is recommended to be used with a literal object, and does not distinguish between reference vs. synonym names. Hence this property."@en ;
     rdfs:seeAlso taxrefp:hasSynonym, dwc:scientificName .
 
 wcvpp:hasTaxonomicStatus a owl:ObjectProperty ;
-    rdfs:isDefinedBy <http://ns.inria.fr/wcvp> ;
+    rdfs:isDefinedBy wcvp: ;
     rdfs:label "has taxonomic status"@en ;
     dct:description "Relates a scientific name to its taxonomic status."@en .
 
@@ -48,7 +49,7 @@ wcvpp:hasTaxonomicStatus a owl:ObjectProperty ;
 # ============================================================
 
 wcvpp:hasAuthority a owl:ObjectProperty ;
-    rdfs:isDefinedBy <http://ns.inria.fr/wcvp> ;
+    rdfs:isDefinedBy wcvp: ;
     rdfs:label "has scientific name authority"@en ;
     owl:equivalentProperty <http://lod.taxonconcept.org/ontology/txn.owl#authority> ;
     owl:equivalentProperty <http://rs.tdwg.org/ontology/voc/TaxonName#authorship> ;
@@ -57,14 +58,14 @@ wcvpp:hasAuthority a owl:ObjectProperty ;
     rdfs:comment "TDWG ontology's property http://rs.tdwg.org/ontology/voc/TaxonName#authorship is preferably associated with a scientific name (http://rs.tdwg.org/ontology/voc/TaxonName#TaxonName). By contrast, DwC's scientificNameAuthorship property is associated with a taxon (dwc:Taxon), and its object shoud be a literal (DwC does not have a class for taxon names). Therefore, hasAuthority property is not equivalent to the latter."@en .
 
 wcvpp:isReferenceNameOf a owl:ObjectProperty ;
-    rdfs:isDefinedBy <http://ns.inria.fr/wcvp> ;
+    rdfs:isDefinedBy wcvp: ;
     rdfs:label "is the reference name of"@en ;
     owl:inverse wcvpp:hasReferenceName ;
     rdfs:seeAlso taxrefp:isReferenceNameOf ;
     dct:description "Relates a scientific name to the taxon for which it is the reference (valid) name"@en .
 
 wcvpp:isSynonymOf a owl:ObjectProperty ;
-    rdfs:isDefinedBy <http://ns.inria.fr/wcvp> ;
+    rdfs:isDefinedBy wcvp: ;
     rdfs:label "is a synonym of"@en ;
     owl:inverse wcvpp:hasSynonym ;
     rdfs:seeAlso taxrefp:isSynonymOf ;

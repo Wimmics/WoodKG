@@ -33,6 +33,28 @@
   rr:predicateObjectMap [
     rr:predicate wcvpp:hasReferenceName ;
     rr:objectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ] ;
+  ] ;
+  
+  # Additional DwC classification terms
+  rr:predicateObjectMap [
+    rr:predicate dwc:family ;
+    rr:objectMap [ xrr:reference "$.family" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dwc:genus ;
+    rr:objectMap [ xrr:reference "$.genus" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dwc:specificEpithet ;
+    rr:objectMap [ xrr:reference "$.specificepithet" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate dwc:infraspecificEpithet ;
+    rr:objectMap [ xrr:reference "$.infraspecificepithet" ] ;
+  ] ;
+  rr:predicateObjectMap [
+    rr:predicate schema:mainEntityOfPage ;
+    rr:objectMap [ xrr:reference "$.references" ] ;
   ] .
 
 <#AllNames> a rr:TripleMap ;
@@ -81,7 +103,7 @@
     rr:objectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.parentnameusageid}" ] ;
   ] ;
   
-  # Additional DwC terms
+  # Additional DwC classification terms
   rr:predicateObjectMap [
     rr:predicate dwc:family ;
     rr:objectMap [ xrr:reference "$.family" ] ;
@@ -103,7 +125,7 @@
     rr:objectMap [ xrr:reference "$.references" ] ;
   ] .
 
-# ==================== Link Names and Taxa ====================
+# ==================== Link Taxa and Names ====================
 <#LinkTaxonToSynonym> a rr:TripleMap ;
   xrr:logicalSource [ xrr:query """db.collection.find({taxonomicstatus: "Synonym"})""" ] ;
   rr:subjectMap [ rr:template "http://ns.inria.fr/wcvp/taxon/{$.acceptednameusageid}" ] ;
@@ -112,7 +134,7 @@
     rr:objectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ] ;
   ] .
 
-# Link names where taxonomic status is none of "Synonym" or "Accepted" to the accepted name
+# Link names where taxonomic status is none of "Synonym" or "Accepted", to the accepted name
 <#LinkNameTaxon> a rr:TripleMap ;
   xrr:logicalSource [
     xrr:query """db.collection.find({$and: [ {taxonomicstatus: {$ne: "Accepted"}}, {taxonomicstatus: {$ne: "Synonym"}} ]})"""

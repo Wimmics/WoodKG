@@ -7,8 +7,7 @@ This repository contains the tools that are used to build the 3 graphs that are 
 - the observations of charcoal samples.
 
 The data sources are the following:
-- [Plants Of the World Online](https://powo.science.kew.org/) (POWO) describes up to date taxonomic name and geolocation.
-- [World Checklist of Vascular Plants](https://powo.science.kew.org/about-wcvp) (WCVP) is the taxonomic names backbone that POWO relies on.
+- [World Checklist of Vascular Plants](https://powo.science.kew.org/about-wcvp) (WCVP) is the taxonomic names backbone used by [Plants Of the World Online](https://powo.science.kew.org/) (POWO).
 - [International Association of Wood Anatomists's features list](http://www.maderasenargentina.com.ar/archivos/IAWA_Committee1989.pdf) (IAWA). From this list we have derived a representation centered around the concepts of Feature of Interest (FoI), Observable Property (OP) and values, available as a [shared document](https://docs.google.com/spreadsheets/d/1PUWlXuF0ph-XoZLRLSvAEFjLJwu-esHQfoGm06nKwRs/edit?usp=sharing).
 - Charcoal observations coming from 2 sources:
     - [InsideWood](https://insidewood.lib.ncsu.edu/search)'s charcoal descriptions;

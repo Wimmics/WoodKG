@@ -1,0 +1,144 @@
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix sd:             <http://www.w3.org/ns/sparql-service-description#>.
+@prefix skos:           <http://www.w3.org/2004/02/skos/core#>.
+@prefix skosxl:         <http://www.w3.org/2008/05/skos-xl#>.
+@prefix xsd:            <http://www.w3.org/2001/XMLSchema#>.
+
+@prefix bibo:           <http://purl.org/ontology/bibo/> .
+@prefix dcat:           <http://www.w3.org/ns/dcat#>.
+@prefix dce:            <http://purl.org/dc/elements/1.1/>.
+@prefix dct:            <http://purl.org/dc/terms/>.
+@prefix dwc:            <http://rs.tdwg.org/dwc/terms/> .
+@prefix foaf:           <http://xmlns.com/foaf/0.1/>.
+@prefix pav:            <http://purl.org/pav/>.
+@prefix prov:           <http://www.w3.org/ns/prov#>.
+@prefix schema:         <http://schema.org/>.
+@prefix vann:           <http://purl.org/vocab/vann/> .
+@prefix void:           <http://rdfs.org/ns/void#>.
+
+@prefix wcvp:           <http://ns.inria.fr/wcvp/>.
+
+
+wcvp:database
+    a                       dcat:Dataset;
+    rdfs:label              "WCVP";
+    dct:title               "The World Checklist of Vascular Plants (WCVP) database";
+    dcat:landingPage        <https://powo.science.kew.org/about-wcvp>;
+    schema:sameAs           <https://powo.science.kew.org/about-wcvp>;
+    dct:license             <https://creativecommons.org/licenses/by/3.0/>;
+    schema:subjectOf        <https://doi.org/10.1038/s41597-021-00997-6>.
+
+<https://doi.org/10.1038/s41597-021-00997-6>
+    a                       <http://purl.org/ontology/bibo/AcademicArticle>, <https://schema.org/ScholarlyArticle>;
+    dct:title               "The World Checklist of Vascular Plants, a continuously updated resource for exploring global plant diversity";
+    dct:issued              "2021"^^xsd:gYear;
+    dct:bibliographicCitation "Govaerts, R., Nic Lughadha, E., Black, N. et al. The World Checklist of Vascular Plants, a continuously updated resource for exploring global plant diversity. Sci Data 8, 215 (2021)";
+    schema:url              <https://doi.org/10.1038/s41597-021-00997-6>.
+
+
+wcvp:
+    a                       dcat:Dataset, skos:ConceptScheme;
+
+    rdfs:label              "WCVP-KG";
+    dct:title               "WCVP-KG: Knowledge Graph of the World Checklist of Vascular Plants";
+    dct:license             <https://creativecommons.org/licenses/by/4.0/>;
+    dct:accessRights        <http://purl.org/coar/access_right/c_abf2>, <http://publications.europa.eu/resource/authority/access-right/PUBLIC>;
+    dct:subject             "biodiversity", "lifesciences", "taxonomy", "species", "vascular plants";
+    dcat:keyword            "biodiversity", "lifesciences", "taxonomy", "species", "vascular plants";
+    
+    vann:preferredNamespaceUri      "http://ns.inria.fr/wcvp/";
+    vann:preferredNamespacePrefix   "wcvp";
+
+    # Versioning, dates -----------------------------------------------------
+    dct:identifier          "https://doi.org/10.5281/zenodo.12733630";
+    bibo:doi                "10.5281/zenodo.12733630";
+    dcat:version            "v16_20260803";
+    pav:version             "v16_20260803";
+    pav:createdOn           "2026-07-01"^^xsd:date; dct:created "2026-07-01"^^xsd:date;
+    pav:lastUpdateOn        "2026-08-03"^^xsd:date; dct:modified "2026-08-03"^^xsd:date;
+
+    # Authoring, institutions ----------------------------------------------
+    dct:creator             <https://orcid.org/0000-0001-9064-0463>, <https://orcid.org/0000-0001-5959-5561>; 
+    dct:publisher           <https://ror.org/0496p8026>, <https://ror.org/02kvxyf05>, <https://ror.org/02feahw73>;
+    foaf:fundedBy           <https://ror.org/0496p8026>, <https://ror.org/02kvxyf05>, <https://ror.org/02feahw73>;
+
+    # RDF dump -------------------------------------------------------------
+    dcat:distribution [
+        a                   dcat:Distribution;
+        dct:description     "Distribution of WCVP-KG as an archive of RDF Turtle files";
+        dcat:accessURL      <https://doi.org/10.5281/zenodo.xxxxxx>;
+        dcat:downloadURL    <https://zenodo.org/record/xxxxxx/files/xxxxxx.zip>;
+        dcat:mediaType      <http://www.iana.org/assignments/media-types/text/turtle>;
+        dcat:compressFormat <http://www.iana.org/assignments/media-types/application/zip>;
+    ];
+    
+    # Provenance information -----------------------------------------------
+    a prov:Entity;
+    prov:hadPrimarySource   wcvp:database;
+    prov:wasDerivedFrom     wcvp:database;
+    prov:generatedAtTime    "2026-08-03"^^xsd:date;
+    dct:isFormatOf          wcvp:database;
+
+    # VOID description -----------------------------------------------------
+    a                       void:Dataset;
+    void:uriSpace           "http://ns.inria.fr/wcvp/";
+    void:triples            "xxxxxx"^^xsd:integer;
+    void:sparqlEndpoint     <http://ns.inria.fr/wcvp/sparql>;
+    void:dataDump           <https://zenodo.org/record/xxxxxx/files/xxxxxx.zip>;
+    void:exampleResource    <http://ns.inria.fr/wcvp/taxon/2772885>;
+    void:vocabulary         skos:, skosxl:, dct:, foaf:, schema:, bibo:, <http://www.wikidata.org/>, dwc:;
+    .
+
+# ------------------------------------------------------------------------------
+# SPARQL Service Description and DCAT DataService
+wcvp:sparql-service
+    a                    sd:Service, dcat:DataService;
+    sd:supportedLanguage sd:SPARQL10Query, sd:SPARQL11Query;
+    sd:endpoint          <http://ns.inria.fr/wcvp/sparql>;
+    dcat:endpointURL     <http://ns.inria.fr/wcvp/sparql>;
+    rdfs:label           "SPARQL endpoint serving the WCVP-KG";
+    dcat:servesDataset   wcvp:;
+    sd:availableGraphs [
+        a                sd:GraphCollection;
+        sd:namedGraph
+            <http://ns.inria.fr/wcvp/graph>,
+            <http://ns.inria.fr/woodkg/graph/metadata>
+    ].
+
+
+# ------------------------------------------------------------------------------
+# Publishers of the DCAT catalog and datasets
+<https://ror.org/0496p8026>
+    a foaf:Organization;
+    foaf:name "University Côte d'Azur";
+    foaf:homepage <https://univ-cotedazur.fr>.
+    
+<https://ror.org/02kvxyf05>
+    a foaf:Organization;
+    foaf:name "Inria";
+    foaf:homepage <https://www.inria.fr>.
+    
+<https://ror.org/02feahw73>
+    a foaf:Organization;
+    foaf:name "CNRS";
+    foaf:homepage <https://www.cnrs.fr>.
+    
+<https://team.inria.fr/wimmics/> a foaf:Organization; foaf:name "Wimmics research team".
+
+
+# ------------------------------------------------------------------------------
+# Contributors/authors
+
+<https://orcid.org/0000-0001-9064-0463>
+    a foaf:Person; 
+    foaf:name "Franck MICHEL";
+    foaf:homepage <https://w3id.org/people/franckmichel>;
+    schema:sameAs <https://cv.archives-ouvertes.fr/fmichel/>, <https://www.researchgate.net/profile/Franck_Michel3>.
+    
+<https://orcid.org/0000-0001-5959-5561>
+    a foaf:Person; 
+    foaf:name "Catherine FARON";
+    foaf:homepage <http://www.i3s.unice.fr/~faron/>;
+    schema:sameAs <https://cv.archives-ouvertes.fr/catherine-faron-zucker>,
+        <https://www.researchgate.net/profile/Catherine_Faron-Zucker>.
