@@ -1,18 +1,21 @@
 log_enable(3,1);
 
--- SPARQL CLEAR GRAPH  <http://ns.inria.fr/iawa/graph>;
 SPARQL CLEAR GRAPH  <http://ns.inria.fr/wcvp/graph>;
+-- SPARQL CLEAR GRAPH  <http://ns.inria.fr/wcvp/graph/metadata>;
+
+-- SPARQL CLEAR GRAPH  <http://ns.inria.fr/iawa/graph>;
 -- SPARQL CLEAR GRAPH  <http://ns.inria.fr/woodkg/graph/cepam_observations>;
 -- SPARQL CLEAR GRAPH  <http://ns.inria.fr/woodkg/graph/insidewood_observations>;
--- SPARQL CLEAR GRAPH  <http://ns.inria.fr/woodkg/graph/metadata>;
 
 delete from DB.DBA.LOAD_LIST;
 
--- ld_dir ('output',  'iawa_thesaurus.ttl',          'http://ns.inria.fr/iawa/graph');
 ld_dir ('output',  'wcvp_taxonomy_%.ttl',         'http://ns.inria.fr/wcvp/graph');
+ld_dir ('dataset', 'wcvp_%.ttl',                  'http://ns.inria.fr/wcvp/graph/metadata');
+ld_dir ('dataset', 'taxrefld_taxranks',           'http://ns.inria.fr/wcvp/graph/metadata');
+
+-- ld_dir ('output',  'iawa_thesaurus.ttl',          'http://ns.inria.fr/iawa/graph');
 -- ld_dir ('output',  'observations_cepam.ttl',      'http://ns.inria.fr/woodkg/graph/cepam_observations');
 -- ld_dir ('output',  'observations_insidewood.ttl', 'http://ns.inria.fr/woodkg/graph/insidewood_observations');
--- ld_dir ('dataset', '%.ttl',                       'http://ns.inria.fr/woodkg/graph/metadata');
 
 rdf_loader_run();
 SELECT * FROM DB.DBA.load_list;

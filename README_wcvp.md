@@ -1,12 +1,11 @@
 # WCVP Knowledge Graph Documentation
 
-This document describes a representation of [WCVP](https://powo.science.kew.org/about-wcvp) (World Checklist of Vascular Plants) as a KG in the Resource Description Format (RDF). that accounts for the semantics of both nomenclatural and taxonomic information. 
+This document describes a representation of [WCVP](https://powo.science.kew.org/about-wcvp) (World Checklist of Vascular Plants) as a KG in the Resource Description Format (RDF), that accounts for the semantics of both nomenclatural and taxonomic information. 
 
-We model nomenclatural information as a SKOS thesaurus wherein each concept denotes a scientific name along with its taxonomic status, rank, authority and publication. 
+**We model nomenclatural information as a SKOS thesaurus wherein each concept denotes a scientific name** along with its taxonomic status, rank, authority and publication. 
 
 Taxonomic information can be considered from two complementary perspectives. (1) A taxon is a group of biological individuals sharing common characteristics. In this sense, it can be represented as a class (a set of individuals) written in OWL. (2) A taxon is a scientific hypothesis about the scope and characteristics of a taxonomic concept that is more naturally represented as a concept in a thesaurus. 
-Whereas the earlier is relevant when the goal is to describe facts about individuals, the latter is more appropriate to describe facts about taxonomic groups themselves, e.g. rank, life traits, ecologic or genomic data etc. Biodiversity data frequently falls in this second option where the point is to communicate about species, delineate the scope of taxa, draw their classification etc. Therefore, we choose to model taxonomic information as a second SKOS thesaurus wherein each concept denotes a taxon linked to its accepted name and synonyms thereof.
-
+Whereas the earlier is relevant when the goal is to describe facts about individuals, the latter is more appropriate to describe facts about taxonomic groups themselves, e.g. rank, life traits, ecologic or genomic data etc. Biodiversity data frequently falls in this second option where the point is to communicate about species, delineate the scope of taxa, draw their classification etc. Therefore, **we model taxonomic information as a second SKOS thesaurus wherein each concept denotes a taxon** linked to its accepted name and synonyms thereof.
 
 The modeling relies primarily on the Darwin Core (DwC) RDF vocabulary, making it fully aligned with the DwC-A distribution of WCVP.
 However since most DwC (datatype) properties have literals as an object, it is complemented with (object) properties and resources for taxonomic ranks and statuses.
@@ -34,7 +33,7 @@ A taxon has an accepted scientific name and associated synonyms. Taxa are create
 - **Type:** `skos:Concept`
 - **Key Properties:**
   - `skos:prefLabel`: accepted name of the taxon (as a string)
-  - `skos:broader`: parent taxon (for hierarchical relationships)
+  - `skos:broader`: link to the parent taxon
   - `dwc:taxonID`: unique identifier for the taxon
   - `dwc:family`, `dwc:genus`, `dwc:specificEpithet`, `dwc:infraspecificEpithet`: taxonomic classification
   - `dwc:taxonRank`: taxonomic rank as it is labeled in WCVP (e.g., Species, Genus, nothosubs., micromorph)
@@ -140,4 +139,4 @@ In this example, the scientific name "Loheria sessilifolia" is marked as a `Syno
 ```
 
 In this example, the scientific name has a taxonomic status of `Illegitimate`.
-The `rdfs:seeAlso` property links to name `205276`, which is the accepted name it relates to
+The `rdfs:seeAlso` property links to name `205276` which is the accepted name it relates to.

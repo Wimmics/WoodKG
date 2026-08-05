@@ -2,12 +2,10 @@
 @prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix sd:             <http://www.w3.org/ns/sparql-service-description#>.
 @prefix skos:           <http://www.w3.org/2004/02/skos/core#>.
-@prefix skosxl:         <http://www.w3.org/2008/05/skos-xl#>.
 @prefix xsd:            <http://www.w3.org/2001/XMLSchema#>.
 
 @prefix bibo:           <http://purl.org/ontology/bibo/> .
 @prefix dcat:           <http://www.w3.org/ns/dcat#>.
-@prefix dce:            <http://purl.org/dc/elements/1.1/>.
 @prefix dct:            <http://purl.org/dc/terms/>.
 @prefix dwc:            <http://rs.tdwg.org/dwc/terms/> .
 @prefix foaf:           <http://xmlns.com/foaf/0.1/>.
@@ -39,7 +37,6 @@ wcvp:database
 
 wcvp:
     a                       dcat:Dataset, skos:ConceptScheme;
-
     rdfs:label              "WCVP-KG";
     dct:title               "WCVP-KG: Knowledge Graph of the World Checklist of Vascular Plants";
     dct:license             <https://creativecommons.org/licenses/by/4.0/>;
@@ -51,10 +48,10 @@ wcvp:
     vann:preferredNamespacePrefix   "wcvp";
 
     # Versioning, dates -----------------------------------------------------
-    dct:identifier          "https://doi.org/10.5281/zenodo.12733630";
-    bibo:doi                "10.5281/zenodo.12733630";
-    dcat:version            "v16_20260803";
-    pav:version             "v16_20260803";
+    dct:identifier          "https://doi.org/10.5281/zenodo.21807454";
+    bibo:doi                "10.5281/zenodo.21807454";
+    dcat:version            "v16_20260604";
+    pav:version             "v16_20260604";
     pav:createdOn           "2026-07-01"^^xsd:date; dct:created "2026-07-01"^^xsd:date;
     pav:lastUpdateOn        "2026-08-03"^^xsd:date; dct:modified "2026-08-03"^^xsd:date;
 
@@ -67,8 +64,8 @@ wcvp:
     dcat:distribution [
         a                   dcat:Distribution;
         dct:description     "Distribution of WCVP-KG as an archive of RDF Turtle files";
-        dcat:accessURL      <https://doi.org/10.5281/zenodo.xxxxxx>;
-        dcat:downloadURL    <https://zenodo.org/record/xxxxxx/files/xxxxxx.zip>;
+        dcat:accessURL      <https://doi.org/10.5281/zenodo.21807454>;
+        dcat:downloadURL    <https://zenodo.org/record/21807454/files/wcvp_taxonomy_v16_20260604.zip>;
         dcat:mediaType      <http://www.iana.org/assignments/media-types/text/turtle>;
         dcat:compressFormat <http://www.iana.org/assignments/media-types/application/zip>;
     ];
@@ -83,11 +80,11 @@ wcvp:
     # VOID description -----------------------------------------------------
     a                       void:Dataset;
     void:uriSpace           "http://ns.inria.fr/wcvp/";
-    void:triples            "xxxxxx"^^xsd:integer;
+    void:triples            "26800000"^^xsd:integer;
     void:sparqlEndpoint     <http://ns.inria.fr/wcvp/sparql>;
-    void:dataDump           <https://zenodo.org/record/xxxxxx/files/xxxxxx.zip>;
+    void:dataDump           <https://zenodo.org/record/21807454/files/wcvp_taxonomy_v16_20260604.zip>;
     void:exampleResource    <http://ns.inria.fr/wcvp/taxon/2772885>;
-    void:vocabulary         skos:, skosxl:, dct:, foaf:, schema:, bibo:, <http://www.wikidata.org/>, dwc:;
+    void:vocabulary         skos:, dct:, foaf:, schema:, bibo:, <http://www.wikidata.org/>, dwc:;
     .
 
 # ------------------------------------------------------------------------------
@@ -103,7 +100,7 @@ wcvp:sparql-service
         a                sd:GraphCollection;
         sd:namedGraph
             <http://ns.inria.fr/wcvp/graph>,
-            <http://ns.inria.fr/woodkg/graph/metadata>
+            <http://ns.inria.fr/wcvp/graph/metadata>
     ].
 
 
