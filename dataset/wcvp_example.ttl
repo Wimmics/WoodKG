@@ -1,0 +1,39 @@
+@prefix dwc:    <http://rs.tdwg.org/dwc/terms/> .
+@prefix wcvpt:  <http://ns.inria.fr/wcvp/taxon/> .
+@prefix wcvpn:  <http://ns.inria.fr/wcvp/name/> .
+@prefix wcvpts: <http://ns.inria.fr/wcvp/taxonomicStatus/> .
+@prefix wcvpp:  <http://ns.inria.fr/wcvp/property/> .
+@prefix powo:   <https://powo.science.kew.org/taxon/> .
+@prefix schema: <http://schema.org/> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+
+wcvpt:2772885 
+    a                           skos:Concept ;
+    skos:prefLabel              "Discocalyx latepetiolata" ;
+    dwc:taxonID                 "2772885" ;
+    dwc:taxonRank               "Species" ;
+    wcvpp:hasRank               <http://taxref.mnhn.fr/lod/taxrank/Species> ;
+
+    skos:broader                wcvpt:2772860 ;
+
+    wcvpp:hasReferenceName      wcvpn:2772885 ;
+    wcvpp:hasSynonym            wcvpn:2494499, wcvpn:2494514 .
+
+wcvpn:2494499 
+    a                         skos:Concept ;
+    skos:prefLabel            "Loheria sessilifolia Mez" ;
+    dwc:family                "Primulaceae" ;
+    dwc:genus                 "Loheria" ;
+    dwc:specificEpithet       "sessilifolia" ;
+    dwc:scientificName        "Loheria sessilifolia" ;
+    dwc:scientificNameID      "2494499" ;
+    dwc:scientificNameAuthorship "Mez" ;
+    dwc:namePublishedIn       "Bot. Arch. 2: 210 (1922)" ;
+
+    dwc:taxonomicStatus       "Synonym" ;
+    wcvpp:hasTaxonomicStatus  wcvpts:Synonym ;
+
+    dwc:taxonRank             "Species" ;
+    wcvpp:hasRank             <http://taxref.mnhn.fr/lod/taxrank/Species> ;
+
+    schema:mainEntityOfPage     powo:urn:lsid:ipni.org:names:588724-1 .
