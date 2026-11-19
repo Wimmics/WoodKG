@@ -4,7 +4,7 @@
 @prefix wcvpts: <http://ns.inria.fr/wcvp/taxonomicStatus/> .
 
 wcvpts:TaxonomicStatusCollection a skos:Collection ;
-  skos:prefLabel "Taxonomic Status Collection"@en ;
+  skos:prefLabel "Collection of Taxonomic Statuses of Sciencitic Names"@en ;
   skos:member wcvpts:Accepted, wcvpts:Valid, wcvpts:Synonym, wcvpts:Illegitimate, wcvpts:Invalid, wcvpts:Misapplied, wcvpts:Orthographic, wcvpts:Unplaced, wcvpts:ArtificialHybrid, wcvpts:ProvisionallyAccepted .
 
 wcvpts:Accepted a skos:Concept ;

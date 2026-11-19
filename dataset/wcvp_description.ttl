@@ -53,7 +53,7 @@ wcvp:
     dcat:version            "v16_20260604";
     pav:version             "v16_20260604";
     pav:createdOn           "2026-07-01"^^xsd:date; dct:created "2026-07-01"^^xsd:date;
-    pav:lastUpdateOn        "2026-08-03"^^xsd:date; dct:modified "2026-08-03"^^xsd:date;
+    pav:lastUpdateOn        "2026-11-19"^^xsd:date; dct:modified "2026-11-19"^^xsd:date;
 
     # Authoring, institutions ----------------------------------------------
     dct:creator             <https://orcid.org/0000-0001-9064-0463>, <https://orcid.org/0000-0001-5959-5561>; 
@@ -74,13 +74,13 @@ wcvp:
     a prov:Entity;
     prov:hadPrimarySource   wcvp:database;
     prov:wasDerivedFrom     wcvp:database;
-    prov:generatedAtTime    "2026-08-03"^^xsd:date;
+    prov:generatedAtTime    "2026-11-19"^^xsd:date;
     dct:isFormatOf          wcvp:database;
 
     # VOID description -----------------------------------------------------
     a                       void:Dataset;
     void:uriSpace           "http://ns.inria.fr/wcvp/";
-    void:triples            "26800000"^^xsd:integer;
+    void:triples            "29500000"^^xsd:integer;
     void:sparqlEndpoint     <http://ns.inria.fr/wcvp/sparql>;
     void:dataDump           <https://zenodo.org/record/21807454/files/wcvp_taxonomy_v16_20260604.zip>;
     void:exampleResource    <http://ns.inria.fr/wcvp/taxon/2772885>;

@@ -8,7 +8,7 @@
 @prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
 
 wcvpt:2772885 
-    a                           skos:Concept ;
+    a                           dwc:Taxon, skos:Concept ;
     skos:prefLabel              "Discocalyx latepetiolata" ;
     dwc:taxonID                 "2772885" ;
     dwc:taxonRank               "Species" ;
@@ -20,7 +20,7 @@ wcvpt:2772885
     wcvpp:hasSynonym            wcvpn:2494499, wcvpn:2494514 .
 
 wcvpn:2494499 
-    a                         skos:Concept ;
+    a                         <http://rs.tdwg.org/ontology/voc/TaxonName#TaxonName>, skos:Concept ;
     skos:prefLabel            "Loheria sessilifolia Mez" ;
     dwc:family                "Primulaceae" ;
     dwc:genus                 "Loheria" ;
@@ -32,6 +32,7 @@ wcvpn:2494499
 
     dwc:taxonomicStatus       "Synonym" ;
     wcvpp:hasTaxonomicStatus  wcvpts:Synonym ;
+    wcvpp:isSynonymOfName     <http://ns.inria.fr/wcvp/name/2772885> ;
 
     dwc:taxonRank             "Species" ;
     wcvpp:hasRank             <http://taxref.mnhn.fr/lod/taxrank/Species> ;

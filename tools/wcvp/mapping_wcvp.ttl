@@ -12,7 +12,7 @@
   xrr:logicalSource [ xrr:query """db.collection.find({taxonomicstatus: "Accepted"})""" ] ;
   rr:subjectMap [
     rr:template "http://ns.inria.fr/wcvp/taxon/{$.taxonid}" ;
-    rr:class skos:Concept ;
+    rr:class skos:Concept, dwc:Taxon ;
   ] ;
   rr:predicateObjectMap [
     rr:predicate skos:broader ;
@@ -61,7 +61,7 @@
   xrr:logicalSource [ xrr:query """db.collection.find({})""" ] ;
   rr:subjectMap [
     rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ;
-    rr:class skos:Concept ;
+    rr:class skos:Concept, <http://rs.tdwg.org/ontology/voc/TaxonName#TaxonName> ;
   ] ;
   rr:predicateObjectMap [
     rr:predicate skos:prefLabel ;
@@ -135,13 +135,24 @@
   ] .
 
 # Link names where taxonomic status is none of "Synonym" or "Accepted", to the accepted name
-<#LinkNameTaxon> a rr:TripleMap ;
+<#LinkNameOtherStatusToTaxon> a rr:TripleMap ;
   xrr:logicalSource [
     xrr:query """db.collection.find({$and: [ {taxonomicstatus: {$ne: "Accepted"}}, {taxonomicstatus: {$ne: "Synonym"}} ]})"""
   ] ;
   rr:subjectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ] ;
   rr:predicateObjectMap [
     rr:predicate rdfs:seeAlso ;
+    rr:objectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.acceptednameusageid}" ] ;
+  ] .
+
+# Link synonym names to the accepted name
+<#LinkSynonymToAccepted> a rr:TripleMap ;
+  xrr:logicalSource [
+    xrr:query """db.collection.find({taxonomicstatus: "Synonym"})"""
+  ] ;
+  rr:subjectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.taxonid}" ] ;
+  rr:predicateObjectMap [
+    rr:predicate wcvpp:isSynonymOfName ;
     rr:objectMap [ rr:template "http://ns.inria.fr/wcvp/name/{$.acceptednameusageid}" ] ;
   ] .
 

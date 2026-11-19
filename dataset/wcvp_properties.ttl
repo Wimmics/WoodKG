@@ -28,14 +28,14 @@ wcvpp:hasRank a owl:ObjectProperty ;
 wcvpp:hasReferenceName a owl:ObjectProperty ;
     rdfs:isDefinedBy wcvp: ;
     rdfs:label "has reference name"@en ;
-    dct:description "Relates a taxon to its reference (valid) scientific name"@en ;
+    dct:description "Relates a taxon to its reference (valid or accepted) scientific name"@en ;
     rdfs:comment "DwC's scientificName property is recommended to be used with a literal object, and does not distinguish between reference vs. synonym names. Hence this property."@en ;
     rdfs:seeAlso taxrefp:hasReferenceName, dwc:scientificName .
 
 wcvpp:hasSynonym a owl:ObjectProperty ;
     rdfs:isDefinedBy wcvp: ;
     rdfs:label "has synonym name"@en ;
-    dct:description "Relates a taxon to one of its synonyms"@en ;
+    dct:description "Relates a taxon to one of its synonym names"@en ;
     rdfs:comment "DwC's scientificName property is recommended to be used with a literal object, and does not distinguish between reference vs. synonym names. Hence this property."@en ;
     rdfs:seeAlso taxrefp:hasSynonym, dwc:scientificName .
 
@@ -45,7 +45,7 @@ wcvpp:hasTaxonomicStatus a owl:ObjectProperty ;
     dct:description "Relates a scientific name to its taxonomic status."@en .
 
 # ============================================================
-# ==== Properties associated to taxon names
+# ==== Properties associated to scientific names
 # ============================================================
 
 wcvpp:hasAuthority a owl:ObjectProperty ;
@@ -64,9 +64,14 @@ wcvpp:isReferenceNameOf a owl:ObjectProperty ;
     rdfs:seeAlso taxrefp:isReferenceNameOf ;
     dct:description "Relates a scientific name to the taxon for which it is the reference (valid) name"@en .
 
-wcvpp:isSynonymOf a owl:ObjectProperty ;
+wcvpp:isSynonymOfTaxon a owl:ObjectProperty ;
     rdfs:isDefinedBy wcvp: ;
-    rdfs:label "is a synonym of"@en ;
+    rdfs:label "is a synonym of taxon"@en ;
     owl:inverse wcvpp:hasSynonym ;
     rdfs:seeAlso taxrefp:isSynonymOf ;
-    dct:description "Relates a scientific name to a taxon for which it is a synonym"@en .
+    dct:description "Relates a scientific name to the taxon for which it is a synonym"@en .
+
+wcvpp:isSynonymOfName a owl:ObjectProperty ;
+    rdfs:isDefinedBy wcvp: ;
+    rdfs:label "is a synonym of reference name"@en ;
+    dct:description "Relates a scientific name to the reference name of which it is a synonym"@en .

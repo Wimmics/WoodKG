@@ -30,12 +30,12 @@ A taxon has an accepted scientific name and associated synonyms. Taxa are create
 ### Description
 
 - **URI Pattern:** `http://ns.inria.fr/wcvp/taxon/{taxonid}`
-- **Type:** `skos:Concept`
+- **Type:** `dwc:Taxon`, `skos:Concept`
 - **Key Properties:**
   - `skos:prefLabel`: accepted name of the taxon (as a string)
   - `skos:broader`: link to the parent taxon
   - `dwc:taxonID`: unique identifier for the taxon
-  - `dwc:family`, `dwc:genus`, `dwc:specificEpithet`, `dwc:infraspecificEpithet`: taxonomic classification
+  - `dwc:family`, `dwc:genus`, `dwc:specificEpithet`, `dwc:infraspecificEpithet`: (string-based) taxonomic classification
   - `dwc:taxonRank`: taxonomic rank as it is labeled in WCVP (e.g., Species, Genus, nothosubs., micromorph)
   - `wcvpp:hasRank`: taxonomic rank as an IRI (from `dataset/taxrefld_taxranks.ttl`) only for Forma, Genus, Species, SubForma, SubSpecies, SubVarietas, Varietas
   - `wcvpp:hasReferenceName`: link to the accepted scientific name
@@ -45,7 +45,7 @@ A taxon has an accepted scientific name and associated synonyms. Taxa are create
 
 ```turtle
 <http://ns.inria.fr/wcvp/taxon/2772885>
-    a                       skos:Concept ;
+    a                       dwc:Taxon, skos:Concept ;
     skos:prefLabel          "Discocalyx latepetiolata" ;
     dwc:family              "Primulaceae" ;
     dwc:genus               "Discocalyx" ;
@@ -72,19 +72,20 @@ In this example, taxon 2772885 has one reference name "Discocalyx latepetiolata"
 ### Description:
 
 - **URI Pattern:** `http://ns.inria.fr/wcvp/name/{taxonid}`
-- **Type:** `skos:Concept`
+- **Type:** `http://rs.tdwg.org/ontology/voc/TaxonName#TaxonName`, `skos:Concept`
 - **Key Properties:**
   - `skos:prefLabel`: label combining name and authority
   - `skos:broader`: link to the parent name (when applicable)
+  - `dwc:family`, `dwc:genus`, `dwc:specificEpithet`, `dwc:infraspecificEpithet`: (string-based) taxonomic classification
   - `dwc:scientificName`: nomenclatural string (e.g., "Loheria sessilifolia")
   - `dwc:scientificNameID`: unique identifier for this name
   - `dwc:scientificNameAuthorship`: author citation (e.g., "Mez")
+  - `dwc:namePublishedIn`: publication reference
   - `dwc:taxonomicStatus`: status as it is labeled in WCVP: Accepted, Synonym, Illegitimate, Invalid, Misplaced, etc.
   - `wcvpp:hasTaxonomicStatus`: IRI reference to the taxonomic status, build from the WCVP label (given in `data/wcvp_taxonomic_statuses.ttl`)
+  - `wcvpp:isSynonymOfName`: for names whose status is Synonym, link to the currently accepted name
   - `dwc:taxonRank`: taxonomic rank as it is labeled in WCVP (e.g., Species, Genus, nothosubs., micromorph)
   - `wcvpp:hasRank`: taxonomic rank as an IRI (given in `dataset/taxrefld_taxranks.ttl`) only for Forma, Genus, Species, SubForma, SubSpecies, SubVarietas, Varietas
-  - `dwc:family`, `dwc:genus`, `dwc:specificEpithet`, `dwc:infraspecificEpithet`: taxonomic classification
-  - `dwc:namePublishedIn`: publication reference
   - `rdfs:seeAlso`: for names whose status is none of Accepted or Synonym, link to the currently accepted name
   - `schema:mainEntityOfPage`: external reference (e.g., POWO link)
 
@@ -92,7 +93,7 @@ In this example, taxon 2772885 has one reference name "Discocalyx latepetiolata"
 
 ```turtle
 <http://ns.inria.fr/wcvp/name/2494499>
-    a                         skos:Concept ;
+    a                         <http://rs.tdwg.org/ontology/voc/TaxonName#TaxonName>, skos:Concept ;
     skos:prefLabel            "Loheria sessilifolia Mez" ;
     dwc:family                "Primulaceae" ;
     dwc:genus                 "Loheria" ;
@@ -104,6 +105,7 @@ In this example, taxon 2772885 has one reference name "Discocalyx latepetiolata"
 
     dwc:taxonomicStatus       "Synonym" ;
     wcvpp:hasTaxonomicStatus  <http://ns.inria.fr/wcvp/taxonomicStatus/Synonym> ;
+    wcvpp:isSynonymOfName     <http://ns.inria.fr/wcvp/name/2772885> ;
 
     dwc:taxonRank             "Species" ;
     wcvpp:hasRank             <http://taxref.mnhn.fr/lod/taxrank/Species> ;
@@ -117,7 +119,7 @@ In this example, the scientific name "Loheria sessilifolia" is marked as a `Syno
 
 ```turtle
 <http://ns.inria.fr/wcvp/name/350474>
-    a                         skos:Concept ;
+    a                         <http://rs.tdwg.org/ontology/voc/TaxonName#TaxonName>, skos:Concept ;
     skos:prefLabel            "Thymus serpyllum var. alpestris Briq." ;
     dwc:family                "Lamiaceae" ;
     dwc:genus                 "Thymus" ;
